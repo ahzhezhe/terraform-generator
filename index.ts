@@ -12,5 +12,6 @@ export { default as Variable } from './src/blocks/Variable';
 
 export { default as Argument } from './src/arguments/Argument';
 export { default as Attribute } from './src/arguments/Attribute';
+export { default as Heredoc } from './src/arguments/Heredoc';
 
 export { default as Map } from './src/types/Map';
