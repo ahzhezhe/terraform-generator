@@ -1,4 +1,4 @@
-import TerraformGenerator, { Block, Identifier, Attribute } from '../..';
+import TerraformGenerator, { Block, Argument, Attribute } from '../..';
 
 export default class Module extends Block {
 
@@ -10,8 +10,8 @@ export default class Module extends Block {
     this.name = name;
   }
 
-  getIdentifier(): Identifier {
-    return new Identifier(`module.${this.name}`);
+  asArgument(): Argument {
+    return new Argument(`module.${this.name}`);
   }
 
   getAttribute(name: string): Attribute {

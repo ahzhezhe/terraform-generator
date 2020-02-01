@@ -1,4 +1,4 @@
-import TerraformGenerator, { Block, Identifier, Attribute } from '../..';
+import TerraformGenerator, { Block, Argument, Attribute } from '../..';
 
 export default class Provider extends Block {
 
@@ -10,11 +10,11 @@ export default class Provider extends Block {
     this.name = name;
   }
 
-  getIdentifier(): Identifier {
+  asArgument(): Argument {
     if (this.getArgument('alias')) {
-      return new Identifier(`${this.name}.${this.getArgument('alias')}`);
+      return new Argument(`${this.name}.${this.getArgument('alias')}`);
     }
-    return new Identifier(this.name);
+    return new Argument(this.name);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

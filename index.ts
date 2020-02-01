@@ -10,7 +10,7 @@ export { default as Output } from './src/blocks/Output';
 export { default as Module } from './src/blocks/Module';
 export { default as Variable } from './src/blocks/Variable';
 
-export { default as Identifier } from './src/identifiers/Identifier';
-export { default as Attribute } from './src/identifiers/Attribute';
+export { default as Argument } from './src/arguments/Argument';
+export { default as Attribute } from './src/arguments/Attribute';
 
 export { default as Map } from './src/types/Map';

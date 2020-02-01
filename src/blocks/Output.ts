@@ -1,4 +1,4 @@
-import TerraformGenerator, { Block, Identifier, Attribute } from '../..';
+import TerraformGenerator, { Block, Argument, Attribute } from '../..';
 
 export default class Output extends Block {
 
@@ -10,7 +10,7 @@ export default class Output extends Block {
     this.name = name;
   }
 
-  getIdentifier(): Identifier {
+  asArgument(): Argument {
     throw new Error('Inaccessible function.');
   }
 

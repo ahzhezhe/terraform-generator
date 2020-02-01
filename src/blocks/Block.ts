@@ -1,4 +1,4 @@
-import TerraformGenerator, { Attribute, Identifier, Map } from '../..';
+import TerraformGenerator, { Attribute, Argument, Map } from '../..';
 
 export default abstract class Block {
 
@@ -60,7 +60,7 @@ export default abstract class Block {
     return str;
   }
 
-  abstract getIdentifier(): Identifier;
+  abstract asArgument(): Argument;
 
   abstract getAttribute(name: string): Attribute;
 
@@ -72,7 +72,7 @@ export default abstract class Block {
 
   private isObjectArgument(value: any): boolean {
     if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0
-      || value instanceof Block || value instanceof Identifier || value instanceof Map) {
+      || value instanceof Block || value instanceof Argument || value instanceof Map) {
       return false;
 
     } else if (typeof value === 'object') {
@@ -131,9 +131,9 @@ export default abstract class Block {
 
   private argumentValueToString(value: any): string {
     if (value instanceof Block) {
-      return this.argumentValueToString(value.getIdentifier());
+      return this.argumentValueToString(value.asArgument());
 
-    } else if (value instanceof Identifier) {
+    } else if (value instanceof Argument) {
       if (this.tfGenerator.options.version === '0.11') {
         return `"\${${value.toTerraform()}}"`;
       } else {

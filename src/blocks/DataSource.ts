@@ -1,4 +1,4 @@
-import TerraformGenerator, { Block, Identifier, Attribute } from '../..';
+import TerraformGenerator, { Block, Argument, Attribute } from '../..';
 
 export default class DataSource extends Block {
 
@@ -12,8 +12,8 @@ export default class DataSource extends Block {
     this.name = name;
   }
 
-  getIdentifier(): Identifier {
-    return new Identifier(`data.${this.type}.${this.name}`);
+  asArgument(): Argument {
+    return new Argument(`data.${this.type}.${this.name}`);
   }
 
   getAttribute(name: string): Attribute {
