@@ -1,0 +1,115 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "@typescript-eslint/member-delimiter-style": {
+      "singleline": {
+        "delimiter": "semi",
+        "requireLast": false
+      }
+    },
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        "accessibility": "no-public"
+      }
+    ],
+    "@typescript-eslint/camelcase": [
+      "never"
+    ],
+    "@typescript-eslint/prefer-for-of": "error",
+    "indent": "off",
+    "camelcase": "off",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 150
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "padded-blocks": [
+      "error",
+      {
+        "classes": "always",
+        "switches": "never"
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "eqeqeq": [
+      "error",
+      "smart"
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "ignoreComments": true
+      }
+    ],
+    "no-throw-literal": "error",
+    "prefer-const": "error",
+    "no-multi-spaces": "error",
+    "no-return-await": "error",
+    "curly": "error",
+    "prefer-template": "error",
+    "block-spacing": "error",
+    "eol-last": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "internal"
+        ],
+        "newlines-between": "never"
+      }
+    ]
+  }
+}

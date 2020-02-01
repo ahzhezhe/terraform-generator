@@ -1,0 +1,48 @@
+{
+  "name": "terraform-generator",
+  "version": "0.1.5",
+  "author": "Ah Zhe",
+  "description": "Generate Terraform plan using Node.js.",
+  "keywords": [
+    "Terraform"
+  ],
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahzhezhe/terraform-generator"
+  },
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint index.ts src/**/*.ts test/**/*.ts",
+    "test": "jest",
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.1",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.1.0",
+    "ts-node": "^7.0.0",
+    "typescript": "^3.4.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "test\\.ts$",
+    "collectCoverage": true,
+    "coverageDirectory": "./test/__coverage__",
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "test"
+    ]
+  }
+}
