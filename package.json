@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "eslint index.ts src/**/*.ts test/**/*.ts",
     "test": "jest",
-    "privateTest": "ts-node test.ts",
+    "tryout": "ts-node tryout.ts",
     "prepublishOnly": "del-cli --force dist && tsc",
     "postpublish": "del-cli --force dist"
   },
