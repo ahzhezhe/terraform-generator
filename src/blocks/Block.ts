@@ -1,4 +1,4 @@
-import TerraformGenerator, { Attribute, Argument, Map } from '../..';
+import TerraformGenerator, { Attribute, Argument, Heredoc, Map } from '../..';
 
 export default abstract class Block {
 
@@ -136,6 +136,10 @@ export default abstract class Block {
       return this.argumentValueToString(value.asArgument());
 
     } else if (value instanceof Argument) {
+      if (value instanceof Heredoc) {
+        return value.toTerraform();
+      }
+
       if (this.tfGenerator && this.tfGenerator.options.version === '0.11') {
         return `"\${${value.toTerraform()}}"`;
       } else {
