@@ -1,13 +1,21 @@
 export default class Argument {
 
-  readonly argument: string;
+  readonly args: (string | Argument)[];
 
-  constructor(argument: string) {
-    this.argument = argument;
+  constructor(...args: (string | Argument)[]) {
+    this.args = args;
   }
 
   toTerraform(): string {
-    return this.argument;
+    let str = '';
+    this.args.forEach(arg => {
+      if (arg instanceof Argument) {
+        str += arg.toTerraform();
+      } else {
+        str += arg;
+      }
+    });
+    return str;
   }
 
 }

@@ -85,7 +85,8 @@ const vpc = new Resource(tfGenerator, 'aws_vpc', 'vpc', {
   heredoc: new Heredoc(`line1
                         line2
                         line3`);
-  custom: new Argument('max(5, 12, 9)')
+  custom1: new Argument('max(5, 12, 9)'),
+  custom2: new Argument('sort("a", ', resource.getAttribute('attributeName'), ', "c")')
 }
 ```
 
