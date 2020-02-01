@@ -81,7 +81,8 @@ const vpc = new Resource(tfGenerator, 'aws_vpc', 'vpc', {
     arg2: 123,
     arg3: true
   }),
-  resourceAttribute: resource.getAttribute('attributeName')
+  resourceAttribute: resource.getAttribute('attributeName'),
+  custom: new Argument('max(5, 12, 9)')
 }
 ```
 

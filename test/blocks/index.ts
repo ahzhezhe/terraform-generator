@@ -1,4 +1,4 @@
-import TerraformGenerator, { Resource, Attribute, Map } from '../..';
+import TerraformGenerator, { Resource, Argument, Attribute, Map } from '../..';
 
 export const tfGenerator11 = new TerraformGenerator({ version: '0.11' });
 
@@ -19,20 +19,21 @@ export const arg1 = (tfGenerator: TerraformGenerator): object => ({
   arg7: [attr(tfGenerator), attr(tfGenerator), attr(tfGenerator)],
   arg8: resource(tfGenerator),
   arg9: [resource(tfGenerator), resource(tfGenerator), resource(tfGenerator)],
-  arg10: ['e', 4, true, attr(tfGenerator), resource(tfGenerator)]
+  arg10: ['e', 4, true, attr(tfGenerator), resource(tfGenerator)],
+  arg11: new Argument('max(5, 12, 9)')
 });
 
 export const arg2 = (tfGenerator: TerraformGenerator): object => ({
   ...arg1(tfGenerator),
-  arg11: arg1(tfGenerator)
+  arg12: arg1(tfGenerator)
 });
 
 export const arg3 = (tfGenerator: TerraformGenerator): object => ({
   ...arg2(tfGenerator),
-  arg12: [arg2(tfGenerator), arg2(tfGenerator), arg2(tfGenerator)]
+  arg13: [arg2(tfGenerator), arg2(tfGenerator), arg2(tfGenerator)]
 });
 
 export const arg4 = (tfGenerator: TerraformGenerator): object => ({
   ...arg3(tfGenerator),
-  arg12: new Map(arg3(tfGenerator))
+  arg14: new Map(arg3(tfGenerator))
 });
