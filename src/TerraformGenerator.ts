@@ -22,8 +22,8 @@ export default class TerraformGenerator {
 
   generate(): string {
     let str = '';
-    this.blocks.forEach(element => {
-      str += element.toTerraform();
+    this.blocks.forEach(block => {
+      str += block.toTerraform();
     });
     return str;
   }
