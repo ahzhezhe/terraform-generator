@@ -8,6 +8,10 @@ The end result of using this module is Terraform plan in plain text, you will ne
 
 Currently support generating plan for Terraform version 0.11 and 0.12.
 
+## **Disclamer**
+
+This module is still in development and testing phase, it might not work fully correctly. Feel free to report issues/bugs, make requests or give suggesstions in GitHub page.
+
 ## **Benefit**
 
 Make use of all Javascript programming features (some of which is not available in Terraform), e.g. functions, array, loops, if-else, map, etc. to generate a plain Terraform plan.
@@ -21,6 +25,73 @@ You don't need to use Terraform modules for reusable resource creations, you can
 ## **Limitation**
 
 The generated text is unformatted, use `terraform fmt` to format it yourself.
+
+## **Install via NPM**
+
+```
+npm install terraform-generator
+```
+
+## **Usage**
+
+### **Initiate TerraformGenerator**
+```javascript
+const tfGenerator = new TerraformGenerator({ version: '0.12' });
+```
+
+### **Block**
+Block's arguments are not typed, please refer to official Terraform documentation on what arguments can be supplied.
+
+```javascript
+new Provider(tfGenerator, 'aws', {
+  region: 'ap-southeast-1',
+  profile: 'example'
+});
+
+const vpc = new Resource(tfGenerator, 'aws_vpc', 'vpc', {
+  cidr_block: '172.88.0.0/16'
+});
+```
+
+### **Argument Types**
+```javascript
+{
+  string: 'str',
+  number: 123,
+  boolean: true,
+  stringList: ['str1', 'str2', 'str3'],
+  numberList: [111, 222, 333],
+  booleanList: [true, false, true],
+  tuple: ['str', 123, true],
+  object: {
+    arg1: 'str',
+    arg2: 123,
+    arg3: true
+  },
+  objectList: [
+    {
+      arg1: 'str'
+    },
+    {
+      arg1: 'str'
+    }
+  ],
+  map: new Map({
+    arg1: 'str',
+    arg2: 123,
+    arg3: true
+  }),
+  resourceAttribute: resource.getAttribute('attributeName')
+}
+```
+
+### **Attribute**
+```javascript
+resource.getAttribute('id')                 // resource id, string
+resource.getAttribute('subnets')            // subnet objects, object list
+resource.getAttribute('subnets.*.id')       // subnet ids, string list
+resource.getAttribute('subnets.*.id[0]')    // first subnet id, string
+```
 
 ## **Example**
 ```javascript
