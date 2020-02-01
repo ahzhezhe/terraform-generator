@@ -21,7 +21,9 @@ export default abstract class Block {
     this.blockNames = names;
     this.arguments = args ? args : {};
 
-    tfGenerator.addBlock(this);
+    if (tfGenerator) {
+      tfGenerator.addBlock(this);
+    }
   }
 
   getArguments(): object {
@@ -134,7 +136,7 @@ export default abstract class Block {
       return this.argumentValueToString(value.asArgument());
 
     } else if (value instanceof Argument) {
-      if (this.tfGenerator.options.version === '0.11') {
+      if (this.tfGenerator && this.tfGenerator.options.version === '0.11') {
         return `"\${${value.toTerraform()}}"`;
       } else {
         return value.toTerraform();
