@@ -19,8 +19,9 @@
   "scripts": {
     "lint": "eslint index.ts src/**/*.ts test/**/*.ts",
     "test": "jest",
-    "build": "tsc",
-    "prepublishOnly": "del-cli --force dist && tsc"
+    "privateTest": "ts-node test.ts",
+    "prepublishOnly": "del-cli --force dist && tsc",
+    "postpublish": "del-cli --force dist"
   },
   "devDependencies": {
     "@types/jest": "^25.1.1",
