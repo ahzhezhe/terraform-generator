@@ -24,7 +24,7 @@ You don't need to use Terraform modules for reusable resource creations, you can
 
 ## **Limitation**
 
-The generated text is unformatted, use `terraform fmt` to format it yourself.
+The generated plan is unformatted and its validity is not verified, use `terraform fmt` and `terraform plan` to format it and check its validity yourself.
 
 ## **Install via NPM**
 
@@ -81,21 +81,22 @@ const vpc = new Resource(tfGenerator, 'aws_vpc', 'vpc', {
     arg2: 123,
     arg3: true
   }),
-  resourceAttribute: resource.getAttribute('attributeName'),
+  block: block,
+  blockAttribute: block.getAttribute('attrName'),
   heredoc: new Heredoc(`line1
                         line2
                         line3`);
   custom1: new Argument('max(5, 12, 9)'),
-  custom2: new Argument('sort("a", ', resource.getAttribute('attributeName'), ', "c")')
+  custom2: new Argument('sort("a", ', block.getAttribute('attrName'), ', "c")')
 }
 ```
 
 ### **Attribute**
 ```javascript
-resource.getAttribute('id')                 // resource id, string
-resource.getAttribute('subnets')            // subnet objects, object list
-resource.getAttribute('subnets.*.id')       // subnet ids, string list
-resource.getAttribute('subnets.*.id[0]')    // first subnet id, string
+block.getAttribute('id')                 // block id, string
+block.getAttribute('subnets')            // subnet objects, object list
+block.getAttribute('subnets.*.id')       // subnet ids, string list
+block.getAttribute('subnets.*.id[0]')    // first subnet id, string
 ```
 
 ## **Example**
@@ -104,8 +105,10 @@ import TerraformGenerator, { Provider, Resource, DataSource, Output, Map } from 
 import fs from 'fs';
 import path from 'path';
 
+// Constants
 const project = 'example';
 
+// Environment variables
 const configs = {
   env: 'dev',
   tiers: [
@@ -127,6 +130,7 @@ const configs = {
   ]
 };
 
+// Utility functions
 const getAvailabilityZone = (i: number): string => {
   if (i === 0) {
     return 'ap-southeast-1a';
@@ -146,13 +150,16 @@ const getTags = (type: string, name?: string): Map => new Map({
   Env: configs.env
 });
 
+// Start writing Terraform plan
 const tfGenerator = new TerraformGenerator({ version: '0.12' });
 
+// Configure provider
 new Provider(tfGenerator, 'aws', {
   region: 'ap-southeast-1',
   profile: 'example'
 });
 
+// Find VPC by name
 const vpc = new DataSource(tfGenerator, 'aws_vpc', 'vpc', {
   filter: [{
     name: 'tag:Name',
@@ -160,10 +167,13 @@ const vpc = new DataSource(tfGenerator, 'aws_vpc', 'vpc', {
   }]
 });
 
-const webSubnets: Resource[] = [];
-const appSubnets: Resource[] = [];
-const dbSubnets: Resource[] = [];
+const subnets = {
+  web: [],
+  app: [],
+  db: []
+};
 
+// Create 3-tiers, each tier has 3 subnets spread across availabilty zones
 configs.tiers.forEach(tier => {
   tier.subnetCidrs.forEach((cidr, i) => {
     const name = `${tier.name}${i}`;
@@ -173,24 +183,20 @@ configs.tiers.forEach(tier => {
       availability_zone: getAvailabilityZone(i),
       tags: getTags('subnet', name)
     });
-    if (tier.name === 'web') {
-      webSubnets.push(subnet);
-    } else if (tier.name === 'app') {
-      appSubnets.push(subnet);
-    } else if (tier.name === 'db') {
-      dbSubnets.push(subnet);
-    }
+    subnets[tier.name].push(subnet);
   })
 });
 
+// Output all subnet ids
 new Output(tfGenerator, 'subnets', {
   value: new Map({
-    webSubnets: webSubnets.map(subnet => subnet.getAttribute('id')),
-    appSubnets: appSubnets.map(subnet => subnet.getAttribute('id')),
-    dbSubnets: dbSubnets.map(subnet => subnet.getAttribute('id'))
+    webSubnets: subnets.web.map(subnet => subnet.getAttribute('id')),
+    appSubnets: subnets.app.map(subnet => subnet.getAttribute('id')),
+    dbSubnets: subnets.db.map(subnet => subnet.getAttribute('id'))
   })
 });
 
+// Write the plan into a terraform.tf file
 const outputPath = path.join('output', configs.env, 'subnets', 'terraform.tf');
 fs.writeFileSync(outputPath, tfGenerator.generate());
 ```
