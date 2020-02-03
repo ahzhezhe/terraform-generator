@@ -1,4 +1,6 @@
-# **terraform-generator**
+# **terraform-generator** 
+
+![CI](https://github.com/ahzhezhe/terraform-generator/workflows/Test/badge.svg?branch=master)
 
 Use Node.js to generate Terraform plan.
 
