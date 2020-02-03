@@ -1,4 +1,4 @@
-import TerraformGenerator, { TerraformVersion, Resource, Map } from '../..';
+import TerraformGenerator, { TerraformVersion, Resource, Map } from '../../src';
 
 const project = 'test';
 

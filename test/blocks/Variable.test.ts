@@ -1,4 +1,4 @@
-import { Variable } from '../..';
+import { Variable } from '../../src';
 import { arg4 } from '.';
 
 test('Variable', () => {

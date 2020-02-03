@@ -1,4 +1,4 @@
-import { Argument, Block } from '../..';
+import { Argument, Block } from '..';
 
 export default class Attribute extends Argument {
 

@@ -1,4 +1,4 @@
-import { DataSource } from '../..';
+import { DataSource } from '../../src';
 import { arg4 } from '.';
 
 test('DataSource', () => {

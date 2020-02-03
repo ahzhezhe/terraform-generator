@@ -1,4 +1,4 @@
-import { Argument } from '../..';
+import { Argument } from '..';
 
 export default class Heredoc extends Argument {
 

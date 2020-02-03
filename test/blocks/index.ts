@@ -1,4 +1,4 @@
-import { Resource, Argument, Attribute, Map } from '../..';
+import { Resource, Argument, Attribute, Map } from '../../src';
 
 export const resource = new Resource('type', 'name', { test: true });
 

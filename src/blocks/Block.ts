@@ -1,4 +1,4 @@
-import { TerraformVersion, Attribute, Argument, Heredoc, Map } from '../..';
+import { TerraformVersion, Attribute, Argument, Heredoc, Map } from '..';
 
 export default abstract class Block {
 

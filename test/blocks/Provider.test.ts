@@ -1,4 +1,4 @@
-import { Provider } from '../..';
+import { Provider } from '../../src';
 import { arg4 } from '.';
 
 test('Provider', () => {

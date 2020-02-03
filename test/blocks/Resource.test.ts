@@ -1,4 +1,4 @@
-import { Resource } from '../..';
+import { Resource } from '../../src';
 import { arg4 } from '.';
 
 test('Resource', () => {

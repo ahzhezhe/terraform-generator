@@ -1,4 +1,4 @@
-import { Module } from '../..';
+import { Module } from '../../src';
 import { arg4 } from '.';
 
 test('Module', () => {

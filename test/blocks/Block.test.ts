@@ -1,4 +1,4 @@
-import { Resource } from '../..';
+import { Resource } from '../../src';
 
 test('Block identifier', () => {
   expect(() => new Resource('!@#', '$%^', {})).toThrow();

@@ -1,4 +1,4 @@
-import { Block, Argument, Attribute } from '../..';
+import { Block, Argument, Attribute } from '..';
 
 export default class Variable extends Block {
 

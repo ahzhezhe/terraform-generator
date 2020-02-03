@@ -1,4 +1,4 @@
-import { Block, Resource, DataSource, Module, Output, Provider, Variable } from '..';
+import { Block, Resource, DataSource, Module, Output, Provider, Variable } from '.';
 
 export type TerraformVersion = '0.11' | '0.12';
 
