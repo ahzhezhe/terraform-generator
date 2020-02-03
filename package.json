@@ -9,6 +9,7 @@
   "files": [
     "dist/**/*"
   ],
+  "homepage": "https://github.com/ahzhezhe/terraform-generator#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/ahzhezhe/terraform-generator"
