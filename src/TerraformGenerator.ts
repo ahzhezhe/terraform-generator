@@ -34,19 +34,19 @@ export default class TerraformGenerator {
     return block;
   }
 
-  addResource(type: string, name: string, args?: object): Resource {
+  addResource(type: string, name: string, args: object): Resource {
     const block = new Resource(type, name, args);
     this.addBlock(block);
     return block;
   }
 
-  addDataSource(type: string, name: string, args?: object): DataSource {
+  addDataSource(type: string, name: string, args: object): DataSource {
     const block = new DataSource(type, name, args);
     this.addBlock(block);
     return block;
   }
 
-  addModule(name: string, args?: object): Module {
+  addModule(name: string, args: object): Module {
     const block = new Module(name, args);
     this.addBlock(block);
     return block;
@@ -58,7 +58,7 @@ export default class TerraformGenerator {
     return block;
   }
 
-  addVariable(name: string, args?: object): Variable {
+  addVariable(name: string, args: object): Variable {
     const block = new Variable(name, args);
     this.addBlock(block);
     return block;
