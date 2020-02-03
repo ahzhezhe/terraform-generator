@@ -160,7 +160,7 @@ tfg.addProvider('aws', {
 });
 
 // Find VPC by name
-const vpc = new DataSource('aws_vpc', 'vpc', {
+const vpc = tfg.addDataSource('aws_vpc', 'vpc', {
   filter: [{
     name: 'tag:Name',
     values: [getTagName('vpc')]
