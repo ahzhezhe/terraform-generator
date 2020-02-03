@@ -1,13 +1,12 @@
-import TerraformGenerator, { Attribute, Argument, Heredoc, Map } from '../..';
+import { TerraformVersion, Attribute, Argument, Heredoc, Map } from '../..';
 
 export default abstract class Block {
 
-  protected readonly tfGenerator: TerraformGenerator;
   readonly blockType: string;
   readonly blockNames: string[];
   private readonly arguments: object;
 
-  constructor(tfGenerator: TerraformGenerator, type: string, names: string[], args?: object) {
+  constructor(type: string, names: string[], args: object) {
     this.validateIdentifier(type);
     if (names.length === 0) {
       throw new Error('Names cannot be empty.');
@@ -16,14 +15,9 @@ export default abstract class Block {
       this.validateIdentifier(name);
     });
 
-    this.tfGenerator = tfGenerator;
     this.blockType = type;
     this.blockNames = names;
     this.arguments = args ? args : {};
-
-    if (tfGenerator) {
-      tfGenerator.addBlock(this);
-    }
   }
 
   getArguments(): object {
@@ -51,13 +45,13 @@ export default abstract class Block {
     return this;
   }
 
-  toTerraform(): string {
+  toTerraform(version: TerraformVersion): string {
     let str = this.blockType;
     this.blockNames.forEach(name => {
       str += ` "${name}"`;
     });
     str += '{\n';
-    str += this.argumentsToString(this.arguments);
+    str += this.argumentsToString(version, this.arguments);
     str += '}\n\n';
     return str;
   }
@@ -85,15 +79,15 @@ export default abstract class Block {
     }
   }
 
-  private argumentsToString(args: object): string {
+  private argumentsToString(version: TerraformVersion, args: object): string {
     let str = '';
     for (const key in args) {
-      str += this.argumentToString(key, args[key]);
+      str += this.argumentToString(version, key, args[key]);
     }
     return str;
   }
 
-  private argumentToString(key: string, value: any): string {
+  private argumentToString(version: TerraformVersion, key: string, value: any): string {
     try {
       if (value == null) {
         return '';
@@ -117,13 +111,13 @@ export default abstract class Block {
         let str = '';
         if (Array.isArray(value)) {
           value.forEach(element => {
-            str += `${key}${operator}${this.argumentValueToString(element)}\n`;
+            str += `${key}${operator}${this.argumentValueToString(version, element)}\n`;
           });
         }
         return str;
 
       } else {
-        return `${key}${operator}${this.argumentValueToString(value)}\n`;
+        return `${key}${operator}${this.argumentValueToString(version, value)}\n`;
       }
 
     } catch (err) {
@@ -131,23 +125,23 @@ export default abstract class Block {
     }
   };
 
-  private argumentValueToString(value: any): string {
+  private argumentValueToString(version: TerraformVersion, value: any): string {
     if (value instanceof Block) {
-      return this.argumentValueToString(value.asArgument());
+      return this.argumentValueToString(version, value.asArgument());
 
     } else if (value instanceof Argument) {
       if (value instanceof Heredoc) {
         return value.toTerraform();
       }
 
-      if (this.tfGenerator && this.tfGenerator.options.version === '0.11') {
+      if (version === '0.11') {
         return `"\${${value.toTerraform()}}"`;
       } else {
         return value.toTerraform();
       }
 
     } else if (value instanceof Map) {
-      return this.argumentValueToString(value.args);
+      return this.argumentValueToString(version, value.args);
 
     } else if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0) {
       return JSON.stringify(value);
@@ -156,7 +150,7 @@ export default abstract class Block {
       if (Array.isArray(value)) {
         let str = '[\n';
         value.forEach(element => {
-          str += `${this.argumentValueToString(element)},\n`;
+          str += `${this.argumentValueToString(version, element)},\n`;
         });
         str += ']';
         return str;
@@ -164,7 +158,7 @@ export default abstract class Block {
       } else {
         let str = '{\n';
         for (const key in value) {
-          str += this.argumentToString(key, value[key]);
+          str += this.argumentToString(version, key, value[key]);
         }
         str += '}';
         return str;

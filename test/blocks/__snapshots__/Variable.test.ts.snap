@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Variable 0.11 1`] = `
+exports[`Variable 1`] = `
 "variable \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -645,11 +645,7 @@ arg11 = \\"\${max(5, 12, 9)}\\"
 "
 `;
 
-exports[`Variable 0.11 2`] = `"var.name"`;
-
-exports[`Variable 0.11 3`] = `"var.name.attr"`;
-
-exports[`Variable 0.12 1`] = `
+exports[`Variable 2`] = `
 "variable \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -1294,6 +1290,6 @@ arg11 = max(5, 12, 9)
 "
 `;
 
-exports[`Variable 0.12 2`] = `"var.name"`;
+exports[`Variable 3`] = `"var.name"`;
 
-exports[`Variable 0.12 3`] = `"var.name.attr"`;
+exports[`Variable 4`] = `"var.name.attr"`;

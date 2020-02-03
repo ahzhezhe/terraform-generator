@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Output 0.11 1`] = `
+exports[`Output 1`] = `
 "output \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -645,7 +645,7 @@ arg11 = \\"\${max(5, 12, 9)}\\"
 "
 `;
 
-exports[`Output 0.12 1`] = `
+exports[`Output 2`] = `
 "output \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [

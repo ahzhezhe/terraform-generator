@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Module 0.11 1`] = `
+exports[`Module 1`] = `
 "module \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -645,11 +645,7 @@ arg11 = \\"\${max(5, 12, 9)}\\"
 "
 `;
 
-exports[`Module 0.11 2`] = `"module.name"`;
-
-exports[`Module 0.11 3`] = `"module.name.attr"`;
-
-exports[`Module 0.12 1`] = `
+exports[`Module 2`] = `
 "module \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -1294,6 +1290,6 @@ arg11 = max(5, 12, 9)
 "
 `;
 
-exports[`Module 0.12 2`] = `"module.name"`;
+exports[`Module 3`] = `"module.name"`;
 
-exports[`Module 0.12 3`] = `"module.name.attr"`;
+exports[`Module 4`] = `"module.name.attr"`;

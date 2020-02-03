@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataSource 0.11 1`] = `
+exports[`DataSource 1`] = `
 "data \\"type\\" \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -645,11 +645,7 @@ arg11 = \\"\${max(5, 12, 9)}\\"
 "
 `;
 
-exports[`DataSource 0.11 2`] = `"data.type.name"`;
-
-exports[`DataSource 0.11 3`] = `"data.type.name.attr"`;
-
-exports[`DataSource 0.12 1`] = `
+exports[`DataSource 2`] = `
 "data \\"type\\" \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -1294,6 +1290,6 @@ arg11 = max(5, 12, 9)
 "
 `;
 
-exports[`DataSource 0.12 2`] = `"data.type.name"`;
+exports[`DataSource 3`] = `"data.type.name"`;
 
-exports[`DataSource 0.12 3`] = `"data.type.name.attr"`;
+exports[`DataSource 4`] = `"data.type.name.attr"`;

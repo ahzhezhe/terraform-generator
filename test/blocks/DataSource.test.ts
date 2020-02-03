@@ -1,16 +1,10 @@
 import { DataSource } from '../..';
-import { tfGenerator11, tfGenerator12, arg4 } from '.';
+import { arg4 } from '.';
 
-test('DataSource 0.11', () => {
-  const dataSource = new DataSource(tfGenerator11, 'type', 'name', arg4(tfGenerator11));
-  expect(dataSource.toTerraform()).toMatchSnapshot();
-  expect(dataSource.asArgument().toTerraform()).toMatchSnapshot();
-  expect(dataSource.getAttribute('attr').toTerraform()).toMatchSnapshot();
-});
-
-test('DataSource 0.12', () => {
-  const dataSource = new DataSource(tfGenerator12, 'type', 'name', arg4(tfGenerator12));
-  expect(dataSource.toTerraform()).toMatchSnapshot();
+test('DataSource', () => {
+  const dataSource = new DataSource('type', 'name', arg4);
+  expect(dataSource.toTerraform('0.11')).toMatchSnapshot();
+  expect(dataSource.toTerraform('0.12')).toMatchSnapshot();
   expect(dataSource.asArgument().toTerraform()).toMatchSnapshot();
   expect(dataSource.getAttribute('attr').toTerraform()).toMatchSnapshot();
 });

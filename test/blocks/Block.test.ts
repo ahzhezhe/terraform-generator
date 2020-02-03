@@ -1,12 +1,11 @@
 import { Resource } from '../..';
-import { tfGenerator12 } from '.';
 
 test('Block identifier', () => {
-  expect(() => new Resource(tfGenerator12, '!@#', '$%^')).toThrow();
+  expect(() => new Resource('!@#', '$%^', {})).toThrow();
 });
 
 test('Block arguments', () => {
-  const resource = new Resource(tfGenerator12, 'type', 'name', { a: 1 });
+  const resource = new Resource('type', 'name', { a: 1 });
   expect(resource.getArguments()).toMatchSnapshot();
   expect(resource.setArgument('b', 2).getArguments()).toMatchSnapshot();
   expect(resource.setArguments({

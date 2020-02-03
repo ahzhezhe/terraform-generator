@@ -1,4 +1,4 @@
-import TerraformGenerator, { TerraformVersion, Provider, Resource, Output, Map } from '../..';
+import TerraformGenerator, { TerraformVersion, Resource, Map } from '../..';
 
 const project = 'test';
 
@@ -62,16 +62,16 @@ const getTags = (type: string, name?: string, tier?: string): Map => new Map({
 
 const generate = (version: TerraformVersion): string => {
   // Terraform
-  const tfGenerator = new TerraformGenerator({ version });
+  const tfg = new TerraformGenerator({ version });
 
   // Provider
-  new Provider(tfGenerator, 'aws', {
+  tfg.addProvider('aws', {
     region: 'ap-southeast-1',
     profile: 'test'
   });
 
   // VPC
-  const vpc = new Resource(tfGenerator, 'aws_vpc', 'vpc', {
+  const vpc = tfg.addResource('aws_vpc', 'vpc', {
     cidr_block: configs.vpc.cidr,
     tags: getTags('vpc')
   });
@@ -88,7 +88,7 @@ const generate = (version: TerraformVersion): string => {
   configs.tiers.forEach(tier => {
     for (let i = 0; i < tier.subnetCidrs.length; i++) {
       const name = `${tier.name}${i}`;
-      const subnet = new Resource(tfGenerator, 'aws_subnet', name, {
+      const subnet = tfg.addResource('aws_subnet', name, {
         vpc_id: vpc.getAttribute('id'),
         cidr_block: tier.subnetCidrs[i],
         availability_zone: getAvailabilityZone(i),
@@ -113,18 +113,18 @@ const generate = (version: TerraformVersion): string => {
   });
 
   // Internet gateway
-  const igw = new Resource(tfGenerator, 'aws_internet_gateway', 'igw', {
+  const igw = tfg.addResource('aws_internet_gateway', 'igw', {
     vpc_id: vpc.getAttribute('id'),
     tags: getTags('igw')
   });
 
   // Route tables
-  const rtDefault = new Resource(tfGenerator, 'aws_route_table', 'default', {
+  const rtDefault = tfg.addResource('aws_route_table', 'default', {
     vpc_id: vpc.getAttribute('id'),
     tags: getTags('rt', 'default')
   });
 
-  const rtIgw = new Resource(tfGenerator, 'aws_route_table', 'igw', {
+  const rtIgw = tfg.addResource('aws_route_table', 'igw', {
     vpc_id: vpc.getAttribute('id'),
     route: [
       {
@@ -136,14 +136,14 @@ const generate = (version: TerraformVersion): string => {
   });
 
   webSubnets.concat(appSubnets, gutSubnets, dbSubnets, itSubnets).forEach(subnet => {
-    new Resource(tfGenerator, 'aws_route_table_association', `default-${subnet.name}`, {
+    tfg.addResource('aws_route_table_association', `default-${subnet.name}`, {
       subnet_id: subnet.getAttribute('id'),
       route_table_id: rtDefault.getAttribute('id')
     });
   });
 
   publicSubnets.forEach(subnet => {
-    new Resource(tfGenerator, 'aws_route_table_association', `igw-${subnet.name}`, {
+    tfg.addResource('aws_route_table_association', `igw-${subnet.name}`, {
       subnet_id: subnet.getAttribute('id'),
       route_table_id: rtIgw.getAttribute('id')
     });
@@ -180,7 +180,7 @@ const generate = (version: TerraformVersion): string => {
     }
   ];
 
-  new Resource(tfGenerator, 'aws_network_acl', 'default', {
+  tfg.addResource('aws_network_acl', 'default', {
     vpc_id: vpc.getAttribute('id'),
     subnet_ids: publicSubnets.concat(webSubnets, appSubnets, gutSubnets, itSubnets, mgtSubnets).map(subnet => subnet.getAttribute('id')),
     ingress: defaultNACLRules,
@@ -188,7 +188,7 @@ const generate = (version: TerraformVersion): string => {
     tags: getTags('nacl', 'default')
   });
 
-  new Resource(tfGenerator, 'aws_network_acl', 'db', {
+  tfg.addResource('aws_network_acl', 'db', {
     vpc_id: vpc.getAttribute('id'),
     subnet_ids: dbSubnets.map(subnet => subnet.getAttribute('id')),
     ingress: dbNACLRules,
@@ -213,7 +213,7 @@ const generate = (version: TerraformVersion): string => {
       description: 'SSH for tier'
     };
 
-    new Resource(tfGenerator, 'aws_security_group', `${tier.name}-default`, {
+    tfg.addResource('aws_security_group', `${tier.name}-default`, {
       name: `fw-${tier.name}-default`,
       description: `Default for ${tier.name} tier`,
       vpc_id: vpc.getAttribute('id'),
@@ -224,18 +224,18 @@ const generate = (version: TerraformVersion): string => {
   });
 
   // NAT Gateway
-  const natEip = new Resource(tfGenerator, 'aws_eip', 'nat', {
+  const natEip = tfg.addResource('aws_eip', 'nat', {
     vpc: true,
     tags: getTags('eip', 'nat')
   });
 
-  const nat = new Resource(tfGenerator, 'aws_nat_gateway', 'nat', {
+  const nat = tfg.addResource('aws_nat_gateway', 'nat', {
     allocation_id: natEip.getAttribute('id'),
     subnet_id: publicSubnets[0].getAttribute('id'),
     tags: getTags('nat')
   });
 
-  const rtNat = new Resource(tfGenerator, 'aws_route_table', 'nat', {
+  const rtNat = tfg.addResource('aws_route_table', 'nat', {
     vpc_id: vpc.getAttribute('id'),
     route: {
       cidr_block: '0.0.0.0/0',
@@ -245,20 +245,20 @@ const generate = (version: TerraformVersion): string => {
   });
 
   gutSubnets.forEach(subnet => {
-    new Resource(tfGenerator, 'aws_route_table_association', `nat-${subnet.name}`, {
+    tfg.addResource('aws_route_table_association', `nat-${subnet.name}`, {
       subnet_id: subnet.getAttribute('id'),
       route_table_id: rtNat.getAttribute('id')
     });
   });
 
   // Output
-  new Output(tfGenerator, 'vpc', {
+  tfg.addOutput('vpc', {
     value: new Map({
       cidr: vpc.getAttribute('cidr_block')
     })
   });
 
-  new Output(tfGenerator, 'subnets', {
+  tfg.addOutput('subnets', {
     value: new Map({
       publicSubnets: publicSubnets.map(subnet => subnet.getAttribute('cidr_block')),
       webSubnets: webSubnets.map(subnet => subnet.getAttribute('cidr_block')),
@@ -270,7 +270,7 @@ const generate = (version: TerraformVersion): string => {
   });
 
   // Generate Terraform
-  return tfGenerator.generate();
+  return tfg.generate();
 };
 
 test('VPC Project 0.11', () => {

@@ -36,19 +36,19 @@ npm install terraform-generator
 
 ### **Initiate TerraformGenerator**
 ```javascript
-const tfGenerator = new TerraformGenerator({ version: '0.12' });
+const tfg = new TerraformGenerator({ version: '0.12' });
 ```
 
 ### **Block**
 Block's arguments are not typed, please refer to official Terraform documentation on what arguments can be supplied.
 
 ```javascript
-new Provider(tfGenerator, 'aws', {
+tfg.addProvider('aws', {
   region: 'ap-southeast-1',
   profile: 'example'
 });
 
-const vpc = new Resource(tfGenerator, 'aws_vpc', 'vpc', {
+const vpc = tfg.addResource('aws_vpc', 'vpc', {
   cidr_block: '172.88.0.0/16'
 });
 ```
@@ -151,16 +151,16 @@ const getTags = (type: string, name?: string): Map => new Map({
 });
 
 // Start writing Terraform plan
-const tfGenerator = new TerraformGenerator({ version: '0.12' });
+const tfg = new TerraformGenerator({ version: '0.12' });
 
 // Configure provider
-new Provider(tfGenerator, 'aws', {
+tfg.addProvider('aws', {
   region: 'ap-southeast-1',
   profile: 'example'
 });
 
 // Find VPC by name
-const vpc = new DataSource(tfGenerator, 'aws_vpc', 'vpc', {
+const vpc = new DataSource('aws_vpc', 'vpc', {
   filter: [{
     name: 'tag:Name',
     values: [getTagName('vpc')]
@@ -177,18 +177,18 @@ const subnets = {
 configs.tiers.forEach(tier => {
   tier.subnetCidrs.forEach((cidr, i) => {
     const name = `${tier.name}${i}`;
-    const subnet = new Resource(tfGenerator, 'aws_subnet', `subnet_${name}`, {
+    const subnet = tfg.addResource('aws_subnet', `subnet_${name}`, {
       vpc_id: vpc.getAttribute('id'),
       cidr_block: cidr,
       availability_zone: getAvailabilityZone(i),
       tags: getTags('subnet', name)
     });
     subnets[tier.name].push(subnet);
-  })
+  });
 });
 
 // Output all subnet ids
-new Output(tfGenerator, 'subnets', {
+tfg.addOutput('subnets', {
   value: new Map({
     webSubnets: subnets.web.map(subnet => subnet.getAttribute('id')),
     appSubnets: subnets.app.map(subnet => subnet.getAttribute('id')),
@@ -198,5 +198,5 @@ new Output(tfGenerator, 'subnets', {
 
 // Write the plan into a terraform.tf file
 const outputPath = path.join('output', configs.env, 'subnets', 'terraform.tf');
-fs.writeFileSync(outputPath, tfGenerator.generate());
+fs.writeFileSync(outputPath, tfg.generate());
 ```

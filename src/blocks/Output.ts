@@ -1,11 +1,11 @@
-import TerraformGenerator, { Block, Argument, Attribute } from '../..';
+import { Block, Argument, Attribute } from '../..';
 
 export default class Output extends Block {
 
   readonly name: string;
 
-  constructor(tfGenerator: TerraformGenerator, name: string, args: object) {
-    super(tfGenerator, 'output', [name], args);
+  constructor(name: string, args: object) {
+    super('output', [name], args);
 
     this.name = name;
   }
