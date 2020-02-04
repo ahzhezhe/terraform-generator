@@ -70,6 +70,17 @@ const generate = (version: TerraformVersion): string => {
     profile: 'test'
   });
 
+  // For test only
+  tfg.addVariable('test', {
+    type: 'string'
+  });
+  tfg.addDataSource('aws_vpc', 'vpc', {
+    cidr_block: 'test'
+  });
+  tfg.addModule('test', {
+    source: './test'
+  });
+
   // VPC
   const vpc = tfg.addResource('aws_vpc', 'vpc', {
     cidr_block: configs.vpc.cidr,
