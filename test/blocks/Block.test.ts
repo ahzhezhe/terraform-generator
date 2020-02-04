@@ -1,7 +1,8 @@
-import { Resource } from '../../src';
+import { Resource, Output } from '../../src';
 
 test('Block identifier', () => {
   expect(() => new Resource('!@#', '$%^', {})).toThrow();
+  expect(() => new Output(null, {})).toThrow();
 });
 
 test('Block arguments', () => {

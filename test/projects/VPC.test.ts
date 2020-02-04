@@ -62,7 +62,15 @@ const getTags = (type: string, name?: string, tier?: string): Map => new Map({
 
 const generate = (version: TerraformVersion): string => {
   // Terraform
-  const tfg = new TerraformGenerator({ version });
+  const tfg = new TerraformGenerator({ version }, {
+    required_version: `= ${version}`
+  });
+
+  tfg.addBackend('s3', {
+    bucket: 'mybucket',
+    key: 'path/to/my/key',
+    region: 'ap-southeast-1'
+  });
 
   // Provider
   tfg.addProvider('aws', {

@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VPC Project 0.11 1`] = `
-"provider \\"aws\\"{
+"terraform {
+required_version = \\"= 0.11\\"
+backend \\"s3\\"{
+bucket = \\"mybucket\\"
+key = \\"path/to/my/key\\"
+region = \\"ap-southeast-1\\"
+}
+
+}
+
+provider \\"aws\\"{
 region = \\"ap-southeast-1\\"
 profile = \\"test\\"
 }
@@ -610,7 +620,17 @@ dbSubnets = [
 `;
 
 exports[`VPC Project 0.12 1`] = `
-"provider \\"aws\\"{
+"terraform {
+required_version = \\"= 0.12\\"
+backend \\"s3\\"{
+bucket = \\"mybucket\\"
+key = \\"path/to/my/key\\"
+region = \\"ap-southeast-1\\"
+}
+
+}
+
+provider \\"aws\\"{
 region = \\"ap-southeast-1\\"
 profile = \\"test\\"
 }

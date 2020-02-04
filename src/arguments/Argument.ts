@@ -8,10 +8,7 @@ export default class Argument {
       this.asIs = args[0] as boolean;
       args.splice(0, 1);
     }
-    if (args.length < 1) {
-      throw new Error('Argument cannot be empty.');
-    }
-    if (args.filter(arg => typeof arg === 'boolean').length > 0) {
+    if (args.length < 1 || args.filter(arg => arg == null || typeof arg === 'boolean').length > 0) {
       throw new Error(`Invalid argument: ${args}`);
     }
     this.args = args as (string | Argument)[];

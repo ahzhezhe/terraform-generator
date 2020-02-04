@@ -46,7 +46,9 @@ import TerraformGenerator, { Resource, Map, Argument, Utils } from 'terraform-ge
 
 ### **Initiate TerraformGenerator**
 ```javascript
-const tfg = new TerraformGenerator({ version: '0.12' });
+const tfg = new TerraformGenerator({ version: '0.12' }, {
+  required_version: '>= 0.12'
+});
 ```
 
 ### **Block**
@@ -93,6 +95,7 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
   }),
   block: block,
   blockAttribute: block.getAttribute('attrName'),
+  asIsArg: new Argument(true, 'AS IS'), // it will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version
   heredoc: new Heredoc(`line1
                         line2
                         line3`);
