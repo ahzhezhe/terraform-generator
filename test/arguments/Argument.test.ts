@@ -1,5 +1,4 @@
-import { Argument, Attribute, Heredoc } from '../../src';
-import { resource } from '..';
+import { Argument } from '../../src';
 
 test('Argument invalid args', () => {
   expect(() => new Argument(null)).toThrow();
@@ -13,12 +12,4 @@ test('Argument', () => {
   expect(new Argument('x', 'y', 'z').toTerraform()).toBe('xyz');
   expect(new Argument(true, 'x').toTerraform()).toBe('x');
   expect(new Argument(false, 'x').toTerraform()).toBe('x');
-});
-
-test('Attribute', () => {
-  expect(new Attribute(resource, 'x').toTerraform()).toBe('type.name.x');
-});
-
-test('Heredoc', () => {
-  expect(new Heredoc('x').toTerraform()).toBe('<<EOT\nx\nEOT');
 });

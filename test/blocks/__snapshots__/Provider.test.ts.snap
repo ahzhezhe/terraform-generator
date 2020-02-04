@@ -44,7 +44,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -88,7 +89,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -133,7 +135,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -177,97 +180,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 arg101 {
@@ -313,7 +227,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -357,7 +272,100 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 arg102 = {
@@ -403,7 +411,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -447,7 +456,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -492,7 +502,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -536,97 +547,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 arg101 {
@@ -672,7 +594,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -716,7 +639,100 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 }
@@ -769,7 +785,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -813,7 +830,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -858,7 +876,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -902,97 +921,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 arg101 {
@@ -1038,7 +968,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1082,7 +1013,100 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 arg102 = {
@@ -1128,7 +1152,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1172,7 +1197,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -1217,7 +1243,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1261,97 +1288,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 arg101 {
@@ -1397,7 +1335,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1441,7 +1380,100 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 }
@@ -1494,7 +1526,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1538,7 +1571,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -1583,7 +1617,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1627,97 +1662,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 arg101 {
@@ -1763,7 +1709,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1807,7 +1754,100 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 arg102 = {
@@ -1853,7 +1893,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1897,7 +1938,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -1942,7 +1984,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -1986,97 +2029,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${max(5, 12, 9)}\\"
-arg12 = \\"\${max(5, type.name.attr, 9)}\\"
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 arg101 {
@@ -2122,7 +2076,8 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -2166,7 +2121,100 @@ arg12 = \\"\${max(5, type.name.attr, 9)}\\"
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\",
+]
+arg11 = \\"\${max(5, 12, 9)}\\"
+arg12 = \\"\${max(5, type.name.attr, 9)}\\"
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = \\"\${fn(1, 2, 3)}\\"
+arg15 = AS IS
 }
 }
 }
@@ -2220,7 +2268,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -2264,7 +2313,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -2309,7 +2359,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -2353,97 +2404,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 arg101 {
@@ -2489,7 +2451,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -2533,7 +2496,100 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 arg102 = {
@@ -2579,7 +2635,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -2623,7 +2680,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 arg101 {
 arg0 = \\"a\\"
@@ -2668,7 +2726,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -2712,97 +2771,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = max(5, 12, 9)
-arg12 = max(5, type.name.attr, 9)
-arg13 = <<EOT
-heredoc
-EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 arg101 {
@@ -2848,7 +2818,8 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 arg100 {
 arg0 = \\"a\\"
 arg1 = [
@@ -2892,7 +2863,100 @@ arg12 = max(5, type.name.attr, 9)
 arg13 = <<EOT
 heredoc
 EOT
-arg14 = AS IS
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\",
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3,
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false,
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr,
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name,
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name,
+]
+arg11 = max(5, 12, 9)
+arg12 = max(5, type.name.attr, 9)
+arg13 = <<EOT
+heredoc
+EOT
+arg14 = fn(1, 2, 3)
+arg15 = AS IS
 }
 }
 }

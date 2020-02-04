@@ -14,6 +14,7 @@ export { default as Backend } from './blocks/Backend';
 export { default as Argument } from './arguments/Argument';
 export { default as Attribute } from './arguments/Attribute';
 export { default as Heredoc } from './arguments/Heredoc';
+export { default as Function } from './arguments/Function';
 
 export { default as Map } from './types/Map';
 
