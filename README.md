@@ -41,7 +41,7 @@ npm install terraform-generator
 
 ### **Import**
 ```javascript
-import TerraformGenerator, { Resource, Map, Argument, Utils } from 'terraform-generator';
+import TerraformGenerator, { Resource, map, arg, Utils } from 'terraform-generator';
 ```
 
 ### **Initiate TerraformGenerator**
@@ -88,29 +88,29 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
       arg1: 'str'
     }
   ],
-  map: new Map({
+  map: map({
     arg1: 'str',
     arg2: 123,
     arg3: true
   }),
   block: block,
-  blockAttribute: block.getAttribute('attrName'),
-  heredoc: new Heredoc(`line1
+  blockAttribute: block.attr('attrName'),
+  heredoc: heredoc(`line1
                         line2
                         line3`),
-  function1: new Function('max', 5, 12, 19),
-  function2: new Function('sort', 'a', block.getAttribute('attrName'), 'c'),
-  custom1: new Argument('max(5, 12, 9)'),
-  custom2: new Argument('as is', true) // it will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version
+  function1: fn('max', 5, 12, 19),
+  function2: fn('sort', 'a', block.attr('attrName'), 'c'),
+  custom1: arg('max(5, 12, 9)'),
+  custom2: arg('as is', true) // it will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version
 }
 ```
 
 ### **Attributes**
 ```javascript
-block.getAttribute('id')                 // block id, string
-block.getAttribute('subnets')            // subnet objects, object list
-block.getAttribute('subnets.*.id')       // subnet ids, string list
-block.getAttribute('subnets.*.id[0]')    // first subnet id, string
+block.attr('id')                 // block id, string
+block.attr('subnets')            // subnet objects, object list
+block.attr('subnets.*.id')       // subnet ids, string list
+block.attr('subnets.*.id[0]')    // first subnet id, string
 ```
 
 ### **Generate Terraform plan**
@@ -128,8 +128,7 @@ Utils.writePlan(tfg.generate(), 'output', { filename: 'output.tf', format: true 
 
 ## **Example**
 ```javascript
-import TerraformGenerator, { Map, Utils } from 'terraform-generator';
-import fs from 'fs';
+import TerraformGenerator, { Map, map, Utils } from 'terraform-generator';
 import path from 'path';
 
 // Constants
@@ -205,7 +204,7 @@ configs.tiers.forEach(tier => {
   tier.subnetCidrs.forEach((cidr, i) => {
     const name = `${tier.name}${i}`;
     const subnet = tfg.addResource('aws_subnet', `subnet_${name}`, {
-      vpc_id: vpc.getAttribute('id'),
+      vpc_id: vpc.attr('id'),
       cidr_block: cidr,
       availability_zone: getAvailabilityZone(i),
       tags: getTags('subnet', name)
@@ -216,10 +215,10 @@ configs.tiers.forEach(tier => {
 
 // Output all subnet ids
 tfg.addOutput('subnets', {
-  value: new Map({
-    webSubnets: subnets.web.map(subnet => subnet.getAttribute('id')),
-    appSubnets: subnets.app.map(subnet => subnet.getAttribute('id')),
-    dbSubnets: subnets.db.map(subnet => subnet.getAttribute('id'))
+  value: map({
+    webSubnets: subnets.web.map(subnet => subnet.attr('id')),
+    appSubnets: subnets.app.map(subnet => subnet.attr('id')),
+    dbSubnets: subnets.db.map(subnet => subnet.attr('id'))
   })
 });
 

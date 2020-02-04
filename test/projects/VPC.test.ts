@@ -108,7 +108,7 @@ const generate = (version: TerraformVersion): string => {
     for (let i = 0; i < tier.subnetCidrs.length; i++) {
       const name = `${tier.name}${i}`;
       const subnet = tfg.addResource('aws_subnet', name, {
-        vpc_id: vpc.getAttribute('id'),
+        vpc_id: vpc.attr('id'),
         cidr_block: tier.subnetCidrs[i],
         availability_zone: getAvailabilityZone(i),
         tags: getTags('subnet', name)
@@ -133,22 +133,22 @@ const generate = (version: TerraformVersion): string => {
 
   // Internet gateway
   const igw = tfg.addResource('aws_internet_gateway', 'igw', {
-    vpc_id: vpc.getAttribute('id'),
+    vpc_id: vpc.attr('id'),
     tags: getTags('igw')
   });
 
   // Route tables
   const rtDefault = tfg.addResource('aws_route_table', 'default', {
-    vpc_id: vpc.getAttribute('id'),
+    vpc_id: vpc.attr('id'),
     tags: getTags('rt', 'default')
   });
 
   const rtIgw = tfg.addResource('aws_route_table', 'igw', {
-    vpc_id: vpc.getAttribute('id'),
+    vpc_id: vpc.attr('id'),
     route: [
       {
         cidr_block: '0.0.0.0/0',
-        gateway_id: igw.getAttribute('id')
+        gateway_id: igw.attr('id')
       }
     ],
     tags: getTags('rt', 'igw')
@@ -156,15 +156,15 @@ const generate = (version: TerraformVersion): string => {
 
   webSubnets.concat(appSubnets, gutSubnets, dbSubnets, itSubnets).forEach(subnet => {
     tfg.addResource('aws_route_table_association', `default-${subnet.name}`, {
-      subnet_id: subnet.getAttribute('id'),
-      route_table_id: rtDefault.getAttribute('id')
+      subnet_id: subnet.attr('id'),
+      route_table_id: rtDefault.attr('id')
     });
   });
 
   publicSubnets.forEach(subnet => {
     tfg.addResource('aws_route_table_association', `igw-${subnet.name}`, {
-      subnet_id: subnet.getAttribute('id'),
-      route_table_id: rtIgw.getAttribute('id')
+      subnet_id: subnet.attr('id'),
+      route_table_id: rtIgw.attr('id')
     });
   });
 
@@ -200,16 +200,16 @@ const generate = (version: TerraformVersion): string => {
   ];
 
   tfg.addResource('aws_network_acl', 'default', {
-    vpc_id: vpc.getAttribute('id'),
-    subnet_ids: publicSubnets.concat(webSubnets, appSubnets, gutSubnets, itSubnets, mgtSubnets).map(subnet => subnet.getAttribute('id')),
+    vpc_id: vpc.attr('id'),
+    subnet_ids: publicSubnets.concat(webSubnets, appSubnets, gutSubnets, itSubnets, mgtSubnets).map(subnet => subnet.attr('id')),
     ingress: defaultNACLRules,
     egress: defaultNACLRules,
     tags: getTags('nacl', 'default')
   });
 
   tfg.addResource('aws_network_acl', 'db', {
-    vpc_id: vpc.getAttribute('id'),
-    subnet_ids: dbSubnets.map(subnet => subnet.getAttribute('id')),
+    vpc_id: vpc.attr('id'),
+    subnet_ids: dbSubnets.map(subnet => subnet.attr('id')),
     ingress: dbNACLRules,
     egress: dbNACLRules,
     tags: getTags('nacl', 'db')
@@ -235,7 +235,7 @@ const generate = (version: TerraformVersion): string => {
     tfg.addResource('aws_security_group', `${tier.name}-default`, {
       name: `fw-${tier.name}-default`,
       description: `Default for ${tier.name} tier`,
-      vpc_id: vpc.getAttribute('id'),
+      vpc_id: vpc.attr('id'),
       ingress: sgIngress,
       egress: sgEgress,
       tags: getTags('sg', 'default', tier.name)
@@ -249,42 +249,42 @@ const generate = (version: TerraformVersion): string => {
   });
 
   const nat = tfg.addResource('aws_nat_gateway', 'nat', {
-    allocation_id: natEip.getAttribute('id'),
-    subnet_id: publicSubnets[0].getAttribute('id'),
+    allocation_id: natEip.attr('id'),
+    subnet_id: publicSubnets[0].attr('id'),
     tags: getTags('nat')
   });
 
   const rtNat = tfg.addResource('aws_route_table', 'nat', {
-    vpc_id: vpc.getAttribute('id'),
+    vpc_id: vpc.attr('id'),
     route: {
       cidr_block: '0.0.0.0/0',
-      gateway_id: nat.getAttribute('id')
+      gateway_id: nat.attr('id')
     },
     tags: getTags('rt', 'nat')
   });
 
   gutSubnets.forEach(subnet => {
     tfg.addResource('aws_route_table_association', `nat-${subnet.name}`, {
-      subnet_id: subnet.getAttribute('id'),
-      route_table_id: rtNat.getAttribute('id')
+      subnet_id: subnet.attr('id'),
+      route_table_id: rtNat.attr('id')
     });
   });
 
   // Output
   tfg.addOutput('vpc', {
     value: new Map({
-      cidr: vpc.getAttribute('cidr_block')
+      cidr: vpc.attr('cidr_block')
     })
   });
 
   tfg.addOutput('subnets', {
     value: new Map({
-      publicSubnets: publicSubnets.map(subnet => subnet.getAttribute('cidr_block')),
-      webSubnets: webSubnets.map(subnet => subnet.getAttribute('cidr_block')),
-      appSubnets: appSubnets.map(subnet => subnet.getAttribute('cidr_block')),
-      gutSubnets: gutSubnets.map(subnet => subnet.getAttribute('cidr_block')),
-      mgtSubnets: mgtSubnets.map(subnet => subnet.getAttribute('cidr_block')),
-      dbSubnets: dbSubnets.map(subnet => subnet.getAttribute('cidr_block'))
+      publicSubnets: publicSubnets.map(subnet => subnet.attr('cidr_block')),
+      webSubnets: webSubnets.map(subnet => subnet.attr('cidr_block')),
+      appSubnets: appSubnets.map(subnet => subnet.attr('cidr_block')),
+      gutSubnets: gutSubnets.map(subnet => subnet.attr('cidr_block')),
+      mgtSubnets: mgtSubnets.map(subnet => subnet.attr('cidr_block')),
+      dbSubnets: dbSubnets.map(subnet => subnet.attr('cidr_block'))
     })
   });
 
