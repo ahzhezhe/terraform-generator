@@ -2,8 +2,14 @@ import { Argument } from '..';
 
 export default class Function extends Argument {
 
-  constructor(fn: string, ...args: (string | number | boolean | Argument)[]) {
-    super(Function.constructArgument(fn, ...args));
+  /**
+   * Construct function argument.
+   * 
+   * @param fnName function name
+   * @param args function arguments
+   */
+  constructor(fnName: string, ...args: (string | number | boolean | Argument)[]) {
+    super(Function.constructArgument(fnName, ...args));
   }
 
   private static constructArgument(fn: string, ...args: (string | number | boolean | Argument)[]): string {

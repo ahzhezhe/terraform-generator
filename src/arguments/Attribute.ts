@@ -2,6 +2,12 @@ import { Argument, Block } from '..';
 
 export default class Attribute extends Argument {
 
+  /**
+   * Construct block's attribute.
+   * 
+   * @param block block
+   * @param name attribute name
+   */
   constructor(block: Block, name: string) {
     super(Attribute.constructArgument(block, name));
   }

@@ -6,6 +6,13 @@ export default abstract class Block {
   readonly blockNames: string[];
   private readonly arguments: object;
 
+  /**
+   * Construct block.
+   * 
+   * @param type type
+   * @param names names
+   * @param args arguments
+   */
   constructor(type: string, names: string[], args?: object) {
     this.validateIdentifier(type);
     names.forEach(name => {
