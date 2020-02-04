@@ -40,4 +40,4 @@ export default class Function extends Argument {
  * @param name function name
  * @param args function arguments
  */
-export const fn = (name: string, ...args: any[]): Function => new Function(name, args);
+export const fn = (name: string, ...args: any[]): Function => new Function(name, ...args);
