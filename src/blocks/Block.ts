@@ -1,4 +1,5 @@
-import TerraformGenerator, { TerraformVersion, Attribute, Argument } from '..';
+import { TerraformVersion, Attribute, Argument } from '..';
+import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
 
 export default abstract class Block {
 
@@ -24,19 +25,38 @@ export default abstract class Block {
     this.arguments = args ? args : {};
   }
 
+  /**
+   * Get arguments.
+   */
   getArguments(): object {
     return this.arguments;
   }
 
+  /**
+   * Get argument by key.
+   * 
+   * @param key key
+   */
   getArgument(key: string): any {
     return this.arguments[key];
   }
 
+  /**
+   * Set argument.
+   * 
+   * @param key key
+   * @param value value
+   */
   setArgument(key: string, value: any): Block {
     this.arguments[key] = value;
     return this;
   }
 
+  /**
+   * Set arguments.
+   * 
+   * @param args arguments
+   */
   setArguments(args: object): Block {
     for (const key in args) {
       this.arguments[key] = args[key];
@@ -44,24 +64,42 @@ export default abstract class Block {
     return this;
   }
 
+  /**
+   * Delete argument by key.
+   * 
+   * @param key key
+   */
   deleteArgument(key: string): Block {
     delete this.arguments[key];
     return this;
   }
 
+  /**
+   * To Terraform representation.
+   * 
+   * @param version Terraform version
+   */
   toTerraform(version: TerraformVersion): string {
     let str = this.blockType;
     this.blockNames.forEach(name => {
       str += ` "${name}"`;
     });
     str += '{\n';
-    str += TerraformGenerator.argumentsToString(version, this.arguments);
+    str += TerraformGeneratorUtils.argumentsToString(version, this.arguments);
     str += '}\n\n';
     return str;
   }
 
+  /**
+   * Represent block as argument.
+   */
   abstract asArgument(): Argument;
 
+  /**
+   * Get block's attribute.
+   * 
+   * @param name attribute name
+   */
   abstract getAttribute(name: string): Attribute;
 
   private validateIdentifier(identifier: string): void {

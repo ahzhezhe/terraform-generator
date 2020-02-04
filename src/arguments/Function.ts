@@ -1,4 +1,5 @@
-import TerraformGenerator, { Argument } from '..';
+import { Argument } from '..';
+import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
 
 export default class Function extends Argument {
 
@@ -22,7 +23,7 @@ export default class Function extends Argument {
 
     let str = `${fn}(`;
     args.forEach((arg, i) => {
-      str += TerraformGenerator.argumentValueToString(null, arg);
+      str += TerraformGeneratorUtils.argumentValueToString(null, arg);
       if (i < args.length - 1) {
         str += ', ';
       }

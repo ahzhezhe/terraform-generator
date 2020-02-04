@@ -4,6 +4,13 @@ export default class Backend extends Block {
 
   readonly type: string;
 
+  /**
+   * Construct backend.
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   * 
+   * @param type type
+   * @param args arguments
+   */
   constructor(type: string, args?: object) {
     super('backend', [type], args);
 

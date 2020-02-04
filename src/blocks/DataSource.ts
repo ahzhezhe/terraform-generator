@@ -5,6 +5,14 @@ export default class DataSource extends Block {
   readonly type: string;
   readonly name: string;
 
+  /**
+   * Construct data source.
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   * 
+   * @param type type
+   * @param name name
+   * @param args arguments
+   */
   constructor(type: string, name: string, args?: object) {
     super('data', [type, name], args);
 

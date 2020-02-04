@@ -2,19 +2,26 @@ import { Block, Argument, Attribute } from '..';
 
 export default class Provider extends Block {
 
-  readonly name: string;
+  readonly type: string;
 
-  constructor(name: string, args?: object) {
-    super('provider', [name], args);
+  /**
+   * Construct provider.
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   * 
+   * @param type type
+   * @param args arguments
+   */
+  constructor(type: string, args?: object) {
+    super('provider', [type], args);
 
-    this.name = name;
+    this.type = type;
   }
 
   asArgument(): Argument {
     if (this.getArgument('alias')) {
-      return new Argument(`${this.name}.${this.getArgument('alias')}`);
+      return new Argument(`${this.type}.${this.getArgument('alias')}`);
     }
-    return new Argument(this.name);
+    return new Argument(this.type);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

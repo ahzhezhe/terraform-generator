@@ -5,6 +5,14 @@ export default class Resource extends Block {
   readonly type: string;
   readonly name: string;
 
+  /**
+   * Construct resource.
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   * 
+   * @param type type
+   * @param name name
+   * @param args arguments
+   */
   constructor(type: string, name: string, args?: object) {
     super('resource', [type, name], args);
 

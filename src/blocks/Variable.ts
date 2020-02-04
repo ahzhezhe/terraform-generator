@@ -4,6 +4,13 @@ export default class Variable extends Block {
 
   readonly name: string;
 
+  /**
+   * Construct variable.
+   * Refer to Terraform documentation on what can be put as arguments.
+   * 
+   * @param name name
+   * @param args arguments
+   */
   constructor(name: string, args?: object) {
     super('variable', [name], args);
 
