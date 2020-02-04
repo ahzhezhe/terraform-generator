@@ -9,6 +9,7 @@ export { default as DataSource } from './blocks/DataSource';
 export { default as Output } from './blocks/Output';
 export { default as Module } from './blocks/Module';
 export { default as Variable } from './blocks/Variable';
+export { default as Backend } from './blocks/Backend';
 
 export { default as Argument } from './arguments/Argument';
 export { default as Attribute } from './arguments/Attribute';

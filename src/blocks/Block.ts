@@ -1,4 +1,4 @@
-import { TerraformVersion, Attribute, Argument, Heredoc, Map } from '..';
+import { TerraformVersion, Attribute, Argument, Map } from '..';
 
 export default abstract class Block {
 
@@ -130,7 +130,7 @@ export default abstract class Block {
       return this.argumentValueToString(version, value.asArgument());
 
     } else if (value instanceof Argument) {
-      if (value instanceof Heredoc) {
+      if (value.asIs) {
         return value.toTerraform();
       }
 

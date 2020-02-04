@@ -1,4 +1,4 @@
-import { Block, Resource, DataSource, Module, Output, Provider, Variable } from '.';
+import { Block, Resource, DataSource, Module, Output, Provider, Variable, Backend } from '.';
 
 export type TerraformVersion = '0.11' | '0.12';
 
@@ -60,6 +60,12 @@ export default class TerraformGenerator {
 
   addVariable(name: string, args: object): Variable {
     const block = new Variable(name, args);
+    this.addBlock(block);
+    return block;
+  }
+
+  addBackend(type: string, args: object): Backend {
+    const block = new Backend(type, args);
     this.addBlock(block);
     return block;
   }
