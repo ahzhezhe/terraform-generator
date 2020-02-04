@@ -1,6 +1,6 @@
 import { default as TerraformGenerator } from './TerraformGenerator';
 export default TerraformGenerator;
-export { TerraformVersion, TerraformGeneratorOptions } from './TerraformGenerator';
+export { TerraformVersion, TerraformGeneratorOptions, WriteOptions } from './TerraformGenerator';
 
 export { default as Block } from './blocks/Block';
 export { default as Provider } from './blocks/Provider';
@@ -17,5 +17,3 @@ export { default as Heredoc, heredoc } from './arguments/Heredoc';
 export { default as Function, fn } from './arguments/Function';
 
 export { default as Map, map } from './types/Map';
-
-export { default as Utils } from './utils/Utils';

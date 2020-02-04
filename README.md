@@ -41,7 +41,7 @@ npm install terraform-generator
 
 ### **Import**
 ```javascript
-import TerraformGenerator, { Resource, map, arg, Utils } from 'terraform-generator';
+import TerraformGenerator, { Resource, map, fn } from 'terraform-generator';
 ```
 
 ### **Initiate TerraformGenerator**
@@ -115,20 +115,18 @@ block.attr('subnets.*.id[0]')    // first subnet id, string
 
 ### **Generate Terraform plan**
 ```javascript
+// Generate Terraform plan as string
 tfg.generate();
-```
 
-### **Utils**
-```javascript
 // Write Terraform plan to a file
 // Default filename is terraform.tf
 // Default format is false, if format is true, Terraform needs to be installed
-Utils.writePlan(tfg.generate(), 'output', { filename: 'output.tf', format: true });
+tfg.write('outputDir', { filename: 'output.tf', format: true });
 ```
 
 ## **Example**
 ```javascript
-import TerraformGenerator, { Map, map, Utils } from 'terraform-generator';
+import TerraformGenerator, { Map, map } from 'terraform-generator';
 import path from 'path';
 
 // Constants
@@ -224,5 +222,5 @@ tfg.addOutput('subnets', {
 
 // Write the plan into a terraform.tf file
 const outputDir = path.join('output', configs.env, 'subnets');
-Utils.writePlan(tfg.generate(), outputDir, { format: true });
+tfg.write(outputDir, { format: true });
 ```

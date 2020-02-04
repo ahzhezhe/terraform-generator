@@ -1,3 +1,6 @@
+import shell from 'shelljs';
+import fs from 'fs';
+import path from 'path';
 import { Block, Resource, DataSource, Module, Output, Provider, Variable, Backend } from '.';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
@@ -9,6 +12,15 @@ export type TerraformVersion = '0.11' | '0.12';
 export interface TerraformGeneratorOptions {
   version: TerraformVersion;
 }
+
+/**
+ * @param filename Terraform filename, must ends with .tf, default = terraform.tf
+ * @param format use 'terraform fmt' to format the plan, Terraform must be installed, default = false
+ */
+export interface WriteOptions {
+  filename?: string;
+  format?: boolean
+};
 
 export default class TerraformGenerator {
 
@@ -52,6 +64,33 @@ export default class TerraformGenerator {
     });
 
     return str;
+  }
+
+  /**
+   * Write Terraform plan to a file.
+   * 
+   * @param dir directory
+   * @param options options
+   */
+  write(dir: string, options?: WriteOptions): void {
+    if (!options) {
+      options = {};
+    }
+    if (!options.filename) {
+      options.filename = 'terraform.tf';
+    }
+    if (!options.filename.endsWith('.tf')) {
+      options.filename += '.tf';
+    }
+
+    if (!fs.existsSync(dir)) {
+      shell.mkdir('-p', dir);
+    }
+    fs.writeFileSync(path.join(dir, options.filename), this.generate());
+
+    if (options.format) {
+      shell.exec(`cd ${dir} && terraform fmt`);
+    }
   }
 
   /**

@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import TerraformGenerator, { TerraformVersion, Resource, Map } from '../../src';
 
 const project = 'test';
@@ -60,7 +62,7 @@ const getTags = (type: string, name?: string, tier?: string): Map => new Map({
   Env: configs.env
 });
 
-const generate = (version: TerraformVersion): string => {
+const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator => {
   // Terraform
   const tfg = new TerraformGenerator({ version }, {
     required_version: `= ${version}`
@@ -288,14 +290,30 @@ const generate = (version: TerraformVersion): string => {
     })
   });
 
-  // Generate Terraform
-  return tfg.generate();
+  return tfg;
 };
 
+const outputDir = path.join('test', '__output__');
+
 test('VPC Project 0.11', () => {
-  expect(generate('0.11')).toMatchSnapshot();
+  const tfg = createTerraformGenerator('0.11');
+  expect(tfg.generate()).toMatchSnapshot();
+
+  tfg.write(outputDir);
+  const plan = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
+  expect(plan).toMatchSnapshot();
 });
 
 test('VPC Project 0.12', () => {
-  expect(generate('0.12')).toMatchSnapshot();
+  const tfg = createTerraformGenerator('0.12');
+  expect(tfg.generate()).toMatchSnapshot();
+
+  tfg.write(outputDir);
+  const plan = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
+  expect(plan).toMatchSnapshot();
+});
+
+afterAll(() => {
+  fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
+  fs.rmdirSync(outputDir);
 });
