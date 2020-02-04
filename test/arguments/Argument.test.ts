@@ -1,4 +1,4 @@
-import { Argument } from '../../src';
+import { Argument, arg } from '../../src';
 import { attr } from '..';
 
 test('Argument invalid args', () => {
@@ -15,4 +15,13 @@ test('Argument', () => {
   expect(new Argument(attr).toTerraform()).toBe('type.name.attr');
   expect(new Argument(attr, true).toTerraform()).toBe('type.name.attr');
   expect(new Argument(attr, false).toTerraform()).toBe('type.name.attr');
+});
+
+test('arg', () => {
+  expect(arg('x').toTerraform()).toBe('x');
+  expect(arg('x', true).toTerraform()).toBe('x');
+  expect(arg('x', false).toTerraform()).toBe('x');
+  expect(arg(attr).toTerraform()).toBe('type.name.attr');
+  expect(arg(attr, true).toTerraform()).toBe('type.name.attr');
+  expect(arg(attr, false).toTerraform()).toBe('type.name.attr');
 });

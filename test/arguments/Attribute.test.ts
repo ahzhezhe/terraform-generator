@@ -1,4 +1,4 @@
-import { Attribute } from '../../src';
+import { Attribute, attr } from '../../src';
 import { resource } from '..';
 
 test('Attribute invalid args', () => {
@@ -11,4 +11,8 @@ test('Attribute invalid args', () => {
 
 test('Attribute', () => {
   expect(new Attribute(resource, 'x').toTerraform()).toBe('type.name.x');
+});
+
+test('attr', () => {
+  expect(attr(resource, 'x').toTerraform()).toBe('type.name.x');
 });
