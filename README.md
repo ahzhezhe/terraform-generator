@@ -1,6 +1,9 @@
 # **terraform-generator** 
 
-![CI](https://github.com/ahzhezhe/terraform-generator/workflows/Test/badge.svg?branch=master)
+[![npm package](https://img.shields.io/npm/v/terraform-generator/latest.svg)](https://www.npmjs.com/package/terraform-generator)
+[![npm downloads](https://img.shields.io/npm/dt/terraform-generator.svg)](https://www.npmjs.com/package/terraform-generator)
+![GitHub test](https://github.com/ahzhezhe/terraform-generator/workflows/test/badge.svg?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/ahzhezhe/terraform-generator.svg)](https://github.com/ahzhezhe/terraform-generator)
 
 Use Node.js to generate Terraform plan.
 
@@ -99,6 +102,11 @@ block.getAttribute('id')                 // block id, string
 block.getAttribute('subnets')            // subnet objects, object list
 block.getAttribute('subnets.*.id')       // subnet ids, string list
 block.getAttribute('subnets.*.id[0]')    // first subnet id, string
+```
+
+### **Generate Terraform plan**
+```javascript
+tfg.generate();
 ```
 
 ## **Example**
