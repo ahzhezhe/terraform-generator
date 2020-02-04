@@ -109,9 +109,20 @@ block.getAttribute('subnets.*.id[0]')    // first subnet id, string
 tfg.generate();
 ```
 
+### **Utils**
+```javascript
+import { writePlan } from 'terraform-generator/utils';
+
+// Write Terraform plan to a file
+// Default filename is terraform.tf
+// Default format is false, if format is true, Terraform needs to be installed
+writePlan(tfg.generate(), 'output', { filename: 'output.tf', format: true });
+```
+
 ## **Example**
 ```javascript
 import TerraformGenerator, { Provider, Resource, DataSource, Output, Map } from 'terraform-generator';
+import { writePlan } from 'terraform-generator/utils';
 import fs from 'fs';
 import path from 'path';
 
@@ -207,6 +218,6 @@ tfg.addOutput('subnets', {
 });
 
 // Write the plan into a terraform.tf file
-const outputPath = path.join('output', configs.env, 'subnets', 'terraform.tf');
-fs.writeFileSync(outputPath, tfg.generate());
+const outputDir = path.join('output', configs.env, 'subnets');
+writePlan(tfg.generate(), outputDir, { format: true });
 ```
