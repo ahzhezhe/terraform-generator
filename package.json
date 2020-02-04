@@ -19,6 +19,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint src/**/*.ts test/**/*.ts",
+    "lint-mac": "eslint 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
     "tryout": "ts-node tryout.ts",
     "build": "del-cli --force dist && tsc",
