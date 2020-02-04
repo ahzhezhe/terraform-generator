@@ -5,10 +5,17 @@ export default class Map {
   /**
    * Construct map.
    * 
-   * @param args values
+   * @param args map values
    */
   constructor(args: object) {
     this.args = args;
   }
 
 }
+
+/**
+ * Convenient function to construct new map.
+ * 
+ * @param args map values
+ */
+export const map = (args: object): Map => new Map(args);

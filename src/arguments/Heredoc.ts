@@ -12,3 +12,10 @@ export default class Heredoc extends Argument {
   }
 
 }
+
+/**
+ * Convenient function to construct new heredoc.
+ * 
+ * @param str string
+ */
+export const heredoc = (str: string): Heredoc => new Heredoc(str);
