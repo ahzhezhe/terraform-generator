@@ -51,7 +51,7 @@ const tfg = new TerraformGenerator({ version: '0.12' }, {
 });
 ```
 
-### **Block**
+### **Blocks**
 Block's arguments are not typed, please refer to official Terraform documentation on what arguments can be supplied.
 
 ```javascript
@@ -65,7 +65,7 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
 });
 ```
 
-### **Argument Types**
+### **Arguments**
 ```javascript
 {
   string: 'str',
@@ -106,7 +106,7 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
 }
 ```
 
-### **Attribute**
+### **Attributes**
 ```javascript
 block.getAttribute('id')                 // block id, string
 block.getAttribute('subnets')            // subnet objects, object list
