@@ -24,3 +24,11 @@ export default class Attribute extends Argument {
   }
 
 }
+
+/**
+ * Convenient function to construct new block's attribute.
+ * 
+ * @param block block
+ * @param name attribute name
+ */
+export const attr = (block: Block, name: string): Attribute => new Attribute(block, name);

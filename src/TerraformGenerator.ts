@@ -71,7 +71,7 @@ export default class TerraformGenerator {
    * @param type type
    * @param args arguments
    */
-  addProvider(type: string, args: object): Provider {
+  addProvider(type: string, args?: object): Provider {
     const block = new Provider(type, args);
     this.addBlock(block);
     return block;
@@ -85,7 +85,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  addResource(type: string, name: string, args: object): Resource {
+  addResource(type: string, name: string, args?: object): Resource {
     const block = new Resource(type, name, args);
     this.addBlock(block);
     return block;
@@ -99,7 +99,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  addDataSource(type: string, name: string, args: object): DataSource {
+  addDataSource(type: string, name: string, args?: object): DataSource {
     const block = new DataSource(type, name, args);
     this.addBlock(block);
     return block;
@@ -112,7 +112,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  addModule(name: string, args: object): Module {
+  addModule(name: string, args?: object): Module {
     const block = new Module(name, args);
     this.addBlock(block);
     return block;
@@ -125,7 +125,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  addOutput(name: string, args: object): Output {
+  addOutput(name: string, args?: object): Output {
     const block = new Output(name, args);
     this.addBlock(block);
     return block;
@@ -138,7 +138,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  addVariable(name: string, args: object): Variable {
+  addVariable(name: string, args?: object): Variable {
     const block = new Variable(name, args);
     this.addBlock(block);
     return block;
@@ -151,7 +151,7 @@ export default class TerraformGenerator {
    * @param type type
    * @param args arguments
    */
-  addBackend(type: string, args: object): Backend {
+  addBackend(type: string, args?: object): Backend {
     const block = new Backend(type, args);
     this.addBlock(block);
     return block;

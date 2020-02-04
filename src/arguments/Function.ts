@@ -6,11 +6,11 @@ export default class Function extends Argument {
   /**
    * Construct function argument.
    * 
-   * @param fnName function name
+   * @param name function name
    * @param args function arguments
    */
-  constructor(fnName: string, ...args: any[]) {
-    super(Function.constructArgument(fnName, ...args));
+  constructor(name: string, ...args: any[]) {
+    super(Function.constructArgument(name, ...args));
   }
 
   private static constructArgument(fn: string, ...args: any[]): string {
@@ -33,3 +33,11 @@ export default class Function extends Argument {
   }
 
 }
+
+/**
+ * Convenient function to construct new function.
+ * 
+ * @param name function name
+ * @param args function arguments
+ */
+export const fn = (name: string, ...args: any[]): Function => new Function(name, args);

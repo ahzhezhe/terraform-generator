@@ -11,11 +11,11 @@ export { default as Module } from './blocks/Module';
 export { default as Variable } from './blocks/Variable';
 export { default as Backend } from './blocks/Backend';
 
-export { default as Argument } from './arguments/Argument';
-export { default as Attribute } from './arguments/Attribute';
-export { default as Heredoc } from './arguments/Heredoc';
-export { default as Function } from './arguments/Function';
+export { default as Argument, arg } from './arguments/Argument';
+export { default as Attribute, attr } from './arguments/Attribute';
+export { default as Heredoc, heredoc } from './arguments/Heredoc';
+export { default as Function, fn } from './arguments/Function';
 
-export { default as Map } from './types/Map';
+export { default as Map, map } from './types/Map';
 
 export { default as Utils } from './utils/Utils';
