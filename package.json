@@ -6,23 +6,23 @@
   "keywords": [
     "Terraform"
   ],
-  "files": [
-    "dist/**/*"
-  ],
   "homepage": "https://github.com/ahzhezhe/terraform-generator#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/ahzhezhe/terraform-generator"
   },
   "license": "ISC",
+  "files": [
+    "dist/**/*"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint src/**/*.ts test/**/*.ts",
     "test": "jest",
     "tryout": "ts-node tryout.ts",
-    "build": "tsc",
-    "prepublishOnly": "del-cli --force dist && tsc",
+    "build": "del-cli --force dist && tsc",
+    "prepublishOnly": "npm run build",
     "postpublish": "del-cli --force dist"
   },
   "dependencies": {

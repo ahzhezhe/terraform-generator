@@ -15,3 +15,5 @@ export { default as Attribute } from './arguments/Attribute';
 export { default as Heredoc } from './arguments/Heredoc';
 
 export { default as Map } from './types/Map';
+
+export { writePlan } from './utils';

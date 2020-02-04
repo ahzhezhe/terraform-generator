@@ -39,6 +39,11 @@ npm install terraform-generator
 
 ## **Usage**
 
+### **Import**
+```javascript
+import TerraformGenerator, { Resource, Map, Argument, writePlan } from 'terraform-generator';
+```
+
 ### **Initiate TerraformGenerator**
 ```javascript
 const tfg = new TerraformGenerator({ version: '0.12' });
@@ -111,8 +116,6 @@ tfg.generate();
 
 ### **Utils**
 ```javascript
-import { writePlan } from 'terraform-generator/utils';
-
 // Write Terraform plan to a file
 // Default filename is terraform.tf
 // Default format is false, if format is true, Terraform needs to be installed
@@ -121,8 +124,7 @@ writePlan(tfg.generate(), 'output', { filename: 'output.tf', format: true });
 
 ## **Example**
 ```javascript
-import TerraformGenerator, { Provider, Resource, DataSource, Output, Map } from 'terraform-generator';
-import { writePlan } from 'terraform-generator/utils';
+import TerraformGenerator, { Map, writePlan } from 'terraform-generator';
 import fs from 'fs';
 import path from 'path';
 
