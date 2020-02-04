@@ -1,4 +1,4 @@
-import { Argument } from '..';
+import TerraformGenerator, { Argument } from '..';
 
 export default class Function extends Argument {
 
@@ -8,11 +8,11 @@ export default class Function extends Argument {
    * @param fnName function name
    * @param args function arguments
    */
-  constructor(fnName: string, ...args: (string | number | boolean | Argument)[]) {
+  constructor(fnName: string, ...args: any[]) {
     super(Function.constructArgument(fnName, ...args));
   }
 
-  private static constructArgument(fn: string, ...args: (string | number | boolean | Argument)[]): string {
+  private static constructArgument(fn: string, ...args: any[]): string {
     if (!fn || !fn.trim()) {
       throw new Error('Function name cannot be empty.');
     }
@@ -22,11 +22,7 @@ export default class Function extends Argument {
 
     let str = `${fn}(`;
     args.forEach((arg, i) => {
-      if (arg instanceof Argument) {
-        str += arg.toTerraform();
-      } else {
-        str += JSON.stringify(arg);
-      }
+      str += TerraformGenerator.argumentValueToString(null, arg);
       if (i < args.length - 1) {
         str += ', ';
       }

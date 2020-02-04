@@ -53,7 +53,7 @@ export default class TerraformGenerator {
     return str;
   }
 
-  private static isObjectArgument(value: any): boolean {
+  static isObjectArgument(value: any): boolean {
     if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0
       || value instanceof Block || value instanceof Argument || value instanceof Map) {
       return false;
@@ -66,7 +66,7 @@ export default class TerraformGenerator {
     }
   }
 
-  private static argumentToString(version: TerraformVersion, key: string, value: any): string {
+  static argumentToString(version: TerraformVersion, key: string, value: any): string {
     try {
       if (value == null) {
         return '';
@@ -104,16 +104,12 @@ export default class TerraformGenerator {
     }
   };
 
-  private static argumentValueToString(version: TerraformVersion, value: any): string {
+  static argumentValueToString(version: TerraformVersion, value: any): string {
     if (value instanceof Block) {
       return this.argumentValueToString(version, value.asArgument());
 
     } else if (value instanceof Argument) {
-      if (value.asIs) {
-        return value.toTerraform();
-      }
-
-      if (version === '0.11') {
+      if (version && version === '0.11' && !value.asIs) {
         return `"\${${value.toTerraform()}}"`;
       } else {
         return value.toTerraform();

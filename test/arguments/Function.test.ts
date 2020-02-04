@@ -13,4 +13,5 @@ test('Function', () => {
   expect(new Function('fn', true, false, true).toTerraform()).toBe('fn(true, false, true)');
   expect(new Function('fn', 'x', 2, true).toTerraform()).toBe('fn("x", 2, true)');
   expect(new Function('fn', 'x', attr).toTerraform()).toBe('fn("x", type.name.attr)');
+  expect(new Function('fn', 'x', { a: 1, b: '2' }).toTerraform()).toBe('fn("x", {\na = 1\nb = "2"\n})');
 });
