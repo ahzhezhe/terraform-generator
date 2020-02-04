@@ -4,7 +4,7 @@ export default class Provider extends Block {
 
   readonly name: string;
 
-  constructor(name: string, args: object) {
+  constructor(name: string, args?: object) {
     super('provider', [name], args);
 
     this.name = name;

@@ -1,15 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Block arguments 1`] = `
-Object {
-  "a": 1,
-}
-`;
+exports[`Block arguments 1`] = `Object {}`;
 
 exports[`Block arguments 2`] = `
 Object {
   "a": 1,
-  "b": 2,
 }
 `;
 

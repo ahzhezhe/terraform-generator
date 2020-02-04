@@ -6,11 +6,8 @@ export default abstract class Block {
   readonly blockNames: string[];
   private readonly arguments: object;
 
-  constructor(type: string, names: string[], args: object) {
+  constructor(type: string, names: string[], args?: object) {
     this.validateIdentifier(type);
-    if (names.length < 1) {
-      throw new Error('Names cannot be empty.');
-    }
     names.forEach(name => {
       this.validateIdentifier(name);
     });

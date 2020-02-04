@@ -4,7 +4,7 @@ export default class Variable extends Block {
 
   readonly name: string;
 
-  constructor(name: string, args: object) {
+  constructor(name: string, args?: object) {
     super('variable', [name], args);
 
     this.name = name;

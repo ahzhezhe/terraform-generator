@@ -5,7 +5,7 @@ export default class DataSource extends Block {
   readonly type: string;
   readonly name: string;
 
-  constructor(type: string, name: string, args: object) {
+  constructor(type: string, name: string, args?: object) {
     super('data', [type, name], args);
 
     this.type = type;

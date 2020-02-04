@@ -4,7 +4,7 @@ export default class Module extends Block {
 
   readonly name: string;
 
-  constructor(name: string, args: object) {
+  constructor(name: string, args?: object) {
     super('module', [name], args);
 
     this.name = name;

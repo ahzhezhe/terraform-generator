@@ -2,7 +2,7 @@ import { Argument } from '..';
 
 export default class Function extends Argument {
 
-  constructor(fn: string, ...args: any) {
+  constructor(fn: string, ...args: (string | number | boolean | Argument)[]) {
     super(Function.constructArgument(fn, ...args));
   }
 

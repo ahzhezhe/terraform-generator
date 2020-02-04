@@ -1,28 +1,24 @@
 export default class Argument {
 
-  readonly args: (string | Argument)[];
-  readonly asIs: boolean = false;
+  readonly argument: string | Argument;
+  readonly asIs: boolean;
 
-  constructor(...args: (boolean | string | Argument)[]) {
-    if (args.length > 0 && typeof args[0] === 'boolean') {
-      this.asIs = args[0] as boolean;
-      args.splice(0, 1);
+  constructor(argument: string | Argument, asIs = false) {
+    if (!argument || (typeof argument === 'string' && !argument.trim())) {
+      throw new Error('Argument cannot be empty.');
     }
-    if (args.length < 1 || args.filter(arg => arg == null || typeof arg === 'boolean').length > 0) {
-      throw new Error(`Invalid argument: ${args}`);
-    }
-    this.args = args as (string | Argument)[];
+
+    this.argument = typeof argument === 'string' ? argument.trim() : argument;
+    this.asIs = asIs;
   }
 
   toTerraform(): string {
     let str = '';
-    this.args.forEach(arg => {
-      if (arg instanceof Argument) {
-        str += arg.toTerraform();
-      } else {
-        str += arg;
-      }
-    });
+    if (this.argument instanceof Argument) {
+      str += this.argument.toTerraform();
+    } else {
+      str += this.argument;
+    }
     return str;
   }
 

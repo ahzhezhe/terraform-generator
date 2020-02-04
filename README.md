@@ -95,14 +95,13 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
   }),
   block: block,
   blockAttribute: block.getAttribute('attrName'),
-  asIsArg: new Argument(true, 'AS IS'), // it will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version
   heredoc: new Heredoc(`line1
                         line2
                         line3`),
   function1: new Function('max', 5, 12, 19),
   function2: new Function('sort', 'a', block.getAttribute('attrName'), 'c'),
   custom1: new Argument('max(5, 12, 9)'),
-  custom2: new Argument('sort("a", ', block.getAttribute('attrName'), ', "c")')
+  custom2: new Argument('as is', true) // it will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version
 }
 ```
 
