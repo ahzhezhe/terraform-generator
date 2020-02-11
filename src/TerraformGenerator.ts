@@ -94,12 +94,12 @@ export default class TerraformGenerator {
   }
 
   /**
-   * Add block into Terraform.
+   * Add blocks into Terraform.
    * 
-   * @param block block
+   * @param blocks blocks
    */
-  addBlock(block: Block): TerraformGenerator {
-    this.blocks.push(block);
+  addBlocks(...blocks: Block[]): TerraformGenerator {
+    blocks.forEach(block => this.blocks.push(block));
     return this;
   }
 
@@ -112,7 +112,7 @@ export default class TerraformGenerator {
    */
   addProvider(type: string, args?: object): Provider {
     const block = new Provider(type, args);
-    this.addBlock(block);
+    this.addBlocks(block);
     return block;
   }
 
@@ -126,7 +126,7 @@ export default class TerraformGenerator {
    */
   addResource(type: string, name: string, args?: object): Resource {
     const block = new Resource(type, name, args);
-    this.addBlock(block);
+    this.addBlocks(block);
     return block;
   }
 
@@ -140,7 +140,7 @@ export default class TerraformGenerator {
    */
   addDataSource(type: string, name: string, args?: object): DataSource {
     const block = new DataSource(type, name, args);
-    this.addBlock(block);
+    this.addBlocks(block);
     return block;
   }
 
@@ -153,7 +153,7 @@ export default class TerraformGenerator {
    */
   addModule(name: string, args?: object): Module {
     const block = new Module(name, args);
-    this.addBlock(block);
+    this.addBlocks(block);
     return block;
   }
 
@@ -166,7 +166,7 @@ export default class TerraformGenerator {
    */
   addOutput(name: string, args?: object): Output {
     const block = new Output(name, args);
-    this.addBlock(block);
+    this.addBlocks(block);
     return block;
   }
 
@@ -179,7 +179,7 @@ export default class TerraformGenerator {
    */
   addVariable(name: string, args?: object): Variable {
     const block = new Variable(name, args);
-    this.addBlock(block);
+    this.addBlocks(block);
     return block;
   }
 
@@ -192,7 +192,7 @@ export default class TerraformGenerator {
    */
   addBackend(type: string, args?: object): Backend {
     const block = new Backend(type, args);
-    this.addBlock(block);
+    this.addBlocks(block);
     return block;
   }
 

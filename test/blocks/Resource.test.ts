@@ -31,6 +31,12 @@ describe('toDataSourceByTags', () => {
     expect(() => resource.toDataSourceByTags('newName')).toThrow();
   });
 
+  test('Resource tags not map', () => {
+    const resource = new Resource('type', 'name', { tags: 'tags' });
+    expect(() => resource.toDataSourceByTags()).toThrow();
+    expect(() => resource.toDataSourceByTags('newName')).toThrow();
+  });
+
   test('DataSource args', () => {
     expect(okResource.toDataSourceByTags(null, { a: 'a' }).toTerraform('0.11')).toMatchSnapshot();
     expect(okResource.toDataSourceByTags(null, { a: 'a' }).toTerraform('0.12')).toMatchSnapshot();

@@ -69,7 +69,7 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
 ```javascript
 import { vpc } from 'other-terraform-project';
 
-tfg.addBlock(vpc.toDataSourceByTags());
+tfg.addBlocks(vpc.toDataSourceByTags());
 ```
 
 ### **Arguments**
