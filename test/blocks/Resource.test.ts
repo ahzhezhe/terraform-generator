@@ -9,29 +9,45 @@ test('Resource', () => {
   expect(resource.getAttribute('attr').toTerraform()).toBe('type.name.attr');
 });
 
-test('toDataSourceByTags', () => {
-  const resource = new Resource('type', 'name', {
+describe('toDataSourceByTags', () => {
+
+  const okResource = new Resource('type', 'name', {
     tags: map({
       a: 'a',
       b: 'b'
     })
   });
-  expect(resource.toDataSourceByTags().toTerraform('0.11')).toMatchSnapshot();
-  expect(resource.toDataSourceByTags().toTerraform('0.12')).toMatchSnapshot();
-  expect(resource.toDataSourceByTags('newName').toTerraform('0.11')).toMatchSnapshot();
-  expect(resource.toDataSourceByTags('newName').toTerraform('0.12')).toMatchSnapshot();
-});
 
-test('toDataSourceByTags no tags', () => {
-  const resource = new Resource('type', 'name');
-  expect(() => resource.toDataSourceByTags()).toThrow();
-  expect(() => resource.toDataSourceByTags('newName')).toThrow();
-});
-
-test('toDataSourceByTags tags not map', () => {
-  const resource = new Resource('type', 'name', {
-    tags: 'tags'
+  test('OK', () => {
+    expect(okResource.toDataSourceByTags().toTerraform('0.11')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags().toTerraform('0.12')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags('newName').toTerraform('0.11')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags('newName').toTerraform('0.12')).toMatchSnapshot();
   });
-  expect(() => resource.toDataSourceByTags()).toThrow();
-  expect(() => resource.toDataSourceByTags('newName')).toThrow();
+
+  test('Resource no tags', () => {
+    const resource = new Resource('type', 'name');
+    expect(() => resource.toDataSourceByTags()).toThrow();
+    expect(() => resource.toDataSourceByTags('newName')).toThrow();
+  });
+
+  test('DataSource args', () => {
+    expect(okResource.toDataSourceByTags(null, { a: 'a' }).toTerraform('0.11')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags(null, { a: 'a' }).toTerraform('0.12')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags('newName', { a: 'a' }).toTerraform('0.11')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags('newName', { a: 'a' }).toTerraform('0.12')).toMatchSnapshot();
+  });
+
+  test('DataSource args with filter', () => {
+    expect(okResource.toDataSourceByTags(null, { filter: [] }).toTerraform('0.11')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags(null, { filter: [] }).toTerraform('0.12')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags('newName', { a: 'a' }).toTerraform('0.11')).toMatchSnapshot();
+    expect(okResource.toDataSourceByTags('newName', { a: 'a' }).toTerraform('0.12')).toMatchSnapshot();
+  });
+
+  test('DataSource args invalid filter', () => {
+    expect(() => okResource.toDataSourceByTags(null, { filter: 'a' })).toThrow();
+    expect(() => okResource.toDataSourceByTags('newName', { filter: 'a' })).toThrow();
+  });
+
 });

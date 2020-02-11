@@ -32,10 +32,17 @@ export default class Resource extends Block {
    * Convert resource into data source, filtered by resource's tags
    * 
    * @param name data source name, put null to use the same name as resource
+   * @param args other arguments
    */
-  toDataSourceByTags(name?: string): DataSource {
+  toDataSourceByTags(name?: string, args?: object): DataSource {
     if (!name) {
       name = this.name;
+    }
+    if (!args) {
+      args = {};
+    }
+    if (!args['filter']) {
+      args['filter'] = [];
     }
 
     const tags = this.getArgument('tags');
@@ -43,18 +50,20 @@ export default class Resource extends Block {
       throw new Error('Resource does not have tags.');
     }
     if (!(tags instanceof Map)) {
-      throw new Error('Tags is not a Map.');
+      throw new Error('Resource tags is not a Map.');
+    }
+    if (!Array.isArray(args['filter'])) {
+      throw new Error('Data source filter is not an array.');
     }
 
-    const filter = [];
     for (const tagName in tags.args) {
-      filter.push({
+      args['filter'].push({
         name: `tag:${tagName}`,
         values: [tags.args[tagName]]
       });
     }
 
-    return new DataSource(this.type, name, { filter });
+    return new DataSource(this.type, name, args);
   }
 
 }

@@ -1514,7 +1514,87 @@ arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
 "
 `;
 
-exports[`toDataSourceByTags 1`] = `
+exports[`toDataSourceByTags DataSource args 1`] = `
+"data \\"type\\" \\"name\\"{
+a = \\"a\\"
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags DataSource args 2`] = `
+"data \\"type\\" \\"name\\"{
+a = \\"a\\"
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags DataSource args 3`] = `
+"data \\"type\\" \\"newName\\"{
+a = \\"a\\"
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags DataSource args 4`] = `
+"data \\"type\\" \\"newName\\"{
+a = \\"a\\"
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags DataSource args with filter 1`] = `
 "data \\"type\\" \\"name\\"{
 filter {
 name = \\"tag:a\\"
@@ -1533,7 +1613,7 @@ values = [
 "
 `;
 
-exports[`toDataSourceByTags 2`] = `
+exports[`toDataSourceByTags DataSource args with filter 2`] = `
 "data \\"type\\" \\"name\\"{
 filter {
 name = \\"tag:a\\"
@@ -1552,7 +1632,85 @@ values = [
 "
 `;
 
-exports[`toDataSourceByTags 3`] = `
+exports[`toDataSourceByTags DataSource args with filter 3`] = `
+"data \\"type\\" \\"newName\\"{
+a = \\"a\\"
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags DataSource args with filter 4`] = `
+"data \\"type\\" \\"newName\\"{
+a = \\"a\\"
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags OK 1`] = `
+"data \\"type\\" \\"name\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags OK 2`] = `
+"data \\"type\\" \\"name\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags OK 3`] = `
 "data \\"type\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
@@ -1571,7 +1729,7 @@ values = [
 "
 `;
 
-exports[`toDataSourceByTags 4`] = `
+exports[`toDataSourceByTags OK 4`] = `
 "data \\"type\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
