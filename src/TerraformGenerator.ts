@@ -1,4 +1,4 @@
-import shell from 'shelljs';
+import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { Block, Resource, DataSource, Module, Output, Provider, Variable, Backend } from '.';
@@ -83,13 +83,11 @@ export default class TerraformGenerator {
       options.filename += '.tf';
     }
 
-    if (!fs.existsSync(dir)) {
-      shell.mkdir('-p', dir);
-    }
+    fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, options.filename), this.generate());
 
     if (options.format) {
-      shell.exec(`cd ${dir} && terraform fmt`);
+      child_process.execSync('terraform fmt', { cwd: dir });
     }
   }
 

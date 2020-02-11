@@ -26,12 +26,8 @@
     "prepublishOnly": "npm run build",
     "postpublish": "del-cli --force dist"
   },
-  "dependencies": {
-    "shelljs": "^0.8.3"
-  },
   "devDependencies": {
     "@types/jest": "^25.1.1",
-    "@types/shelljs": "^0.8.6",
     "@typescript-eslint/eslint-plugin": "^1.7.0",
     "@typescript-eslint/parser": "^1.7.0",
     "del-cli": "^3.0.0",
