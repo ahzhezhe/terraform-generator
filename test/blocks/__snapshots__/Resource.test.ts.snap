@@ -1513,3 +1513,79 @@ arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
 
 "
 `;
+
+exports[`toDataSourceByTags 1`] = `
+"data \\"type\\" \\"name\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags 2`] = `
+"data \\"type\\" \\"name\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags 3`] = `
+"data \\"type\\" \\"newName\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
+
+exports[`toDataSourceByTags 4`] = `
+"data \\"type\\" \\"newName\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+filter {
+name = \\"tag:b\\"
+values = [
+\\"b\\",
+]
+}
+}
+
+"
+`;
