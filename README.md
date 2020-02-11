@@ -65,6 +65,13 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
 });
 ```
 
+### **Convert resource to data source and filter by resource's tags**
+```javascript
+import { vpc } from 'other-terraform-project';
+
+tfg.addBlock(vpc.toDataSourceByTags());
+```
+
 ### **Arguments**
 ```javascript
 {
