@@ -131,9 +131,10 @@ block.attr('subnets.*.id[0]')    // first subnet id, string
 tfg.generate();
 
 // Write Terraform plan to a file
+// Default dir is .
 // Default filename is terraform.tf
 // Default format is false, if format is true, Terraform needs to be installed
-tfg.write('outputDir', { filename: 'output.tf', format: true });
+tfg.write({ dir: 'outputDir', filename: 'output.tf', format: true });
 ```
 
 ## **Example**
@@ -234,5 +235,5 @@ tfg.addOutput('subnets', {
 
 // Write the plan into a terraform.tf file
 const outputDir = path.join('output', configs.env, 'subnets');
-tfg.write(outputDir, { format: true });
+tfg.write({ dir: outputDir, format: true });
 ```
