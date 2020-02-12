@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { TerraformVersion, Resource, Map } from '../../src';
+import TerraformGenerator, { TerraformVersion, Resource, Map, map } from '../../src';
 
 const project = 'test';
 
@@ -84,12 +84,20 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
   tfg.addVariable('test', {
     type: 'string'
   });
-  tfg.addDataSource('aws_vpc', 'vpc', {
+  tfg.addDataSource('aws_vpc', 'test', {
     cidr_block: 'test'
   });
   tfg.addModule('test', {
     source: './test'
   });
+  const r = tfg.addResource('aws_vpc', 'test', {
+    cidr_block: 'test',
+    tags: map({
+      a: 'a'
+    })
+  });
+  tfg.addDataSourceFromResource(r, ['cidr_block', { name: 'tags', newName: 'tag' }]);
+  tfg.addDataSourceFromResource(r, 'test2', ['cidr_block', { name: 'tags', newName: 'tag' }]);
 
   // VPC
   const vpc = tfg.addResource('aws_vpc', 'vpc', {
@@ -299,7 +307,7 @@ test('VPC Project 0.11', () => {
   const tfg = createTerraformGenerator('0.11');
   expect(tfg.generate()).toMatchSnapshot();
 
-  tfg.write(outputDir);
+  tfg.write({ dir: outputDir });
   const plan = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(plan).toMatchSnapshot();
 });
@@ -308,7 +316,7 @@ test('VPC Project 0.12', () => {
   const tfg = createTerraformGenerator('0.12');
   expect(tfg.generate()).toMatchSnapshot();
 
-  tfg.write(outputDir);
+  tfg.write({ dir: outputDir });
   const plan = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(plan).toMatchSnapshot();
 });

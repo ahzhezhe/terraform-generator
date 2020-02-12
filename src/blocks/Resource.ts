@@ -1,6 +1,6 @@
 import { Block, Argument, Attribute, DataSource, Map } from '..';
 
-interface ToDataSourceArgNameMap {
+export interface ResourceToDataSourceArgNameMap {
   name: string;
   newName: string
 }
@@ -35,29 +35,32 @@ export default class Resource extends Block {
 
   /**
    * Convert resource into data source. Data source will have the same name as resource.
+   * Refer to Terraform documentation on what can be put as arguments.
    * 
    * @param argNames names of resource arguments to converted into data source arguments
    * @param args extra arguments
    */
-  toDataSource(argNames: (string | ToDataSourceArgNameMap)[], args?: object): DataSource;
+  toDataSource(argNames: (string | ResourceToDataSourceArgNameMap)[], args?: object): DataSource;
 
   /**
    * Convert resource into data source.
+   * Refer to Terraform documentation on what can be put as arguments.
    * 
    * @param newName new name of the data source
    * @param argNames names of resource arguments to converted into data source arguments
    * @param args extra arguments
    */
-  toDataSource(newName: string, argNames: (string | ToDataSourceArgNameMap)[], args?: object): DataSource;
+  toDataSource(newName: string, argNames: (string | ResourceToDataSourceArgNameMap)[], args?: object): DataSource;
 
-  toDataSource(arg1: (string | ToDataSourceArgNameMap)[] | string, arg2?: object | (string | ToDataSourceArgNameMap)[], arg3?: object): DataSource {
+  toDataSource(arg1: string | (string | ResourceToDataSourceArgNameMap)[],
+    arg2?: (string | ResourceToDataSourceArgNameMap)[] | object, arg3?: object): DataSource {
     let newName = this.name;
-    let argNames: (string | ToDataSourceArgNameMap)[];
+    let argNames: (string | ResourceToDataSourceArgNameMap)[];
     let args: object;
 
     if (typeof arg1 === 'string') {
       newName = arg1;
-      argNames = arg2 as (string | ToDataSourceArgNameMap)[];
+      argNames = arg2 as (string | ResourceToDataSourceArgNameMap)[];
       args = arg3;
     } else {
       argNames = arg1;

@@ -20,12 +20,39 @@ variable \\"test\\"{
 type = \\"string\\"
 }
 
-data \\"aws_vpc\\" \\"vpc\\"{
+data \\"aws_vpc\\" \\"test\\"{
 cidr_block = \\"test\\"
 }
 
 module \\"test\\"{
 source = \\"./test\\"
+}
+
+resource \\"aws_vpc\\" \\"test\\"{
+cidr_block = \\"test\\"
+tags = {
+a = \\"a\\"
+}
+}
+
+data \\"aws_vpc\\" \\"test\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
+}
+
+data \\"aws_vpc\\" \\"test2\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -639,12 +666,39 @@ variable \\"test\\"{
 type = \\"string\\"
 }
 
-data \\"aws_vpc\\" \\"vpc\\"{
+data \\"aws_vpc\\" \\"test\\"{
 cidr_block = \\"test\\"
 }
 
 module \\"test\\"{
 source = \\"./test\\"
+}
+
+resource \\"aws_vpc\\" \\"test\\"{
+cidr_block = \\"test\\"
+tags = {
+a = \\"a\\"
+}
+}
+
+data \\"aws_vpc\\" \\"test\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
+}
+
+data \\"aws_vpc\\" \\"test2\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -1258,12 +1312,39 @@ variable \\"test\\"{
 type = \\"string\\"
 }
 
-data \\"aws_vpc\\" \\"vpc\\"{
+data \\"aws_vpc\\" \\"test\\"{
 cidr_block = \\"test\\"
 }
 
 module \\"test\\"{
 source = \\"./test\\"
+}
+
+resource \\"aws_vpc\\" \\"test\\"{
+cidr_block = \\"test\\"
+tags = {
+a = \\"a\\"
+}
+}
+
+data \\"aws_vpc\\" \\"test\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
+}
+
+data \\"aws_vpc\\" \\"test2\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -1877,12 +1958,39 @@ variable \\"test\\"{
 type = \\"string\\"
 }
 
-data \\"aws_vpc\\" \\"vpc\\"{
+data \\"aws_vpc\\" \\"test\\"{
 cidr_block = \\"test\\"
 }
 
 module \\"test\\"{
 source = \\"./test\\"
+}
+
+resource \\"aws_vpc\\" \\"test\\"{
+cidr_block = \\"test\\"
+tags = {
+a = \\"a\\"
+}
+}
+
+data \\"aws_vpc\\" \\"test\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
+}
+
+data \\"aws_vpc\\" \\"test2\\"{
+filter {
+name = \\"tag:a\\"
+values = [
+\\"a\\",
+]
+}
+cidr_block = \\"test\\"
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{

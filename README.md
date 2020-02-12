@@ -69,10 +69,10 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
 ```javascript
 import { vpc } from 'other-terraform-project';
 
-tfg.addBlocks(vpc.toDataSource([
+tfg.addDataSourceFromResource(vpc, [
   'cidr_block',
   { name: 'tags', newName: 'tag' }
-]));
+]);
 ```
 
 ### **Arguments**

@@ -4,7 +4,7 @@ export { TerraformVersion, TerraformGeneratorOptions, WriteOptions } from './Ter
 
 export { default as Block } from './blocks/Block';
 export { default as Provider } from './blocks/Provider';
-export { default as Resource } from './blocks/Resource';
+export { default as Resource, ResourceToDataSourceArgNameMap } from './blocks/Resource';
 export { default as DataSource } from './blocks/DataSource';
 export { default as Output } from './blocks/Output';
 export { default as Module } from './blocks/Module';
