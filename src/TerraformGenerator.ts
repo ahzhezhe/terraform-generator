@@ -1,7 +1,7 @@
 import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { Block, Resource, DataSource, Module, Output, Provider, Variable, Backend, ResourceToDataSourceArgNameMap } from '.';
+import { Block, Resource, DataSource, Module, Output, Provider, Variable, Backend, ResourceToDataSourceOptions } from '.';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
 export type TerraformVersion = '0.11' | '0.12';
@@ -131,36 +131,14 @@ export default class TerraformGenerator {
     this.addBlocks(block);
     return block;
   }
-
-  /**
-   * Convert resource into data source and add it into Terraform. Data source will have the same name as resource.
-   * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
-   * @param resource resource
-   * @param argNames names of resource arguments to converted into data source arguments
-   * @param args extra arguments
-   */
-  addDataSourceFromResource(resource: Resource, argNames: (string | ResourceToDataSourceArgNameMap)[], args?: object): DataSource;
-
   /**
    * Convert resource into data source and add it into Terraform.
-   * Refer to Terraform documentation on what can be put as arguments.
    * 
    * @param resource resource
-   * @param newName new name of the data source
-   * @param argNames names of resource arguments to converted into data source arguments
-   * @param args extra arguments
+   * @param options options
    */
-  addDataSourceFromResource(resource: Resource, newName: string, argNames: (string | ResourceToDataSourceArgNameMap)[], args?: object): DataSource;
-
-  addDataSourceFromResource(resource: Resource, arg1: string | (string | ResourceToDataSourceArgNameMap)[],
-    arg2?: (string | ResourceToDataSourceArgNameMap)[] | object, arg3?: object): DataSource {
-    let block: DataSource;
-    if (typeof arg1 === 'string') {
-      block = resource.toDataSource(arg1, arg2 as (string | ResourceToDataSourceArgNameMap)[], arg3);
-    } else {
-      block = resource.toDataSource(arg1, arg2);
-    }
+  addDataSourceFromResource(resource: Resource, options: ResourceToDataSourceOptions): DataSource {
+    const block = resource.toDataSource(options);
     this.addBlocks(block);
     return block;
   }

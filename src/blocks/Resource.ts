@@ -1,8 +1,19 @@
 import { Block, Argument, Attribute, DataSource, Map } from '..';
 
-export interface ResourceToDataSourceArgNameMap {
-  name: string;
-  newName: string
+/**
+ * Options to convert resource into data source.
+ * Refer to Terraform documentation on what can be put as arguments.
+ * 
+ * @param type new type of the data source
+ * @param name new name of the data source
+ * @param argNames names of resource arguments to converted into data source arguments
+ * @param args extra arguments
+ */
+export interface ResourceToDataSourceOptions {
+  type?: string;
+  name?: string;
+  argNames: (string | { name: string; newName: string })[];
+  args?: object;
 }
 
 export default class Resource extends Block {
@@ -34,38 +45,15 @@ export default class Resource extends Block {
   }
 
   /**
-   * Convert resource into data source. Data source will have the same name as resource.
-   * Refer to Terraform documentation on what can be put as arguments.
-   * 
-   * @param argNames names of resource arguments to converted into data source arguments
-   * @param args extra arguments
-   */
-  toDataSource(argNames: (string | ResourceToDataSourceArgNameMap)[], args?: object): DataSource;
-
-  /**
    * Convert resource into data source.
-   * Refer to Terraform documentation on what can be put as arguments.
    * 
-   * @param newName new name of the data source
-   * @param argNames names of resource arguments to converted into data source arguments
-   * @param args extra arguments
+   * @param options options
    */
-  toDataSource(newName: string, argNames: (string | ResourceToDataSourceArgNameMap)[], args?: object): DataSource;
-
-  toDataSource(arg1: string | (string | ResourceToDataSourceArgNameMap)[],
-    arg2?: (string | ResourceToDataSourceArgNameMap)[] | object, arg3?: object): DataSource {
-    let newName = this.name;
-    let argNames: (string | ResourceToDataSourceArgNameMap)[];
-    let args: object;
-
-    if (typeof arg1 === 'string') {
-      newName = arg1;
-      argNames = arg2 as (string | ResourceToDataSourceArgNameMap)[];
-      args = arg3;
-    } else {
-      argNames = arg1;
-      args = arg2;
-    }
+  toDataSource(options: ResourceToDataSourceOptions): DataSource {
+    const type = options.type || this.type;
+    const name = options.name || this.name;
+    const argNames = options.argNames;
+    let args = options.args;
 
     if (!args) {
       args = {};
@@ -100,7 +88,7 @@ export default class Resource extends Block {
       }
     }
 
-    return new DataSource(this.type, newName, args);
+    return new DataSource(type, name, args);
   }
 
 }
