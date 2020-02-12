@@ -1557,7 +1557,7 @@ arg = \\"arg\\"
 `;
 
 exports[`toDataSource DataSource args 3`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 a = \\"a\\"
 filter {
 name = \\"tag:a\\"
@@ -1578,7 +1578,7 @@ arg = \\"arg\\"
 `;
 
 exports[`toDataSource DataSource args 4`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 a = \\"a\\"
 filter {
 name = \\"tag:a\\"
@@ -1639,7 +1639,7 @@ values = [
 `;
 
 exports[`toDataSource DataSource args overwrite 3`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 arg = \\"a\\"
 filter {
 name = \\"tag:a\\"
@@ -1659,7 +1659,7 @@ values = [
 `;
 
 exports[`toDataSource DataSource args overwrite 4`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 arg = \\"a\\"
 filter {
 name = \\"tag:a\\"
@@ -1719,7 +1719,7 @@ arg = \\"arg\\"
 `;
 
 exports[`toDataSource DataSource args with filter 3`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
 values = [
@@ -1739,7 +1739,7 @@ arg = \\"arg\\"
 `;
 
 exports[`toDataSource DataSource args with filter 4`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
 values = [
@@ -1799,7 +1799,7 @@ arg = \\"arg\\"
 `;
 
 exports[`toDataSource OK 3`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
 values = [
@@ -1819,7 +1819,7 @@ arg = \\"arg\\"
 `;
 
 exports[`toDataSource OK 4`] = `
-"data \\"type\\" \\"newName\\"{
+"data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
 values = [

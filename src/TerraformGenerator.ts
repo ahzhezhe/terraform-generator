@@ -136,9 +136,12 @@ export default class TerraformGenerator {
    * 
    * @param resource resource
    * @param options options
+   * @param argNames names of resource arguments to converted into data source arguments
+   * @param args extra arguments
    */
-  addDataSourceFromResource(resource: Resource, options: ResourceToDataSourceOptions): DataSource {
-    const block = resource.toDataSource(options);
+  addDataSourceFromResource(resource: Resource, options: ResourceToDataSourceOptions,
+    argNames: (string | { name: string; newName: string })[], args?: object): DataSource {
+    const block = resource.toDataSource(options, argNames, args);
     this.addBlocks(block);
     return block;
   }

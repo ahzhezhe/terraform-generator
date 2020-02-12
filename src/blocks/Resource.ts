@@ -2,18 +2,14 @@ import { Block, Argument, Attribute, DataSource, Map } from '..';
 
 /**
  * Options to convert resource into data source.
- * Refer to Terraform documentation on what can be put as arguments.
  * 
  * @param type new type of the data source
  * @param name new name of the data source
- * @param argNames names of resource arguments to converted into data source arguments
- * @param args extra arguments
+ * 
  */
 export interface ResourceToDataSourceOptions {
   type?: string;
   name?: string;
-  argNames: (string | { name: string; newName: string })[];
-  args?: object;
 }
 
 export default class Resource extends Block {
@@ -46,14 +42,15 @@ export default class Resource extends Block {
 
   /**
    * Convert resource into data source.
+   * Refer to Terraform documentation on what can be put as arguments.
    * 
    * @param options options
+   * @param argNames names of resource arguments to converted into data source arguments
+   * @param args extra arguments
    */
-  toDataSource(options: ResourceToDataSourceOptions): DataSource {
-    const type = options.type || this.type;
-    const name = options.name || this.name;
-    const argNames = options.argNames;
-    let args = options.args;
+  toDataSource(options: ResourceToDataSourceOptions, argNames: (string | { name: string; newName: string })[], args?: object): DataSource {
+    const type = (options && options.type) ? options.type : this.type;
+    const name = (options && options.name) ? options.name : this.name;
 
     if (!args) {
       args = {};
