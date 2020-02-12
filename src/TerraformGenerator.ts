@@ -14,10 +14,12 @@ export interface TerraformGeneratorOptions {
 }
 
 /**
+ * @param dir directoty, default = .
  * @param filename Terraform filename, must ends with .tf, default = terraform.tf
  * @param format use 'terraform fmt' to format the plan, Terraform must be installed, default = false
  */
 export interface WriteOptions {
+  dir?: string;
   filename?: string;
   format?: boolean
 };
@@ -69,12 +71,14 @@ export default class TerraformGenerator {
   /**
    * Write Terraform plan to a file.
    * 
-   * @param dir directory
    * @param options options
    */
-  write(dir: string, options?: WriteOptions): void {
+  write(options?: WriteOptions): void {
     if (!options) {
       options = {};
+    }
+    if (!options.dir) {
+      options.dir = '.';
     }
     if (!options.filename) {
       options.filename = 'terraform.tf';
@@ -83,11 +87,11 @@ export default class TerraformGenerator {
       options.filename += '.tf';
     }
 
-    fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, options.filename), this.generate());
+    fs.mkdirSync(options.dir, { recursive: true });
+    fs.writeFileSync(path.join(options.dir, options.filename), this.generate());
 
     if (options.format) {
-      child_process.execSync('terraform fmt', { cwd: dir });
+      child_process.execSync('terraform fmt', { cwd: options.dir });
     }
   }
 

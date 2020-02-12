@@ -1,5 +1,10 @@
 import { Block, Argument, Attribute, DataSource, Map } from '..';
 
+interface ToDataSourceArgNameMap {
+  name: string;
+  newName: string
+}
+
 export default class Resource extends Block {
 
   readonly type: string;
@@ -29,41 +34,70 @@ export default class Resource extends Block {
   }
 
   /**
-   * Convert resource into data source, filtered by resource's tags
+   * Convert resource into data source. Data source will have the same name as resource.
    * 
-   * @param name data source name, put null to use the same name as resource
-   * @param args other arguments
+   * @param argNames names of resource arguments to converted into data source arguments
+   * @param args extra arguments
    */
-  toDataSourceByTags(name?: string, args?: object): DataSource {
-    if (!name) {
-      name = this.name;
+  toDataSource(argNames: (string | ToDataSourceArgNameMap)[], args?: object): DataSource;
+
+  /**
+   * Convert resource into data source.
+   * 
+   * @param newName new name of the data source
+   * @param argNames names of resource arguments to converted into data source arguments
+   * @param args extra arguments
+   */
+  toDataSource(newName: string, argNames: (string | ToDataSourceArgNameMap)[], args?: object): DataSource;
+
+  toDataSource(arg1: (string | ToDataSourceArgNameMap)[] | string, arg2?: object | (string | ToDataSourceArgNameMap)[], arg3?: object): DataSource {
+    let newName = this.name;
+    let argNames: (string | ToDataSourceArgNameMap)[];
+    let args: object;
+
+    if (typeof arg1 === 'string') {
+      newName = arg1;
+      argNames = arg2 as (string | ToDataSourceArgNameMap)[];
+      args = arg3;
+    } else {
+      argNames = arg1;
+      args = arg2;
     }
+
     if (!args) {
       args = {};
     }
     if (!args['filter']) {
       args['filter'] = [];
+    } else if (!Array.isArray(args['filter'])) {
+      throw new Error('Filter is not an array.');
     }
 
-    const tags = this.getArgument('tags');
-    if (!tags) {
-      throw new Error('Resource does not have tags.');
-    }
-    if (!(tags instanceof Map)) {
-      throw new Error('Resource tags is not a Map.');
-    }
-    if (!Array.isArray(args['filter'])) {
-      throw new Error('Data source filter is not an array.');
+    for (const argName of argNames) {
+      let actualArgName: string;
+      let newArgName: string;
+      if (typeof argName === 'string') {
+        actualArgName = argName;
+        newArgName = argName;
+      } else {
+        actualArgName = argName.name;
+        newArgName = argName.newName;
+      }
+
+      const arg = this.getArgument(actualArgName);
+      if (arg instanceof Map) {
+        for (const mapArgName in arg.args) {
+          args['filter'].push({
+            name: `${newArgName}:${mapArgName}`,
+            values: [arg.args[mapArgName]]
+          });
+        }
+      } else if (!args[newArgName]) {
+        args[newArgName] = arg;
+      }
     }
 
-    for (const tagName in tags.args) {
-      args['filter'].push({
-        name: `tag:${tagName}`,
-        values: [tags.args[tagName]]
-      });
-    }
-
-    return new DataSource(this.type, name, args);
+    return new DataSource(this.type, newName, args);
   }
 
 }
