@@ -1,3 +1,4 @@
+import shell from 'shelljs';
 import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
@@ -87,7 +88,7 @@ export default class TerraformGenerator {
       options.filename += '.tf';
     }
 
-    fs.mkdirSync(options.dir, { recursive: true });
+    shell.mkdir('-p', options.dir);
     fs.writeFileSync(path.join(options.dir, options.filename), this.generate());
 
     if (options.format) {
