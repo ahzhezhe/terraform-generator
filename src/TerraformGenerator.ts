@@ -136,11 +136,12 @@ export default class TerraformGenerator {
    * 
    * @param resource resource
    * @param options options
-   * @param argNames names of resource arguments to converted into data source arguments
+   * @param argNames names of resource arguments to converted into data source arguments;
+   * use array for name mapping, position 0 = original resource name, position 1 = mapped data source name
    * @param args extra arguments
    */
   addDataSourceFromResource(resource: Resource, options: ResourceToDataSourceOptions,
-    argNames: (string | { name: string; newName: string })[], args?: object): DataSource {
+    argNames: (string | [string, string])[], args?: object): DataSource {
     const block = resource.toDataSource(options, argNames, args);
     this.addBlocks(block);
     return block;

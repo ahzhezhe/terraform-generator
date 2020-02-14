@@ -45,10 +45,11 @@ export default class Resource extends Block {
    * Refer to Terraform documentation on what can be put as arguments.
    * 
    * @param options options
-   * @param argNames names of resource arguments to converted into data source arguments
+   * @param argNames names of resource arguments to converted into data source arguments;
+   * use array for name mapping, position 0 = original resource name, position 1 = mapped data source name
    * @param args extra arguments
    */
-  toDataSource(options: ResourceToDataSourceOptions, argNames: (string | { name: string; newName: string })[], args?: object): DataSource {
+  toDataSource(options: ResourceToDataSourceOptions, argNames: (string | [string, string])[], args?: object): DataSource {
     const type = (options && options.type) ? options.type : this.type;
     const name = (options && options.name) ? options.name : this.name;
 
@@ -68,8 +69,8 @@ export default class Resource extends Block {
         actualArgName = argName;
         newArgName = argName;
       } else {
-        actualArgName = argName.name;
-        newArgName = argName.newName;
+        actualArgName = argName[0];
+        newArgName = argName[1];
       }
 
       const arg = this.getArgument(actualArgName);

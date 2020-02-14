@@ -96,8 +96,8 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
       a: 'a'
     })
   });
-  tfg.addDataSourceFromResource(r, null, ['cidr_block', { name: 'tags', newName: 'tag' }]);
-  tfg.addDataSourceFromResource(r, { name: 'test2' }, ['cidr_block', { name: 'tags', newName: 'tag' }]);
+  tfg.addDataSourceFromResource(r, null, ['cidr_block', ['tags', 'tag']]);
+  tfg.addDataSourceFromResource(r, { name: 'test2' }, ['cidr_block', ['tags', 'tag']]);
 
   // VPC
   const vpc = tfg.addResource('aws_vpc', 'vpc', {
