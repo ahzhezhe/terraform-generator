@@ -13,10 +13,6 @@ The end result of using this module is Terraform plan in plain text, you will ne
 
 Currently support generating plan for Terraform version 0.11 and 0.12.
 
-## **Disclamer**
-
-This module is still in development and testing phase, it might not work fully correctly. Feel free to report issues/bugs, make requests or give suggesstions in GitHub page.
-
 ## **Benefit**
 
 Make use of all Javascript programming features (some of which is not available in Terraform), e.g. functions, array, loops, if-else, map, etc. to generate a plain Terraform plan.
