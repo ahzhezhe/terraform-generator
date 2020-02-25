@@ -2,7 +2,8 @@
 
 [![npm package](https://img.shields.io/npm/v/terraform-generator/latest.svg)](https://www.npmjs.com/package/terraform-generator)
 [![npm downloads](https://img.shields.io/npm/dt/terraform-generator.svg)](https://www.npmjs.com/package/terraform-generator)
-![GitHub test](https://github.com/ahzhezhe/terraform-generator/workflows/test/badge.svg?branch=master)
+[![npm dependencies](https://img.shields.io/librariesio/release/npm/terraform-generator.svg)](https://www.npmjs.com/package/terraform-generator)
+[![GitHub test](https://github.com/ahzhezhe/terraform-generator/workflows/test/badge.svg?branch=master)](https://github.com/ahzhezhe/terraform-generator)
 [![GitHub issues](https://img.shields.io/github/issues/ahzhezhe/terraform-generator.svg)](https://github.com/ahzhezhe/terraform-generator)
 
 Use Node.js to generate Terraform plan.
