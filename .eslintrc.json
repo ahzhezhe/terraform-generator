@@ -15,12 +15,15 @@
       "error",
       2
     ],
-    "@typescript-eslint/member-delimiter-style": {
-      "singleline": {
-        "delimiter": "semi",
-        "requireLast": false
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
       }
-    },
+    ],
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
@@ -35,12 +38,8 @@
         "accessibility": "no-public"
       }
     ],
-    "@typescript-eslint/camelcase": [
-      "never"
-    ],
+    "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/prefer-for-of": "error",
-    "indent": "off",
-    "camelcase": "off",
     "quotes": [
       "error",
       "single",

@@ -22,7 +22,7 @@ export interface TerraformGeneratorOptions {
 export interface WriteOptions {
   dir?: string;
   filename?: string;
-  format?: boolean
+  format?: boolean;
 };
 
 export default class TerraformGenerator {
