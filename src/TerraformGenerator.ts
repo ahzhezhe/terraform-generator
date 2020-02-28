@@ -17,7 +17,7 @@ export interface TerraformGeneratorOptions {
 /**
  * @param dir directoty, default = .
  * @param filename Terraform filename, must ends with .tf, default = terraform.tf
- * @param format use 'terraform fmt' to format the plan, Terraform must be installed, default = false
+ * @param format use 'terraform fmt' to format the configuration, Terraform must be installed, default = false
  */
 export interface WriteOptions {
   dir?: string;
@@ -44,7 +44,7 @@ export default class TerraformGenerator {
   }
 
   /**
-   * Generate Terraform plan as string.
+   * Generate Terraform configuration as string.
    */
   generate(): string {
     let str = '';
@@ -70,7 +70,7 @@ export default class TerraformGenerator {
   }
 
   /**
-   * Write Terraform plan to a file.
+   * Write Terraform configuration to a file.
    * 
    * @param options options
    */

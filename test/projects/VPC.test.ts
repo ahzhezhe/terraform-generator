@@ -308,8 +308,8 @@ test('VPC Project 0.11', () => {
   expect(tfg.generate()).toMatchSnapshot();
 
   tfg.write({ dir: outputDir });
-  const plan = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
-  expect(plan).toMatchSnapshot();
+  const configuration = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
+  expect(configuration).toMatchSnapshot();
 });
 
 test('VPC Project 0.12', () => {
@@ -317,8 +317,8 @@ test('VPC Project 0.12', () => {
   expect(tfg.generate()).toMatchSnapshot();
 
   tfg.write({ dir: outputDir });
-  const plan = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
-  expect(plan).toMatchSnapshot();
+  const configuration = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
+  expect(configuration).toMatchSnapshot();
 });
 
 afterAll(() => {

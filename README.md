@@ -6,17 +6,17 @@
 [![GitHub test](https://github.com/ahzhezhe/terraform-generator/workflows/test/badge.svg?branch=master)](https://github.com/ahzhezhe/terraform-generator)
 [![GitHub issues](https://img.shields.io/github/issues/ahzhezhe/terraform-generator)](https://github.com/ahzhezhe/terraform-generator)
 
-Use Node.js to generate Terraform plan.
+Use Node.js to generate Terraform configurations.
 
 You do not need to have Terraform installed to use this module.
 
-The end result of using this module is Terraform plan in plain text, you will need to write the text into a file and execute it yourself.
+The end result of using this module is Terraform configurations in plain text, you will need to write the text  into a file (terraform-generator does provide an utility function to write the file for you) and execute it yourself.
 
-Currently support generating plan for Terraform version 0.11 and 0.12.
+Currently support generating configurations for Terraform version 0.11 and 0.12.
 
 ## **Benefit**
 
-Make use of all Javascript programming features (some of which is not available in Terraform), e.g. functions, array, loops, if-else, map, etc. to generate a plain Terraform plan.
+Make use of all Javascript programming features (some of which is not available in Terraform), e.g. functions, array, loops, if-else, map, etc. to generate a plain Terraform configurations.
 
 You can easily maintain your infra in Javascript/Typescript.
 
@@ -26,7 +26,7 @@ You don't need to use Terraform modules for reusable resource creations, you can
 
 ## **Limitation**
 
-The generated plan is unformatted and its validity is not verified, use `terraform fmt` and `terraform plan` to format it and check its validity yourself.
+The generated configurations are unformatted and its validity is not verified, use `terraform fmt` and `terraform plan` to format it and check its validity yourself.
 
 ## **Install via NPM**
 
@@ -117,12 +117,12 @@ block.attr('subnets.*.id')       // subnet ids, string list
 block.attr('subnets.*.id[0]')    // first subnet id, string
 ```
 
-### **Generate Terraform plan**
+### **Generate Terraform configuration**
 ```javascript
-// Generate Terraform plan as string
+// Generate Terraform configuration as string
 tfg.generate();
 
-// Write Terraform plan to a file
+// Write Terraform configuration to a file
 // Default dir is .
 // Default filename is terraform.tf
 // Default format is false, if format is true, Terraform needs to be installed
@@ -179,7 +179,7 @@ const getTags = (type: string, name?: string): Map => new Map({
   Env: configs.env
 });
 
-// Start writing Terraform plan
+// Start writing Terraform configuration
 const tfg = new TerraformGenerator({ version: '0.12' });
 
 // Configure provider
@@ -225,7 +225,7 @@ tfg.addOutput('subnets', {
   })
 });
 
-// Write the plan into a terraform.tf file
+// Write the configuration into a terraform.tf file
 const outputDir = path.join('output', configs.env, 'subnets');
 tfg.write({ dir: outputDir, format: true });
 ```
