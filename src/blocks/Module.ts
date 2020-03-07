@@ -21,7 +21,7 @@ export default class Module extends Block {
     return new Argument(`module.${this.name}`);
   }
 
-  getAttribute(name: string): Attribute {
+  attr(name: string): Attribute {
     return new Attribute(this, name);
   }
 

@@ -6,5 +6,5 @@ test('Backend', () => {
   expect(backend.toTerraform('0.11')).toMatchSnapshot();
   expect(backend.toTerraform('0.12')).toMatchSnapshot();
   expect(backend.asArgument().toTerraform()).toBe('"name"');
-  expect(() => backend.getAttribute('attr')).toThrow();
+  expect(() => backend.attr('attr')).toThrow();
 });

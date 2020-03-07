@@ -6,5 +6,5 @@ test('DataSource', () => {
   expect(dataSource.toTerraform('0.11')).toMatchSnapshot();
   expect(dataSource.toTerraform('0.12')).toMatchSnapshot();
   expect(dataSource.asArgument().toTerraform()).toBe('data.type.name');
-  expect(dataSource.getAttribute('attr').toTerraform()).toBe('data.type.name.attr');
+  expect(dataSource.attr('attr').toTerraform()).toBe('data.type.name.attr');
 });

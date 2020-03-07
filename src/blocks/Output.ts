@@ -22,7 +22,7 @@ export default class Output extends Block {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  getAttribute(name: string): Attribute {
+  attr(name: string): Attribute {
     throw new Error('Inaccessible function.');
   }
 

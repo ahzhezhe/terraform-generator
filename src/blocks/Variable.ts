@@ -21,7 +21,7 @@ export default class Variable extends Block {
     return new Argument(`var.${this.name}`);
   }
 
-  getAttribute(name: string): Attribute {
+  attr(name: string): Attribute {
     return new Attribute(this, name);
   }
 

@@ -24,7 +24,7 @@ export default class DataSource extends Block {
     return new Argument(`data.${this.type}.${this.name}`);
   }
 
-  getAttribute(name: string): Attribute {
+  attr(name: string): Attribute {
     return new Attribute(this, name);
   }
 

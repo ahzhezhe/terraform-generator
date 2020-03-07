@@ -6,7 +6,7 @@ test('Provider', () => {
   expect(provider.toTerraform('0.11')).toMatchSnapshot();
   expect(provider.toTerraform('0.12')).toMatchSnapshot();
   expect(provider.asArgument().toTerraform()).toBe('name');
-  expect(() => provider.getAttribute('attr')).toThrow();
+  expect(() => provider.attr('attr')).toThrow();
 });
 
 test('Provider alias', () => {
@@ -14,5 +14,5 @@ test('Provider alias', () => {
   expect(provider.toTerraform('0.11')).toMatchSnapshot();
   expect(provider.toTerraform('0.12')).toMatchSnapshot();
   expect(provider.asArgument().toTerraform()).toBe('name.alias');
-  expect(() => provider.getAttribute('attr')).toThrow();
+  expect(() => provider.attr('attr')).toThrow();
 });

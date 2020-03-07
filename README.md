@@ -52,12 +52,12 @@ const tfg = new TerraformGenerator({ version: '0.12' }, {
 Block's arguments are not typed, please refer to official Terraform documentation on what arguments can be supplied.
 
 ```javascript
-tfg.addProvider('aws', {
+tfg.provider('aws', {
   region: 'ap-southeast-1',
   profile: 'example'
 });
 
-const vpc = tfg.addResource('aws_vpc', 'vpc', {
+const vpc = tfg.resource('aws_vpc', 'vpc', {
   cidr_block: '172.88.0.0/16'
 });
 ```
@@ -66,7 +66,7 @@ const vpc = tfg.addResource('aws_vpc', 'vpc', {
 ```javascript
 import { vpc as vpcDS } from 'other-terraform-project';
 
-const vpc = tfg.addDataSourceFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
+const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 ```
 
 ### **Arguments**
@@ -183,13 +183,13 @@ const getTags = (type: string, name?: string): Map => new Map({
 const tfg = new TerraformGenerator({ version: '0.12' });
 
 // Configure provider
-tfg.addProvider('aws', {
+tfg.provider('aws', {
   region: 'ap-southeast-1',
   profile: 'example'
 });
 
 // Find VPC by name
-const vpc = tfg.addDataSource('aws_vpc', 'vpc', {
+const vpc = tfg.data('aws_vpc', 'vpc', {
   filter: [{
     name: 'tag:Name',
     values: [getTagName('vpc')]
@@ -206,7 +206,7 @@ const subnets = {
 configs.tiers.forEach(tier => {
   tier.subnetCidrs.forEach((cidr, i) => {
     const name = `${tier.name}${i}`;
-    const subnet = tfg.addResource('aws_subnet', `subnet_${name}`, {
+    const subnet = tfg.resource('aws_subnet', `subnet_${name}`, {
       vpc_id: vpc.attr('id'),
       cidr_block: cidr,
       availability_zone: getAvailabilityZone(i),
@@ -217,7 +217,7 @@ configs.tiers.forEach(tier => {
 });
 
 // Output all subnet ids
-tfg.addOutput('subnets', {
+tfg.output('subnets', {
   value: map({
     webSubnets: subnets.web.map(subnet => subnet.attr('id')),
     appSubnets: subnets.app.map(subnet => subnet.attr('id')),

@@ -6,5 +6,5 @@ test('Output', () => {
   expect(output.toTerraform('0.11')).toMatchSnapshot();
   expect(output.toTerraform('0.12')).toMatchSnapshot();
   expect(() => output.asArgument()).toThrow();
-  expect(() => output.getAttribute('attr')).toThrow();
+  expect(() => output.attr('attr')).toThrow();
 });

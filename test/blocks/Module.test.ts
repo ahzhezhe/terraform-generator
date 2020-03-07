@@ -6,5 +6,5 @@ test('Module', () => {
   expect(module.toTerraform('0.11')).toMatchSnapshot();
   expect(module.toTerraform('0.12')).toMatchSnapshot();
   expect(module.asArgument().toTerraform()).toBe('module.name');
-  expect(module.getAttribute('attr').toTerraform()).toBe('module.name.attr');
+  expect(module.attr('attr').toTerraform()).toBe('module.name.attr');
 });

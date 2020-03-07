@@ -6,5 +6,5 @@ test('Variable', () => {
   expect(variable.toTerraform('0.11')).toMatchSnapshot();
   expect(variable.toTerraform('0.12')).toMatchSnapshot();
   expect(variable.asArgument().toTerraform()).toBe('var.name');
-  expect(variable.getAttribute('attr').toTerraform()).toBe('var.name.attr');
+  expect(variable.attr('attr').toTerraform()).toBe('var.name.attr');
 });

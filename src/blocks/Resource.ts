@@ -36,7 +36,7 @@ export default class Resource extends Block {
     return new Argument(`${this.type}.${this.name}`);
   }
 
-  getAttribute(name: string): Attribute {
+  attr(name: string): Attribute {
     return new Attribute(this, name);
   }
 

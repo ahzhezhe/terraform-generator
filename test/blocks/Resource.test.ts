@@ -6,7 +6,7 @@ test('Resource', () => {
   expect(resource.toTerraform('0.11')).toMatchSnapshot();
   expect(resource.toTerraform('0.12')).toMatchSnapshot();
   expect(resource.asArgument().toTerraform()).toBe('type.name');
-  expect(resource.getAttribute('attr').toTerraform()).toBe('type.name.attr');
+  expect(resource.attr('attr').toTerraform()).toBe('type.name.attr');
 });
 
 describe('toDataSource', () => {

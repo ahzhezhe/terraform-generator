@@ -97,21 +97,10 @@ export default abstract class Block {
 
   /**
    * Get block's attribute.
-   * Same as attr().
    * 
    * @param name attribute name
    */
-  abstract getAttribute(name: string): Attribute;
-
-  /**
-   * Get block's attribute.
-   * Same as getAttribute().
-   * 
-   * @param name attribute name
-   */
-  attr(name: string): Attribute {
-    return this.getAttribute(name);
-  }
+  abstract attr(name: string): Attribute;
 
   private validateIdentifier(identifier: string): void {
     if (!identifier.match(/^[a-zA-Z_\-]{1}[0-9a-zA-Z_\-]*$/)) {
