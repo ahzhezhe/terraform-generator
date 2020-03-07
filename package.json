@@ -2,7 +2,7 @@
   "name": "terraform-generator",
   "version": "1.0.3",
   "author": "Ah Zhe",
-  "description": "Generate Terraform plan using Node.js.",
+  "description": "Generate Terraform configuration using Node.js.",
   "keywords": [
     "Terraform"
   ],
