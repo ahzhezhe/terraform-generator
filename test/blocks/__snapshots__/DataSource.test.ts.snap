@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataSource 1`] = `
+exports[`Data 1`] = `
 "data \\"type\\" \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [
@@ -757,7 +757,7 @@ arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
 "
 `;
 
-exports[`DataSource 2`] = `
+exports[`Data 2`] = `
 "data \\"type\\" \\"name\\"{
 arg0 = \\"a\\"
 arg1 = [

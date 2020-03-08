@@ -1,4 +1,4 @@
-import { Block, Argument, Attribute, DataSource, Map } from '..';
+import { Block, Argument, Attribute, Data, Map } from '..';
 
 /**
  * Options to convert resource into data source.
@@ -7,7 +7,7 @@ import { Block, Argument, Attribute, DataSource, Map } from '..';
  * @param name new name of the data source
  * 
  */
-export interface ResourceToDataSourceOptions {
+export interface ResourceToDataOptions {
   type?: string;
   name?: string;
 }
@@ -46,10 +46,10 @@ export default class Resource extends Block {
    * 
    * @param options options
    * @param argNames names of resource arguments to converted into data source arguments;
-   * use array for name mapping, position 0 = original resource name, position 1 = mapped data source name
+   * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  toDataSource(options: ResourceToDataSourceOptions, argNames: (string | [string, string])[], args?: object): DataSource {
+  toData(options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: object): Data {
     const type = (options && options.type) ? options.type : this.type;
     const name = (options && options.name) ? options.name : this.name;
 
@@ -86,7 +86,7 @@ export default class Resource extends Block {
       }
     }
 
-    return new DataSource(type, name, args);
+    return new Data(type, name, args);
   }
 
 }

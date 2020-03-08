@@ -1,10 +1,10 @@
-import { DataSource } from '../../src';
+import { Data } from '../../src';
 import { arg4 } from '..';
 
-test('DataSource', () => {
-  const dataSource = new DataSource('type', 'name', arg4);
-  expect(dataSource.toTerraform('0.11')).toMatchSnapshot();
-  expect(dataSource.toTerraform('0.12')).toMatchSnapshot();
-  expect(dataSource.asArgument().toTerraform()).toBe('data.type.name');
-  expect(dataSource.attr('attr').toTerraform()).toBe('data.type.name.attr');
+test('Data', () => {
+  const data = new Data('type', 'name', arg4);
+  expect(data.toTerraform('0.11')).toMatchSnapshot();
+  expect(data.toTerraform('0.12')).toMatchSnapshot();
+  expect(data.asArgument().toTerraform()).toBe('data.type.name');
+  expect(data.attr('attr').toTerraform()).toBe('data.type.name.attr');
 });

@@ -1514,7 +1514,7 @@ arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
 "
 `;
 
-exports[`toDataSource DataSource args 1`] = `
+exports[`toData Data args 1`] = `
 "data \\"type\\" \\"name\\"{
 a = \\"a\\"
 filter {
@@ -1535,7 +1535,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource DataSource args 2`] = `
+exports[`toData Data args 2`] = `
 "data \\"type\\" \\"name\\"{
 a = \\"a\\"
 filter {
@@ -1556,7 +1556,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource DataSource args 3`] = `
+exports[`toData Data args 3`] = `
 "data \\"newType\\" \\"newName\\"{
 a = \\"a\\"
 filter {
@@ -1577,7 +1577,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource DataSource args 4`] = `
+exports[`toData Data args 4`] = `
 "data \\"newType\\" \\"newName\\"{
 a = \\"a\\"
 filter {
@@ -1598,7 +1598,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource DataSource args overwrite 1`] = `
+exports[`toData Data args overwrite 1`] = `
 "data \\"type\\" \\"name\\"{
 arg = \\"a\\"
 filter {
@@ -1618,7 +1618,7 @@ values = [
 "
 `;
 
-exports[`toDataSource DataSource args overwrite 2`] = `
+exports[`toData Data args overwrite 2`] = `
 "data \\"type\\" \\"name\\"{
 arg = \\"a\\"
 filter {
@@ -1638,7 +1638,7 @@ values = [
 "
 `;
 
-exports[`toDataSource DataSource args overwrite 3`] = `
+exports[`toData Data args overwrite 3`] = `
 "data \\"newType\\" \\"newName\\"{
 arg = \\"a\\"
 filter {
@@ -1658,7 +1658,7 @@ values = [
 "
 `;
 
-exports[`toDataSource DataSource args overwrite 4`] = `
+exports[`toData Data args overwrite 4`] = `
 "data \\"newType\\" \\"newName\\"{
 arg = \\"a\\"
 filter {
@@ -1678,7 +1678,7 @@ values = [
 "
 `;
 
-exports[`toDataSource DataSource args with filter 1`] = `
+exports[`toData Data args with filter 1`] = `
 "data \\"type\\" \\"name\\"{
 filter {
 name = \\"tag:a\\"
@@ -1698,7 +1698,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource DataSource args with filter 2`] = `
+exports[`toData Data args with filter 2`] = `
 "data \\"type\\" \\"name\\"{
 filter {
 name = \\"tag:a\\"
@@ -1718,7 +1718,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource DataSource args with filter 3`] = `
+exports[`toData Data args with filter 3`] = `
 "data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
@@ -1738,7 +1738,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource DataSource args with filter 4`] = `
+exports[`toData Data args with filter 4`] = `
 "data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
@@ -1758,7 +1758,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource OK 1`] = `
+exports[`toData OK 1`] = `
 "data \\"type\\" \\"name\\"{
 filter {
 name = \\"tag:a\\"
@@ -1778,7 +1778,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource OK 2`] = `
+exports[`toData OK 2`] = `
 "data \\"type\\" \\"name\\"{
 filter {
 name = \\"tag:a\\"
@@ -1798,7 +1798,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource OK 3`] = `
+exports[`toData OK 3`] = `
 "data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"
@@ -1818,7 +1818,7 @@ arg = \\"arg\\"
 "
 `;
 
-exports[`toDataSource OK 4`] = `
+exports[`toData OK 4`] = `
 "data \\"newType\\" \\"newName\\"{
 filter {
 name = \\"tag:a\\"

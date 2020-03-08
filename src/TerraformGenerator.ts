@@ -2,7 +2,7 @@ import shell from 'shelljs';
 import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { Block, Resource, DataSource, Module, Output, Provider, Variable, Backend, ResourceToDataSourceOptions } from '.';
+import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, ResourceToDataOptions } from '.';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
 export type TerraformVersion = '0.11' | '0.12';
@@ -137,13 +137,12 @@ export default class TerraformGenerator {
    * 
    * @param resource resource
    * @param options options
-   * @param argNames names of resource arguments to converted into data source arguments;
-   * use array for name mapping, position 0 = original resource name, position 1 = mapped data source name
+   * @param argNames names of resource arguments to be converted into data source arguments;
+   * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  dataFromResource(resource: Resource, options: ResourceToDataSourceOptions,
-    argNames: (string | [string, string])[], args?: object): DataSource {
-    const block = resource.toDataSource(options, argNames, args);
+  dataFromResource(resource: Resource, options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: object): Data {
+    const block = resource.toData(options, argNames, args);
     this.addBlocks(block);
     return block;
   }
@@ -156,8 +155,8 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  data(type: string, name: string, args?: object): DataSource {
-    const block = new DataSource(type, name, args);
+  data(type: string, name: string, args?: object): Data {
+    const block = new Data(type, name, args);
     this.addBlocks(block);
     return block;
   }
