@@ -2,9 +2,17 @@
   "name": "terraform-generator",
   "version": "2.1.1",
   "author": "Chang Zhe Jiet",
-  "description": "Generate Terraform configuration using Node.js.",
+  "description": "Generate Terraform configurations with Node.js.",
   "keywords": [
-    "Terraform"
+    "terraform",
+    "terraformjs",
+    "hashicorp",
+    "node",
+    "node.js",
+    "cloud",
+    "infrastructure",
+    "infra",
+    "aws"
   ],
   "homepage": "https://github.com/ahzhezhe/terraform-generator#readme",
   "repository": {
