@@ -1,6 +1,6 @@
 import { Block, Argument, Attribute } from '..';
 
-export default class DataSource extends Block {
+export default class Data extends Block {
 
   readonly type: string;
   readonly name: string;
