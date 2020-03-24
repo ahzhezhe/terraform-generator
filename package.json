@@ -32,7 +32,8 @@
     "tryout": "ts-node tryout.ts",
     "build": "del-cli --force dist && tsc",
     "prepublishOnly": "npm run build",
-    "postpublish": "del-cli --force dist"
+    "postpublish": "del-cli --force dist",
+    "postversion": "git push"
   },
   "dependencies": {
     "shelljs": "^0.8.3"
