@@ -6,7 +6,7 @@ export default class Argument {
   /**
    * Construct argument.
    * 
-   * @param arg argument as string
+   * @param arg argument as string or copy from another argument object
    * @param asIs argument will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version, default = false.
    */
   constructor(arg: string | Argument, asIs = false) {
@@ -36,7 +36,7 @@ export default class Argument {
 /**
  * Convenient function to construct new argument.
  * 
- * @param arg argument as string
+ * @param arg argument as string or copy from another argument object
  * @param asIs argument will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version, default = false.
  */
 export const arg = (arg: string | Argument, asIs = false): Argument => new Argument(arg, asIs);
