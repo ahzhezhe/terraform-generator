@@ -39,17 +39,17 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/shelljs": "^0.8.7",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.31.0",
+    "@types/jest": "^25.2.3",
+    "@types/shelljs": "^0.8.8",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "del-cli": "^3.0.1",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
     "jest": "^25.5.4",
     "ts-jest": "^25.5.1",
     "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.2"
   },
   "jest": {
     "transform": {
