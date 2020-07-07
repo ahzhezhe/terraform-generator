@@ -2,13 +2,13 @@ import { TerraformVersion, Block, Argument, Map } from '.';
 
 export default class TerraformGeneratorUtils {
 
-  static argumentsToString(version: TerraformVersion, args: object): string {
+  static argumentsToString(version: TerraformVersion, args: Record<string, any>): string {
     let str = '';
     for (const key in args) {
       str += this.argumentToString(version, key, args[key]);
     }
     return str;
-  };
+  }
 
   static isObjectArgument(value: any): boolean {
     if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0
@@ -21,7 +21,7 @@ export default class TerraformGeneratorUtils {
     } else {
       throw new Error(`Invalid value: ${value}`);
     }
-  };
+  }
 
   static argumentToString(version: TerraformVersion, key: string, value: any): string {
     try {
@@ -59,7 +59,7 @@ export default class TerraformGeneratorUtils {
     } catch (err) {
       throw new Error(`Invalid value: ${key} = ${value}`);
     }
-  };
+  }
 
   static argumentValueToString(version: TerraformVersion, value: any): string {
     if (value instanceof Block) {
