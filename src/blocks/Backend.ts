@@ -11,7 +11,7 @@ export default class Backend extends Block {
    * @param type type
    * @param args arguments
    */
-  constructor(type: string, args?: object) {
+  constructor(type: string, args?: Record<string, any>) {
     super('backend', [type], args);
 
     this.type = type;

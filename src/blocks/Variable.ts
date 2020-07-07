@@ -11,7 +11,7 @@ export default class Variable extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(name: string, args?: object) {
+  constructor(name: string, args?: Record<string, any>) {
     super('variable', [name], args);
 
     this.name = name;

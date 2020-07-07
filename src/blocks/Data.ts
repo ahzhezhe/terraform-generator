@@ -13,7 +13,7 @@ export default class Data extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(type: string, name: string, args?: object) {
+  constructor(type: string, name: string, args?: Record<string, any>) {
     super('data', [type, name], args);
 
     this.type = type;

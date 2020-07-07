@@ -23,12 +23,12 @@ export interface WriteOptions {
   dir?: string;
   filename?: string;
   format?: boolean;
-};
+}
 
 export default class TerraformGenerator {
 
   private readonly options: TerraformGeneratorOptions;
-  private readonly arguments: object;
+  private readonly arguments: Record<string, any>;
   private readonly blocks: Block[] = [];
 
   /**
@@ -38,7 +38,7 @@ export default class TerraformGenerator {
    * @param options options
    * @param args arguments
    */
-  constructor(options: TerraformGeneratorOptions, args?: object) {
+  constructor(options: TerraformGeneratorOptions, args?: Record<string, any>) {
     this.options = options;
     this.arguments = args;
   }
@@ -113,7 +113,7 @@ export default class TerraformGenerator {
    * @param type type
    * @param args arguments
    */
-  provider(type: string, args?: object): Provider {
+  provider(type: string, args?: Record<string, any>): Provider {
     const block = new Provider(type, args);
     this.addBlocks(block);
     return block;
@@ -127,7 +127,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  resource(type: string, name: string, args?: object): Resource {
+  resource(type: string, name: string, args?: Record<string, any>): Resource {
     const block = new Resource(type, name, args);
     this.addBlocks(block);
     return block;
@@ -141,7 +141,7 @@ export default class TerraformGenerator {
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  dataFromResource(resource: Resource, options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: object): Data {
+  dataFromResource(resource: Resource, options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: Record<string, any>): Data {
     const block = resource.toData(options, argNames, args);
     this.addBlocks(block);
     return block;
@@ -155,7 +155,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  data(type: string, name: string, args?: object): Data {
+  data(type: string, name: string, args?: Record<string, any>): Data {
     const block = new Data(type, name, args);
     this.addBlocks(block);
     return block;
@@ -168,7 +168,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  module(name: string, args?: object): Module {
+  module(name: string, args?: Record<string, any>): Module {
     const block = new Module(name, args);
     this.addBlocks(block);
     return block;
@@ -181,7 +181,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  output(name: string, args?: object): Output {
+  output(name: string, args?: Record<string, any>): Output {
     const block = new Output(name, args);
     this.addBlocks(block);
     return block;
@@ -194,7 +194,7 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  variable(name: string, args?: object): Variable {
+  variable(name: string, args?: Record<string, any>): Variable {
     const block = new Variable(name, args);
     this.addBlocks(block);
     return block;
@@ -207,7 +207,7 @@ export default class TerraformGenerator {
    * @param type type
    * @param args arguments
    */
-  backend(type: string, args?: object): Backend {
+  backend(type: string, args?: Record<string, any>): Backend {
     const block = new Backend(type, args);
     this.addBlocks(block);
     return block;

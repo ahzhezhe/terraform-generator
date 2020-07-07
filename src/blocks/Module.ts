@@ -11,7 +11,7 @@ export default class Module extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(name: string, args?: object) {
+  constructor(name: string, args?: Record<string, any>) {
     super('module', [name], args);
 
     this.name = name;

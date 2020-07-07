@@ -11,7 +11,7 @@ export default class Provider extends Block {
    * @param type type
    * @param args arguments
    */
-  constructor(type: string, args?: object) {
+  constructor(type: string, args?: Record<string, any>) {
     super('provider', [type], args);
 
     this.type = type;

@@ -32,13 +32,35 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {
         "accessibility": "no-public"
       }
     ],
-    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variableLike",
+        "format": [
+          "camelCase",
+          "UPPER_CASE"
+        ]
+      },
+      {
+        "selector": "enumMember",
+        "format": [
+          "UPPER_CASE"
+        ]
+      },
+      {
+        "selector": "typeLike",
+        "format": [
+          "PascalCase"
+        ]
+      }
+    ],
     "@typescript-eslint/prefer-for-of": "error",
     "quotes": [
       "error",

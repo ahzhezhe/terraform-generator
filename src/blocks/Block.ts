@@ -5,7 +5,7 @@ export default abstract class Block {
 
   readonly blockType: string;
   readonly blockNames: string[];
-  private readonly arguments: object;
+  private readonly arguments: Record<string, any>;
 
   /**
    * Construct block.
@@ -14,7 +14,7 @@ export default abstract class Block {
    * @param names names
    * @param args arguments
    */
-  constructor(type: string, names: string[], args?: object) {
+  constructor(type: string, names: string[], args?: Record<string, any>) {
     this.validateIdentifier(type);
     names.forEach(name => {
       this.validateIdentifier(name);
@@ -28,7 +28,7 @@ export default abstract class Block {
   /**
    * Get arguments.
    */
-  getArguments(): object {
+  getArguments(): Record<string, any> {
     return this.arguments;
   }
 
@@ -57,7 +57,7 @@ export default abstract class Block {
    * 
    * @param args arguments
    */
-  setArguments(args: object): Block {
+  setArguments(args: Record<string, any>): Block {
     for (const key in args) {
       this.arguments[key] = args[key];
     }

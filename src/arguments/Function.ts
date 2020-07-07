@@ -1,7 +1,7 @@
 import { Argument } from '..';
 import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
 
-export default class Function extends Argument {
+export default class Fn extends Argument {
 
   /**
    * Construct function argument.
@@ -10,7 +10,7 @@ export default class Function extends Argument {
    * @param args function arguments
    */
   constructor(name: string, ...args: any[]) {
-    super(Function.constructArgument(name, ...args));
+    super(Fn.constructArgument(name, ...args));
   }
 
   private static constructArgument(fn: string, ...args: any[]): string {
@@ -40,4 +40,4 @@ export default class Function extends Argument {
  * @param name function name
  * @param args function arguments
  */
-export const fn = (name: string, ...args: any[]): Function => new Function(name, ...args);
+export const fn = (name: string, ...args: any[]): Fn => new Fn(name, ...args);
