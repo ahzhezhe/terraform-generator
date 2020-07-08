@@ -20,6 +20,10 @@ variable \\"test\\"{
 type = \\"string\\"
 }
 
+variable \\"test2\\"{
+type = \\"string\\"
+}
+
 data \\"aws_vpc\\" \\"test\\"{
 cidr_block = \\"test\\"
 }
@@ -666,6 +670,10 @@ variable \\"test\\"{
 type = \\"string\\"
 }
 
+variable \\"test2\\"{
+type = \\"string\\"
+}
+
 data \\"aws_vpc\\" \\"test\\"{
 cidr_block = \\"test\\"
 }
@@ -1292,6 +1300,20 @@ dbSubnets = [
 "
 `;
 
+exports[`VPC Project 0.11 3`] = `
+"test2 = \\"test\\"
+
+
+"
+`;
+
+exports[`VPC Project 0.11 4`] = `
+"test2 = \\"test\\"
+
+
+"
+`;
+
 exports[`VPC Project 0.12 1`] = `
 "terraform {
 required_version = \\"= 0.12\\"
@@ -1309,6 +1331,10 @@ profile = \\"test\\"
 }
 
 variable \\"test\\"{
+type = \\"string\\"
+}
+
+variable \\"test2\\"{
 type = \\"string\\"
 }
 
@@ -1958,6 +1984,10 @@ variable \\"test\\"{
 type = \\"string\\"
 }
 
+variable \\"test2\\"{
+type = \\"string\\"
+}
+
 data \\"aws_vpc\\" \\"test\\"{
 cidr_block = \\"test\\"
 }
@@ -2580,6 +2610,20 @@ aws_subnet.db2.cidr_block,
 ]
 }
 }
+
+"
+`;
+
+exports[`VPC Project 0.12 3`] = `
+"test2 = \\"test\\"
+
+
+"
+`;
+
+exports[`VPC Project 0.12 4`] = `
+"test2 = \\"test\\"
+
 
 "
 `;

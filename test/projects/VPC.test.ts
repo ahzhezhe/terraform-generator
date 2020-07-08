@@ -84,6 +84,9 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
   tfg.variable('test', {
     type: 'string'
   });
+  tfg.variable('test2', {
+    type: 'string'
+  }, 'test');
   tfg.data('aws_vpc', 'test', {
     cidr_block: 'test'
   });
@@ -305,23 +308,38 @@ const outputDir = path.join('test', '__output__');
 
 test('VPC Project 0.11', () => {
   const tfg = createTerraformGenerator('0.11');
+
   expect(tfg.generate()).toMatchSnapshot();
 
   tfg.write({ dir: outputDir });
-  const configuration = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
-  expect(configuration).toMatchSnapshot();
+  const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
+  expect(tf).toMatchSnapshot();
+
+  expect(tfg.generateVars()).toMatchSnapshot();
+
+  tfg.writeVars({ dir: outputDir });
+  const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
+  expect(tfvars).toMatchSnapshot();
 });
 
 test('VPC Project 0.12', () => {
   const tfg = createTerraformGenerator('0.12');
+
   expect(tfg.generate()).toMatchSnapshot();
 
   tfg.write({ dir: outputDir });
-  const configuration = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
-  expect(configuration).toMatchSnapshot();
+  const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
+  expect(tf).toMatchSnapshot();
+
+  expect(tfg.generateVars()).toMatchSnapshot();
+
+  tfg.writeVars({ dir: outputDir });
+  const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
+  expect(tfvars).toMatchSnapshot();
 });
 
 afterAll(() => {
-  fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
-  fs.rmdirSync(outputDir);
+  // fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
+  // fs.unlinkSync(path.join(outputDir, 'terraform.tfvars'));
+  // fs.rmdirSync(outputDir);
 });

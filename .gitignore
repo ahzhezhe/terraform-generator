@@ -4,3 +4,4 @@ test/__coverage__
 test/__output__
 tryout.ts
 tryout.tf
+tryout.tfvars
