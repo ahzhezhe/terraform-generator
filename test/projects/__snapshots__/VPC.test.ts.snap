@@ -1303,13 +1303,11 @@ dbSubnets = [
 exports[`VPC Project 0.11 3`] = `
 "test2 = \\"test\\"
 
-
 "
 `;
 
 exports[`VPC Project 0.11 4`] = `
 "test2 = \\"test\\"
-
 
 "
 `;
@@ -2617,13 +2615,11 @@ aws_subnet.db2.cidr_block,
 exports[`VPC Project 0.12 3`] = `
 "test2 = \\"test\\"
 
-
 "
 `;
 
 exports[`VPC Project 0.12 4`] = `
 "test2 = \\"test\\"
-
 
 "
 `;

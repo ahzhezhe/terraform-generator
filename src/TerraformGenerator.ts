@@ -89,7 +89,7 @@ export default class TerraformGenerator {
 
     Object.keys(this.variables).forEach(key => {
       str += TerraformGeneratorUtils.argumentsToString(this.options.version, { [key]: this.variables[key] });
-      str += '\n\n';
+      str += '\n';
     });
 
     return str;
