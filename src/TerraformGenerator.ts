@@ -16,12 +16,14 @@ export interface TerraformGeneratorOptions {
 
 /**
  * @param dir directoty, default = .
- * @param filename Terraform filename, must ends with .tf, default = terraform.tf
+ * @param tfFilename Terraform filename, must ends with .tf, default = terraform.tf
+ * @param tfvarsFilename Terraform variables filename, must ends with .tfvars, default = terraform.tfvars
  * @param format use 'terraform fmt' to format the configuration, Terraform must be installed, default = false
  */
 export interface WriteOptions {
   dir?: string;
-  filename?: string;
+  tfFilename?: string;
+  tfvarsFilename?: string;
   format?: boolean;
 }
 
@@ -30,6 +32,7 @@ export default class TerraformGenerator {
   private readonly options: TerraformGeneratorOptions;
   private readonly arguments: Record<string, any>;
   private readonly blocks: Block[] = [];
+  private variables: Record<string, any> = {};
 
   /**
    * Construct Terraform generator.
@@ -46,7 +49,14 @@ export default class TerraformGenerator {
   /**
    * Generate Terraform configuration as string.
    */
-  generate(): string {
+  generate(): { tf: string; tfvars: string } {
+    return {
+      tf: this.generateTf(),
+      tfvars: Object.keys(this.variables).length > 0 ? this.generateTfvars() : null
+    };
+  }
+
+  private generateTf(): string {
     let str = '';
 
     if (this.arguments || this.blocks.filter(block => block instanceof Backend).length > 0) {
@@ -69,6 +79,17 @@ export default class TerraformGenerator {
     return str;
   }
 
+  private generateTfvars(): string {
+    let str = '';
+
+    Object.keys(this.variables).forEach(key => {
+      str += TerraformGeneratorUtils.argumentsToString(this.options.version, { [key]: this.variables[key] });
+      str += '\n';
+    });
+
+    return str;
+  }
+
   /**
    * Write Terraform configuration to a file.
    * 
@@ -81,15 +102,25 @@ export default class TerraformGenerator {
     if (!options.dir) {
       options.dir = '.';
     }
-    if (!options.filename) {
-      options.filename = 'terraform.tf';
+    if (!options.tfFilename) {
+      options.tfFilename = 'terraform.tf';
     }
-    if (!options.filename.endsWith('.tf')) {
-      options.filename += '.tf';
+    if (!options.tfFilename.endsWith('.tf')) {
+      options.tfFilename += '.tf';
+    }
+    if (!options.tfvarsFilename) {
+      options.tfvarsFilename = 'terraform.tfvars';
+    }
+    if (!options.tfvarsFilename.endsWith('.tfvars')) {
+      options.tfvarsFilename += '.tfvars';
     }
 
+    const result = this.generate();
     shell.mkdir('-p', options.dir);
-    fs.writeFileSync(path.join(options.dir, options.filename), this.generate());
+    fs.writeFileSync(path.join(options.dir, options.tfFilename), result.tf);
+    if (result.tfvars) {
+      fs.writeFileSync(path.join(options.dir, options.tfvarsFilename), result.tfvars);
+    }
 
     if (options.format) {
       child_process.execSync('terraform fmt', { cwd: options.dir });
@@ -193,10 +224,14 @@ export default class TerraformGenerator {
    * 
    * @param name name
    * @param args arguments
+   * @param value variable value
    */
-  variable(name: string, args?: Record<string, any>): Variable {
+  variable(name: string, args?: Record<string, any>, value?: any): Variable {
     const block = new Variable(name, args);
     this.addBlocks(block);
+    if (value != null) {
+      this.addVars({ [name]: value });
+    }
     return block;
   }
 
@@ -211,6 +246,19 @@ export default class TerraformGenerator {
     const block = new Backend(type, args);
     this.addBlocks(block);
     return block;
+  }
+
+  /**
+   * Add variable values into Terraform.
+   * 
+   * @param variables variables
+   */
+  addVars(variables: Record<string, any>): TerraformGenerator {
+    this.variables = {
+      ...this.variables,
+      ...variables
+    };
+    return this;
   }
 
 }
