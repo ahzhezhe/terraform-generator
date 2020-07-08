@@ -1329,11 +1329,11 @@ profile = \\"test\\"
 }
 
 variable \\"test\\"{
-type = \\"string\\"
+type = string
 }
 
 variable \\"test2\\"{
-type = \\"string\\"
+type = string
 }
 
 data \\"aws_vpc\\" \\"test\\"{
@@ -1983,11 +1983,11 @@ profile = \\"test\\"
 }
 
 variable \\"test\\"{
-type = \\"string\\"
+type = string
 }
 
 variable \\"test2\\"{
-type = \\"string\\"
+type = string
 }
 
 data \\"aws_vpc\\" \\"test\\"{

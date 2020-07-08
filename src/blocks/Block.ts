@@ -1,11 +1,12 @@
 import { TerraformVersion, Attribute, Argument } from '..';
-import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
+import TerraformGeneratorUtils, { ArgumentsToStringFn } from '../TerraformGeneratorUtils';
 
 export default abstract class Block {
 
   readonly blockType: string;
   readonly blockNames: string[];
   private readonly arguments: Record<string, any>;
+  private readonly customArgumentToString: ArgumentsToStringFn;
 
   /**
    * Construct block.
@@ -14,7 +15,7 @@ export default abstract class Block {
    * @param names names
    * @param args arguments
    */
-  constructor(type: string, names: string[], args?: Record<string, any>) {
+  constructor(type: string, names: string[], args?: Record<string, any>, customArgumentToString?: ArgumentsToStringFn) {
     this.validateIdentifier(type);
     names.forEach(name => {
       this.validateIdentifier(name);
@@ -23,6 +24,7 @@ export default abstract class Block {
     this.blockType = type;
     this.blockNames = names;
     this.arguments = args ? args : {};
+    this.customArgumentToString = customArgumentToString;
   }
 
   /**
@@ -85,7 +87,7 @@ export default abstract class Block {
       str += ` "${name}"`;
     });
     str += '{\n';
-    str += TerraformGeneratorUtils.argumentsToString(version, this.arguments);
+    str += TerraformGeneratorUtils.argumentsToString(version, this.arguments, this.customArgumentToString);
     str += '}\n\n';
     return str;
   }

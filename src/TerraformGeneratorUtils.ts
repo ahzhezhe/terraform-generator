@@ -1,11 +1,17 @@
 import { TerraformVersion, Block, Argument, Map } from '.';
 
+export type ArgumentsToStringFn = (version: TerraformVersion, key: string, value: any) => string;
+
 export default class TerraformGeneratorUtils {
 
-  static argumentsToString(version: TerraformVersion, args: Record<string, any>): string {
+  static argumentsToString(version: TerraformVersion, args: Record<string, any>, customArgumentToString?: ArgumentsToStringFn): string {
     let str = '';
     for (const key in args) {
-      str += this.argumentToString(version, key, args[key]);
+      if (customArgumentToString) {
+        str += customArgumentToString(version, key, args[key]);
+      } else {
+        str += this.argumentToString(version, key, args[key]);
+      }
     }
     return str;
   }
