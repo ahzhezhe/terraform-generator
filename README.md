@@ -133,25 +133,15 @@ tfg.variable('password', {
 ### **Generate Terraform configuration**
 ```javascript
 // Generate Terraform configuration as string
-tfg.generate();
+const result = tfg.generate();
+console.log(result.tf);
+console.log(result.tfvars);
 
 // Write Terraform configuration to a file
-// Default dir is .
-// Default filename is terraform.tf
-// Default format is false, if format is true, Terraform needs to be installed
-tfg.write({ dir: 'outputDir', filename: 'output.tf', format: true });
-```
-
-### **Generate Terraform variables**
-```javascript
-// Generate Terraform variables as string
-tfg.generateVars();
-
-// Write Terraform variables to a file
-// Default dir is .
-// Default filename is terraform.tfvars
-// Default format is false, if format is true, Terraform needs to be installed
-tfg.writeVars({ dir: 'outputDir', filename: 'output.tf', format: true });
+tfg.write({ 
+  dir: 'outputDir',
+  format: true 
+});
 ```
 
 ## **Example**

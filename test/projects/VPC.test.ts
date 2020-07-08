@@ -314,10 +314,6 @@ test('VPC Project 0.11', () => {
   tfg.write({ dir: outputDir });
   const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(tf).toMatchSnapshot();
-
-  expect(tfg.generateVars()).toMatchSnapshot();
-
-  tfg.writeVars({ dir: outputDir });
   const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
   expect(tfvars).toMatchSnapshot();
 });
@@ -330,16 +326,12 @@ test('VPC Project 0.12', () => {
   tfg.write({ dir: outputDir });
   const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(tf).toMatchSnapshot();
-
-  expect(tfg.generateVars()).toMatchSnapshot();
-
-  tfg.writeVars({ dir: outputDir });
   const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
   expect(tfvars).toMatchSnapshot();
 });
 
 afterAll(() => {
-  // fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
-  // fs.unlinkSync(path.join(outputDir, 'terraform.tfvars'));
-  // fs.rmdirSync(outputDir);
+  fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
+  fs.unlinkSync(path.join(outputDir, 'terraform.tfvars'));
+  fs.rmdirSync(outputDir);
 });

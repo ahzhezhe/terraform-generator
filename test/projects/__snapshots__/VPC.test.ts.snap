@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VPC Project 0.11 1`] = `
-"terraform {
+Object {
+  "tf": "terraform {
 required_version = \\"= 0.11\\"
 backend \\"s3\\"{
 bucket = \\"mybucket\\"
@@ -647,7 +648,11 @@ dbSubnets = [
 }
 }
 
-"
+",
+  "tfvars": "test2 = \\"test\\"
+
+",
+}
 `;
 
 exports[`VPC Project 0.11 2`] = `
@@ -1306,14 +1311,9 @@ exports[`VPC Project 0.11 3`] = `
 "
 `;
 
-exports[`VPC Project 0.11 4`] = `
-"test2 = \\"test\\"
-
-"
-`;
-
 exports[`VPC Project 0.12 1`] = `
-"terraform {
+Object {
+  "tf": "terraform {
 required_version = \\"= 0.12\\"
 backend \\"s3\\"{
 bucket = \\"mybucket\\"
@@ -1959,7 +1959,11 @@ aws_subnet.db2.cidr_block,
 }
 }
 
-"
+",
+  "tfvars": "test2 = \\"test\\"
+
+",
+}
 `;
 
 exports[`VPC Project 0.12 2`] = `
@@ -2613,12 +2617,6 @@ aws_subnet.db2.cidr_block,
 `;
 
 exports[`VPC Project 0.12 3`] = `
-"test2 = \\"test\\"
-
-"
-`;
-
-exports[`VPC Project 0.12 4`] = `
 "test2 = \\"test\\"
 
 "
