@@ -84,9 +84,6 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
   tfg.variable('test', {
     type: 'string'
   });
-  tfg.variable('test2', {
-    type: 'string'
-  }, 'test');
   tfg.data('aws_vpc', 'test', {
     cidr_block: 'test'
   });
@@ -314,8 +311,6 @@ test('VPC Project 0.11', () => {
   tfg.write({ dir: outputDir });
   const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(tf).toMatchSnapshot();
-  const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
-  expect(tfvars).toMatchSnapshot();
 });
 
 test('VPC Project 0.12', () => {
@@ -326,12 +321,9 @@ test('VPC Project 0.12', () => {
   tfg.write({ dir: outputDir });
   const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(tf).toMatchSnapshot();
-  const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
-  expect(tfvars).toMatchSnapshot();
 });
 
 afterAll(() => {
   fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
-  fs.unlinkSync(path.join(outputDir, 'terraform.tfvars'));
   fs.rmdirSync(outputDir);
 });
