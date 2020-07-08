@@ -116,6 +116,20 @@ block.attr('subnets.*.id')       // subnet ids, string list
 block.attr('subnets.*.id[0]')    // first subnet id, string
 ```
 
+### **Variables**
+```javascript
+// You can directly add multiple variable values.
+tfg.addVars({
+  var1: 123,
+  var2: 'abc'
+});
+
+// You can also add single variable value while adding variable block to your configuration.
+tfg.variable('password', {
+  type: 'string'
+}, 'p@ssW0rd');
+```
+
 ### **Generate Terraform configuration**
 ```javascript
 // Generate Terraform configuration as string
@@ -126,6 +140,18 @@ tfg.generate();
 // Default filename is terraform.tf
 // Default format is false, if format is true, Terraform needs to be installed
 tfg.write({ dir: 'outputDir', filename: 'output.tf', format: true });
+```
+
+### **Generate Terraform variables**
+```javascript
+// Generate Terraform variables as string
+tfg.generateVars();
+
+// Write Terraform variables to a file
+// Default dir is .
+// Default filename is terraform.tfvars
+// Default format is false, if format is true, Terraform needs to be installed
+tfg.writeVars({ dir: 'outputDir', filename: 'output.tf', format: true });
 ```
 
 ## **Example**
