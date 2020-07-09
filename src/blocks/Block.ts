@@ -104,6 +104,13 @@ export default abstract class Block {
    */
   abstract attr(name: string): Attribute;
 
+  /**
+   * Block's id attribute.
+   */
+  get id(): Attribute {
+    return this.attr('id');
+  }
+
   private validateIdentifier(identifier: string): void {
     if (!identifier.match(/^[a-zA-Z_\-]{1}[0-9a-zA-Z_\-]*$/)) {
       throw new Error(`Invalid identifier: ${identifier}`);

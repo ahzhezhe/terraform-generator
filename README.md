@@ -110,7 +110,8 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 
 ### **Attributes**
 ```javascript
-block.attr('id')                 // block id, string
+block.id                 // block id, string
+block.id                         // convenience function for attr('id')
 block.attr('subnets')            // subnet objects, object list
 block.attr('subnets.*.id')       // subnet ids, string list
 block.attr('subnets.*.id[0]')    // first subnet id, string
@@ -222,7 +223,7 @@ configs.tiers.forEach(tier => {
   tier.subnetCidrs.forEach((cidr, i) => {
     const name = `${tier.name}${i}`;
     const subnet = tfg.resource('aws_subnet', `subnet_${name}`, {
-      vpc_id: vpc.attr('id'),
+      vpc_id: vpc.id,
       cidr_block: cidr,
       availability_zone: getAvailabilityZone(i),
       tags: getTags('subnet', name)
@@ -234,9 +235,9 @@ configs.tiers.forEach(tier => {
 // Output all subnet ids
 tfg.output('subnets', {
   value: map({
-    webSubnets: subnets.web.map(subnet => subnet.attr('id')),
-    appSubnets: subnets.app.map(subnet => subnet.attr('id')),
-    dbSubnets: subnets.db.map(subnet => subnet.attr('id'))
+    webSubnets: subnets.web.map(subnet => subnet.id),
+    appSubnets: subnets.app.map(subnet => subnet.id),
+    dbSubnets: subnets.db.map(subnet => subnet.id)
   })
 });
 
