@@ -110,8 +110,8 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 
 ### **Attributes**
 ```javascript
-block.id                 // block id, string
-block.id                         // convenience function for attr('id')
+block.attr('id')                 // block id, string
+block.id                         // convenience getter function, same as attr('id')
 block.attr('subnets')            // subnet objects, object list
 block.attr('subnets.*.id')       // subnet ids, string list
 block.attr('subnets.*.id[0]')    // first subnet id, string
