@@ -1,4 +1,4 @@
-import { Block, Argument, Attribute } from '..';
+import { TerraformVersion, Block, Argument, Attribute } from '..';
 import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
 
 export default class Variable extends Block {
@@ -13,15 +13,17 @@ export default class Variable extends Block {
    * @param args arguments
    */
   constructor(name: string, args?: Record<string, any>) {
-    super('variable', [name], args, (version, key, value) => {
-      if (version === '0.12' && key === 'type' && typeof value === 'string') {
-        return `${key} = ${value}\n`;
-      } else {
-        return TerraformGeneratorUtils.argumentToString(version, key, value);
-      }
-    });
+    super('variable', [name], args, Variable.customArgumentToString);
 
     this.name = name;
+  }
+
+  private static customArgumentToString(version: TerraformVersion, key: string, value: any): string {
+    if (version === '0.12' && key === 'type' && typeof value === 'string') {
+      return `${key} = ${value}\n`;
+    } else {
+      return TerraformGeneratorUtils.argumentToString(version, key, value);
+    }
   }
 
   asArgument(): Argument {
