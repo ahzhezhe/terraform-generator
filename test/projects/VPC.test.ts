@@ -309,6 +309,9 @@ const outputDir = path.join('test', '__output__');
 test('VPC Project 0.11', () => {
   const tfg = createTerraformGenerator('0.11');
 
+  expect(tfg.getArguments()).toMatchSnapshot();
+  expect(tfg.getBlocks()).toMatchSnapshot();
+  expect(tfg.getVars()).toMatchSnapshot();
   expect(tfg.generate()).toMatchSnapshot();
 
   tfg.write({ dir: outputDir });
@@ -321,6 +324,9 @@ test('VPC Project 0.11', () => {
 test('VPC Project 0.12', () => {
   const tfg = createTerraformGenerator('0.12');
 
+  expect(tfg.getArguments()).toMatchSnapshot();
+  expect(tfg.getBlocks()).toMatchSnapshot();
+  expect(tfg.getVars()).toMatchSnapshot();
   expect(tfg.generate()).toMatchSnapshot();
 
   tfg.write({ dir: outputDir });

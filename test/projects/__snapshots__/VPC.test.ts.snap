@@ -2,6 +2,1543 @@
 
 exports[`VPC Project 0.11 1`] = `
 Object {
+  "required_version": "= 0.11",
+}
+`;
+
+exports[`VPC Project 0.11 2`] = `
+Array [
+  Backend {
+    "arguments": Object {
+      "bucket": "mybucket",
+      "key": "path/to/my/key",
+      "region": "ap-southeast-1",
+    },
+    "blockNames": Array [
+      "s3",
+    ],
+    "blockType": "backend",
+    "customArgumentToString": undefined,
+    "type": "s3",
+  },
+  Provider {
+    "arguments": Object {
+      "profile": "test",
+      "region": "ap-southeast-1",
+    },
+    "blockNames": Array [
+      "aws",
+    ],
+    "blockType": "provider",
+    "customArgumentToString": undefined,
+    "type": "aws",
+  },
+  Variable {
+    "arguments": Object {
+      "type": "string",
+    },
+    "blockNames": Array [
+      "test",
+    ],
+    "blockType": "variable",
+    "customArgumentToString": [Function],
+    "name": "test",
+  },
+  Variable {
+    "arguments": Object {
+      "type": "string",
+    },
+    "blockNames": Array [
+      "test2",
+    ],
+    "blockType": "variable",
+    "customArgumentToString": [Function],
+    "name": "test2",
+  },
+  Data {
+    "arguments": Object {
+      "cidr_block": "test",
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test",
+    ],
+    "blockType": "data",
+    "customArgumentToString": undefined,
+    "name": "test",
+    "type": "aws_vpc",
+  },
+  Module {
+    "arguments": Object {
+      "source": "./test",
+    },
+    "blockNames": Array [
+      "test",
+    ],
+    "blockType": "module",
+    "customArgumentToString": undefined,
+    "name": "test",
+  },
+  Resource {
+    "arguments": Object {
+      "cidr_block": "test",
+      "tags": Map {
+        "arguments": Object {
+          "a": "a",
+        },
+      },
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "test",
+    "type": "aws_vpc",
+  },
+  Data {
+    "arguments": Object {
+      "cidr_block": "test",
+      "filter": Array [
+        Object {
+          "name": "tag:a",
+          "values": Array [
+            "a",
+          ],
+        },
+      ],
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test",
+    ],
+    "blockType": "data",
+    "customArgumentToString": undefined,
+    "name": "test",
+    "type": "aws_vpc",
+  },
+  Data {
+    "arguments": Object {
+      "cidr_block": "test",
+      "filter": Array [
+        Object {
+          "name": "tag:a",
+          "values": Array [
+            "a",
+          ],
+        },
+      ],
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test2",
+    ],
+    "blockType": "data",
+    "customArgumentToString": undefined,
+    "name": "test2",
+    "type": "aws_vpc",
+  },
+  Resource {
+    "arguments": Object {
+      "cidr_block": "172.88.0.0/16",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "vpc-test-dev",
+          "Project": "test",
+        },
+      },
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "vpc",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "vpc",
+    "type": "aws_vpc",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.100.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-public0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "public0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.101.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-public1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "public1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.102.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-public2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "public2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.104.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-web0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "web0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.105.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-web1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "web1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.106.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-web2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "web2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.108.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-app0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "app0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.109.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-app1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "app1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.110.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-app2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "app2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.112.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-gut0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "gut0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.113.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-gut1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "gut1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.114.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-gut2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "gut2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.116.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-db0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "db0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.117.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-db1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "db1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.118.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-db2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "db2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "igw-test-dev",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_internet_gateway",
+      "igw",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw",
+    "type": "aws_internet_gateway",
+  },
+  Resource {
+    "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "rt-test-dev-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table",
+      "default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default",
+    "type": "aws_route_table",
+  },
+  Resource {
+    "arguments": Object {
+      "route": Array [
+        Object {
+          "cidr_block": "0.0.0.0/0",
+          "gateway_id": Attribute {
+            "argument": "aws_internet_gateway.igw.id",
+            "asIs": false,
+          },
+        },
+      ],
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "rt-test-dev-igw",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table",
+      "igw",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw",
+    "type": "aws_route_table",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.web0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-web0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-web0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.web1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-web1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-web1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.web2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-web2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-web2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.app0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-app0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-app0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.app1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-app1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-app1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.app2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-app2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-app2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-gut0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-gut0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-gut1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-gut1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-gut2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-gut2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.db0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-db0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-db0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.db1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-db1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-db1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.db2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-db2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-db2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.igw.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "igw-public0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw-public0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.igw.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "igw-public1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw-public1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.igw.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "igw-public2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw-public2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "egress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "0.0.0.0/0",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+      ],
+      "ingress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "0.0.0.0/0",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+      ],
+      "subnet_ids": Array [
+        Attribute {
+          "argument": "aws_subnet.public0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.public1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.public2.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.web0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.web1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.web2.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.app0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.app1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.app2.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.gut0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.gut1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.gut2.id",
+          "asIs": false,
+        },
+      ],
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "nacl-test-dev-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_network_acl",
+      "default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default",
+    "type": "aws_network_acl",
+  },
+  Resource {
+    "arguments": Object {
+      "egress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.108.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.116.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 110,
+          "to_port": 0,
+        },
+      ],
+      "ingress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.108.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.116.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 110,
+          "to_port": 0,
+        },
+      ],
+      "subnet_ids": Array [
+        Attribute {
+          "argument": "aws_subnet.db0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.db1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.db2.id",
+          "asIs": false,
+        },
+      ],
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "nacl-test-dev-db",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_network_acl",
+      "db",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db",
+    "type": "aws_network_acl",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for public tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.100.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-public-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-public-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "public-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for web tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.104.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-web-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-web-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "web-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for app tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.108.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-app-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-app-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "app-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for gut tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.112.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-gut-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-gut-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "gut-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for db tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.116.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-db-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-db-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "db-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "eip-test-dev-nat",
+          "Project": "test",
+        },
+      },
+      "vpc": true,
+    },
+    "blockNames": Array [
+      "aws_eip",
+      "nat",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat",
+    "type": "aws_eip",
+  },
+  Resource {
+    "arguments": Object {
+      "allocation_id": Attribute {
+        "argument": "aws_eip.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public0.id",
+        "asIs": false,
+      },
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "nat-test-dev",
+          "Project": "test",
+        },
+      },
+    },
+    "blockNames": Array [
+      "aws_nat_gateway",
+      "nat",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat",
+    "type": "aws_nat_gateway",
+  },
+  Resource {
+    "arguments": Object {
+      "route": Object {
+        "cidr_block": "0.0.0.0/0",
+        "gateway_id": Attribute {
+          "argument": "aws_nat_gateway.nat.id",
+          "asIs": false,
+        },
+      },
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "rt-test-dev-nat",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table",
+      "nat",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat",
+    "type": "aws_route_table",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "nat-gut0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat-gut0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "nat-gut1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat-gut1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "nat-gut2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat-gut2",
+    "type": "aws_route_table_association",
+  },
+  Output {
+    "arguments": Object {
+      "value": Map {
+        "arguments": Object {
+          "cidr": Attribute {
+            "argument": "aws_vpc.vpc.cidr_block",
+            "asIs": false,
+          },
+        },
+      },
+    },
+    "blockNames": Array [
+      "vpc",
+    ],
+    "blockType": "output",
+    "customArgumentToString": undefined,
+    "name": "vpc",
+  },
+  Output {
+    "arguments": Object {
+      "value": Map {
+        "arguments": Object {
+          "appSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.app0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.app1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.app2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "dbSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.db0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.db1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.db2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "gutSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.gut0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.gut1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.gut2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "mgtSubnets": Array [],
+          "publicSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.public0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.public1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.public2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "webSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.web0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.web1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.web2.cidr_block",
+              "asIs": false,
+            },
+          ],
+        },
+      },
+    },
+    "blockNames": Array [
+      "subnets",
+    ],
+    "blockType": "output",
+    "customArgumentToString": undefined,
+    "name": "subnets",
+  },
+]
+`;
+
+exports[`VPC Project 0.11 3`] = `
+Object {
+  "test2": "test",
+}
+`;
+
+exports[`VPC Project 0.11 4`] = `
+Object {
   "tf": "terraform {
 required_version = \\"= 0.11\\"
 backend \\"s3\\"{
@@ -655,7 +2192,7 @@ dbSubnets = [
 }
 `;
 
-exports[`VPC Project 0.11 2`] = `
+exports[`VPC Project 0.11 5`] = `
 "terraform {
 required_version = \\"= 0.11\\"
 backend \\"s3\\"{
@@ -1305,13 +2842,1550 @@ dbSubnets = [
 "
 `;
 
-exports[`VPC Project 0.11 3`] = `
+exports[`VPC Project 0.11 6`] = `
 "test2 = \\"test\\"
 
 "
 `;
 
 exports[`VPC Project 0.12 1`] = `
+Object {
+  "required_version": "= 0.12",
+}
+`;
+
+exports[`VPC Project 0.12 2`] = `
+Array [
+  Backend {
+    "arguments": Object {
+      "bucket": "mybucket",
+      "key": "path/to/my/key",
+      "region": "ap-southeast-1",
+    },
+    "blockNames": Array [
+      "s3",
+    ],
+    "blockType": "backend",
+    "customArgumentToString": undefined,
+    "type": "s3",
+  },
+  Provider {
+    "arguments": Object {
+      "profile": "test",
+      "region": "ap-southeast-1",
+    },
+    "blockNames": Array [
+      "aws",
+    ],
+    "blockType": "provider",
+    "customArgumentToString": undefined,
+    "type": "aws",
+  },
+  Variable {
+    "arguments": Object {
+      "type": "string",
+    },
+    "blockNames": Array [
+      "test",
+    ],
+    "blockType": "variable",
+    "customArgumentToString": [Function],
+    "name": "test",
+  },
+  Variable {
+    "arguments": Object {
+      "type": "string",
+    },
+    "blockNames": Array [
+      "test2",
+    ],
+    "blockType": "variable",
+    "customArgumentToString": [Function],
+    "name": "test2",
+  },
+  Data {
+    "arguments": Object {
+      "cidr_block": "test",
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test",
+    ],
+    "blockType": "data",
+    "customArgumentToString": undefined,
+    "name": "test",
+    "type": "aws_vpc",
+  },
+  Module {
+    "arguments": Object {
+      "source": "./test",
+    },
+    "blockNames": Array [
+      "test",
+    ],
+    "blockType": "module",
+    "customArgumentToString": undefined,
+    "name": "test",
+  },
+  Resource {
+    "arguments": Object {
+      "cidr_block": "test",
+      "tags": Map {
+        "arguments": Object {
+          "a": "a",
+        },
+      },
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "test",
+    "type": "aws_vpc",
+  },
+  Data {
+    "arguments": Object {
+      "cidr_block": "test",
+      "filter": Array [
+        Object {
+          "name": "tag:a",
+          "values": Array [
+            "a",
+          ],
+        },
+      ],
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test",
+    ],
+    "blockType": "data",
+    "customArgumentToString": undefined,
+    "name": "test",
+    "type": "aws_vpc",
+  },
+  Data {
+    "arguments": Object {
+      "cidr_block": "test",
+      "filter": Array [
+        Object {
+          "name": "tag:a",
+          "values": Array [
+            "a",
+          ],
+        },
+      ],
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "test2",
+    ],
+    "blockType": "data",
+    "customArgumentToString": undefined,
+    "name": "test2",
+    "type": "aws_vpc",
+  },
+  Resource {
+    "arguments": Object {
+      "cidr_block": "172.88.0.0/16",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "vpc-test-dev",
+          "Project": "test",
+        },
+      },
+    },
+    "blockNames": Array [
+      "aws_vpc",
+      "vpc",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "vpc",
+    "type": "aws_vpc",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.100.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-public0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "public0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.101.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-public1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "public1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.102.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-public2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "public2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.104.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-web0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "web0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.105.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-web1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "web1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.106.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-web2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "web2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.108.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-app0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "app0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.109.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-app1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "app1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.110.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-app2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "app2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.112.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-gut0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "gut0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.113.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-gut1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "gut1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.114.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-gut2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "gut2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1a",
+      "cidr_block": "172.88.116.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-db0",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "db0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db0",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1b",
+      "cidr_block": "172.88.117.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-db1",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "db1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db1",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "availability_zone": "ap-southeast-1c",
+      "cidr_block": "172.88.118.0/24",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "subnet-test-dev-db2",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_subnet",
+      "db2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db2",
+    "type": "aws_subnet",
+  },
+  Resource {
+    "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "igw-test-dev",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_internet_gateway",
+      "igw",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw",
+    "type": "aws_internet_gateway",
+  },
+  Resource {
+    "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "rt-test-dev-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table",
+      "default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default",
+    "type": "aws_route_table",
+  },
+  Resource {
+    "arguments": Object {
+      "route": Array [
+        Object {
+          "cidr_block": "0.0.0.0/0",
+          "gateway_id": Attribute {
+            "argument": "aws_internet_gateway.igw.id",
+            "asIs": false,
+          },
+        },
+      ],
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "rt-test-dev-igw",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table",
+      "igw",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw",
+    "type": "aws_route_table",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.web0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-web0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-web0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.web1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-web1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-web1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.web2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-web2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-web2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.app0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-app0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-app0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.app1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-app1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-app1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.app2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-app2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-app2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-gut0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-gut0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-gut1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-gut1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-gut2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-gut2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.db0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-db0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-db0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.db1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-db1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-db1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.default.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.db2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "default-db2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default-db2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.igw.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "igw-public0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw-public0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.igw.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "igw-public1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw-public1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.igw.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "igw-public2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "igw-public2",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "egress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "0.0.0.0/0",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+      ],
+      "ingress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "0.0.0.0/0",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+      ],
+      "subnet_ids": Array [
+        Attribute {
+          "argument": "aws_subnet.public0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.public1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.public2.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.web0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.web1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.web2.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.app0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.app1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.app2.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.gut0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.gut1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.gut2.id",
+          "asIs": false,
+        },
+      ],
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "nacl-test-dev-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_network_acl",
+      "default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "default",
+    "type": "aws_network_acl",
+  },
+  Resource {
+    "arguments": Object {
+      "egress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.108.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.116.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 110,
+          "to_port": 0,
+        },
+      ],
+      "ingress": Array [
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.108.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 100,
+          "to_port": 0,
+        },
+        Object {
+          "action": "allow",
+          "cidr_block": "172.88.116.0/22",
+          "from_port": 0,
+          "protocol": "all",
+          "rule_no": 110,
+          "to_port": 0,
+        },
+      ],
+      "subnet_ids": Array [
+        Attribute {
+          "argument": "aws_subnet.db0.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.db1.id",
+          "asIs": false,
+        },
+        Attribute {
+          "argument": "aws_subnet.db2.id",
+          "asIs": false,
+        },
+      ],
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "nacl-test-dev-db",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_network_acl",
+      "db",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db",
+    "type": "aws_network_acl",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for public tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.100.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-public-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-public-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "public-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "public-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for web tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.104.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-web-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-web-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "web-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "web-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for app tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.108.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-app-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-app-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "app-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "app-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for gut tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.112.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-gut-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-gut-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "gut-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "gut-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "description": "Default for db tier",
+      "egress": Object {
+        "cidr_blocks": Array [
+          "0.0.0.0/0",
+        ],
+        "from_port": 0,
+        "protocol": "-1",
+        "to_port": 0,
+      },
+      "ingress": Object {
+        "cidr_blocks": Array [
+          "172.88.116.0/22",
+        ],
+        "description": "SSH for tier",
+        "from_port": 22,
+        "protocol": "tcp",
+        "to_port": 22,
+      },
+      "name": "fw-db-default",
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "sg-test-dev-db-default",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_security_group",
+      "db-default",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "db-default",
+    "type": "aws_security_group",
+  },
+  Resource {
+    "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "eip-test-dev-nat",
+          "Project": "test",
+        },
+      },
+      "vpc": true,
+    },
+    "blockNames": Array [
+      "aws_eip",
+      "nat",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat",
+    "type": "aws_eip",
+  },
+  Resource {
+    "arguments": Object {
+      "allocation_id": Attribute {
+        "argument": "aws_eip.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.public0.id",
+        "asIs": false,
+      },
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "nat-test-dev",
+          "Project": "test",
+        },
+      },
+    },
+    "blockNames": Array [
+      "aws_nat_gateway",
+      "nat",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat",
+    "type": "aws_nat_gateway",
+  },
+  Resource {
+    "arguments": Object {
+      "route": Object {
+        "cidr_block": "0.0.0.0/0",
+        "gateway_id": Attribute {
+          "argument": "aws_nat_gateway.nat.id",
+          "asIs": false,
+        },
+      },
+      "tags": Map {
+        "arguments": Object {
+          "Env": "dev",
+          "Name": "rt-test-dev-nat",
+          "Project": "test",
+        },
+      },
+      "vpc_id": Attribute {
+        "argument": "aws_vpc.vpc.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table",
+      "nat",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat",
+    "type": "aws_route_table",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut0.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "nat-gut0",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat-gut0",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut1.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "nat-gut1",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat-gut1",
+    "type": "aws_route_table_association",
+  },
+  Resource {
+    "arguments": Object {
+      "route_table_id": Attribute {
+        "argument": "aws_route_table.nat.id",
+        "asIs": false,
+      },
+      "subnet_id": Attribute {
+        "argument": "aws_subnet.gut2.id",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "aws_route_table_association",
+      "nat-gut2",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "name": "nat-gut2",
+    "type": "aws_route_table_association",
+  },
+  Output {
+    "arguments": Object {
+      "value": Map {
+        "arguments": Object {
+          "cidr": Attribute {
+            "argument": "aws_vpc.vpc.cidr_block",
+            "asIs": false,
+          },
+        },
+      },
+    },
+    "blockNames": Array [
+      "vpc",
+    ],
+    "blockType": "output",
+    "customArgumentToString": undefined,
+    "name": "vpc",
+  },
+  Output {
+    "arguments": Object {
+      "value": Map {
+        "arguments": Object {
+          "appSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.app0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.app1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.app2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "dbSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.db0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.db1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.db2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "gutSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.gut0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.gut1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.gut2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "mgtSubnets": Array [],
+          "publicSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.public0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.public1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.public2.cidr_block",
+              "asIs": false,
+            },
+          ],
+          "webSubnets": Array [
+            Attribute {
+              "argument": "aws_subnet.web0.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.web1.cidr_block",
+              "asIs": false,
+            },
+            Attribute {
+              "argument": "aws_subnet.web2.cidr_block",
+              "asIs": false,
+            },
+          ],
+        },
+      },
+    },
+    "blockNames": Array [
+      "subnets",
+    ],
+    "blockType": "output",
+    "customArgumentToString": undefined,
+    "name": "subnets",
+  },
+]
+`;
+
+exports[`VPC Project 0.12 3`] = `
+Object {
+  "test2": "test",
+}
+`;
+
+exports[`VPC Project 0.12 4`] = `
 Object {
   "tf": "terraform {
 required_version = \\"= 0.12\\"
@@ -1966,7 +5040,7 @@ aws_subnet.db2.cidr_block,
 }
 `;
 
-exports[`VPC Project 0.12 2`] = `
+exports[`VPC Project 0.12 5`] = `
 "terraform {
 required_version = \\"= 0.12\\"
 backend \\"s3\\"{
@@ -2616,7 +5690,7 @@ aws_subnet.db2.cidr_block,
 "
 `;
 
-exports[`VPC Project 0.12 3`] = `
+exports[`VPC Project 0.12 6`] = `
 "test2 = \\"test\\"
 
 "
