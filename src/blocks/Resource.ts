@@ -75,10 +75,10 @@ export default class Resource extends Block {
 
       const arg = this.getArgument(actualArgName);
       if (arg instanceof Map) {
-        for (const mapArgName in arg.args) {
+        for (const mapArgName in arg.arguments) {
           args['filter'].push({
             name: `${newArgName}:${mapArgName}`,
-            values: [arg.args[mapArgName]]
+            values: [arg.arguments[mapArgName]]
           });
         }
       } else if (!args[newArgName]) {

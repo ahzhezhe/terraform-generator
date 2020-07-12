@@ -79,7 +79,7 @@ export default class TerraformGeneratorUtils {
       }
 
     } else if (value instanceof Map) {
-      return this.argumentValueToString(version, value.args);
+      return this.argumentValueToString(version, value.arguments);
 
     } else if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0) {
       return JSON.stringify(value);

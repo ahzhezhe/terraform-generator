@@ -261,4 +261,25 @@ export default class TerraformGenerator {
     return this;
   }
 
+  /**
+   * Get arguments.
+   */
+  getArguments(): Record<string, any> {
+    return this.arguments;
+  }
+
+  /**
+   * Get blocks.
+   */
+  getBlocks(): Block[] {
+    return this.blocks;
+  }
+
+  /**
+   * Get variables.
+   */
+  getVars(): Record<string, any> {
+    return this.variables;
+  }
+
 }

@@ -1,6 +1,6 @@
 export default class Map {
 
-  readonly args: Record<string, any>;
+  readonly arguments: Record<string, any>;
 
   /**
    * Construct map.
@@ -8,7 +8,7 @@ export default class Map {
    * @param args map values
    */
   constructor(args: Record<string, any>) {
-    this.args = args;
+    this.arguments = args;
   }
 
 }
