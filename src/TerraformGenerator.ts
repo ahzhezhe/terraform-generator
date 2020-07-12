@@ -8,7 +8,7 @@ import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 export type TerraformVersion = '0.11' | '0.12';
 
 /**
- * @param version Terraform version
+ * @param version Terraform version, default is latest version
  */
 export interface TerraformGeneratorOptions {
   version: TerraformVersion;
@@ -41,8 +41,10 @@ export default class TerraformGenerator {
    * @param options options
    * @param args arguments
    */
-  constructor(options: TerraformGeneratorOptions, args?: Record<string, any>) {
-    this.options = options;
+  constructor(options?: TerraformGeneratorOptions, args?: Record<string, any>) {
+    this.options = {
+      version: options && options.version ? options.version : '0.12'
+    };
     this.arguments = args;
   }
 
@@ -258,6 +260,19 @@ export default class TerraformGenerator {
       ...this.variables,
       ...variables
     };
+    return this;
+  }
+
+  /**
+   * Merge this instance with other TerraformGenerator instances.
+   * 
+   * @param tfgs other instances
+   */
+  merge(...tfgs: TerraformGenerator[]): TerraformGenerator {
+    tfgs.forEach(tfg => {
+      this.addBlocks(...tfg.getBlocks());
+      this.addVars(tfg.getVars());
+    });
     return this;
   }
 
