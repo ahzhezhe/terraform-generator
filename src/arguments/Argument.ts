@@ -31,6 +31,13 @@ export default class Argument {
     return str;
   }
 
+  /**
+   * To string, used when argument is used in string interpolation.
+   */
+  toString(): string {
+    return `\${${this.toTerraform()}}`;
+  }
+
 }
 
 /**
