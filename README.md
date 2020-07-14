@@ -101,6 +101,11 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
   heredoc: heredoc(`line1
                         line2
                         line3`),
+  heredocJson: heredoc({
+    arg1: 'str',
+    arg2: 123,
+    arg3: true
+  }),
   function1: fn('max', 5, 12, 19),
   function2: fn('sort', 'a', block.attr('attrName'), 'c'),
   custom1: arg('max(5, 12, 9)'),
