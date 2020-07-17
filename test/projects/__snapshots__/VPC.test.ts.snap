@@ -139,6 +139,18 @@ Array [
     "name": "test2",
     "type": "aws_vpc",
   },
+  Provisioner {
+    "arguments": Object {
+      "destination": "destination",
+      "source": "source",
+    },
+    "blockNames": Array [
+      "file",
+    ],
+    "blockType": "provisioner",
+    "customArgumentToString": undefined,
+    "type": "file",
+  },
   Resource {
     "arguments": Object {
       "cidr_block": "172.88.0.0/16",
@@ -1597,6 +1609,11 @@ values = [
 cidr_block = \\"test\\"
 }
 
+provisioner \\"file\\"{
+source = \\"source\\"
+destination = \\"destination\\"
+}
+
 resource \\"aws_vpc\\" \\"vpc\\"{
 cidr_block = \\"172.88.0.0/16\\"
 tags = {
@@ -2249,6 +2266,11 @@ values = [
 ]
 }
 cidr_block = \\"test\\"
+}
+
+provisioner \\"file\\"{
+source = \\"source\\"
+destination = \\"destination\\"
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -2986,6 +3008,18 @@ Array [
     "customArgumentToString": undefined,
     "name": "test2",
     "type": "aws_vpc",
+  },
+  Provisioner {
+    "arguments": Object {
+      "destination": "destination",
+      "source": "source",
+    },
+    "blockNames": Array [
+      "file",
+    ],
+    "blockType": "provisioner",
+    "customArgumentToString": undefined,
+    "type": "file",
   },
   Resource {
     "arguments": Object {
@@ -4445,6 +4479,11 @@ values = [
 cidr_block = \\"test\\"
 }
 
+provisioner \\"file\\"{
+source = \\"source\\"
+destination = \\"destination\\"
+}
+
 resource \\"aws_vpc\\" \\"vpc\\"{
 cidr_block = \\"172.88.0.0/16\\"
 tags = {
@@ -5097,6 +5136,11 @@ values = [
 ]
 }
 cidr_block = \\"test\\"
+}
+
+provisioner \\"file\\"{
+source = \\"source\\"
+destination = \\"destination\\"
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{

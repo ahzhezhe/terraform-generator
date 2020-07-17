@@ -10,6 +10,7 @@ export { default as Output } from './blocks/Output';
 export { default as Module } from './blocks/Module';
 export { default as Variable } from './blocks/Variable';
 export { default as Backend } from './blocks/Backend';
+export { default as Provisioner } from './blocks/Provisioner';
 
 export { default as Argument, arg } from './arguments/Argument';
 export { default as Attribute, attr } from './arguments/Attribute';

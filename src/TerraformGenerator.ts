@@ -2,7 +2,7 @@ import shell from 'shelljs';
 import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, ResourceToDataOptions } from '.';
+import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions } from '.';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
 export type TerraformVersion = '0.11' | '0.12';
@@ -246,6 +246,19 @@ export default class TerraformGenerator {
    */
   backend(type: string, args?: Record<string, any>): Backend {
     const block = new Backend(type, args);
+    this.addBlocks(block);
+    return block;
+  }
+
+  /**
+   * Add provisioner into Terraform.
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   * 
+   * @param type type
+   * @param args arguments
+   */
+  provisioner(type: string, args?: Record<string, any>): Backend {
+    const block = new Provisioner(type, args);
     this.addBlocks(block);
     return block;
   }

@@ -101,6 +101,10 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
   });
   tfg.dataFromResource(r, null, ['cidr_block', ['tags', 'tag']]);
   tfg.dataFromResource(r, { name: 'test2' }, ['cidr_block', ['tags', 'tag']]);
+  tfg.provisioner('file', {
+    source: 'source',
+    destination: 'destination'
+  });
 
   // VPC
   const vpc = tfg.resource('aws_vpc', 'vpc', {
