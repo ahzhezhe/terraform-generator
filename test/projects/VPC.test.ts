@@ -86,7 +86,7 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
   });
   tfg.variable('test2', {
     type: 'string'
-  }, 'test');
+  }, null, 'test');
   tfg.data('aws_vpc', 'test', {
     cidr_block: 'test'
   });

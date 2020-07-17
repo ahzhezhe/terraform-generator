@@ -233,10 +233,10 @@ export default class TerraformGenerator {
    * 
    * @param name name
    * @param args arguments
-   * @param value variable value
    * @param innerBlocks inner blocks
+   * @param value variable value
    */
-  variable(name: string, args?: Record<string, any>, value?: any, innerBlocks?: Block[]): Variable {
+  variable(name: string, args?: Record<string, any>, innerBlocks?: Block[], value?: any): Variable {
     const block = new Variable(name, args, innerBlocks);
     this.addBlocks(block);
     if (value != null) {
