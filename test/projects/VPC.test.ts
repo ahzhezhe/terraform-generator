@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { TerraformVersion, Resource, Map, map } from '../../src';
+import TerraformGenerator, { TerraformVersion, Resource, Map, map, Provisioner } from '../../src';
 
 const project = 'test';
 
@@ -105,6 +105,16 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
     source: 'source',
     destination: 'destination'
   });
+  tfg.resource('innerBlock', 'innerBlock', {
+    a: 'a'
+  }, [
+    new Provisioner('local-exec', {
+      command: 'echo hello'
+    }),
+    new Provisioner('local-exec', {
+      command: 'echo world'
+    })
+  ]);
 
   // VPC
   const vpc = tfg.resource('aws_vpc', 'vpc', {

@@ -10,9 +10,10 @@ export default class Backend extends Block {
    * 
    * @param type type
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  constructor(type: string, args?: Record<string, any>) {
-    super('backend', [type], args);
+  constructor(type: string, args?: Record<string, any>, innerBlocks?: Block[]) {
+    super('backend', [type], args, innerBlocks);
 
     this.type = type;
   }

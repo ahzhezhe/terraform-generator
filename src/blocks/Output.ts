@@ -10,9 +10,10 @@ export default class Output extends Block {
    * 
    * @param name name
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  constructor(name: string, args?: Record<string, any>) {
-    super('output', [name], args);
+  constructor(name: string, args?: Record<string, any>, innerBlocks?: Block[]) {
+    super('output', [name], args, innerBlocks);
 
     this.name = name;
   }

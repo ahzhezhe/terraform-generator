@@ -24,9 +24,10 @@ export default class Resource extends Block {
    * @param type type
    * @param name name
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  constructor(type: string, name: string, args?: Record<string, any>) {
-    super('resource', [type, name], args);
+  constructor(type: string, name: string, args?: Record<string, any>, innerBlocks?: Block[]) {
+    super('resource', [type, name], args, innerBlocks);
 
     this.type = type;
     this.name = name;
@@ -48,8 +49,9 @@ export default class Resource extends Block {
    * @param argNames names of resource arguments to converted into data source arguments;
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
+   * @param innerBlocks inner blocks
    */
-  toData(options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: Record<string, any>): Data {
+  toData(options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: Record<string, any>, innerBlocks?: Block[]): Data {
     const type = (options && options.type) ? options.type : this.type;
     const name = (options && options.name) ? options.name : this.name;
 
@@ -86,7 +88,7 @@ export default class Resource extends Block {
       }
     }
 
-    return new Data(type, name, args);
+    return new Data(type, name, args, innerBlocks);
   }
 
 }

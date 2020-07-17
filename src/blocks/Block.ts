@@ -6,6 +6,7 @@ export default abstract class Block {
   readonly blockType: string;
   readonly blockNames: string[];
   private readonly arguments: Record<string, any>;
+  private innerBlocks: Block[];
   private readonly customArgumentToString: ArgumentsToStringFn;
 
   /**
@@ -15,7 +16,7 @@ export default abstract class Block {
    * @param names names
    * @param args arguments
    */
-  constructor(type: string, names: string[], args?: Record<string, any>, customArgumentToString?: ArgumentsToStringFn) {
+  constructor(type: string, names: string[], args?: Record<string, any>, innerBlocks?: Block[], customArgumentToString?: ArgumentsToStringFn) {
     this.validateIdentifier(type);
     names.forEach(name => {
       this.validateIdentifier(name);
@@ -24,6 +25,7 @@ export default abstract class Block {
     this.blockType = type;
     this.blockNames = names;
     this.arguments = args ? args : {};
+    this.innerBlocks = innerBlocks ? innerBlocks : [];
     this.customArgumentToString = customArgumentToString;
   }
 
@@ -77,6 +79,21 @@ export default abstract class Block {
   }
 
   /**
+   * Get inner blocks.
+   */
+  getInnerBlocks(): Block[] {
+    return this.innerBlocks;
+  }
+
+  /**
+   * Set inner blocks.
+   */
+  setInnerBlocks(innerBlocks: Block[]): Block {
+    this.innerBlocks = innerBlocks ? innerBlocks : [];
+    return this;
+  }
+
+  /**
    * To Terraform representation.
    * 
    * @param version Terraform version
@@ -88,6 +105,9 @@ export default abstract class Block {
     });
     str += '{\n';
     str += TerraformGeneratorUtils.argumentsToString(version, this.arguments, this.customArgumentToString);
+    this.innerBlocks.forEach(block => {
+      str += `${block.toTerraform(version).trim()}\n`;
+    });
     str += '}\n\n';
     return str;
   }

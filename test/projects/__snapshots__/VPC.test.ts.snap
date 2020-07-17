@@ -19,6 +19,7 @@ Array [
     ],
     "blockType": "backend",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "type": "s3",
   },
   Provider {
@@ -31,6 +32,7 @@ Array [
     ],
     "blockType": "provider",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "type": "aws",
   },
   Variable {
@@ -42,6 +44,7 @@ Array [
     ],
     "blockType": "variable",
     "customArgumentToString": [Function],
+    "innerBlocks": Array [],
     "name": "test",
   },
   Variable {
@@ -53,6 +56,7 @@ Array [
     ],
     "blockType": "variable",
     "customArgumentToString": [Function],
+    "innerBlocks": Array [],
     "name": "test2",
   },
   Data {
@@ -65,6 +69,7 @@ Array [
     ],
     "blockType": "data",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
@@ -77,6 +82,7 @@ Array [
     ],
     "blockType": "module",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
   },
   Resource {
@@ -94,6 +100,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
@@ -115,6 +122,7 @@ Array [
     ],
     "blockType": "data",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
@@ -136,6 +144,7 @@ Array [
     ],
     "blockType": "data",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test2",
     "type": "aws_vpc",
   },
@@ -149,7 +158,47 @@ Array [
     ],
     "blockType": "provisioner",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "type": "file",
+  },
+  Resource {
+    "arguments": Object {
+      "a": "a",
+    },
+    "blockNames": Array [
+      "innerBlock",
+      "innerBlock",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [
+      Provisioner {
+        "arguments": Object {
+          "command": "echo hello",
+        },
+        "blockNames": Array [
+          "local-exec",
+        ],
+        "blockType": "provisioner",
+        "customArgumentToString": undefined,
+        "innerBlocks": Array [],
+        "type": "local-exec",
+      },
+      Provisioner {
+        "arguments": Object {
+          "command": "echo world",
+        },
+        "blockNames": Array [
+          "local-exec",
+        ],
+        "blockType": "provisioner",
+        "customArgumentToString": undefined,
+        "innerBlocks": Array [],
+        "type": "local-exec",
+      },
+    ],
+    "name": "innerBlock",
+    "type": "innerBlock",
   },
   Resource {
     "arguments": Object {
@@ -168,6 +217,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "vpc",
     "type": "aws_vpc",
   },
@@ -193,6 +243,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public0",
     "type": "aws_subnet",
   },
@@ -218,6 +269,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public1",
     "type": "aws_subnet",
   },
@@ -243,6 +295,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public2",
     "type": "aws_subnet",
   },
@@ -268,6 +321,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web0",
     "type": "aws_subnet",
   },
@@ -293,6 +347,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web1",
     "type": "aws_subnet",
   },
@@ -318,6 +373,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web2",
     "type": "aws_subnet",
   },
@@ -343,6 +399,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app0",
     "type": "aws_subnet",
   },
@@ -368,6 +425,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app1",
     "type": "aws_subnet",
   },
@@ -393,6 +451,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app2",
     "type": "aws_subnet",
   },
@@ -418,6 +477,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut0",
     "type": "aws_subnet",
   },
@@ -443,6 +503,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut1",
     "type": "aws_subnet",
   },
@@ -468,6 +529,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut2",
     "type": "aws_subnet",
   },
@@ -493,6 +555,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db0",
     "type": "aws_subnet",
   },
@@ -518,6 +581,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db1",
     "type": "aws_subnet",
   },
@@ -543,6 +607,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db2",
     "type": "aws_subnet",
   },
@@ -566,6 +631,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw",
     "type": "aws_internet_gateway",
   },
@@ -589,6 +655,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default",
     "type": "aws_route_table",
   },
@@ -621,6 +688,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw",
     "type": "aws_route_table",
   },
@@ -641,6 +709,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-web0",
     "type": "aws_route_table_association",
   },
@@ -661,6 +730,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-web1",
     "type": "aws_route_table_association",
   },
@@ -681,6 +751,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-web2",
     "type": "aws_route_table_association",
   },
@@ -701,6 +772,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-app0",
     "type": "aws_route_table_association",
   },
@@ -721,6 +793,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-app1",
     "type": "aws_route_table_association",
   },
@@ -741,6 +814,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-app2",
     "type": "aws_route_table_association",
   },
@@ -761,6 +835,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-gut0",
     "type": "aws_route_table_association",
   },
@@ -781,6 +856,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-gut1",
     "type": "aws_route_table_association",
   },
@@ -801,6 +877,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-gut2",
     "type": "aws_route_table_association",
   },
@@ -821,6 +898,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-db0",
     "type": "aws_route_table_association",
   },
@@ -841,6 +919,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-db1",
     "type": "aws_route_table_association",
   },
@@ -861,6 +940,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-db2",
     "type": "aws_route_table_association",
   },
@@ -881,6 +961,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw-public0",
     "type": "aws_route_table_association",
   },
@@ -901,6 +982,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw-public1",
     "type": "aws_route_table_association",
   },
@@ -921,6 +1003,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw-public2",
     "type": "aws_route_table_association",
   },
@@ -1014,6 +1097,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default",
     "type": "aws_network_acl",
   },
@@ -1087,6 +1171,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db",
     "type": "aws_network_acl",
   },
@@ -1129,6 +1214,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public-default",
     "type": "aws_security_group",
   },
@@ -1171,6 +1257,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web-default",
     "type": "aws_security_group",
   },
@@ -1213,6 +1300,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app-default",
     "type": "aws_security_group",
   },
@@ -1255,6 +1343,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut-default",
     "type": "aws_security_group",
   },
@@ -1297,6 +1386,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db-default",
     "type": "aws_security_group",
   },
@@ -1317,6 +1407,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat",
     "type": "aws_eip",
   },
@@ -1344,6 +1435,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat",
     "type": "aws_nat_gateway",
   },
@@ -1374,6 +1466,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat",
     "type": "aws_route_table",
   },
@@ -1394,6 +1487,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat-gut0",
     "type": "aws_route_table_association",
   },
@@ -1414,6 +1508,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat-gut1",
     "type": "aws_route_table_association",
   },
@@ -1434,6 +1529,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat-gut2",
     "type": "aws_route_table_association",
   },
@@ -1453,6 +1549,7 @@ Array [
     ],
     "blockType": "output",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "vpc",
   },
   Output {
@@ -1538,6 +1635,7 @@ Array [
     ],
     "blockType": "output",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "subnets",
   },
 ]
@@ -1612,6 +1710,16 @@ cidr_block = \\"test\\"
 provisioner \\"file\\"{
 source = \\"source\\"
 destination = \\"destination\\"
+}
+
+resource \\"innerBlock\\" \\"innerBlock\\"{
+a = \\"a\\"
+provisioner \\"local-exec\\"{
+command = \\"echo hello\\"
+}
+provisioner \\"local-exec\\"{
+command = \\"echo world\\"
+}
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -2273,6 +2381,16 @@ source = \\"source\\"
 destination = \\"destination\\"
 }
 
+resource \\"innerBlock\\" \\"innerBlock\\"{
+a = \\"a\\"
+provisioner \\"local-exec\\"{
+command = \\"echo hello\\"
+}
+provisioner \\"local-exec\\"{
+command = \\"echo world\\"
+}
+}
+
 resource \\"aws_vpc\\" \\"vpc\\"{
 cidr_block = \\"172.88.0.0/16\\"
 tags = {
@@ -2889,6 +3007,7 @@ Array [
     ],
     "blockType": "backend",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "type": "s3",
   },
   Provider {
@@ -2901,6 +3020,7 @@ Array [
     ],
     "blockType": "provider",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "type": "aws",
   },
   Variable {
@@ -2912,6 +3032,7 @@ Array [
     ],
     "blockType": "variable",
     "customArgumentToString": [Function],
+    "innerBlocks": Array [],
     "name": "test",
   },
   Variable {
@@ -2923,6 +3044,7 @@ Array [
     ],
     "blockType": "variable",
     "customArgumentToString": [Function],
+    "innerBlocks": Array [],
     "name": "test2",
   },
   Data {
@@ -2935,6 +3057,7 @@ Array [
     ],
     "blockType": "data",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
@@ -2947,6 +3070,7 @@ Array [
     ],
     "blockType": "module",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
   },
   Resource {
@@ -2964,6 +3088,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
@@ -2985,6 +3110,7 @@ Array [
     ],
     "blockType": "data",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
@@ -3006,6 +3132,7 @@ Array [
     ],
     "blockType": "data",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "test2",
     "type": "aws_vpc",
   },
@@ -3019,7 +3146,47 @@ Array [
     ],
     "blockType": "provisioner",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "type": "file",
+  },
+  Resource {
+    "arguments": Object {
+      "a": "a",
+    },
+    "blockNames": Array [
+      "innerBlock",
+      "innerBlock",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [
+      Provisioner {
+        "arguments": Object {
+          "command": "echo hello",
+        },
+        "blockNames": Array [
+          "local-exec",
+        ],
+        "blockType": "provisioner",
+        "customArgumentToString": undefined,
+        "innerBlocks": Array [],
+        "type": "local-exec",
+      },
+      Provisioner {
+        "arguments": Object {
+          "command": "echo world",
+        },
+        "blockNames": Array [
+          "local-exec",
+        ],
+        "blockType": "provisioner",
+        "customArgumentToString": undefined,
+        "innerBlocks": Array [],
+        "type": "local-exec",
+      },
+    ],
+    "name": "innerBlock",
+    "type": "innerBlock",
   },
   Resource {
     "arguments": Object {
@@ -3038,6 +3205,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "vpc",
     "type": "aws_vpc",
   },
@@ -3063,6 +3231,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public0",
     "type": "aws_subnet",
   },
@@ -3088,6 +3257,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public1",
     "type": "aws_subnet",
   },
@@ -3113,6 +3283,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public2",
     "type": "aws_subnet",
   },
@@ -3138,6 +3309,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web0",
     "type": "aws_subnet",
   },
@@ -3163,6 +3335,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web1",
     "type": "aws_subnet",
   },
@@ -3188,6 +3361,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web2",
     "type": "aws_subnet",
   },
@@ -3213,6 +3387,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app0",
     "type": "aws_subnet",
   },
@@ -3238,6 +3413,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app1",
     "type": "aws_subnet",
   },
@@ -3263,6 +3439,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app2",
     "type": "aws_subnet",
   },
@@ -3288,6 +3465,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut0",
     "type": "aws_subnet",
   },
@@ -3313,6 +3491,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut1",
     "type": "aws_subnet",
   },
@@ -3338,6 +3517,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut2",
     "type": "aws_subnet",
   },
@@ -3363,6 +3543,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db0",
     "type": "aws_subnet",
   },
@@ -3388,6 +3569,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db1",
     "type": "aws_subnet",
   },
@@ -3413,6 +3595,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db2",
     "type": "aws_subnet",
   },
@@ -3436,6 +3619,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw",
     "type": "aws_internet_gateway",
   },
@@ -3459,6 +3643,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default",
     "type": "aws_route_table",
   },
@@ -3491,6 +3676,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw",
     "type": "aws_route_table",
   },
@@ -3511,6 +3697,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-web0",
     "type": "aws_route_table_association",
   },
@@ -3531,6 +3718,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-web1",
     "type": "aws_route_table_association",
   },
@@ -3551,6 +3739,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-web2",
     "type": "aws_route_table_association",
   },
@@ -3571,6 +3760,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-app0",
     "type": "aws_route_table_association",
   },
@@ -3591,6 +3781,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-app1",
     "type": "aws_route_table_association",
   },
@@ -3611,6 +3802,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-app2",
     "type": "aws_route_table_association",
   },
@@ -3631,6 +3823,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-gut0",
     "type": "aws_route_table_association",
   },
@@ -3651,6 +3844,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-gut1",
     "type": "aws_route_table_association",
   },
@@ -3671,6 +3865,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-gut2",
     "type": "aws_route_table_association",
   },
@@ -3691,6 +3886,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-db0",
     "type": "aws_route_table_association",
   },
@@ -3711,6 +3907,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-db1",
     "type": "aws_route_table_association",
   },
@@ -3731,6 +3928,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default-db2",
     "type": "aws_route_table_association",
   },
@@ -3751,6 +3949,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw-public0",
     "type": "aws_route_table_association",
   },
@@ -3771,6 +3970,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw-public1",
     "type": "aws_route_table_association",
   },
@@ -3791,6 +3991,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "igw-public2",
     "type": "aws_route_table_association",
   },
@@ -3884,6 +4085,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "default",
     "type": "aws_network_acl",
   },
@@ -3957,6 +4159,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db",
     "type": "aws_network_acl",
   },
@@ -3999,6 +4202,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "public-default",
     "type": "aws_security_group",
   },
@@ -4041,6 +4245,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "web-default",
     "type": "aws_security_group",
   },
@@ -4083,6 +4288,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "app-default",
     "type": "aws_security_group",
   },
@@ -4125,6 +4331,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "gut-default",
     "type": "aws_security_group",
   },
@@ -4167,6 +4374,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "db-default",
     "type": "aws_security_group",
   },
@@ -4187,6 +4395,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat",
     "type": "aws_eip",
   },
@@ -4214,6 +4423,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat",
     "type": "aws_nat_gateway",
   },
@@ -4244,6 +4454,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat",
     "type": "aws_route_table",
   },
@@ -4264,6 +4475,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat-gut0",
     "type": "aws_route_table_association",
   },
@@ -4284,6 +4496,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat-gut1",
     "type": "aws_route_table_association",
   },
@@ -4304,6 +4517,7 @@ Array [
     ],
     "blockType": "resource",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "nat-gut2",
     "type": "aws_route_table_association",
   },
@@ -4323,6 +4537,7 @@ Array [
     ],
     "blockType": "output",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "vpc",
   },
   Output {
@@ -4408,6 +4623,7 @@ Array [
     ],
     "blockType": "output",
     "customArgumentToString": undefined,
+    "innerBlocks": Array [],
     "name": "subnets",
   },
 ]
@@ -4482,6 +4698,16 @@ cidr_block = \\"test\\"
 provisioner \\"file\\"{
 source = \\"source\\"
 destination = \\"destination\\"
+}
+
+resource \\"innerBlock\\" \\"innerBlock\\"{
+a = \\"a\\"
+provisioner \\"local-exec\\"{
+command = \\"echo hello\\"
+}
+provisioner \\"local-exec\\"{
+command = \\"echo world\\"
+}
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -5141,6 +5367,16 @@ cidr_block = \\"test\\"
 provisioner \\"file\\"{
 source = \\"source\\"
 destination = \\"destination\\"
+}
+
+resource \\"innerBlock\\" \\"innerBlock\\"{
+a = \\"a\\"
+provisioner \\"local-exec\\"{
+command = \\"echo hello\\"
+}
+provisioner \\"local-exec\\"{
+command = \\"echo world\\"
+}
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{

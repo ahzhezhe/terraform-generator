@@ -145,9 +145,10 @@ export default class TerraformGenerator {
    * 
    * @param type type
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  provider(type: string, args?: Record<string, any>): Provider {
-    const block = new Provider(type, args);
+  provider(type: string, args?: Record<string, any>, innerBlocks?: Block[]): Provider {
+    const block = new Provider(type, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }
@@ -159,9 +160,10 @@ export default class TerraformGenerator {
    * @param type type
    * @param name name
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  resource(type: string, name: string, args?: Record<string, any>): Resource {
-    const block = new Resource(type, name, args);
+  resource(type: string, name: string, args?: Record<string, any>, innerBlocks?: Block[]): Resource {
+    const block = new Resource(type, name, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }
@@ -173,9 +175,11 @@ export default class TerraformGenerator {
    * @param argNames names of resource arguments to be converted into data source arguments;
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
+   * @param innerBlocks inner blocks
    */
-  dataFromResource(resource: Resource, options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: Record<string, any>): Data {
-    const block = resource.toData(options, argNames, args);
+  dataFromResource(resource: Resource, options: ResourceToDataOptions, argNames: (string | [string, string])[],
+    args?: Record<string, any>, innerBlocks?: Block[]): Data {
+    const block = resource.toData(options, argNames, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }
@@ -187,9 +191,10 @@ export default class TerraformGenerator {
    * @param type type
    * @param name name
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  data(type: string, name: string, args?: Record<string, any>): Data {
-    const block = new Data(type, name, args);
+  data(type: string, name: string, args?: Record<string, any>, innerBlocks?: Block[]): Data {
+    const block = new Data(type, name, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }
@@ -200,9 +205,10 @@ export default class TerraformGenerator {
    * 
    * @param name name
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  module(name: string, args?: Record<string, any>): Module {
-    const block = new Module(name, args);
+  module(name: string, args?: Record<string, any>, innerBlocks?: Block[]): Module {
+    const block = new Module(name, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }
@@ -213,9 +219,10 @@ export default class TerraformGenerator {
    * 
    * @param name name
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  output(name: string, args?: Record<string, any>): Output {
-    const block = new Output(name, args);
+  output(name: string, args?: Record<string, any>, innerBlocks?: Block[]): Output {
+    const block = new Output(name, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }
@@ -227,9 +234,10 @@ export default class TerraformGenerator {
    * @param name name
    * @param args arguments
    * @param value variable value
+   * @param innerBlocks inner blocks
    */
-  variable(name: string, args?: Record<string, any>, value?: any): Variable {
-    const block = new Variable(name, args);
+  variable(name: string, args?: Record<string, any>, value?: any, innerBlocks?: Block[]): Variable {
+    const block = new Variable(name, args, innerBlocks);
     this.addBlocks(block);
     if (value != null) {
       this.addVars({ [name]: value });
@@ -243,9 +251,10 @@ export default class TerraformGenerator {
    * 
    * @param type type
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  backend(type: string, args?: Record<string, any>): Backend {
-    const block = new Backend(type, args);
+  backend(type: string, args?: Record<string, any>, innerBlocks?: Block[]): Backend {
+    const block = new Backend(type, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }
@@ -256,9 +265,10 @@ export default class TerraformGenerator {
    * 
    * @param type type
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  provisioner(type: string, args?: Record<string, any>): Backend {
-    const block = new Provisioner(type, args);
+  provisioner(type: string, args?: Record<string, any>, innerBlocks?: Block[]): Backend {
+    const block = new Provisioner(type, args, innerBlocks);
     this.addBlocks(block);
     return block;
   }

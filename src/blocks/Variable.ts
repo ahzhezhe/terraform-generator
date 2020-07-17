@@ -11,9 +11,10 @@ export default class Variable extends Block {
    * 
    * @param name name
    * @param args arguments
+   * @param innerBlocks inner blocks
    */
-  constructor(name: string, args?: Record<string, any>) {
-    super('variable', [name], args, Variable.customArgumentToString);
+  constructor(name: string, args?: Record<string, any>, innerBlocks?: Block[]) {
+    super('variable', [name], args, innerBlocks, Variable.customArgumentToString);
 
     this.name = name;
   }
