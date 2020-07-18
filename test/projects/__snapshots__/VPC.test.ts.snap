@@ -148,19 +148,6 @@ Array [
     "name": "test2",
     "type": "aws_vpc",
   },
-  Provisioner {
-    "arguments": Object {
-      "destination": "destination",
-      "source": "source",
-    },
-    "blockNames": Array [
-      "file",
-    ],
-    "blockType": "provisioner",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "type": "file",
-  },
   Resource {
     "arguments": Object {
       "a": "a",
@@ -1707,11 +1694,6 @@ values = [
 cidr_block = \\"test\\"
 }
 
-provisioner \\"file\\"{
-source = \\"source\\"
-destination = \\"destination\\"
-}
-
 resource \\"innerBlock\\" \\"innerBlock\\"{
 a = \\"a\\"
 provisioner \\"local-exec\\"{
@@ -2374,11 +2356,6 @@ values = [
 ]
 }
 cidr_block = \\"test\\"
-}
-
-provisioner \\"file\\"{
-source = \\"source\\"
-destination = \\"destination\\"
 }
 
 resource \\"innerBlock\\" \\"innerBlock\\"{
@@ -3135,19 +3112,6 @@ Array [
     "innerBlocks": Array [],
     "name": "test2",
     "type": "aws_vpc",
-  },
-  Provisioner {
-    "arguments": Object {
-      "destination": "destination",
-      "source": "source",
-    },
-    "blockNames": Array [
-      "file",
-    ],
-    "blockType": "provisioner",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "type": "file",
   },
   Resource {
     "arguments": Object {
@@ -4695,11 +4659,6 @@ values = [
 cidr_block = \\"test\\"
 }
 
-provisioner \\"file\\"{
-source = \\"source\\"
-destination = \\"destination\\"
-}
-
 resource \\"innerBlock\\" \\"innerBlock\\"{
 a = \\"a\\"
 provisioner \\"local-exec\\"{
@@ -5362,11 +5321,6 @@ values = [
 ]
 }
 cidr_block = \\"test\\"
-}
-
-provisioner \\"file\\"{
-source = \\"source\\"
-destination = \\"destination\\"
 }
 
 resource \\"innerBlock\\" \\"innerBlock\\"{
