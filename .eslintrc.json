@@ -72,7 +72,8 @@
     "max-len": [
       "error",
       {
-        "code": 150
+        "code": 150,
+        "ignoreStrings": true
       }
     ],
     "semi": [

@@ -1,4 +1,4 @@
-import { TerraformVersion, Block, Argument, Map } from '.';
+import { TerraformVersion, Block, Argument, Map, Heredoc } from '.';
 
 export type ArgumentsToStringFn = (version: TerraformVersion, key: string, value: any) => string;
 
@@ -88,7 +88,7 @@ export default class TerraformGeneratorUtils {
       if (Array.isArray(value)) {
         let str = '[\n';
         value.forEach((element, i) => {
-          str += `${this.argumentValueToString(version, element)}${i < value.length - 1 ? ',' : ''}\n`;
+          str += `${this.argumentValueToString(version, element)}${element instanceof Heredoc && i < value.length - 1 ? '\n' : ''}${i < value.length - 1 ? ',' : ''}\n`;
         });
         str += ']';
         return str;
