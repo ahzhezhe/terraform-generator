@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { TerraformVersion, Resource, Map, map, Provisioner } from '../../src';
+import TerraformGenerator, { TerraformVersion, Resource, Map } from '../../src';
 
 const project = 'test';
 
@@ -79,38 +79,6 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
     region: 'ap-southeast-1',
     profile: 'test'
   });
-
-  // For test only
-  tfg.variable('test', {
-    type: 'string'
-  });
-  tfg.variable('test2', {
-    type: 'string'
-  }, 'test');
-  tfg.data('aws_vpc', 'test', {
-    cidr_block: 'test'
-  });
-  tfg.module('test', {
-    source: './test'
-  });
-  const r = tfg.resource('aws_vpc', 'test', {
-    cidr_block: 'test',
-    tags: map({
-      a: 'a'
-    })
-  });
-  tfg.dataFromResource(r, null, ['cidr_block', ['tags', 'tag']]);
-  tfg.dataFromResource(r, { name: 'test2' }, ['cidr_block', ['tags', 'tag']]);
-  tfg.resource('innerBlock', 'innerBlock', {
-    a: 'a'
-  }, [
-    new Provisioner('local-exec', {
-      command: 'echo hello'
-    }),
-    new Provisioner('local-exec', {
-      command: 'echo world'
-    })
-  ]);
 
   // VPC
   const vpc = tfg.resource('aws_vpc', 'vpc', {
@@ -327,8 +295,6 @@ test('VPC Project 0.11', () => {
   tfg.write({ dir: outputDir });
   const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(tf).toMatchSnapshot();
-  const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
-  expect(tfvars).toMatchSnapshot();
 });
 
 test('VPC Project 0.12', () => {
@@ -342,12 +308,9 @@ test('VPC Project 0.12', () => {
   tfg.write({ dir: outputDir });
   const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
   expect(tf).toMatchSnapshot();
-  const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
-  expect(tfvars).toMatchSnapshot();
 });
 
 afterAll(() => {
   fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
-  fs.unlinkSync(path.join(outputDir, 'terraform.tfvars'));
   fs.rmdirSync(outputDir);
 });

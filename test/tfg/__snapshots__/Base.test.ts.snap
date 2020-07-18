@@ -35,158 +35,6 @@ Array [
     "innerBlocks": Array [],
     "type": "aws",
   },
-  Variable {
-    "arguments": Object {
-      "type": "string",
-    },
-    "blockNames": Array [
-      "test",
-    ],
-    "blockType": "variable",
-    "customArgumentToString": [Function],
-    "innerBlocks": Array [],
-    "name": "test",
-  },
-  Variable {
-    "arguments": Object {
-      "type": "string",
-    },
-    "blockNames": Array [
-      "test2",
-    ],
-    "blockType": "variable",
-    "customArgumentToString": [Function],
-    "innerBlocks": Array [],
-    "name": "test2",
-  },
-  Data {
-    "arguments": Object {
-      "cidr_block": "test",
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test",
-    ],
-    "blockType": "data",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-    "type": "aws_vpc",
-  },
-  Module {
-    "arguments": Object {
-      "source": "./test",
-    },
-    "blockNames": Array [
-      "test",
-    ],
-    "blockType": "module",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-  },
-  Resource {
-    "arguments": Object {
-      "cidr_block": "test",
-      "tags": Map {
-        "arguments": Object {
-          "a": "a",
-        },
-      },
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test",
-    ],
-    "blockType": "resource",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-    "type": "aws_vpc",
-  },
-  Data {
-    "arguments": Object {
-      "cidr_block": "test",
-      "filter": Array [
-        Object {
-          "name": "tag:a",
-          "values": Array [
-            "a",
-          ],
-        },
-      ],
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test",
-    ],
-    "blockType": "data",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-    "type": "aws_vpc",
-  },
-  Data {
-    "arguments": Object {
-      "cidr_block": "test",
-      "filter": Array [
-        Object {
-          "name": "tag:a",
-          "values": Array [
-            "a",
-          ],
-        },
-      ],
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test2",
-    ],
-    "blockType": "data",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test2",
-    "type": "aws_vpc",
-  },
-  Resource {
-    "arguments": Object {
-      "a": "a",
-    },
-    "blockNames": Array [
-      "innerBlock",
-      "innerBlock",
-    ],
-    "blockType": "resource",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [
-      Provisioner {
-        "arguments": Object {
-          "command": "echo hello",
-        },
-        "blockNames": Array [
-          "local-exec",
-        ],
-        "blockType": "provisioner",
-        "customArgumentToString": undefined,
-        "innerBlocks": Array [],
-        "type": "local-exec",
-      },
-      Provisioner {
-        "arguments": Object {
-          "command": "echo world",
-        },
-        "blockNames": Array [
-          "local-exec",
-        ],
-        "blockType": "provisioner",
-        "customArgumentToString": undefined,
-        "innerBlocks": Array [],
-        "type": "local-exec",
-      },
-    ],
-    "name": "innerBlock",
-    "type": "innerBlock",
-  },
   Resource {
     "arguments": Object {
       "cidr_block": "172.88.0.0/16",
@@ -1628,11 +1476,7 @@ Array [
 ]
 `;
 
-exports[`VPC Project 0.11 3`] = `
-Object {
-  "test2": "test",
-}
-`;
+exports[`VPC Project 0.11 3`] = `Object {}`;
 
 exports[`VPC Project 0.11 4`] = `
 Object {
@@ -1649,59 +1493,6 @@ region = \\"ap-southeast-1\\"
 provider \\"aws\\"{
 region = \\"ap-southeast-1\\"
 profile = \\"test\\"
-}
-
-variable \\"test\\"{
-type = \\"string\\"
-}
-
-variable \\"test2\\"{
-type = \\"string\\"
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-}
-
-module \\"test\\"{
-source = \\"./test\\"
-}
-
-resource \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-tags = {
-a = \\"a\\"
-}
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-data \\"aws_vpc\\" \\"test2\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-resource \\"innerBlock\\" \\"innerBlock\\"{
-a = \\"a\\"
-provisioner \\"local-exec\\"{
-command = \\"echo hello\\"
-}
-provisioner \\"local-exec\\"{
-command = \\"echo world\\"
-}
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -2293,9 +2084,7 @@ dbSubnets = [
 }
 
 ",
-  "tfvars": "test2 = \\"test\\"
-
-",
+  "tfvars": null,
 }
 `;
 
@@ -2315,59 +2104,6 @@ region = \\"ap-southeast-1\\"
 profile = \\"test\\"
 }
 
-variable \\"test\\"{
-type = \\"string\\"
-}
-
-variable \\"test2\\"{
-type = \\"string\\"
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-}
-
-module \\"test\\"{
-source = \\"./test\\"
-}
-
-resource \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-tags = {
-a = \\"a\\"
-}
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-data \\"aws_vpc\\" \\"test2\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-resource \\"innerBlock\\" \\"innerBlock\\"{
-a = \\"a\\"
-provisioner \\"local-exec\\"{
-command = \\"echo hello\\"
-}
-provisioner \\"local-exec\\"{
-command = \\"echo world\\"
-}
-}
-
 resource \\"aws_vpc\\" \\"vpc\\"{
 cidr_block = \\"172.88.0.0/16\\"
 tags = {
@@ -2955,12 +2691,6 @@ dbSubnets = [
 ]
 }
 }
-
-"
-`;
-
-exports[`VPC Project 0.11 6`] = `
-"test2 = \\"test\\"
 
 "
 `;
@@ -3000,158 +2730,6 @@ Array [
     "innerBlocks": Array [],
     "type": "aws",
   },
-  Variable {
-    "arguments": Object {
-      "type": "string",
-    },
-    "blockNames": Array [
-      "test",
-    ],
-    "blockType": "variable",
-    "customArgumentToString": [Function],
-    "innerBlocks": Array [],
-    "name": "test",
-  },
-  Variable {
-    "arguments": Object {
-      "type": "string",
-    },
-    "blockNames": Array [
-      "test2",
-    ],
-    "blockType": "variable",
-    "customArgumentToString": [Function],
-    "innerBlocks": Array [],
-    "name": "test2",
-  },
-  Data {
-    "arguments": Object {
-      "cidr_block": "test",
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test",
-    ],
-    "blockType": "data",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-    "type": "aws_vpc",
-  },
-  Module {
-    "arguments": Object {
-      "source": "./test",
-    },
-    "blockNames": Array [
-      "test",
-    ],
-    "blockType": "module",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-  },
-  Resource {
-    "arguments": Object {
-      "cidr_block": "test",
-      "tags": Map {
-        "arguments": Object {
-          "a": "a",
-        },
-      },
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test",
-    ],
-    "blockType": "resource",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-    "type": "aws_vpc",
-  },
-  Data {
-    "arguments": Object {
-      "cidr_block": "test",
-      "filter": Array [
-        Object {
-          "name": "tag:a",
-          "values": Array [
-            "a",
-          ],
-        },
-      ],
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test",
-    ],
-    "blockType": "data",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test",
-    "type": "aws_vpc",
-  },
-  Data {
-    "arguments": Object {
-      "cidr_block": "test",
-      "filter": Array [
-        Object {
-          "name": "tag:a",
-          "values": Array [
-            "a",
-          ],
-        },
-      ],
-    },
-    "blockNames": Array [
-      "aws_vpc",
-      "test2",
-    ],
-    "blockType": "data",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [],
-    "name": "test2",
-    "type": "aws_vpc",
-  },
-  Resource {
-    "arguments": Object {
-      "a": "a",
-    },
-    "blockNames": Array [
-      "innerBlock",
-      "innerBlock",
-    ],
-    "blockType": "resource",
-    "customArgumentToString": undefined,
-    "innerBlocks": Array [
-      Provisioner {
-        "arguments": Object {
-          "command": "echo hello",
-        },
-        "blockNames": Array [
-          "local-exec",
-        ],
-        "blockType": "provisioner",
-        "customArgumentToString": undefined,
-        "innerBlocks": Array [],
-        "type": "local-exec",
-      },
-      Provisioner {
-        "arguments": Object {
-          "command": "echo world",
-        },
-        "blockNames": Array [
-          "local-exec",
-        ],
-        "blockType": "provisioner",
-        "customArgumentToString": undefined,
-        "innerBlocks": Array [],
-        "type": "local-exec",
-      },
-    ],
-    "name": "innerBlock",
-    "type": "innerBlock",
-  },
   Resource {
     "arguments": Object {
       "cidr_block": "172.88.0.0/16",
@@ -4593,11 +4171,7 @@ Array [
 ]
 `;
 
-exports[`VPC Project 0.12 3`] = `
-Object {
-  "test2": "test",
-}
-`;
+exports[`VPC Project 0.12 3`] = `Object {}`;
 
 exports[`VPC Project 0.12 4`] = `
 Object {
@@ -4614,59 +4188,6 @@ region = \\"ap-southeast-1\\"
 provider \\"aws\\"{
 region = \\"ap-southeast-1\\"
 profile = \\"test\\"
-}
-
-variable \\"test\\"{
-type = string
-}
-
-variable \\"test2\\"{
-type = string
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-}
-
-module \\"test\\"{
-source = \\"./test\\"
-}
-
-resource \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-tags = {
-a = \\"a\\"
-}
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-data \\"aws_vpc\\" \\"test2\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-resource \\"innerBlock\\" \\"innerBlock\\"{
-a = \\"a\\"
-provisioner \\"local-exec\\"{
-command = \\"echo hello\\"
-}
-provisioner \\"local-exec\\"{
-command = \\"echo world\\"
-}
 }
 
 resource \\"aws_vpc\\" \\"vpc\\"{
@@ -5258,9 +4779,7 @@ aws_subnet.db2.cidr_block,
 }
 
 ",
-  "tfvars": "test2 = \\"test\\"
-
-",
+  "tfvars": null,
 }
 `;
 
@@ -5280,59 +4799,6 @@ region = \\"ap-southeast-1\\"
 profile = \\"test\\"
 }
 
-variable \\"test\\"{
-type = string
-}
-
-variable \\"test2\\"{
-type = string
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-}
-
-module \\"test\\"{
-source = \\"./test\\"
-}
-
-resource \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
-tags = {
-a = \\"a\\"
-}
-}
-
-data \\"aws_vpc\\" \\"test\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-data \\"aws_vpc\\" \\"test2\\"{
-filter {
-name = \\"tag:a\\"
-values = [
-\\"a\\",
-]
-}
-cidr_block = \\"test\\"
-}
-
-resource \\"innerBlock\\" \\"innerBlock\\"{
-a = \\"a\\"
-provisioner \\"local-exec\\"{
-command = \\"echo hello\\"
-}
-provisioner \\"local-exec\\"{
-command = \\"echo world\\"
-}
-}
-
 resource \\"aws_vpc\\" \\"vpc\\"{
 cidr_block = \\"172.88.0.0/16\\"
 tags = {
@@ -5920,12 +5386,6 @@ aws_subnet.db2.cidr_block,
 ]
 }
 }
-
-"
-`;
-
-exports[`VPC Project 0.12 6`] = `
-"test2 = \\"test\\"
 
 "
 `;

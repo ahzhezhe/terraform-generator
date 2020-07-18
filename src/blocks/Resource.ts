@@ -42,6 +42,21 @@ export default class Resource extends Block {
   }
 
   /**
+   * Get provisioners.
+   */
+  getProvisioners(): Provisioner[] {
+    return this.getInnerBlocks() as Provisioner[];
+  }
+
+  /**
+   * Set provisioners.
+   */
+  setProvisioners(provisioners: Provisioner[]): Resource {
+    this.setInnerBlocks(provisioners);
+    return this;
+  }
+
+  /**
    * Convert resource into data source.
    * Refer to Terraform documentation on what can be put as arguments.
    * 

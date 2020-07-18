@@ -81,14 +81,14 @@ export default abstract class Block {
   /**
    * Get inner blocks.
    */
-  getInnerBlocks(): Block[] {
+  protected getInnerBlocks(): Block[] {
     return this.innerBlocks;
   }
 
   /**
    * Set inner blocks.
    */
-  setInnerBlocks(innerBlocks: Block[]): Block {
+  protected setInnerBlocks(innerBlocks: Block[]): Block {
     this.innerBlocks = innerBlocks ? innerBlocks : [];
     return this;
   }

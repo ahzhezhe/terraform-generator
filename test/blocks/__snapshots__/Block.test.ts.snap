@@ -22,3 +22,34 @@ Object {
   "c": 2,
 }
 `;
+
+exports[`Block arguments 5`] = `
+Array [
+  Provisioner {
+    "arguments": Object {
+      "a": 0,
+    },
+    "blockNames": Array [
+      "p1",
+    ],
+    "blockType": "provisioner",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [],
+    "type": "p1",
+  },
+  Provisioner {
+    "arguments": Object {
+      "b": 1,
+    },
+    "blockNames": Array [
+      "p2",
+    ],
+    "blockType": "provisioner",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [],
+    "type": "p2",
+  },
+]
+`;
+
+exports[`Block arguments 6`] = `Array []`;

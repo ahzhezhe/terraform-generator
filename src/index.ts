@@ -8,6 +8,7 @@ export { default as Resource, ResourceToDataOptions } from './blocks/Resource';
 export { default as Data } from './blocks/Data';
 export { default as Output } from './blocks/Output';
 export { default as Module } from './blocks/Module';
+export { default as Locals } from './blocks/Locals';
 export { default as Variable } from './blocks/Variable';
 export { default as Backend } from './blocks/Backend';
 export { default as Provisioner } from './blocks/Provisioner';

@@ -2,7 +2,7 @@ import shell from 'shelljs';
 import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions } from '.';
+import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
 export type TerraformVersion = '0.11' | '0.12';
@@ -218,6 +218,18 @@ export default class TerraformGenerator {
    */
   output(name: string, args?: Record<string, any>): Output {
     const block = new Output(name, args);
+    this.addBlocks(block);
+    return block;
+  }
+
+  /**
+   * Add locals into Terraform.
+   * Refer to Terraform documentation on what can be put as arguments.
+   * 
+   * @param args arguments
+   */
+  locals(args?: Record<string, any>): Locals {
+    const block = new Locals(args);
     this.addBlocks(block);
     return block;
   }

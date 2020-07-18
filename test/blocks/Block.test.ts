@@ -1,4 +1,4 @@
-import { Resource, Output } from '../../src';
+import { Resource, Output, Provisioner } from '../../src';
 
 test('Block identifier', () => {
   expect(() => new Resource('!@#', '$%^')).toThrow();
@@ -16,4 +16,9 @@ test('Block arguments', () => {
     c: 2
   }).getArguments()).toMatchSnapshot();
   expect(resource.deleteArgument('b').getArguments()).toMatchSnapshot();
+  expect(resource.setProvisioners([
+    new Provisioner('p1', { a: 0 }),
+    new Provisioner('p2', { b: 1 })
+  ]).getProvisioners()).toMatchSnapshot();
+  expect(resource.setProvisioners(null).getProvisioners()).toMatchSnapshot();
 });
