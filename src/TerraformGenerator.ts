@@ -166,6 +166,7 @@ export default class TerraformGenerator {
     this.addBlocks(block);
     return block;
   }
+
   /**
    * Convert resource into data source and add it into Terraform.
    * 
@@ -260,6 +261,19 @@ export default class TerraformGenerator {
    */
   backend(type: string, args?: Record<string, any>): Backend {
     const block = new Backend(type, args);
+    this.addBlocks(block);
+    return block;
+  }
+
+  /**
+   * Add provisioner into Terraform.
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   * 
+   * @param type type
+   * @param args arguments
+   */
+  provisioner(type: string, args?: Record<string, any>): Provisioner {
+    const block = new Provisioner(type, args);
     this.addBlocks(block);
     return block;
   }

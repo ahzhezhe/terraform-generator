@@ -187,6 +187,23 @@ Array [
     "name": "locals",
     "type": "locals",
   },
+  Provisioner {
+    "arguments": Object {
+      "a": "a",
+      "b": 123,
+      "c": Attribute {
+        "argument": "aws_vpc.test.x",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "provisioner",
+    ],
+    "blockType": "provisioner",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [],
+    "type": "provisioner",
+  },
   Resource {
     "arguments": Object {
       "tfg2": "tfg2",
@@ -275,6 +292,12 @@ resource \\"locals\\" \\"locals\\"{
 a = \\"\${local.a}\\"
 }
 
+provisioner \\"provisioner\\"{
+a = \\"a\\"
+b = 123
+c = \\"\${aws_vpc.test.x}\\"
+}
+
 resource \\"tfg2\\" \\"tfg2\\"{
 tfg2 = \\"tfg2\\"
 }
@@ -348,6 +371,12 @@ c = \\"\${aws_vpc.test.x}\\"
 
 resource \\"locals\\" \\"locals\\"{
 a = \\"\${local.a}\\"
+}
+
+provisioner \\"provisioner\\"{
+a = \\"a\\"
+b = 123
+c = \\"\${aws_vpc.test.x}\\"
 }
 
 resource \\"tfg2\\" \\"tfg2\\"{
@@ -550,6 +579,23 @@ Array [
     "name": "locals",
     "type": "locals",
   },
+  Provisioner {
+    "arguments": Object {
+      "a": "a",
+      "b": 123,
+      "c": Attribute {
+        "argument": "aws_vpc.test.x",
+        "asIs": false,
+      },
+    },
+    "blockNames": Array [
+      "provisioner",
+    ],
+    "blockType": "provisioner",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [],
+    "type": "provisioner",
+  },
   Resource {
     "arguments": Object {
       "tfg2": "tfg2",
@@ -638,6 +684,12 @@ resource \\"locals\\" \\"locals\\"{
 a = local.a
 }
 
+provisioner \\"provisioner\\"{
+a = \\"a\\"
+b = 123
+c = aws_vpc.test.x
+}
+
 resource \\"tfg2\\" \\"tfg2\\"{
 tfg2 = \\"tfg2\\"
 }
@@ -711,6 +763,12 @@ c = aws_vpc.test.x
 
 resource \\"locals\\" \\"locals\\"{
 a = local.a
+}
+
+provisioner \\"provisioner\\"{
+a = \\"a\\"
+b = 123
+c = aws_vpc.test.x
 }
 
 resource \\"tfg2\\" \\"tfg2\\"{

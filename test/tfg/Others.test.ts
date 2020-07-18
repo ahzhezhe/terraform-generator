@@ -52,6 +52,12 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
     a: locals.arg('a')
   });
 
+  tfg.provisioner('provisioner', {
+    a: 'a',
+    b: 123,
+    c: r.attr('x')
+  });
+
   const tfg2 = new TerraformGenerator({ version });
   tfg2.resource('tfg2', 'tfg2', {
     tfg2: 'tfg2'
