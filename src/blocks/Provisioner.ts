@@ -10,10 +10,9 @@ export default class Provisioner extends Block {
    * 
    * @param type type
    * @param args arguments
-   * @param innerBlocks inner blocks
    */
-  constructor(type: string, args?: Record<string, any>, innerBlocks?: Block[]) {
-    super('provisioner', [type], args, innerBlocks);
+  constructor(type: string, args?: Record<string, any>) {
+    super('provisioner', [type], args);
 
     this.type = type;
   }

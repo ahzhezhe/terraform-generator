@@ -86,7 +86,7 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
   });
   tfg.variable('test2', {
     type: 'string'
-  }, null, 'test');
+  }, 'test');
   tfg.data('aws_vpc', 'test', {
     cidr_block: 'test'
   });
@@ -101,10 +101,6 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
   });
   tfg.dataFromResource(r, null, ['cidr_block', ['tags', 'tag']]);
   tfg.dataFromResource(r, { name: 'test2' }, ['cidr_block', ['tags', 'tag']]);
-  tfg.provisioner('file', {
-    source: 'source',
-    destination: 'destination'
-  });
   tfg.resource('innerBlock', 'innerBlock', {
     a: 'a'
   }, [

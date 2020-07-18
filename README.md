@@ -133,7 +133,7 @@ tfg.addVars({
 // You can also add single variable value while adding variable block to your configuration.
 tfg.variable('password', {
   type: 'string'
-}, null, 'p@ssW0rd');
+}, 'p@ssW0rd');
 ```
 
 ### **Generate Terraform configuration**
