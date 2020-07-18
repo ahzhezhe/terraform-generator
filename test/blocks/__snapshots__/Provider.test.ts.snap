@@ -6,38 +6,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -52,38 +52,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -99,38 +99,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -145,132 +145,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -287,38 +193,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -333,38 +239,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
 \\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -381,38 +381,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -427,38 +427,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -474,38 +474,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -520,132 +520,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -662,38 +568,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -708,38 +614,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
 \\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -763,38 +763,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -809,38 +809,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -856,38 +856,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -902,132 +902,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1044,38 +950,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1090,38 +996,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
 type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1138,38 +1138,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1184,38 +1184,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1231,38 +1231,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1277,132 +1277,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1419,38 +1325,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1465,38 +1371,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
 type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -1520,38 +1520,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1566,38 +1566,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1613,38 +1613,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1659,132 +1659,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1801,38 +1707,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1847,38 +1753,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
 \\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1895,38 +1895,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1941,38 +1941,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -1988,38 +1988,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -2034,132 +2034,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
-]
-arg11 = \\"\${arg}\\"
-arg12 = \\"\${type.name.attr}\\"
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = \\"\${fn(1, 2, 3)}\\"
-arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = \\"\${type.name.attr}\\"
-arg7 = [
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
-]
-arg8 = \\"\${type.name}\\"
-arg9 = [
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-\\"\${type.name}\\",
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-\\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -2176,38 +2082,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -2222,38 +2128,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = \\"\${type.name.attr}\\"
 arg7 = [
 \\"\${type.name.attr}\\",
 \\"\${type.name.attr}\\",
-\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
 ]
 arg8 = \\"\${type.name}\\"
 arg9 = [
 \\"\${type.name}\\",
 \\"\${type.name}\\",
-\\"\${type.name}\\",
+\\"\${type.name}\\"
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 \\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
 \\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
+]
+arg11 = \\"\${arg}\\"
+arg12 = \\"\${type.name.attr}\\"
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = \\"\${fn(1, 2, 3)}\\"
+arg16 = \\"\${fn(type.name.attr, type.name.attr, type.name.attr)}\\"
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = \\"\${type.name.attr}\\"
+arg7 = [
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\",
+\\"\${type.name.attr}\\"
+]
+arg8 = \\"\${type.name}\\"
+arg9 = [
+\\"\${type.name}\\",
+\\"\${type.name}\\",
+\\"\${type.name}\\"
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+\\"\${type.name.attr}\\",
+\\"\${type.name}\\"
 ]
 arg11 = \\"\${arg}\\"
 arg12 = \\"\${type.name.attr}\\"
@@ -2278,38 +2278,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2324,38 +2324,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2371,38 +2371,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2417,132 +2417,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2559,38 +2465,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2605,38 +2511,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
 type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2653,38 +2653,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2699,38 +2699,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2746,38 +2746,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2792,132 +2792,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-}
-}
-arg101 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-arg100 {
-arg0 = \\"a\\"
-arg1 = [
-\\"b\\",
-\\"c\\",
-\\"d\\",
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3,
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false,
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr,
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name,
-]
-arg10 = [
-\\"e\\",
-4,
-true,
-type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2934,38 +2840,38 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
-type.name,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
@@ -2980,38 +2886,132 @@ arg0 = \\"a\\"
 arg1 = [
 \\"b\\",
 \\"c\\",
-\\"d\\",
+\\"d\\"
 ]
 arg2 = 0
 arg3 = [
 1,
 2,
-3,
+3
 ]
 arg4 = true
 arg5 = [
 false,
 true,
-false,
+false
 ]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
 type.name.attr,
-type.name.attr,
+type.name.attr
 ]
 arg8 = type.name
 arg9 = [
 type.name,
 type.name,
-type.name,
+type.name
 ]
 arg10 = [
 \\"e\\",
 4,
 true,
 type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+}
+}
+arg101 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
 type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = as is
+arg14 = <<EOT
+heredoc
+EOT
+arg15 = fn(1, 2, 3)
+arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg100 {
+arg0 = \\"a\\"
+arg1 = [
+\\"b\\",
+\\"c\\",
+\\"d\\"
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name
+]
+arg10 = [
+\\"e\\",
+4,
+true,
+type.name.attr,
+type.name
 ]
 arg11 = arg
 arg12 = type.name.attr

@@ -87,8 +87,8 @@ export default class TerraformGeneratorUtils {
     } else if (typeof value === 'object') {
       if (Array.isArray(value)) {
         let str = '[\n';
-        value.forEach(element => {
-          str += `${this.argumentValueToString(version, element)},\n`;
+        value.forEach((element, i) => {
+          str += `${this.argumentValueToString(version, element)}${i < value.length - 1 ? ',' : ''}\n`;
         });
         str += ']';
         return str;

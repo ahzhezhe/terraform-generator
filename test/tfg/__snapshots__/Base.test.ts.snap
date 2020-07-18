@@ -1789,7 +1789,7 @@ subnet_ids = [
 \\"\${aws_subnet.app2.id}\\",
 \\"\${aws_subnet.gut0.id}\\",
 \\"\${aws_subnet.gut1.id}\\",
-\\"\${aws_subnet.gut2.id}\\",
+\\"\${aws_subnet.gut2.id}\\"
 ]
 ingress {
 protocol = \\"all\\"
@@ -1819,7 +1819,7 @@ vpc_id = \\"\${aws_vpc.vpc.id}\\"
 subnet_ids = [
 \\"\${aws_subnet.db0.id}\\",
 \\"\${aws_subnet.db1.id}\\",
-\\"\${aws_subnet.db2.id}\\",
+\\"\${aws_subnet.db2.id}\\"
 ]
 ingress {
 protocol = \\"all\\"
@@ -1869,7 +1869,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.100.0/22\\",
+\\"172.88.100.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -1878,7 +1878,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -1897,7 +1897,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.104.0/22\\",
+\\"172.88.104.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -1906,7 +1906,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -1925,7 +1925,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.108.0/22\\",
+\\"172.88.108.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -1934,7 +1934,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -1953,7 +1953,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.112.0/22\\",
+\\"172.88.112.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -1962,7 +1962,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -1981,7 +1981,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.116.0/22\\",
+\\"172.88.116.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -1990,7 +1990,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -2058,27 +2058,27 @@ value = {
 publicSubnets = [
 \\"\${aws_subnet.public0.cidr_block}\\",
 \\"\${aws_subnet.public1.cidr_block}\\",
-\\"\${aws_subnet.public2.cidr_block}\\",
+\\"\${aws_subnet.public2.cidr_block}\\"
 ]
 webSubnets = [
 \\"\${aws_subnet.web0.cidr_block}\\",
 \\"\${aws_subnet.web1.cidr_block}\\",
-\\"\${aws_subnet.web2.cidr_block}\\",
+\\"\${aws_subnet.web2.cidr_block}\\"
 ]
 appSubnets = [
 \\"\${aws_subnet.app0.cidr_block}\\",
 \\"\${aws_subnet.app1.cidr_block}\\",
-\\"\${aws_subnet.app2.cidr_block}\\",
+\\"\${aws_subnet.app2.cidr_block}\\"
 ]
 gutSubnets = [
 \\"\${aws_subnet.gut0.cidr_block}\\",
 \\"\${aws_subnet.gut1.cidr_block}\\",
-\\"\${aws_subnet.gut2.cidr_block}\\",
+\\"\${aws_subnet.gut2.cidr_block}\\"
 ]
 dbSubnets = [
 \\"\${aws_subnet.db0.cidr_block}\\",
 \\"\${aws_subnet.db1.cidr_block}\\",
-\\"\${aws_subnet.db2.cidr_block}\\",
+\\"\${aws_subnet.db2.cidr_block}\\"
 ]
 }
 }
@@ -2398,7 +2398,7 @@ subnet_ids = [
 \\"\${aws_subnet.app2.id}\\",
 \\"\${aws_subnet.gut0.id}\\",
 \\"\${aws_subnet.gut1.id}\\",
-\\"\${aws_subnet.gut2.id}\\",
+\\"\${aws_subnet.gut2.id}\\"
 ]
 ingress {
 protocol = \\"all\\"
@@ -2428,7 +2428,7 @@ vpc_id = \\"\${aws_vpc.vpc.id}\\"
 subnet_ids = [
 \\"\${aws_subnet.db0.id}\\",
 \\"\${aws_subnet.db1.id}\\",
-\\"\${aws_subnet.db2.id}\\",
+\\"\${aws_subnet.db2.id}\\"
 ]
 ingress {
 protocol = \\"all\\"
@@ -2478,7 +2478,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.100.0/22\\",
+\\"172.88.100.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -2487,7 +2487,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -2506,7 +2506,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.104.0/22\\",
+\\"172.88.104.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -2515,7 +2515,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -2534,7 +2534,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.108.0/22\\",
+\\"172.88.108.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -2543,7 +2543,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -2562,7 +2562,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.112.0/22\\",
+\\"172.88.112.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -2571,7 +2571,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -2590,7 +2590,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.116.0/22\\",
+\\"172.88.116.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -2599,7 +2599,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -2667,27 +2667,27 @@ value = {
 publicSubnets = [
 \\"\${aws_subnet.public0.cidr_block}\\",
 \\"\${aws_subnet.public1.cidr_block}\\",
-\\"\${aws_subnet.public2.cidr_block}\\",
+\\"\${aws_subnet.public2.cidr_block}\\"
 ]
 webSubnets = [
 \\"\${aws_subnet.web0.cidr_block}\\",
 \\"\${aws_subnet.web1.cidr_block}\\",
-\\"\${aws_subnet.web2.cidr_block}\\",
+\\"\${aws_subnet.web2.cidr_block}\\"
 ]
 appSubnets = [
 \\"\${aws_subnet.app0.cidr_block}\\",
 \\"\${aws_subnet.app1.cidr_block}\\",
-\\"\${aws_subnet.app2.cidr_block}\\",
+\\"\${aws_subnet.app2.cidr_block}\\"
 ]
 gutSubnets = [
 \\"\${aws_subnet.gut0.cidr_block}\\",
 \\"\${aws_subnet.gut1.cidr_block}\\",
-\\"\${aws_subnet.gut2.cidr_block}\\",
+\\"\${aws_subnet.gut2.cidr_block}\\"
 ]
 dbSubnets = [
 \\"\${aws_subnet.db0.cidr_block}\\",
 \\"\${aws_subnet.db1.cidr_block}\\",
-\\"\${aws_subnet.db2.cidr_block}\\",
+\\"\${aws_subnet.db2.cidr_block}\\"
 ]
 }
 }
@@ -4484,7 +4484,7 @@ aws_subnet.app1.id,
 aws_subnet.app2.id,
 aws_subnet.gut0.id,
 aws_subnet.gut1.id,
-aws_subnet.gut2.id,
+aws_subnet.gut2.id
 ]
 ingress {
 protocol = \\"all\\"
@@ -4514,7 +4514,7 @@ vpc_id = aws_vpc.vpc.id
 subnet_ids = [
 aws_subnet.db0.id,
 aws_subnet.db1.id,
-aws_subnet.db2.id,
+aws_subnet.db2.id
 ]
 ingress {
 protocol = \\"all\\"
@@ -4564,7 +4564,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.100.0/22\\",
+\\"172.88.100.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -4573,7 +4573,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -4592,7 +4592,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.104.0/22\\",
+\\"172.88.104.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -4601,7 +4601,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -4620,7 +4620,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.108.0/22\\",
+\\"172.88.108.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -4629,7 +4629,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -4648,7 +4648,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.112.0/22\\",
+\\"172.88.112.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -4657,7 +4657,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -4676,7 +4676,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.116.0/22\\",
+\\"172.88.116.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -4685,7 +4685,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -4753,27 +4753,27 @@ value = {
 publicSubnets = [
 aws_subnet.public0.cidr_block,
 aws_subnet.public1.cidr_block,
-aws_subnet.public2.cidr_block,
+aws_subnet.public2.cidr_block
 ]
 webSubnets = [
 aws_subnet.web0.cidr_block,
 aws_subnet.web1.cidr_block,
-aws_subnet.web2.cidr_block,
+aws_subnet.web2.cidr_block
 ]
 appSubnets = [
 aws_subnet.app0.cidr_block,
 aws_subnet.app1.cidr_block,
-aws_subnet.app2.cidr_block,
+aws_subnet.app2.cidr_block
 ]
 gutSubnets = [
 aws_subnet.gut0.cidr_block,
 aws_subnet.gut1.cidr_block,
-aws_subnet.gut2.cidr_block,
+aws_subnet.gut2.cidr_block
 ]
 dbSubnets = [
 aws_subnet.db0.cidr_block,
 aws_subnet.db1.cidr_block,
-aws_subnet.db2.cidr_block,
+aws_subnet.db2.cidr_block
 ]
 }
 }
@@ -5093,7 +5093,7 @@ aws_subnet.app1.id,
 aws_subnet.app2.id,
 aws_subnet.gut0.id,
 aws_subnet.gut1.id,
-aws_subnet.gut2.id,
+aws_subnet.gut2.id
 ]
 ingress {
 protocol = \\"all\\"
@@ -5123,7 +5123,7 @@ vpc_id = aws_vpc.vpc.id
 subnet_ids = [
 aws_subnet.db0.id,
 aws_subnet.db1.id,
-aws_subnet.db2.id,
+aws_subnet.db2.id
 ]
 ingress {
 protocol = \\"all\\"
@@ -5173,7 +5173,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.100.0/22\\",
+\\"172.88.100.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -5182,7 +5182,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -5201,7 +5201,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.104.0/22\\",
+\\"172.88.104.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -5210,7 +5210,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -5229,7 +5229,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.108.0/22\\",
+\\"172.88.108.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -5238,7 +5238,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -5257,7 +5257,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.112.0/22\\",
+\\"172.88.112.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -5266,7 +5266,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -5285,7 +5285,7 @@ protocol = \\"tcp\\"
 from_port = 22
 to_port = 22
 cidr_blocks = [
-\\"172.88.116.0/22\\",
+\\"172.88.116.0/22\\"
 ]
 description = \\"SSH for tier\\"
 }
@@ -5294,7 +5294,7 @@ protocol = \\"-1\\"
 from_port = 0
 to_port = 0
 cidr_blocks = [
-\\"0.0.0.0/0\\",
+\\"0.0.0.0/0\\"
 ]
 }
 tags = {
@@ -5362,27 +5362,27 @@ value = {
 publicSubnets = [
 aws_subnet.public0.cidr_block,
 aws_subnet.public1.cidr_block,
-aws_subnet.public2.cidr_block,
+aws_subnet.public2.cidr_block
 ]
 webSubnets = [
 aws_subnet.web0.cidr_block,
 aws_subnet.web1.cidr_block,
-aws_subnet.web2.cidr_block,
+aws_subnet.web2.cidr_block
 ]
 appSubnets = [
 aws_subnet.app0.cidr_block,
 aws_subnet.app1.cidr_block,
-aws_subnet.app2.cidr_block,
+aws_subnet.app2.cidr_block
 ]
 gutSubnets = [
 aws_subnet.gut0.cidr_block,
 aws_subnet.gut1.cidr_block,
-aws_subnet.gut2.cidr_block,
+aws_subnet.gut2.cidr_block
 ]
 dbSubnets = [
 aws_subnet.db0.cidr_block,
 aws_subnet.db1.cidr_block,
-aws_subnet.db2.cidr_block,
+aws_subnet.db2.cidr_block
 ]
 }
 }
