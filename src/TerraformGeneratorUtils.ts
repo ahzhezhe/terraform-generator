@@ -40,6 +40,7 @@ export default class TerraformGeneratorUtils {
 
       if (Array.isArray(value)) {
         if (value.length === 0 || this.isObjectArgument(value[0])) {
+          value = value.filter(element => element != null);
           operator = ' ';
           isObjectArray = true;
         }
@@ -68,7 +69,10 @@ export default class TerraformGeneratorUtils {
   }
 
   static argumentValueToString(version: TerraformVersion, value: any): string {
-    if (value instanceof Block) {
+    if (value == null) {
+      return null;
+
+    } else if (value instanceof Block) {
       return this.argumentValueToString(version, value.asArgument());
 
     } else if (value instanceof Argument) {
