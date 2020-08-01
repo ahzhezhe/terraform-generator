@@ -35,6 +35,10 @@ export default class TerraformGeneratorUtils {
         return '';
       }
 
+      if (key.indexOf(' ') > 0) {
+        key = `"${key}"`;
+      }
+
       let operator = ' = ';
       let isObjectArray = false;
 

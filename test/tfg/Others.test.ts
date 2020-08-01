@@ -58,6 +58,13 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
     c: r.attr('x')
   });
 
+  tfg.resource('tags', 'tags', {
+    tags: map({
+      'a': 'a',
+      'b c d': 'b c d'
+    })
+  });
+
   const tfg2 = new TerraformGenerator({ version });
   tfg2.resource('tfg2', 'tfg2', {
     tfg2: 'tfg2'

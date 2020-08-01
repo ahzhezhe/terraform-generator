@@ -206,6 +206,25 @@ Array [
   },
   Resource {
     "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "a": "a",
+          "b c d": "b c d",
+        },
+      },
+    },
+    "blockNames": Array [
+      "tags",
+      "tags",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [],
+    "name": "tags",
+    "type": "tags",
+  },
+  Resource {
+    "arguments": Object {
       "tfg2": "tfg2",
     },
     "blockNames": Array [
@@ -298,6 +317,13 @@ b = 123
 c = \\"\${aws_vpc.test.x}\\"
 }
 
+resource \\"tags\\" \\"tags\\"{
+tags = {
+a = \\"a\\"
+\\"b c d\\" = \\"b c d\\"
+}
+}
+
 resource \\"tfg2\\" \\"tfg2\\"{
 tfg2 = \\"tfg2\\"
 }
@@ -377,6 +403,13 @@ provisioner \\"provisioner\\"{
 a = \\"a\\"
 b = 123
 c = \\"\${aws_vpc.test.x}\\"
+}
+
+resource \\"tags\\" \\"tags\\"{
+tags = {
+a = \\"a\\"
+\\"b c d\\" = \\"b c d\\"
+}
 }
 
 resource \\"tfg2\\" \\"tfg2\\"{
@@ -598,6 +631,25 @@ Array [
   },
   Resource {
     "arguments": Object {
+      "tags": Map {
+        "arguments": Object {
+          "a": "a",
+          "b c d": "b c d",
+        },
+      },
+    },
+    "blockNames": Array [
+      "tags",
+      "tags",
+    ],
+    "blockType": "resource",
+    "customArgumentToString": undefined,
+    "innerBlocks": Array [],
+    "name": "tags",
+    "type": "tags",
+  },
+  Resource {
+    "arguments": Object {
       "tfg2": "tfg2",
     },
     "blockNames": Array [
@@ -690,6 +742,13 @@ b = 123
 c = aws_vpc.test.x
 }
 
+resource \\"tags\\" \\"tags\\"{
+tags = {
+a = \\"a\\"
+\\"b c d\\" = \\"b c d\\"
+}
+}
+
 resource \\"tfg2\\" \\"tfg2\\"{
 tfg2 = \\"tfg2\\"
 }
@@ -769,6 +828,13 @@ provisioner \\"provisioner\\"{
 a = \\"a\\"
 b = 123
 c = aws_vpc.test.x
+}
+
+resource \\"tags\\" \\"tags\\"{
+tags = {
+a = \\"a\\"
+\\"b c d\\" = \\"b c d\\"
+}
 }
 
 resource \\"tfg2\\" \\"tfg2\\"{
