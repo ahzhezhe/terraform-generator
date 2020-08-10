@@ -8,7 +8,7 @@ export default class Heredoc extends Argument {
    * @param content string or object, object will be stringify
    */
   constructor(content: string | Record<any, any>) {
-    super(`<<EOT\n${typeof content === 'string' ? content : JSON.stringify(content, null, 2)}\nEOT`, true);
+    super(`<<EOT\n${typeof content === 'string' ? content : JSON.stringify(content, null, 2)}\nEOT\n`, true);
   }
 
 }

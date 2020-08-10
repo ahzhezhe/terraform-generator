@@ -96,7 +96,7 @@ export default class TerraformGeneratorUtils {
       if (Array.isArray(value)) {
         let str = '[\n';
         value.forEach((element, i) => {
-          str += `${this.argumentValueToString(version, element)}${element instanceof Heredoc && i < value.length - 1 ? '\n' : ''}${i < value.length - 1 ? ',' : ''}\n`;
+          str += `${this.argumentValueToString(version, element)}${i < value.length - 1 ? ',' : ''}\n`;
         });
         str += ']';
         return str;

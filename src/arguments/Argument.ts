@@ -14,7 +14,7 @@ export default class Argument {
       throw new Error('Argument cannot be empty.');
     }
 
-    this.argument = typeof arg === 'string' ? arg.trim() : arg;
+    this.argument = arg;
     this.asIs = asIs;
   }
 
