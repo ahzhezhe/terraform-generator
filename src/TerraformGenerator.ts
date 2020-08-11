@@ -18,13 +18,14 @@ export interface TerraformGeneratorOptions {
  * @param dir directoty, default = .
  * @param tfFilename Terraform filename, must ends with .tf, default = terraform.tf
  * @param tfvarsFilename Terraform variables filename, must ends with .tfvars, default = terraform.tfvars
- * @param format use 'terraform fmt' to format the configuration, Terraform must be installed, default = false
+ * @param format put true to use 'terraform fmt' to format the configuration, Terraform must be installed,
+ * if the terraform binary is named differently in your machine, put the binary name instead, default = false
  */
 export interface WriteOptions {
   dir?: string;
   tfFilename?: string;
   tfvarsFilename?: string;
-  format?: boolean;
+  format?: boolean | string;
 }
 
 export default class TerraformGenerator {
@@ -116,6 +117,9 @@ export default class TerraformGenerator {
     if (!options.tfvarsFilename.endsWith('.tfvars')) {
       options.tfvarsFilename += '.tfvars';
     }
+    if (options.format === true) {
+      options.format = 'terraform';
+    }
 
     const result = this.generate();
     shell.mkdir('-p', options.dir);
@@ -125,7 +129,7 @@ export default class TerraformGenerator {
     }
 
     if (options.format) {
-      child_process.execSync('terraform fmt', { cwd: options.dir });
+      child_process.execSync(`${options.format} fmt`, { cwd: options.dir });
     }
   }
 

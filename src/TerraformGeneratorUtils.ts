@@ -1,4 +1,4 @@
-import { TerraformVersion, Block, Argument, Map, Heredoc } from '.';
+import { TerraformVersion, Block, Argument, Map } from '.';
 
 export type ArgumentsToStringFn = (version: TerraformVersion, key: string, value: any) => string;
 
