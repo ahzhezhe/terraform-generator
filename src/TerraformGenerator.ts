@@ -96,7 +96,7 @@ export default class TerraformGenerator {
       }
     });
 
-    return str;
+    return TerraformGeneratorUtils.unescape(str);
   }
 
   private generateTfvars(): string {

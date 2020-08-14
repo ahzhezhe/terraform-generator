@@ -109,7 +109,7 @@ export default abstract class Block {
       str += `${block.toTerraform(version).trim()}\n`;
     });
     str += '}\n\n';
-    return str;
+    return TerraformGeneratorUtils.escape(str);
   }
 
   /**

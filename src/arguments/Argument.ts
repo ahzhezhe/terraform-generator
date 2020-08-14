@@ -1,3 +1,5 @@
+import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
+
 export default class Argument {
 
   readonly argument: string | Argument;
@@ -28,7 +30,7 @@ export default class Argument {
     } else {
       str += this.argument;
     }
-    return str;
+    return TerraformGeneratorUtils.escape(str);
   }
 
   /**

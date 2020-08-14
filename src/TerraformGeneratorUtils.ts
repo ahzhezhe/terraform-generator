@@ -1,8 +1,23 @@
+import replaceString from 'replace-string';
 import { TerraformVersion, Block, Argument, Map } from '.';
 
 export type ArgumentsToStringFn = (version: TerraformVersion, key: string, value: any) => string;
 
 export default class TerraformGeneratorUtils {
+
+  private static readonly escapeChars = [
+    ['"', '&tfgquot;']
+  ];
+
+  static escape(str: string): string {
+    this.escapeChars.forEach(char => str = replaceString(str, char[0], char[1]));
+    return str;
+  }
+
+  static unescape(str: string): string {
+    this.escapeChars.slice().reverse().forEach(char => str = replaceString(str, char[1], char[0]));
+    return str;
+  }
 
   static argumentsToString(version: TerraformVersion, args: Record<string, any>, customArgumentToString?: ArgumentsToStringFn): string {
     let str = '';
