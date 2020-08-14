@@ -7,24 +7,41 @@ import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
 export type TerraformVersion = '0.11' | '0.12';
 
-/**
- * @param version Terraform version, default is latest version
- */
 export interface TerraformGeneratorOptions {
-  version: TerraformVersion;
+  /**
+   * Terraform version.
+   * Default is latest version.
+   */
+  version?: TerraformVersion;
 }
 
 /**
  * @param dir directoty, default = .
- * @param tfFilename Terraform filename, must ends with .tf, default = terraform.tf
- * @param tfvarsFilename Terraform variables filename, must ends with .tfvars, default = terraform.tfvars
- * @param format put true to use 'terraform fmt' to format the configuration, Terraform must be installed,
- * if the terraform binary is named differently in your machine, put the binary name instead, default = false
+ * @param tfFilename 
+ * @param tfvarsFilename 
+ * @param format 
  */
 export interface WriteOptions {
+  /**
+   * Directory to write to.
+   * Default = .
+   */
   dir?: string;
+  /**
+   * Terraform filename, must ends with .tf.
+   * Default = terraform.tf
+   */
   tfFilename?: string;
+  /**
+   * Terraform variables filename, must ends with .tfvars.
+   * Default = terraform.tfvars
+   */
   tfvarsFilename?: string;
+  /**
+   * Put true to use 'terraform fmt' to format the configuration, Terraform must be installed.
+   * If the terraform binary is named differently in your machine, put the binary name instead.
+   * Default = false
+   */
   format?: boolean | string;
 }
 

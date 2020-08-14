@@ -1,14 +1,13 @@
 import { Block, Argument, Attribute, Data, Map, Provisioner } from '..';
 
-/**
- * Options to convert resource into data source.
- * 
- * @param type new type of the data source
- * @param name new name of the data source
- * 
- */
 export interface ResourceToDataOptions {
+  /**
+   * New type of the data source.
+   */
   type?: string;
+  /**
+   * New name of the data source.
+   */
   name?: string;
 }
 
