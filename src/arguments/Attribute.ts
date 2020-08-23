@@ -6,21 +6,21 @@ export default class Attribute extends Argument {
    * Construct block's attribute.
    * 
    * @param block block
-   * @param name attribute name
+   * @param attrName attribute name
    */
-  constructor(block: Block, name: string) {
-    super(Attribute.constructArgument(block, name));
+  constructor(block: Block, attrName: string) {
+    super(Attribute.constructArgument(block, attrName));
   }
 
-  private static constructArgument(block: Block, name: string): string {
+  private static constructArgument(block: Block, attrName: string): string {
     if (!block) {
       throw new Error('Attribute block cannot be null.');
     }
-    if (!name || !name.trim()) {
+    if (!attrName || !attrName.trim()) {
       throw new Error('Attribute name cannot be empty.');
     }
 
-    return `${block.asArgument().toTerraform()}.${name.trim()}`;
+    return `${block.asArgument().toTerraform()}.${attrName.trim()}`;
   }
 
 }
