@@ -69,7 +69,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -95,7 +95,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -121,7 +121,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -147,7 +147,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -173,7 +173,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -199,7 +199,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -225,7 +225,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -251,7 +251,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -277,7 +277,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -303,7 +303,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -329,7 +329,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -355,7 +355,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -381,7 +381,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -407,7 +407,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -433,7 +433,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -457,7 +457,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -481,7 +481,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -501,7 +501,7 @@ Array [
           "cidr_block": "0.0.0.0/0",
           "gateway_id": Attribute {
             "argument": "aws_internet_gateway.igw.id",
-            "asIs": false,
+            "literal": false,
           },
         },
       ],
@@ -514,7 +514,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -531,11 +531,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.web0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -552,11 +552,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.web1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -573,11 +573,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.web2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -594,11 +594,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.app0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -615,11 +615,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.app1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -636,11 +636,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.app2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -657,11 +657,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -678,11 +678,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -699,11 +699,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -720,11 +720,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.db0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -741,11 +741,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.db1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -762,11 +762,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.db2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -783,11 +783,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.igw.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -804,11 +804,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.igw.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -825,11 +825,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.igw.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -867,51 +867,51 @@ Array [
       "subnet_ids": Array [
         Attribute {
           "argument": "aws_subnet.public0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.public1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.public2.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.web0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.web1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.web2.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.app0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.app1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.app2.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.gut0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.gut1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.gut2.id",
-          "asIs": false,
+          "literal": false,
         },
       ],
       "tags": Map {
@@ -923,7 +923,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -977,15 +977,15 @@ Array [
       "subnet_ids": Array [
         Attribute {
           "argument": "aws_subnet.db0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.db1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.db2.id",
-          "asIs": false,
+          "literal": false,
         },
       ],
       "tags": Map {
@@ -997,7 +997,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1040,7 +1040,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1083,7 +1083,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1126,7 +1126,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1169,7 +1169,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1212,7 +1212,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1250,11 +1250,11 @@ Array [
     "arguments": Object {
       "allocation_id": Attribute {
         "argument": "aws_eip.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public0.id",
-        "asIs": false,
+        "literal": false,
       },
       "tags": Map {
         "arguments": Object {
@@ -1280,7 +1280,7 @@ Array [
         "cidr_block": "0.0.0.0/0",
         "gateway_id": Attribute {
           "argument": "aws_nat_gateway.nat.id",
-          "asIs": false,
+          "literal": false,
         },
       },
       "tags": Map {
@@ -1292,7 +1292,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1309,11 +1309,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1330,11 +1330,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1351,11 +1351,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -1374,7 +1374,7 @@ Array [
         "arguments": Object {
           "cidr": Attribute {
             "argument": "aws_vpc.vpc.cidr_block",
-            "asIs": false,
+            "literal": false,
           },
         },
       },
@@ -1394,72 +1394,72 @@ Array [
           "appSubnets": Array [
             Attribute {
               "argument": "aws_subnet.app0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.app1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.app2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "dbSubnets": Array [
             Attribute {
               "argument": "aws_subnet.db0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.db1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.db2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "gutSubnets": Array [
             Attribute {
               "argument": "aws_subnet.gut0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.gut1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.gut2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "mgtSubnets": Array [],
           "publicSubnets": Array [
             Attribute {
               "argument": "aws_subnet.public0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.public1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.public2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "webSubnets": Array [
             Attribute {
               "argument": "aws_subnet.web0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.web1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.web2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
         },
@@ -2088,612 +2088,7 @@ dbSubnets = [
 }
 `;
 
-exports[`VPC Project 0.11 5`] = `
-"terraform {
-required_version = \\"= 0.11\\"
-backend \\"s3\\"{
-bucket = \\"mybucket\\"
-key = \\"path/to/my/key\\"
-region = \\"ap-southeast-1\\"
-}
-
-}
-
-provider \\"aws\\"{
-region = \\"ap-southeast-1\\"
-profile = \\"test\\"
-}
-
-resource \\"aws_vpc\\" \\"vpc\\"{
-cidr_block = \\"172.88.0.0/16\\"
-tags = {
-Name = \\"vpc-test-dev\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"public0\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.100.0/24\\"
-availability_zone = \\"ap-southeast-1a\\"
-tags = {
-Name = \\"subnet-test-dev-public0\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"public1\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.101.0/24\\"
-availability_zone = \\"ap-southeast-1b\\"
-tags = {
-Name = \\"subnet-test-dev-public1\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"public2\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.102.0/24\\"
-availability_zone = \\"ap-southeast-1c\\"
-tags = {
-Name = \\"subnet-test-dev-public2\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"web0\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.104.0/24\\"
-availability_zone = \\"ap-southeast-1a\\"
-tags = {
-Name = \\"subnet-test-dev-web0\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"web1\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.105.0/24\\"
-availability_zone = \\"ap-southeast-1b\\"
-tags = {
-Name = \\"subnet-test-dev-web1\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"web2\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.106.0/24\\"
-availability_zone = \\"ap-southeast-1c\\"
-tags = {
-Name = \\"subnet-test-dev-web2\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"app0\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.108.0/24\\"
-availability_zone = \\"ap-southeast-1a\\"
-tags = {
-Name = \\"subnet-test-dev-app0\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"app1\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.109.0/24\\"
-availability_zone = \\"ap-southeast-1b\\"
-tags = {
-Name = \\"subnet-test-dev-app1\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"app2\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.110.0/24\\"
-availability_zone = \\"ap-southeast-1c\\"
-tags = {
-Name = \\"subnet-test-dev-app2\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"gut0\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.112.0/24\\"
-availability_zone = \\"ap-southeast-1a\\"
-tags = {
-Name = \\"subnet-test-dev-gut0\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"gut1\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.113.0/24\\"
-availability_zone = \\"ap-southeast-1b\\"
-tags = {
-Name = \\"subnet-test-dev-gut1\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"gut2\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.114.0/24\\"
-availability_zone = \\"ap-southeast-1c\\"
-tags = {
-Name = \\"subnet-test-dev-gut2\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"db0\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.116.0/24\\"
-availability_zone = \\"ap-southeast-1a\\"
-tags = {
-Name = \\"subnet-test-dev-db0\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"db1\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.117.0/24\\"
-availability_zone = \\"ap-southeast-1b\\"
-tags = {
-Name = \\"subnet-test-dev-db1\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_subnet\\" \\"db2\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-cidr_block = \\"172.88.118.0/24\\"
-availability_zone = \\"ap-southeast-1c\\"
-tags = {
-Name = \\"subnet-test-dev-db2\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_internet_gateway\\" \\"igw\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-tags = {
-Name = \\"igw-test-dev\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_route_table\\" \\"default\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-tags = {
-Name = \\"rt-test-dev-default\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_route_table\\" \\"igw\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-route {
-cidr_block = \\"0.0.0.0/0\\"
-gateway_id = \\"\${aws_internet_gateway.igw.id}\\"
-}
-tags = {
-Name = \\"rt-test-dev-igw\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_route_table_association\\" \\"default-web0\\"{
-subnet_id = \\"\${aws_subnet.web0.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-web1\\"{
-subnet_id = \\"\${aws_subnet.web1.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-web2\\"{
-subnet_id = \\"\${aws_subnet.web2.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-app0\\"{
-subnet_id = \\"\${aws_subnet.app0.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-app1\\"{
-subnet_id = \\"\${aws_subnet.app1.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-app2\\"{
-subnet_id = \\"\${aws_subnet.app2.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-gut0\\"{
-subnet_id = \\"\${aws_subnet.gut0.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-gut1\\"{
-subnet_id = \\"\${aws_subnet.gut1.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-gut2\\"{
-subnet_id = \\"\${aws_subnet.gut2.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-db0\\"{
-subnet_id = \\"\${aws_subnet.db0.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-db1\\"{
-subnet_id = \\"\${aws_subnet.db1.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"default-db2\\"{
-subnet_id = \\"\${aws_subnet.db2.id}\\"
-route_table_id = \\"\${aws_route_table.default.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"igw-public0\\"{
-subnet_id = \\"\${aws_subnet.public0.id}\\"
-route_table_id = \\"\${aws_route_table.igw.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"igw-public1\\"{
-subnet_id = \\"\${aws_subnet.public1.id}\\"
-route_table_id = \\"\${aws_route_table.igw.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"igw-public2\\"{
-subnet_id = \\"\${aws_subnet.public2.id}\\"
-route_table_id = \\"\${aws_route_table.igw.id}\\"
-}
-
-resource \\"aws_network_acl\\" \\"default\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-subnet_ids = [
-\\"\${aws_subnet.public0.id}\\",
-\\"\${aws_subnet.public1.id}\\",
-\\"\${aws_subnet.public2.id}\\",
-\\"\${aws_subnet.web0.id}\\",
-\\"\${aws_subnet.web1.id}\\",
-\\"\${aws_subnet.web2.id}\\",
-\\"\${aws_subnet.app0.id}\\",
-\\"\${aws_subnet.app1.id}\\",
-\\"\${aws_subnet.app2.id}\\",
-\\"\${aws_subnet.gut0.id}\\",
-\\"\${aws_subnet.gut1.id}\\",
-\\"\${aws_subnet.gut2.id}\\"
-]
-ingress {
-protocol = \\"all\\"
-rule_no = 100
-action = \\"allow\\"
-cidr_block = \\"0.0.0.0/0\\"
-from_port = 0
-to_port = 0
-}
-egress {
-protocol = \\"all\\"
-rule_no = 100
-action = \\"allow\\"
-cidr_block = \\"0.0.0.0/0\\"
-from_port = 0
-to_port = 0
-}
-tags = {
-Name = \\"nacl-test-dev-default\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_network_acl\\" \\"db\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-subnet_ids = [
-\\"\${aws_subnet.db0.id}\\",
-\\"\${aws_subnet.db1.id}\\",
-\\"\${aws_subnet.db2.id}\\"
-]
-ingress {
-protocol = \\"all\\"
-rule_no = 100
-action = \\"allow\\"
-cidr_block = \\"172.88.108.0/22\\"
-from_port = 0
-to_port = 0
-}
-ingress {
-protocol = \\"all\\"
-rule_no = 110
-action = \\"allow\\"
-cidr_block = \\"172.88.116.0/22\\"
-from_port = 0
-to_port = 0
-}
-egress {
-protocol = \\"all\\"
-rule_no = 100
-action = \\"allow\\"
-cidr_block = \\"172.88.108.0/22\\"
-from_port = 0
-to_port = 0
-}
-egress {
-protocol = \\"all\\"
-rule_no = 110
-action = \\"allow\\"
-cidr_block = \\"172.88.116.0/22\\"
-from_port = 0
-to_port = 0
-}
-tags = {
-Name = \\"nacl-test-dev-db\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_security_group\\" \\"public-default\\"{
-name = \\"fw-public-default\\"
-description = \\"Default for public tier\\"
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-ingress {
-protocol = \\"tcp\\"
-from_port = 22
-to_port = 22
-cidr_blocks = [
-\\"172.88.100.0/22\\"
-]
-description = \\"SSH for tier\\"
-}
-egress {
-protocol = \\"-1\\"
-from_port = 0
-to_port = 0
-cidr_blocks = [
-\\"0.0.0.0/0\\"
-]
-}
-tags = {
-Name = \\"sg-test-dev-public-default\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_security_group\\" \\"web-default\\"{
-name = \\"fw-web-default\\"
-description = \\"Default for web tier\\"
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-ingress {
-protocol = \\"tcp\\"
-from_port = 22
-to_port = 22
-cidr_blocks = [
-\\"172.88.104.0/22\\"
-]
-description = \\"SSH for tier\\"
-}
-egress {
-protocol = \\"-1\\"
-from_port = 0
-to_port = 0
-cidr_blocks = [
-\\"0.0.0.0/0\\"
-]
-}
-tags = {
-Name = \\"sg-test-dev-web-default\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_security_group\\" \\"app-default\\"{
-name = \\"fw-app-default\\"
-description = \\"Default for app tier\\"
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-ingress {
-protocol = \\"tcp\\"
-from_port = 22
-to_port = 22
-cidr_blocks = [
-\\"172.88.108.0/22\\"
-]
-description = \\"SSH for tier\\"
-}
-egress {
-protocol = \\"-1\\"
-from_port = 0
-to_port = 0
-cidr_blocks = [
-\\"0.0.0.0/0\\"
-]
-}
-tags = {
-Name = \\"sg-test-dev-app-default\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_security_group\\" \\"gut-default\\"{
-name = \\"fw-gut-default\\"
-description = \\"Default for gut tier\\"
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-ingress {
-protocol = \\"tcp\\"
-from_port = 22
-to_port = 22
-cidr_blocks = [
-\\"172.88.112.0/22\\"
-]
-description = \\"SSH for tier\\"
-}
-egress {
-protocol = \\"-1\\"
-from_port = 0
-to_port = 0
-cidr_blocks = [
-\\"0.0.0.0/0\\"
-]
-}
-tags = {
-Name = \\"sg-test-dev-gut-default\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_security_group\\" \\"db-default\\"{
-name = \\"fw-db-default\\"
-description = \\"Default for db tier\\"
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-ingress {
-protocol = \\"tcp\\"
-from_port = 22
-to_port = 22
-cidr_blocks = [
-\\"172.88.116.0/22\\"
-]
-description = \\"SSH for tier\\"
-}
-egress {
-protocol = \\"-1\\"
-from_port = 0
-to_port = 0
-cidr_blocks = [
-\\"0.0.0.0/0\\"
-]
-}
-tags = {
-Name = \\"sg-test-dev-db-default\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_eip\\" \\"nat\\"{
-vpc = true
-tags = {
-Name = \\"eip-test-dev-nat\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_nat_gateway\\" \\"nat\\"{
-allocation_id = \\"\${aws_eip.nat.id}\\"
-subnet_id = \\"\${aws_subnet.public0.id}\\"
-tags = {
-Name = \\"nat-test-dev\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_route_table\\" \\"nat\\"{
-vpc_id = \\"\${aws_vpc.vpc.id}\\"
-route {
-cidr_block = \\"0.0.0.0/0\\"
-gateway_id = \\"\${aws_nat_gateway.nat.id}\\"
-}
-tags = {
-Name = \\"rt-test-dev-nat\\"
-Project = \\"test\\"
-Env = \\"dev\\"
-}
-}
-
-resource \\"aws_route_table_association\\" \\"nat-gut0\\"{
-subnet_id = \\"\${aws_subnet.gut0.id}\\"
-route_table_id = \\"\${aws_route_table.nat.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"nat-gut1\\"{
-subnet_id = \\"\${aws_subnet.gut1.id}\\"
-route_table_id = \\"\${aws_route_table.nat.id}\\"
-}
-
-resource \\"aws_route_table_association\\" \\"nat-gut2\\"{
-subnet_id = \\"\${aws_subnet.gut2.id}\\"
-route_table_id = \\"\${aws_route_table.nat.id}\\"
-}
-
-output \\"vpc\\"{
-value = {
-cidr = \\"\${aws_vpc.vpc.cidr_block}\\"
-}
-}
-
-output \\"subnets\\"{
-value = {
-publicSubnets = [
-\\"\${aws_subnet.public0.cidr_block}\\",
-\\"\${aws_subnet.public1.cidr_block}\\",
-\\"\${aws_subnet.public2.cidr_block}\\"
-]
-webSubnets = [
-\\"\${aws_subnet.web0.cidr_block}\\",
-\\"\${aws_subnet.web1.cidr_block}\\",
-\\"\${aws_subnet.web2.cidr_block}\\"
-]
-appSubnets = [
-\\"\${aws_subnet.app0.cidr_block}\\",
-\\"\${aws_subnet.app1.cidr_block}\\",
-\\"\${aws_subnet.app2.cidr_block}\\"
-]
-gutSubnets = [
-\\"\${aws_subnet.gut0.cidr_block}\\",
-\\"\${aws_subnet.gut1.cidr_block}\\",
-\\"\${aws_subnet.gut2.cidr_block}\\"
-]
-dbSubnets = [
-\\"\${aws_subnet.db0.cidr_block}\\",
-\\"\${aws_subnet.db1.cidr_block}\\",
-\\"\${aws_subnet.db2.cidr_block}\\"
-]
-}
-}
-
-"
-`;
+exports[`VPC Project 0.11 5`] = `""`;
 
 exports[`VPC Project 0.12 1`] = `
 Object {
@@ -2764,7 +2159,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2790,7 +2185,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2816,7 +2211,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2842,7 +2237,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2868,7 +2263,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2894,7 +2289,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2920,7 +2315,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2946,7 +2341,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2972,7 +2367,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -2998,7 +2393,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3024,7 +2419,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3050,7 +2445,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3076,7 +2471,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3102,7 +2497,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3128,7 +2523,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3152,7 +2547,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3176,7 +2571,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3196,7 +2591,7 @@ Array [
           "cidr_block": "0.0.0.0/0",
           "gateway_id": Attribute {
             "argument": "aws_internet_gateway.igw.id",
-            "asIs": false,
+            "literal": false,
           },
         },
       ],
@@ -3209,7 +2604,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3226,11 +2621,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.web0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3247,11 +2642,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.web1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3268,11 +2663,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.web2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3289,11 +2684,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.app0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3310,11 +2705,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.app1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3331,11 +2726,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.app2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3352,11 +2747,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3373,11 +2768,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3394,11 +2789,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3415,11 +2810,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.db0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3436,11 +2831,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.db1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3457,11 +2852,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.default.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.db2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3478,11 +2873,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.igw.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3499,11 +2894,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.igw.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3520,11 +2915,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.igw.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3562,51 +2957,51 @@ Array [
       "subnet_ids": Array [
         Attribute {
           "argument": "aws_subnet.public0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.public1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.public2.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.web0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.web1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.web2.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.app0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.app1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.app2.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.gut0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.gut1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.gut2.id",
-          "asIs": false,
+          "literal": false,
         },
       ],
       "tags": Map {
@@ -3618,7 +3013,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3672,15 +3067,15 @@ Array [
       "subnet_ids": Array [
         Attribute {
           "argument": "aws_subnet.db0.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.db1.id",
-          "asIs": false,
+          "literal": false,
         },
         Attribute {
           "argument": "aws_subnet.db2.id",
-          "asIs": false,
+          "literal": false,
         },
       ],
       "tags": Map {
@@ -3692,7 +3087,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3735,7 +3130,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3778,7 +3173,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3821,7 +3216,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3864,7 +3259,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3907,7 +3302,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -3945,11 +3340,11 @@ Array [
     "arguments": Object {
       "allocation_id": Attribute {
         "argument": "aws_eip.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.public0.id",
-        "asIs": false,
+        "literal": false,
       },
       "tags": Map {
         "arguments": Object {
@@ -3975,7 +3370,7 @@ Array [
         "cidr_block": "0.0.0.0/0",
         "gateway_id": Attribute {
           "argument": "aws_nat_gateway.nat.id",
-          "asIs": false,
+          "literal": false,
         },
       },
       "tags": Map {
@@ -3987,7 +3382,7 @@ Array [
       },
       "vpc_id": Attribute {
         "argument": "aws_vpc.vpc.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -4004,11 +3399,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut0.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -4025,11 +3420,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut1.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -4046,11 +3441,11 @@ Array [
     "arguments": Object {
       "route_table_id": Attribute {
         "argument": "aws_route_table.nat.id",
-        "asIs": false,
+        "literal": false,
       },
       "subnet_id": Attribute {
         "argument": "aws_subnet.gut2.id",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -4069,7 +3464,7 @@ Array [
         "arguments": Object {
           "cidr": Attribute {
             "argument": "aws_vpc.vpc.cidr_block",
-            "asIs": false,
+            "literal": false,
           },
         },
       },
@@ -4089,72 +3484,72 @@ Array [
           "appSubnets": Array [
             Attribute {
               "argument": "aws_subnet.app0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.app1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.app2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "dbSubnets": Array [
             Attribute {
               "argument": "aws_subnet.db0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.db1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.db2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "gutSubnets": Array [
             Attribute {
               "argument": "aws_subnet.gut0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.gut1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.gut2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "mgtSubnets": Array [],
           "publicSubnets": Array [
             Attribute {
               "argument": "aws_subnet.public0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.public1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.public2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
           "webSubnets": Array [
             Attribute {
               "argument": "aws_subnet.web0.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.web1.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
             Attribute {
               "argument": "aws_subnet.web2.cidr_block",
-              "asIs": false,
+              "literal": false,
             },
           ],
         },

@@ -162,7 +162,7 @@ Array [
       "b": 123,
       "c": Attribute {
         "argument": "aws_vpc.test.x",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [],
@@ -174,7 +174,7 @@ Array [
     "arguments": Object {
       "a": Argument {
         "argument": "local.a",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -193,7 +193,7 @@ Array [
       "b": 123,
       "c": Attribute {
         "argument": "aws_vpc.test.x",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -587,7 +587,7 @@ Array [
       "b": 123,
       "c": Attribute {
         "argument": "aws_vpc.test.x",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [],
@@ -599,7 +599,7 @@ Array [
     "arguments": Object {
       "a": Argument {
         "argument": "local.a",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
@@ -618,7 +618,7 @@ Array [
       "b": 123,
       "c": Attribute {
         "argument": "aws_vpc.test.x",
-        "asIs": false,
+        "literal": false,
       },
     },
     "blockNames": Array [
