@@ -108,8 +108,9 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
   }),
   function1: fn('max', 5, 12, 19),
   function2: fn('sort', 'a', block.attr('attrName'), 'c'),
+  each: each('key'),
   custom: arg('max(5, 12, 9)'),
-  literal: arg('literal', true) // it will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version
+  literal: literal('str') // it will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version
 }
 ```
 
