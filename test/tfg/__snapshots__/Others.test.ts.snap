@@ -6,25 +6,27 @@ exports[`VPC Project 0.12 2`] = `
 Array [
   Variable {
     "arguments": Object {
-      "type": "string",
+      "type": Argument {
+        "argument": "string",
+      },
     },
     "blockNames": Array [
       "test",
     ],
     "blockType": "variable",
-    "customArgumentToString": [Function],
     "innerBlocks": Array [],
     "name": "test",
   },
   Variable {
     "arguments": Object {
-      "type": "string",
+      "type": Argument {
+        "argument": "string",
+      },
     },
     "blockNames": Array [
       "test2",
     ],
     "blockType": "variable",
-    "customArgumentToString": [Function],
     "innerBlocks": Array [],
     "name": "test2",
   },
@@ -37,7 +39,6 @@ Array [
       "test",
     ],
     "blockType": "data",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
@@ -50,7 +51,6 @@ Array [
       "test",
     ],
     "blockType": "module",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "test",
   },
@@ -68,7 +68,6 @@ Array [
       "test",
     ],
     "blockType": "resource",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
@@ -90,7 +89,6 @@ Array [
       "test",
     ],
     "blockType": "data",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
@@ -112,7 +110,6 @@ Array [
       "test2",
     ],
     "blockType": "data",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "test2",
     "type": "aws_vpc",
@@ -126,7 +123,6 @@ Array [
       "innerBlock",
     ],
     "blockType": "resource",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [
       Provisioner {
         "arguments": Object {
@@ -136,7 +132,6 @@ Array [
           "local-exec",
         ],
         "blockType": "provisioner",
-        "customArgumentToString": undefined,
         "innerBlocks": Array [],
         "type": "local-exec",
       },
@@ -148,7 +143,6 @@ Array [
           "local-exec",
         ],
         "blockType": "provisioner",
-        "customArgumentToString": undefined,
         "innerBlocks": Array [],
         "type": "local-exec",
       },
@@ -166,7 +160,6 @@ Array [
     },
     "blockNames": Array [],
     "blockType": "lcoals",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
   },
   Resource {
@@ -180,7 +173,6 @@ Array [
       "locals",
     ],
     "blockType": "resource",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "locals",
     "type": "locals",
@@ -197,7 +189,6 @@ Array [
       "provisioner",
     ],
     "blockType": "provisioner",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "type": "provisioner",
   },
@@ -215,7 +206,6 @@ Array [
       "tags",
     ],
     "blockType": "resource",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "tags",
     "type": "tags",
@@ -229,7 +219,6 @@ Array [
       "tfg2",
     ],
     "blockType": "resource",
-    "customArgumentToString": undefined,
     "innerBlocks": Array [],
     "name": "tfg2",
     "type": "tfg2",

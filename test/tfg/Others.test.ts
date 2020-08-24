@@ -1,17 +1,17 @@
 
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { map, Provisioner, TerraformVersion } from '../../src';
+import TerraformGenerator, { map, Provisioner, TerraformVersion, arg } from '../../src';
 
 const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator => {
   const tfg = new TerraformGenerator({ version });
 
   tfg.variable('test', {
-    type: 'string'
+    type: arg('string')
   });
 
   tfg.variable('test2', {
-    type: 'string'
+    type: arg('string')
   }, 'test');
 
   tfg.data('aws_vpc', 'test', {
