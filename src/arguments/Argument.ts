@@ -3,21 +3,18 @@ import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
 export default class Argument {
 
   readonly argument: string | Argument;
-  readonly literal: boolean;
 
   /**
    * Construct argument.
    * 
    * @param arg argument as string or copy from another argument object
-   * @param literal argument will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version, default = false.
    */
-  constructor(arg: string | Argument, literal = false) {
+  constructor(arg: string | Argument) {
     if (!arg || (typeof arg === 'string' && !arg.trim())) {
       throw new Error('Argument cannot be empty.');
     }
 
     this.argument = arg;
-    this.literal = literal;
   }
 
   /**
@@ -34,9 +31,16 @@ export default class Argument {
   }
 
   /**
-   * To string, used when argument is used in string interpolation.
+   * To string. It is automatically called when argument is used in template literal.
    */
   toString(): string {
+    return this.toTerraform();
+  }
+
+  /**
+   * Call this function when argument is used in template literal of a Terraform string or heredoc.
+   */
+  toTemplate(): string {
     return `\${${this.toTerraform()}}`;
   }
 
@@ -46,6 +50,5 @@ export default class Argument {
  * Convenient function to construct new argument.
  * 
  * @param arg argument as string or copy from another argument object
- * @param literal argument will be printed as is, without extra symbol, quotes and whatnot, regardless of Terraform version, default = false.
  */
-export const arg = (arg: string | Argument, literal = false): Argument => new Argument(arg, literal);
+export const arg = (arg: string | Argument): Argument => new Argument(arg);

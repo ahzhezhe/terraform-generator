@@ -77,21 +77,6 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
 
 const outputDir = path.join('test', '__output__');
 
-test('VPC Project 0.11', () => {
-  const tfg = createTerraformGenerator('0.11');
-
-  expect(tfg.getArguments()).toMatchSnapshot();
-  expect(tfg.getBlocks()).toMatchSnapshot();
-  expect(tfg.getVars()).toMatchSnapshot();
-  expect(tfg.generate()).toMatchSnapshot();
-
-  tfg.write({ dir: outputDir });
-  const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
-  expect(tf).toMatchSnapshot();
-  const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
-  expect(tfvars).toMatchSnapshot();
-});
-
 test('VPC Project 0.12', () => {
   const tfg = createTerraformGenerator('0.12');
 

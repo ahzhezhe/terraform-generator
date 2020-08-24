@@ -95,11 +95,7 @@ export default class TerraformGeneratorUtils {
       return this.argumentValueToString(version, value.asArgument());
 
     } else if (value instanceof Argument) {
-      if (version && version === '0.11' && !value.literal) {
-        return `"\${${value.toTerraform()}}"`;
-      } else {
-        return value.toTerraform();
-      }
+      return value.toTerraform();
 
     } else if (value instanceof Map) {
       return this.argumentValueToString(version, value.arguments);

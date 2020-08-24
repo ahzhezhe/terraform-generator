@@ -20,779 +20,6 @@ false,
 true,
 false
 ]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-arg101 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-}
-arg101 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-}
-arg101 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-}
-arg102 = {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-arg101 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-}
-arg101 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-}
-arg101 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = &tfgquot;\${type.name.attr}&tfgquot;
-arg7 = [
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name.attr}&tfgquot;
-]
-arg8 = &tfgquot;\${type.name}&tfgquot;
-arg9 = [
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-&tfgquot;\${type.name.attr}&tfgquot;,
-&tfgquot;\${type.name}&tfgquot;
-]
-arg11 = &tfgquot;\${arg}&tfgquot;
-arg12 = &tfgquot;\${type.name.attr}&tfgquot;
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = &tfgquot;\${fn(1, 2, 3)}&tfgquot;
-arg16 = &tfgquot;\${fn(type.name.attr, type.name.attr, type.name.attr)}&tfgquot;
-}
-}
-}
-}
-
-"
-`;
-
-exports[`Output 2`] = `
-"output &tfgquot;name&tfgquot;{
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
 arg6 = type.name.attr
 arg7 = [
 type.name.attr,
@@ -814,13 +41,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 arg100 {
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
@@ -861,13 +87,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 arg101 {
 arg0 = &tfgquot;a&tfgquot;
@@ -909,13 +134,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 arg100 {
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
@@ -956,13 +180,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 }
 arg101 {
@@ -1005,13 +228,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 arg100 {
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
@@ -1052,13 +274,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 }
 arg101 {
@@ -1101,13 +322,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 arg100 {
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
@@ -1148,13 +368,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 }
 arg102 = {
@@ -1197,13 +416,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 arg100 {
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
@@ -1244,13 +462,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 arg101 {
 arg0 = &tfgquot;a&tfgquot;
@@ -1292,13 +509,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 arg100 {
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
@@ -1339,109 +555,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-}
-}
-arg101 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-type.name.attr,
-type.name
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
-arg100 {
-arg0 = &tfgquot;a&tfgquot;
-arg1 = [
-&tfgquot;b&tfgquot;,
-&tfgquot;c&tfgquot;,
-&tfgquot;d&tfgquot;
-]
-arg2 = 0
-arg3 = [
-1,
-2,
-3
-]
-arg4 = true
-arg5 = [
-false,
-true,
-false
-]
-arg6 = type.name.attr
-arg7 = [
-type.name.attr,
-type.name.attr,
-type.name.attr
-]
-arg8 = type.name
-arg9 = [
-type.name,
-type.name,
-type.name
-]
-arg10 = [
-&tfgquot;e&tfgquot;,
-4,
-true,
-type.name.attr,
-type.name
-]
-arg11 = arg
-arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
-heredoc
-EOT
-
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 }
 arg101 {
@@ -1484,13 +603,12 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 arg100 {
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
@@ -1531,13 +649,106 @@ type.name
 ]
 arg11 = arg
 arg12 = type.name.attr
-arg13 = as is
-arg14 = <<EOT
+arg13 = <<EOT
 heredoc
 EOT
 
-arg15 = fn(1, 2, 3)
-arg16 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
+}
+}
+arg101 {
+arg0 = &tfgquot;a&tfgquot;
+arg1 = [
+&tfgquot;b&tfgquot;,
+&tfgquot;c&tfgquot;,
+&tfgquot;d&tfgquot;
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name
+]
+arg10 = [
+&tfgquot;e&tfgquot;,
+4,
+true,
+type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = <<EOT
+heredoc
+EOT
+
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
+arg100 {
+arg0 = &tfgquot;a&tfgquot;
+arg1 = [
+&tfgquot;b&tfgquot;,
+&tfgquot;c&tfgquot;,
+&tfgquot;d&tfgquot;
+]
+arg2 = 0
+arg3 = [
+1,
+2,
+3
+]
+arg4 = true
+arg5 = [
+false,
+true,
+false
+]
+arg6 = type.name.attr
+arg7 = [
+type.name.attr,
+type.name.attr,
+type.name.attr
+]
+arg8 = type.name
+arg9 = [
+type.name,
+type.name,
+type.name
+]
+arg10 = [
+&tfgquot;e&tfgquot;,
+4,
+true,
+type.name.attr,
+type.name
+]
+arg11 = arg
+arg12 = type.name.attr
+arg13 = <<EOT
+heredoc
+EOT
+
+arg14 = fn(1, 2, 3)
+arg15 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 }
 }

@@ -1,6 +1,6 @@
-import { Literal } from '..';
+import { Argument } from '..';
 
-export default class Heredoc extends Literal {
+export default class Heredoc extends Argument {
 
   /**
    * Construct heredoc argument.

@@ -16,7 +16,6 @@ export { default as Provisioner } from './blocks/Provisioner';
 export { default as Argument, arg } from './arguments/Argument';
 export { default as Attribute, attr } from './arguments/Attribute';
 export { default as Function, fn } from './arguments/Function';
-export { default as Literal, literal } from './arguments/Literal';
 export { default as Heredoc, heredoc } from './arguments/Heredoc';
 
 export { default as Map, map } from './types/Map';

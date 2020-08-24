@@ -5,7 +5,7 @@ import path from 'path';
 import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
-export type TerraformVersion = '0.11' | '0.12';
+export type TerraformVersion = '0.12';
 
 export interface TerraformGeneratorOptions {
   /**

@@ -18,10 +18,9 @@ export const arg1 = {
   arg10: ['e', 4, true, attr, resource],
   arg11: arg('arg'),
   arg12: arg(attr),
-  arg13: arg('as is', true),
-  arg14: heredoc('heredoc'),
-  arg15: fn('fn', 1, 2, 3),
-  arg16: fn('fn', attr, attr, attr)
+  arg13: heredoc('heredoc'),
+  arg14: fn('fn', 1, 2, 3),
+  arg15: fn('fn', attr, attr, attr)
 };
 
 export const arg2 = {
