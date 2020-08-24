@@ -4,7 +4,6 @@ import { attr } from '..';
 
 test('Argument invalid args', () => {
   expect(() => new Argument(null)).toThrow();
-
 });
 
 test('Argument', () => {
