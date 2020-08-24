@@ -11,7 +11,7 @@ You do not need to have Terraform installed to use this module.
 
 The end result of using this module is Terraform configurations in plain text, you will need to write the text  into a file (terraform-generator does provide an utility function to write the file for you) and execute it yourself.
 
-Currently support generating configurations for Terraform version 0.11 and 0.12.
+Currently support generating configurations for Terraform version 0.12.
 
 ## **Benefit**
 
@@ -108,7 +108,8 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
   }),
   function1: fn('max', 5, 12, 19),
   function2: fn('sort', 'a', block.attr('attrName'), 'c'),
-  custom: arg('max(5, 12, 9)')
+  custom: arg('max(5, 12, 9)'),
+  interpolation: `ab-${block.attr('attrName')}`
 }
 ```
 

@@ -34,13 +34,6 @@ export default class Argument {
    * To string. It is automatically called when argument is used in template literal.
    */
   toString(): string {
-    return this.toTerraform();
-  }
-
-  /**
-   * Call this function when argument is used in template literal of a Terraform string or heredoc.
-   */
-  toTemplate(): string {
     return `\${${this.toTerraform()}}`;
   }
 
