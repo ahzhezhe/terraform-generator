@@ -19,6 +19,7 @@ export default class Argument {
 
   /**
    * To Terraform representation.
+   * Use this function when argument is used as an interpolation in another argument.
    */
   toTerraform(): string {
     let str = '';
@@ -31,7 +32,9 @@ export default class Argument {
   }
 
   /**
-   * To string. It is automatically called when argument is used in template literal.
+   * To string.
+   * Use this function when argument is used as an interpolation in a Terraform string or heredoc.
+   * It is automatically called when argument is used in template literal.
    */
   toString(): string {
     return `\${${this.toTerraform()}}`;
