@@ -1,6 +1,6 @@
 import { default as TerraformGenerator } from './TerraformGenerator';
 export default TerraformGenerator;
-export { TerraformVersion, TerraformGeneratorOptions, WriteOptions } from './TerraformGenerator';
+export { WriteOptions } from './TerraformGenerator';
 
 export { default as Block } from './blocks/Block';
 export { default as Provider } from './blocks/Provider';

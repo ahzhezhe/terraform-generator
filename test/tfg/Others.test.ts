@@ -1,10 +1,10 @@
 
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { map, Provisioner, TerraformVersion, arg } from '../../src';
+import TerraformGenerator, { map, Provisioner, arg } from '../../src';
 
-const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator => {
-  const tfg = new TerraformGenerator({ version });
+const createTerraformGenerator = (): TerraformGenerator => {
+  const tfg = new TerraformGenerator();
 
   tfg.variable('test', {
     type: arg('string')
@@ -65,7 +65,7 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
     })
   });
 
-  const tfg2 = new TerraformGenerator({ version });
+  const tfg2 = new TerraformGenerator();
   tfg2.resource('tfg2', 'tfg2', {
     tfg2: 'tfg2'
   });
@@ -77,8 +77,8 @@ const createTerraformGenerator = (version: TerraformVersion): TerraformGenerator
 
 const outputDir = path.join('test', '__output__');
 
-test('VPC Project 0.12', () => {
-  const tfg = createTerraformGenerator('0.12');
+test('Others', () => {
+  const tfg = createTerraformGenerator();
 
   expect(tfg.getArguments()).toMatchSnapshot();
   expect(tfg.getBlocks()).toMatchSnapshot();

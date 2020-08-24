@@ -23,7 +23,7 @@ export default class Fn extends Argument {
 
     let str = `${fn}(`;
     args.forEach((arg, i) => {
-      str += TerraformGeneratorUtils.argumentValueToString(null, arg);
+      str += TerraformGeneratorUtils.argumentValueToString(arg);
       if (i < args.length - 1) {
         str += ', ';
       }

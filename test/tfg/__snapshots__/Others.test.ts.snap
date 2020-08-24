@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VPC Project 0.12 1`] = `undefined`;
+exports[`Others 1`] = `undefined`;
 
-exports[`VPC Project 0.12 2`] = `
+exports[`Others 2`] = `
 Array [
   Variable {
     "arguments": Object {
@@ -226,13 +226,13 @@ Array [
 ]
 `;
 
-exports[`VPC Project 0.12 3`] = `
+exports[`Others 3`] = `
 Object {
   "test2": "test",
 }
 `;
 
-exports[`VPC Project 0.12 4`] = `
+exports[`Others 4`] = `
 Object {
   "tf": "variable \\"test\\"{
 type = string
@@ -321,7 +321,7 @@ tfg2 = \\"tfg2\\"
 }
 `;
 
-exports[`VPC Project 0.12 5`] = `
+exports[`Others 5`] = `
 "variable \\"test\\"{
 type = string
 }
@@ -405,7 +405,7 @@ tfg2 = \\"tfg2\\"
 "
 `;
 
-exports[`VPC Project 0.12 6`] = `
+exports[`Others 6`] = `
 "test2 = \\"test\\"
 
 "

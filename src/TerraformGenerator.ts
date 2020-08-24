@@ -5,16 +5,6 @@ import path from 'path';
 import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
 
-export type TerraformVersion = '0.12';
-
-export interface TerraformGeneratorOptions {
-  /**
-   * Terraform version.
-   * Default is latest version.
-   */
-  version?: TerraformVersion;
-}
-
 /**
  * @param dir directoty, default = .
  * @param tfFilename 
@@ -47,7 +37,6 @@ export interface WriteOptions {
 
 export default class TerraformGenerator {
 
-  private readonly options: TerraformGeneratorOptions;
   private readonly arguments: Record<string, any>;
   private readonly blocks: Block[] = [];
   private variables: Record<string, any> = {};
@@ -56,13 +45,9 @@ export default class TerraformGenerator {
    * Construct Terraform generator.
    * Refer to Terraform documentation on what can be put as arguments.
    * 
-   * @param options options
    * @param args arguments
    */
-  constructor(options?: TerraformGeneratorOptions, args?: Record<string, any>) {
-    this.options = {
-      version: options && options.version ? options.version : '0.12'
-    };
+  constructor(args?: Record<string, any>) {
     this.arguments = args;
   }
 
@@ -81,10 +66,10 @@ export default class TerraformGenerator {
 
     if (this.arguments || this.blocks.filter(block => block instanceof Backend).length > 0) {
       str += 'terraform {\n';
-      str += TerraformGeneratorUtils.argumentsToString(this.options.version, this.arguments);
+      str += TerraformGeneratorUtils.argumentsToString(this.arguments);
       this.blocks.forEach(block => {
         if (block instanceof Backend) {
-          str += block.toTerraform(this.options.version);
+          str += block.toTerraform();
         }
       });
       str += '}\n\n';
@@ -92,7 +77,7 @@ export default class TerraformGenerator {
 
     this.blocks.forEach(block => {
       if (!(block instanceof Backend)) {
-        str += block.toTerraform(this.options.version);
+        str += block.toTerraform();
       }
     });
 
@@ -103,7 +88,7 @@ export default class TerraformGenerator {
     let str = '';
 
     Object.keys(this.variables).forEach(key => {
-      str += TerraformGeneratorUtils.argumentsToString(this.options.version, { [key]: this.variables[key] });
+      str += TerraformGeneratorUtils.argumentsToString({ [key]: this.variables[key] });
       str += '\n';
     });
 

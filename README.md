@@ -42,7 +42,7 @@ import TerraformGenerator, { Resource, map, fn } from 'terraform-generator';
 
 ### **Initialize TerraformGenerator**
 ```javascript
-const tfg = new TerraformGenerator({ version: '0.12' }, {
+const tfg = new TerraformGenerator({
   required_version: '>= 0.12'
 });
 ```
@@ -201,7 +201,7 @@ const getTags = (type: string, name?: string): Map => new Map({
 });
 
 // Start writing Terraform configuration
-const tfg = new TerraformGenerator({ version: '0.12' });
+const tfg = new TerraformGenerator();
 
 // Configure provider
 tfg.provider('aws', {

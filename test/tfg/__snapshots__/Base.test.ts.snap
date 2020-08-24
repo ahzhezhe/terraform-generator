@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VPC Project 0.12 1`] = `
+exports[`Base 1`] = `
 Object {
   "required_version": "= 0.12",
 }
 `;
 
-exports[`VPC Project 0.12 2`] = `
+exports[`Base 2`] = `
 Array [
   Backend {
     "arguments": Object {
@@ -1328,9 +1328,9 @@ Array [
 ]
 `;
 
-exports[`VPC Project 0.12 3`] = `Object {}`;
+exports[`Base 3`] = `Object {}`;
 
-exports[`VPC Project 0.12 4`] = `
+exports[`Base 4`] = `
 Object {
   "tf": "terraform {
 required_version = \\"= 0.12\\"
@@ -1940,7 +1940,7 @@ aws_subnet.db2.cidr_block
 }
 `;
 
-exports[`VPC Project 0.12 5`] = `
+exports[`Base 5`] = `
 "terraform {
 required_version = \\"= 0.12\\"
 backend \\"s3\\"{

@@ -1,4 +1,4 @@
-import { TerraformVersion, Attribute, Argument } from '..';
+import { Attribute, Argument } from '..';
 import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
 
 export default abstract class Block {
@@ -93,18 +93,16 @@ export default abstract class Block {
 
   /**
    * To Terraform representation.
-   * 
-   * @param version Terraform version
    */
-  toTerraform(version: TerraformVersion): string {
+  toTerraform(): string {
     let str = this.blockType;
     this.blockNames.forEach(name => {
       str += ` "${name}"`;
     });
     str += '{\n';
-    str += TerraformGeneratorUtils.argumentsToString(version, this.arguments);
+    str += TerraformGeneratorUtils.argumentsToString(this.arguments);
     this.innerBlocks.forEach(block => {
-      str += `${block.toTerraform(version).trim()}\n`;
+      str += `${block.toTerraform().trim()}\n`;
     });
     str += '}\n\n';
     return TerraformGeneratorUtils.escape(str);

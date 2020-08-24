@@ -1,5 +1,5 @@
 import replaceString from 'replace-string';
-import { TerraformVersion, Block, Argument, Map } from '.';
+import { Block, Argument, Map } from '.';
 
 export default class TerraformGeneratorUtils {
 
@@ -17,10 +17,10 @@ export default class TerraformGeneratorUtils {
     return str;
   }
 
-  static argumentsToString(version: TerraformVersion, args: Record<string, any>): string {
+  static argumentsToString(args: Record<string, any>): string {
     let str = '';
     for (const key in args) {
-      str += this.argumentToString(version, key, args[key]);
+      str += this.argumentToString(key, args[key]);
     }
     return str;
   }
@@ -38,7 +38,7 @@ export default class TerraformGeneratorUtils {
     }
   }
 
-  static argumentToString(version: TerraformVersion, key: string, value: any): string {
+  static argumentToString(key: string, value: any): string {
     try {
       if (value == null) {
         return '';
@@ -67,13 +67,13 @@ export default class TerraformGeneratorUtils {
         let str = '';
         if (Array.isArray(value)) {
           value.forEach(element => {
-            str += `${key}${operator}${this.argumentValueToString(version, element)}\n`;
+            str += `${key}${operator}${this.argumentValueToString(element)}\n`;
           });
         }
         return str;
 
       } else {
-        return `${key}${operator}${this.argumentValueToString(version, value)}\n`;
+        return `${key}${operator}${this.argumentValueToString(value)}\n`;
       }
 
     } catch (err) {
@@ -81,18 +81,18 @@ export default class TerraformGeneratorUtils {
     }
   }
 
-  static argumentValueToString(version: TerraformVersion, value: any): string {
+  static argumentValueToString(value: any): string {
     if (value == null) {
       return null;
 
     } else if (value instanceof Block) {
-      return this.argumentValueToString(version, value.asArgument());
+      return this.argumentValueToString(value.asArgument());
 
     } else if (value instanceof Argument) {
       return value.toTerraform();
 
     } else if (value instanceof Map) {
-      return this.argumentValueToString(version, value.arguments);
+      return this.argumentValueToString(value.arguments);
 
     } else if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0) {
       return JSON.stringify(value);
@@ -101,7 +101,7 @@ export default class TerraformGeneratorUtils {
       if (Array.isArray(value)) {
         let str = '[\n';
         value.forEach((element, i) => {
-          str += `${this.argumentValueToString(version, element)}${i < value.length - 1 ? ',' : ''}\n`;
+          str += `${this.argumentValueToString(element)}${i < value.length - 1 ? ',' : ''}\n`;
         });
         str += ']';
         return str;
@@ -109,7 +109,7 @@ export default class TerraformGeneratorUtils {
       } else {
         let str = '{\n';
         for (const key in value) {
-          str += this.argumentToString(version, key, value[key]);
+          str += this.argumentToString(key, value[key]);
         }
         str += '}';
         return str;
