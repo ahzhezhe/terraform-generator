@@ -20,7 +20,7 @@ export default class Attribute extends Argument {
       throw new Error('Attribute name cannot be empty.');
     }
 
-    return `${block.asArgument().toTerraform()}.${attrName.trim()}`;
+    return `${block.asArgument()}.${attrName.trim()}`;
   }
 
 }

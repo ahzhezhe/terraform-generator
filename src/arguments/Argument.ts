@@ -20,10 +20,10 @@ export default class Argument {
   /**
    * To Terraform representation.
    */
-  toTerraform(): string {
+  toString(): string {
     let str = '';
     if (this.argument instanceof Argument) {
-      str += this.argument.toTerraform();
+      str += this.argument.toString();
     } else {
       str += this.argument;
     }
@@ -31,10 +31,11 @@ export default class Argument {
   }
 
   /**
-   * To string. It is automatically called when argument is used in template literal.
+   * To string template interpolation.
+   * Use this function when this argument is used as an interpolation in a Terraform string or heredoc.
    */
-  toString(): string {
-    return `\${${this.toTerraform()}}`;
+  toInterpolation(): string {
+    return `\${${this.toString()}}`;
   }
 
 }

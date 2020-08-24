@@ -4,7 +4,7 @@ import { arg4 } from '..';
 
 test('Module', () => {
   const module = new Module('name', arg4);
-  expect(module.toTerraform()).toMatchSnapshot();
-  expect(module.asArgument().toTerraform()).toBe(TerraformGeneratorUtils.escape('module.name'));
-  expect(module.attr('attr').toTerraform()).toBe(TerraformGeneratorUtils.escape('module.name.attr'));
+  expect(module.toString()).toMatchSnapshot();
+  expect(module.asArgument().toString()).toBe(TerraformGeneratorUtils.escape('module.name'));
+  expect(module.attr('attr').toString()).toBe(TerraformGeneratorUtils.escape('module.name.attr'));
 });

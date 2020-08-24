@@ -109,7 +109,8 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
   function1: fn('max', 5, 12, 19),
   function2: fn('sort', 'a', block.attr('attrName'), 'c'),
   custom: arg('max(5, 12, 9)'),
-  interpolation: `ab-${block.attr('attrName')}`
+  interpolationInArgument: arg(`str-${block.attr('attrName')}`)
+  interpolationInString: `str-${block.attr('attrName').toInterpolation()}`
 }
 ```
 

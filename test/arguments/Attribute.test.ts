@@ -11,9 +11,9 @@ test('Attribute invalid args', () => {
 });
 
 test('Attribute', () => {
-  expect(new Attribute(resource, 'x').toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name.x'));
+  expect(new Attribute(resource, 'x').toString()).toBe(TerraformGeneratorUtils.escape('type.name.x'));
 });
 
 test('attr', () => {
-  expect(attr(resource, 'x').toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name.x'));
+  expect(attr(resource, 'x').toString()).toBe(TerraformGeneratorUtils.escape('type.name.x'));
 });

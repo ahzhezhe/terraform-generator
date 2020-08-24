@@ -4,9 +4,9 @@ import { arg4 } from '..';
 
 test('Resource', () => {
   const resource = new Resource('type', 'name', arg4);
-  expect(resource.toTerraform()).toMatchSnapshot();
-  expect(resource.asArgument().toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name'));
-  expect(resource.attr('attr').toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name.attr'));
+  expect(resource.toString()).toMatchSnapshot();
+  expect(resource.asArgument().toString()).toBe(TerraformGeneratorUtils.escape('type.name'));
+  expect(resource.attr('attr').toString()).toBe(TerraformGeneratorUtils.escape('type.name.attr'));
 });
 
 describe('toData', () => {
@@ -20,23 +20,23 @@ describe('toData', () => {
   });
 
   test('OK', () => {
-    expect(resource.toData(null, ['arg', ['tags', 'tag']]).toTerraform()).toMatchSnapshot();
-    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']]).toTerraform()).toMatchSnapshot();
+    expect(resource.toData(null, ['arg', ['tags', 'tag']]).toString()).toMatchSnapshot();
+    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']]).toString()).toMatchSnapshot();
   });
 
   test('Data args', () => {
-    expect(resource.toData(null, ['arg', ['tags', 'tag']], { a: 'a' }).toTerraform()).toMatchSnapshot();
-    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']], { a: 'a' }).toTerraform()).toMatchSnapshot();
+    expect(resource.toData(null, ['arg', ['tags', 'tag']], { a: 'a' }).toString()).toMatchSnapshot();
+    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']], { a: 'a' }).toString()).toMatchSnapshot();
   });
 
   test('Data args overwrite', () => {
-    expect(resource.toData(null, ['arg', ['tags', 'tag']], { arg: 'a' }).toTerraform()).toMatchSnapshot();
-    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']], { arg: 'a' }).toTerraform()).toMatchSnapshot();
+    expect(resource.toData(null, ['arg', ['tags', 'tag']], { arg: 'a' }).toString()).toMatchSnapshot();
+    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']], { arg: 'a' }).toString()).toMatchSnapshot();
   });
 
   test('Data args with filter', () => {
-    expect(resource.toData(null, ['arg', ['tags', 'tag']], { filter: [] }).toTerraform()).toMatchSnapshot();
-    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']], { filter: [] }).toTerraform())
+    expect(resource.toData(null, ['arg', ['tags', 'tag']], { filter: [] }).toString()).toMatchSnapshot();
+    expect(resource.toData({ type: 'newType', name: 'newName' }, ['arg', ['tags', 'tag']], { filter: [] }).toString())
       .toMatchSnapshot();
   });
 

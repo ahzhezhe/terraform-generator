@@ -89,7 +89,7 @@ export default class TerraformGeneratorUtils {
       return this.argumentValueToString(value.asArgument());
 
     } else if (value instanceof Argument) {
-      return value.toTerraform();
+      return value.toString();
 
     } else if (value instanceof Map) {
       return this.argumentValueToString(value.arguments);

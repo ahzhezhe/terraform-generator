@@ -69,7 +69,7 @@ export default class TerraformGenerator {
       str += TerraformGeneratorUtils.argumentsToString(this.arguments);
       this.blocks.forEach(block => {
         if (block instanceof Backend) {
-          str += block.toTerraform();
+          str += block.toString();
         }
       });
       str += '}\n\n';
@@ -77,7 +77,7 @@ export default class TerraformGenerator {
 
     this.blocks.forEach(block => {
       if (!(block instanceof Backend)) {
-        str += block.toTerraform();
+        str += block.toString();
       }
     });
 
