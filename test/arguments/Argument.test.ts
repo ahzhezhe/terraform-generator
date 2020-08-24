@@ -1,5 +1,5 @@
 import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Argument, arg, heredoc } from '../../src';
+import { Argument, arg } from '../../src';
 import { attr } from '..';
 
 test('Argument invalid args', () => {
