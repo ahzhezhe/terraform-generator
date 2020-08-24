@@ -7,21 +7,16 @@ test('Argument invalid args', () => {
 });
 
 test('Argument', () => {
-  expect(new Argument('x').toString()).toBe(TerraformGeneratorUtils.escape('x'));
-  expect(new Argument(attr).toString()).toBe(TerraformGeneratorUtils.escape('type.name.attr'));
+  expect(new Argument('x').toTerraform()).toBe(TerraformGeneratorUtils.escape('x'));
+  expect(new Argument(attr).toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name.attr'));
 });
 
 test('arg', () => {
-  expect(arg('x').toString()).toBe(TerraformGeneratorUtils.escape('x'));
-  expect(arg(attr).toString()).toBe(TerraformGeneratorUtils.escape('type.name.attr'));
+  expect(arg('x').toTerraform()).toBe(TerraformGeneratorUtils.escape('x'));
+  expect(arg(attr).toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name.attr'));
 });
 
-test('Interpolation', () => {
-  expect(`prefix-${arg('x')}-suffix`).toBe(TerraformGeneratorUtils.escape('prefix-x-suffix'));
-  expect(`prefix-${arg(attr)}-suffix`).toBe(TerraformGeneratorUtils.escape('prefix-type.name.attr-suffix'));
-});
-
-test('Interpolation toInterpolation', () => {
-  expect(`prefix-${arg('x').toInterpolation()}-suffix`).toBe(TerraformGeneratorUtils.escape('prefix-${x}-suffix'));
-  expect(`prefix-${arg(attr).toInterpolation()}-suffix`).toBe(TerraformGeneratorUtils.escape('prefix-${type.name.attr}-suffix'));
+test('interpolation', () => {
+  expect(`prefix-${arg('x')}-suffix`).toBe(TerraformGeneratorUtils.escape('prefix-${x}-suffix'));
+  expect(`prefix-${arg(attr)}-suffix`).toBe(TerraformGeneratorUtils.escape('prefix-${type.name.attr}-suffix'));
 });

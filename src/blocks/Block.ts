@@ -27,12 +27,6 @@ export default abstract class Block {
     this.innerBlocks = innerBlocks ? innerBlocks : [];
   }
 
-  private validateIdentifier(identifier: string): void {
-    if (!identifier.match(/^[a-zA-Z_\-]{1}[0-9a-zA-Z_\-]*$/)) {
-      throw new Error(`Invalid identifier: ${identifier}`);
-    }
-  }
-
   /**
    * Get arguments.
    */
@@ -98,6 +92,23 @@ export default abstract class Block {
   }
 
   /**
+   * To Terraform representation.
+   */
+  toTerraform(): string {
+    let str = this.blockType;
+    this.blockNames.forEach(name => {
+      str += ` "${name}"`;
+    });
+    str += '{\n';
+    str += TerraformGeneratorUtils.argumentsToString(this.arguments);
+    this.innerBlocks.forEach(block => {
+      str += `${block.toTerraform().trim()}\n`;
+    });
+    str += '}\n\n';
+    return TerraformGeneratorUtils.escape(str);
+  }
+
+  /**
    * Represent block as argument.
    */
   abstract asArgument(): Argument;
@@ -116,21 +127,10 @@ export default abstract class Block {
     return this.attr('id');
   }
 
-  /**
-   * To Terraform representation.
-   */
-  toString(): string {
-    let str = this.blockType;
-    this.blockNames.forEach(name => {
-      str += ` "${name}"`;
-    });
-    str += '{\n';
-    str += TerraformGeneratorUtils.argumentsToString(this.arguments);
-    this.innerBlocks.forEach(block => {
-      str += `${block.toString().trim()}\n`;
-    });
-    str += '}\n\n';
-    return TerraformGeneratorUtils.escape(str);
+  private validateIdentifier(identifier: string): void {
+    if (!identifier.match(/^[a-zA-Z_\-]{1}[0-9a-zA-Z_\-]*$/)) {
+      throw new Error(`Invalid identifier: ${identifier}`);
+    }
   }
 
 }
