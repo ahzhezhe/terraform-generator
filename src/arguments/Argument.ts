@@ -19,7 +19,7 @@ export default class Argument {
 
   /**
    * To Terraform representation.
-   * Use this function when argument is used as an interpolation in another argument.
+   * Use this function when argument is used as an interpolation in another Terraform argument or code.
    */
   toTerraform(): string {
     let str = '';
