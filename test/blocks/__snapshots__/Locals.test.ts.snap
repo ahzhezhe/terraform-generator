@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Locals 1`] = `
-"lcoals{
+"locals{
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
 &tfgquot;b&tfgquot;,

@@ -3,9 +3,9 @@ import { Locals } from '../../src';
 import { arg4 } from '..';
 
 test('Locals', () => {
-  const lcoals = new Locals(arg4);
-  expect(lcoals.toTerraform()).toMatchSnapshot();
-  expect(() => lcoals.asArgument()).toThrow();
-  expect(() => lcoals.attr('attr')).toThrow();
-  expect(lcoals.arg('arg').toTerraform()).toBe(TerraformGeneratorUtils.escape('local.arg'));
+  const locals = new Locals(arg4);
+  expect(locals.toTerraform()).toMatchSnapshot();
+  expect(() => locals.asArgument()).toThrow();
+  expect(() => locals.attr('attr')).toThrow();
+  expect(locals.arg('arg').toTerraform()).toBe(TerraformGeneratorUtils.escape('local.arg'));
 });

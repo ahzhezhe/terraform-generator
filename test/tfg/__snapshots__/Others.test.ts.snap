@@ -159,7 +159,7 @@ Array [
       },
     },
     "blockNames": Array [],
-    "blockType": "lcoals",
+    "blockType": "locals",
     "innerBlocks": Array [],
   },
   Resource {
@@ -287,7 +287,7 @@ command = \\"echo world\\"
 }
 }
 
-lcoals{
+locals{
 a = \\"a\\"
 b = 123
 c = aws_vpc.test.x
@@ -375,7 +375,7 @@ command = \\"echo world\\"
 }
 }
 
-lcoals{
+locals{
 a = \\"a\\"
 b = 123
 c = aws_vpc.test.x

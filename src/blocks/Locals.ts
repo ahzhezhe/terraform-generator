@@ -9,7 +9,7 @@ export default class Locals extends Block {
    * @param args arguments
    */
   constructor(args?: Record<string, any>) {
-    super('lcoals', [], args);
+    super('locals', [], args);
   }
 
   asArgument(): Argument {
