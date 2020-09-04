@@ -63,7 +63,7 @@ const vpc = tfg.resource('aws_vpc', 'vpc', {
 
 ### **Convert resource to data source**
 ```javascript
-import { vpc as vpcDS } from 'other-terraform-project';
+import { vpc as vpcDS } from 'other-terraform-generator-configuration';
 
 const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 ```
