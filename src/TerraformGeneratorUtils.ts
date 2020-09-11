@@ -1,5 +1,5 @@
 import replaceString from 'replace-string';
-import { Block, Argument, Map } from '.';
+import { Block, Argument, Map, List } from '.';
 
 export default class TerraformGeneratorUtils {
 
@@ -27,7 +27,8 @@ export default class TerraformGeneratorUtils {
 
   static isObjectArgument(value: any): boolean {
     if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0
-      || value instanceof Block || value instanceof Argument || value instanceof Map) {
+      || value instanceof Block || value instanceof Argument
+      || value instanceof Map || value instanceof List) {
       return false;
 
     } else if (typeof value === 'object') {
@@ -93,6 +94,14 @@ export default class TerraformGeneratorUtils {
 
     } else if (value instanceof Map) {
       return this.argumentValueToString(value.arguments);
+
+    } else if (value instanceof List) {
+      let str = '[\n';
+      value.elements.forEach((element, i) => {
+        str += `${this.argumentValueToString(element)}${i < value.elements.length - 1 ? ',' : ''}\n`;
+      });
+      str += ']';
+      return str;
 
     } else if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0) {
       return JSON.stringify(value);

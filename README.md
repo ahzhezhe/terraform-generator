@@ -83,6 +83,11 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
     arg2: 123,
     arg3: true
   },
+  objectForVariable: object({
+    arg1: 'str',
+    arg2: 123,
+    arg3: true
+  }), // it's actually same as map, they are interchangeable
   objectList: [
     {
       arg1: 'str'
@@ -91,6 +96,14 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
       arg1: 'str'
     }
   ],
+  objectListForVariable: list(
+    {
+      arg1: 'str'
+    },
+    {
+      arg1: 'str'
+    }
+  ), // set & tuple works the same, they are interchangeable
   map: map({
     arg1: 'str',
     arg2: 123,
