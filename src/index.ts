@@ -19,7 +19,4 @@ export { default as Function, fn } from './arguments/Function';
 export { default as Heredoc, heredoc } from './arguments/Heredoc';
 
 export { default as Map, map } from './types/Map';
-export { default as Object, map as object } from './types/Map';
 export { default as List, list } from './types/List';
-export { default as Set, list as set } from './types/List';
-export { default as Tuple, list as tuple } from './types/List';
