@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Attribute, attr } from '../../src';
 import { resource } from '..';
+import { Attribute, attr } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Attribute invalid args', () => {
   expect(() => new Attribute(null, null)).toThrow();

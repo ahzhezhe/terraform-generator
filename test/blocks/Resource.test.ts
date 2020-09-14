@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Resource, map } from '../../src';
 import { arg4 } from '..';
+import { Resource, map } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Resource', () => {
   const resource = new Resource('type', 'name', arg4);

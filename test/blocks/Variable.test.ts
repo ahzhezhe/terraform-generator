@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Variable } from '../../src';
 import { arg4 } from '..';
+import { Variable } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Variable', () => {
   const variable = new Variable('name', arg4);

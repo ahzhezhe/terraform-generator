@@ -1,5 +1,5 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 import { Heredoc, heredoc } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Heredoc', () => {
   expect(new Heredoc('x').toTerraform()).toBe(TerraformGeneratorUtils.escape(`<<EOT

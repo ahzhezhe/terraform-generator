@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Backend } from '../../src';
 import { arg4 } from '..';
+import { Backend } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Backend', () => {
   const backend = new Backend('name', arg4);

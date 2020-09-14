@@ -1,5 +1,5 @@
-import { Output } from '../../src';
 import { arg4 } from '..';
+import { Output } from '../../src';
 
 test('Output', () => {
   const output = new Output('name', arg4);

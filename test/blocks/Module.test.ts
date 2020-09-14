@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Module } from '../../src';
 import { arg4 } from '..';
+import { Module } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Module', () => {
   const module = new Module('name', arg4);

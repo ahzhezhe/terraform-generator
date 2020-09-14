@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Argument, arg } from '../../src';
 import { attr } from '..';
+import { Argument, arg } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Argument invalid args', () => {
   expect(() => new Argument(null)).toThrow();

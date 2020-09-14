@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Provider } from '../../src';
 import { arg4 } from '..';
+import { Provider } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Provider', () => {
   const provider = new Provider('name', arg4);

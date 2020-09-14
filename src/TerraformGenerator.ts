@@ -1,9 +1,9 @@
-import shell from 'shelljs';
 import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
+import shell from 'shelljs';
 import TerraformGeneratorUtils from './TerraformGeneratorUtils';
+import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
 
 /**
  * @param dir directoty, default = .

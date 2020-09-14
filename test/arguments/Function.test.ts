@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Function, fn } from '../../src';
 import { attr } from '..';
+import { Function, fn } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Function invalid args', () => {
   expect(() => new Function(null)).toThrow();

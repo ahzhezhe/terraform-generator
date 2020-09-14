@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Data } from '../../src';
 import { arg4 } from '..';
+import { Data } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Data', () => {
   const data = new Data('type', 'name', arg4);

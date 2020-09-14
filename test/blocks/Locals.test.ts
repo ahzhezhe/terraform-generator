@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
-import { Locals } from '../../src';
 import { arg4 } from '..';
+import { Locals } from '../../src';
+import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 
 test('Locals', () => {
   const locals = new Locals(arg4);
