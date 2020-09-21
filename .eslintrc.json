@@ -1,16 +1,21 @@
 {
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript"
   ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
   "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/indent": [
       "error",
       2
@@ -24,15 +29,6 @@
         }
       }
     ],
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowExpressions": true,
-        "allowTypedFunctionExpressions": true
-      }
-    ],
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {
@@ -61,7 +57,16 @@
         ]
       }
     ],
-    "@typescript-eslint/prefer-for-of": "error",
+    "indent": "off",
+    "camelcase": "off",
+    "no-throw-literal": "error",
+    "prefer-const": "error",
+    "no-multi-spaces": "error",
+    "no-return-await": "error",
+    "curly": "error",
+    "prefer-template": "error",
+    "block-spacing": "error",
+    "eol-last": "error",
     "quotes": [
       "error",
       "single",
@@ -115,14 +120,6 @@
         "ignoreComments": true
       }
     ],
-    "no-throw-literal": "error",
-    "prefer-const": "error",
-    "no-multi-spaces": "error",
-    "no-return-await": "error",
-    "curly": "error",
-    "prefer-template": "error",
-    "block-spacing": "error",
-    "eol-last": "error",
     "import/order": [
       "error",
       {
@@ -139,6 +136,10 @@
         },
         "newlines-between": "never"
       }
-    ]
+    ],
+    "security/detect-object-injection": "off",
+    "security/detect-non-literal-fs-filename": "off",
+    "security/detect-non-literal-require": "off",
+    "security/detect-new-buffer": "off"
   }
 }
