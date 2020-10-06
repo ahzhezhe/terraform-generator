@@ -19,9 +19,11 @@ Make use of all Javascript programming features (some of which is not available 
 
 You can easily maintain your infra in Javascript/Typescript.
 
-You don't need to use Terraform variables, you can use your own Javascript/JSON variables or use dot env.
+You don't need to use Terraform variables, you can use your own Javascript/JSON variables or use dotenv.
 
 You don't need to use Terraform modules for reusable resource creations, you can make use of Javascript functions.
+
+You can incorporate other Node.js libraries to facilitate your work.
 
 ## **Limitation**
 
