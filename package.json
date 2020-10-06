@@ -22,6 +22,7 @@
   "funding": "https://www.paypal.me/ahzhezhe",
   "license": "ISC",
   "files": [
+    ".github/FUNDING.yml",
     "dist/**/*"
   ],
   "main": "dist/index.js",
