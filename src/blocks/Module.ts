@@ -7,7 +7,7 @@ export default class Module extends Block {
   /**
    * Construct module.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param name name
    * @param args arguments
    */

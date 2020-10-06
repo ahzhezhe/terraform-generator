@@ -19,7 +19,7 @@ export default class Resource extends Block {
   /**
    * Construct resource.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param name name
    * @param args arguments
@@ -58,7 +58,7 @@ export default class Resource extends Block {
   /**
    * Convert resource into data source.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param options options
    * @param argNames names of resource arguments to converted into data source arguments;
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name

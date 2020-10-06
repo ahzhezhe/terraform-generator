@@ -7,7 +7,7 @@ export default class Output extends Block {
   /**
    * Construct output.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param name name
    * @param args arguments
    */

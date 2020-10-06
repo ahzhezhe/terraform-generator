@@ -4,7 +4,7 @@ export default class List {
 
   /**
    * Construct list.
-   * 
+   *
    * @param elements list elements
    */
   constructor(...elements: any[]) {
@@ -15,7 +15,7 @@ export default class List {
 
 /**
  * Convenient function to construct new list.
- * 
+ *
  * @param elements list elements
  */
 export const list = (...elements: any[]): List => new List(...elements);

@@ -5,7 +5,7 @@ export default class Fn extends Argument {
 
   /**
    * Construct function argument.
-   * 
+   *
    * @param name function name
    * @param args function arguments
    */
@@ -36,7 +36,7 @@ export default class Fn extends Argument {
 
 /**
  * Convenient function to construct new function.
- * 
+ *
  * @param name function name
  * @param args function arguments
  */

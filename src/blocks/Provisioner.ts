@@ -7,7 +7,7 @@ export default class Provisioner extends Block {
   /**
    * Construct provisioner.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param args arguments
    */

@@ -7,7 +7,7 @@ export default class Variable extends Block {
   /**
    * Construct variable.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param name name
    * @param args arguments
    */

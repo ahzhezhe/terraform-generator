@@ -7,9 +7,9 @@ import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Pro
 
 /**
  * @param dir directoty, default = .
- * @param tfFilename 
- * @param tfvarsFilename 
- * @param format 
+ * @param tfFilename
+ * @param tfvarsFilename
+ * @param format
  */
 export interface WriteOptions {
   /**
@@ -44,7 +44,7 @@ export default class TerraformGenerator {
   /**
    * Construct Terraform generator.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param args arguments
    */
   constructor(args?: Record<string, any>) {
@@ -97,7 +97,7 @@ export default class TerraformGenerator {
 
   /**
    * Write Terraform configuration to a file.
-   * 
+   *
    * @param options options
    */
   write(options?: WriteOptions): void {
@@ -137,7 +137,7 @@ export default class TerraformGenerator {
 
   /**
    * Add blocks into Terraform.
-   * 
+   *
    * @param blocks blocks
    */
   addBlocks(...blocks: Block[]): TerraformGenerator {
@@ -148,7 +148,7 @@ export default class TerraformGenerator {
   /**
    * Add provider into Terraform.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param args arguments
    */
@@ -161,7 +161,7 @@ export default class TerraformGenerator {
   /**
    * Add resource into Terraform.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param name name
    * @param args arguments
@@ -175,7 +175,7 @@ export default class TerraformGenerator {
 
   /**
    * Convert resource into data source and add it into Terraform.
-   * 
+   *
    * @param resource resource
    * @param options options
    * @param argNames names of resource arguments to be converted into data source arguments;
@@ -192,7 +192,7 @@ export default class TerraformGenerator {
   /**
    * Add data source into Terraform.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param name name
    * @param args arguments
@@ -206,7 +206,7 @@ export default class TerraformGenerator {
   /**
    * Add module into Terraform.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param name name
    * @param args arguments
    */
@@ -219,7 +219,7 @@ export default class TerraformGenerator {
   /**
    * Add output into Terraform.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param name name
    * @param args arguments
    */
@@ -232,7 +232,7 @@ export default class TerraformGenerator {
   /**
    * Add locals into Terraform.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param args arguments
    */
   locals(args?: Record<string, any>): Locals {
@@ -244,7 +244,7 @@ export default class TerraformGenerator {
   /**
    * Add variable into Terraform.
    * Refer to Terraform documentation on what can be put as arguments.
-   * 
+   *
    * @param name name
    * @param args arguments
    * @param value variable value
@@ -261,7 +261,7 @@ export default class TerraformGenerator {
   /**
    * Add backend into Terraform.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param args arguments
    */
@@ -274,7 +274,7 @@ export default class TerraformGenerator {
   /**
    * Add provisioner into Terraform.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param args arguments
    */
@@ -286,7 +286,7 @@ export default class TerraformGenerator {
 
   /**
    * Add variable values into Terraform.
-   * 
+   *
    * @param variables variables
    */
   addVars(variables: Record<string, any>): TerraformGenerator {
@@ -299,7 +299,7 @@ export default class TerraformGenerator {
 
   /**
    * Merge this instance with other TerraformGenerator instances.
-   * 
+   *
    * @param tfgs other instances
    */
   merge(...tfgs: TerraformGenerator[]): TerraformGenerator {

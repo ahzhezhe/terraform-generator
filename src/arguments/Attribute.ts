@@ -4,7 +4,7 @@ export default class Attribute extends Argument {
 
   /**
    * Construct block's attribute.
-   * 
+   *
    * @param block block
    * @param attrName attribute name
    */
@@ -27,7 +27,7 @@ export default class Attribute extends Argument {
 
 /**
  * Convenient function to construct new block's attribute.
- * 
+ *
  * @param block block
  * @param name attribute name
  */

@@ -10,7 +10,7 @@ export default abstract class Block {
 
   /**
    * Construct block.
-   * 
+   *
    * @param type type
    * @param names names
    * @param args arguments
@@ -36,7 +36,7 @@ export default abstract class Block {
 
   /**
    * Get argument by key.
-   * 
+   *
    * @param key key
    */
   getArgument(key: string): any {
@@ -45,7 +45,7 @@ export default abstract class Block {
 
   /**
    * Set argument.
-   * 
+   *
    * @param key key
    * @param value value
    */
@@ -56,7 +56,7 @@ export default abstract class Block {
 
   /**
    * Set arguments.
-   * 
+   *
    * @param args arguments
    */
   setArguments(args: Record<string, any>): Block {
@@ -68,7 +68,7 @@ export default abstract class Block {
 
   /**
    * Delete argument by key.
-   * 
+   *
    * @param key key
    */
   deleteArgument(key: string): Block {
@@ -115,7 +115,7 @@ export default abstract class Block {
 
   /**
    * Get block's attribute.
-   * 
+   *
    * @param name attribute name
    */
   abstract attr(name: string): Attribute;

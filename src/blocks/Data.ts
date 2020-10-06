@@ -8,7 +8,7 @@ export default class Data extends Block {
   /**
    * Construct data source.
    * Refer to Terraform documentation on what can be put as type & arguments.
-   * 
+   *
    * @param type type
    * @param name name
    * @param args arguments

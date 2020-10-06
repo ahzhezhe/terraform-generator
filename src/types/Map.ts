@@ -4,7 +4,7 @@ export default class Map {
 
   /**
    * Construct map.
-   * 
+   *
    * @param args map values
    */
   constructor(args: Record<string, any>) {
@@ -15,7 +15,7 @@ export default class Map {
 
 /**
  * Convenient function to construct new map.
- * 
+ *
  * @param args map values
  */
 export const map = (args: Record<string, any>): Map => new Map(args);
