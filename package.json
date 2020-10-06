@@ -27,15 +27,16 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint src/*.ts src/**/*.ts test/**/*.ts",
-    "lint-mac": "eslint 'src/*.ts' 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
     "tryout": "ts-node tryout.ts",
     "build": "del-cli --force dist && tsc",
     "prepublishOnly": "npm run build",
     "postpublish": "del-cli --force dist",
-    "postversion": "git push"
+    "postversion": "git push",
+    "postinstall": "github-sponsors"
   },
   "dependencies": {
+    "github-sponsors": "^1.0.1",
     "replace-string": "^3.1.0",
     "shelljs": "^0.8.4"
   },
