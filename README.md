@@ -1,4 +1,4 @@
-# **terraform-generator** 
+# **terraform-generator**
 
 [![npm package](https://img.shields.io/npm/v/terraform-generator)](https://www.npmjs.com/package/terraform-generator)
 [![npm downloads](https://img.shields.io/npm/dt/terraform-generator)](https://www.npmjs.com/package/terraform-generator)
@@ -19,7 +19,7 @@ Make use of all Javascript programming features (some of which is not available 
 
 You can easily maintain your infra in Javascript/Typescript.
 
-You don't need to use Terraform variables, you can use your own Javascript/JSON variables or use dot env. 
+You don't need to use Terraform variables, you can use your own Javascript/JSON variables or use dot env.
 
 You don't need to use Terraform modules for reusable resource creations, you can make use of Javascript functions.
 
@@ -121,6 +121,7 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
   }),
   function1: fn('max', 5, 12, 19),
   function2: fn('sort', 'a', block.attr('attrName'), 'c'),
+  functionElement: fn('tolist', ['a', 'b', 'c']).element(0),
   custom: arg('max(5, 12, 9)'),
   interpolation: `str-${block.attr('attrName')}`
 }
@@ -128,11 +129,13 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 
 ### **Attributes**
 ```javascript
-block.attr('id')                 // block id, string
-block.id                         // convenience getter function, same as attr('id')
-block.attr('subnets')            // subnet objects, object list
-block.attr('subnets.*.id')       // subnet ids, string list
-block.attr('subnets.*.id[0]')    // first subnet id, string
+block.attr('id')                                      // block id, string
+block.id                                              // convenience getter function, same as attr('id')
+block.attr('subnets')                                 // subnet objects, object list
+block.attr('subnets.*.id')                            // subnet ids, string list
+block.attr('subnets').attr('*').attr('id')            // same as above
+block.attr('subnets.*.id[0]')                         // first subnet id, string
+block.attr('subnets').attr('*').attr('id').element(0) // same as above
 ```
 
 ### **Variables**
@@ -157,9 +160,9 @@ console.log(result.tf);
 console.log(result.tfvars);
 
 // Write Terraform configuration to a file
-tfg.write({ 
+tfg.write({
   dir: 'outputDir',
-  format: true 
+  format: true
 });
 ```
 

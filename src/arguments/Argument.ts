@@ -6,7 +6,7 @@ export default class Argument {
 
   /**
    * Construct argument.
-   * 
+   *
    * @param arg argument as string or copy from another argument object
    */
   constructor(arg: string | Argument) {
@@ -15,6 +15,31 @@ export default class Argument {
     }
 
     this.argument = arg;
+  }
+
+  /**
+   * Get argument's attribute.
+   *
+   * @param name attribute name
+   */
+  attr(name: string): Argument {
+    name = name.trim();
+    if (this.argument instanceof Argument) {
+      return this.argument.attr(name);
+    }
+    return new Argument(`${this.argument}.${name}`);
+  }
+
+  /**
+   * Get list argument's element.
+   *
+   * @param idx element index
+   */
+  element(idx: number): Argument {
+    if (this.argument instanceof Argument) {
+      return this.argument.element(idx);
+    }
+    return new Argument(`${this.argument}[${idx}]`);
   }
 
   /**
@@ -44,7 +69,7 @@ export default class Argument {
 
 /**
  * Convenient function to construct new argument.
- * 
+ *
  * @param arg argument as string or copy from another argument object
  */
 export const arg = (arg: string | Argument): Argument => new Argument(arg);
