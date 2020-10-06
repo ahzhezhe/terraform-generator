@@ -19,6 +19,7 @@
     "type": "git",
     "url": "https://github.com/ahzhezhe/terraform-generator"
   },
+  "funding": "https://www.paypal.me/ahzhezhe",
   "license": "ISC",
   "files": [
     "dist/**/*"
