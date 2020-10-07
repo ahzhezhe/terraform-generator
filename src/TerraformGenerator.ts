@@ -140,7 +140,7 @@ export default class TerraformGenerator {
    *
    * @param blocks blocks
    */
-  addBlocks(...blocks: Block[]): TerraformGenerator {
+  addBlocks(...blocks: Block[]): this {
     blocks.forEach(block => this.blocks.push(block));
     return this;
   }
@@ -289,7 +289,7 @@ export default class TerraformGenerator {
    *
    * @param variables variables
    */
-  addVars(variables: Record<string, any>): TerraformGenerator {
+  addVars(variables: Record<string, any>): this {
     this.variables = {
       ...this.variables,
       ...variables
@@ -302,7 +302,7 @@ export default class TerraformGenerator {
    *
    * @param tfgs other instances
    */
-  merge(...tfgs: TerraformGenerator[]): TerraformGenerator {
+  merge(...tfgs: TerraformGenerator[]): this {
     tfgs.forEach(tfg => {
       this.addBlocks(...tfg.getBlocks());
       this.addVars(tfg.getVars());

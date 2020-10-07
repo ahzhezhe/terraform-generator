@@ -49,7 +49,7 @@ export default abstract class Block {
    * @param key key
    * @param value value
    */
-  setArgument(key: string, value: any): Block {
+  setArgument(key: string, value: any): this {
     this.arguments[key] = value;
     return this;
   }
@@ -59,7 +59,7 @@ export default abstract class Block {
    *
    * @param args arguments
    */
-  setArguments(args: Record<string, any>): Block {
+  setArguments(args: Record<string, any>): this {
     for (const key in args) {
       this.arguments[key] = args[key];
     }
@@ -71,7 +71,7 @@ export default abstract class Block {
    *
    * @param key key
    */
-  deleteArgument(key: string): Block {
+  deleteArgument(key: string): this {
     delete this.arguments[key];
     return this;
   }
@@ -86,7 +86,7 @@ export default abstract class Block {
   /**
    * Set inner blocks.
    */
-  protected setInnerBlocks(innerBlocks: Block[]): Block {
+  protected setInnerBlocks(innerBlocks: Block[]): this {
     this.innerBlocks = innerBlocks ? innerBlocks : [];
     return this;
   }

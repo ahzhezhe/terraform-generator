@@ -50,7 +50,7 @@ export default class Resource extends Block {
   /**
    * Set provisioners.
    */
-  setProvisioners(provisioners: Provisioner[]): Resource {
+  setProvisioners(provisioners: Provisioner[]): this {
     this.setInnerBlocks(provisioners);
     return this;
   }
