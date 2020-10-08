@@ -5,7 +5,7 @@ import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
 test('Provider', () => {
   const provider = new Provider('name', arg4);
   expect(provider.toTerraform()).toMatchSnapshot();
-  expect(provider.asArgument().toTerraform()).toBe(TerraformGeneratorUtils.escape('name'));
+  expect(() => provider.asArgument()).toThrow();
   expect(() => provider.attr('attr')).toThrow();
 });
 

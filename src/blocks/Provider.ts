@@ -21,7 +21,7 @@ export default class Provider extends Block {
     if (this.getArgument('alias')) {
       return new Argument(`${this.type}.${this.getArgument('alias')}`);
     }
-    return new Argument(this.type);
+    throw new Error('Provider has no alias.');
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
