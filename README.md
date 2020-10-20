@@ -44,7 +44,7 @@ import TerraformGenerator, { Resource, map, fn } from 'terraform-generator';
 or
 ```javascript
 const TFG = require('terraform-generator');
-const { default: TerraformGenerator, map } = TFG;
+const { default: TerraformGenerator, Resource, map, fn } = TFG;
 ```
 
 ### **Initialize TerraformGenerator**
