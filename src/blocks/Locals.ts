@@ -16,8 +16,7 @@ export default class Locals extends Block {
     throw new Error('Inaccessible function.');
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  attr(name: string): Attribute {
+  attr(_name: string): Attribute {
     throw new Error('Inaccessible function.');
   }
 

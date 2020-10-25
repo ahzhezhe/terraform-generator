@@ -24,8 +24,7 @@ export default class Provider extends Block {
     throw new Error('Provider has no alias.');
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  attr(name: string): Attribute {
+  attr(_name: string): Attribute {
     throw new Error('Inaccessible function.');
   }
 
