@@ -67,11 +67,18 @@ export default class TerraformGenerator {
     if (this.arguments || this.blocks.filter(block => block instanceof Backend).length > 0) {
       str += 'terraform {\n';
       str += TerraformGeneratorUtils.argumentsToString(this.arguments);
+      this.blocks.forEach(block => {
+        if (block instanceof Backend) {
+          str += block.toTerraform();
+        }
+      });
       str += '}\n\n';
     }
 
     this.blocks.forEach(block => {
-      str += block.toTerraform();
+      if (!(block instanceof Backend)) {
+        str += block.toTerraform();
+      }
     });
 
     return TerraformGeneratorUtils.unescape(str);
@@ -248,6 +255,19 @@ export default class TerraformGenerator {
     if (value != null) {
       this.addVars({ [name]: value });
     }
+    return block;
+  }
+
+  /**
+   * Add backend into Terraform.
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   *
+   * @param type type
+   * @param args arguments
+   */
+  backend(type: string, args?: Record<string, any>): Backend {
+    const block = new Backend(type, args);
+    this.addBlocks(block);
     return block;
   }
 

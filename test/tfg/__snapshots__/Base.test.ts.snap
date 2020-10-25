@@ -2,7 +2,13 @@
 
 exports[`Base 1`] = `
 Object {
-  "backend": Backend {
+  "required_version": "= 0.12",
+}
+`;
+
+exports[`Base 2`] = `
+Array [
+  Backend {
     "arguments": Object {
       "bucket": "mybucket",
       "key": "path/to/my/key",
@@ -15,12 +21,6 @@ Object {
     "innerBlocks": Array [],
     "type": "s3",
   },
-  "required_version": "= 0.12",
-}
-`;
-
-exports[`Base 2`] = `
-Array [
   Provider {
     "arguments": Object {
       "profile": "test",
@@ -1334,7 +1334,12 @@ exports[`Base 4`] = `
 Object {
   "tf": "terraform {
 required_version = \\"= 0.12\\"
-backend = \\"s3\\"
+backend \\"s3\\"{
+bucket = \\"mybucket\\"
+key = \\"path/to/my/key\\"
+region = \\"ap-southeast-1\\"
+}
+
 }
 
 provider \\"aws\\"{
@@ -1938,7 +1943,12 @@ aws_subnet.db2.cidr_block
 exports[`Base 5`] = `
 "terraform {
 required_version = \\"= 0.12\\"
-backend = \\"s3\\"
+backend \\"s3\\"{
+bucket = \\"mybucket\\"
+key = \\"path/to/my/key\\"
+region = \\"ap-southeast-1\\"
+}
+
 }
 
 provider \\"aws\\"{
