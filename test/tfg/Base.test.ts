@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { Resource, Map } from '../../src';
+import TerraformGenerator, { Resource, Map, Backend } from '../../src';
 
 const project = 'test';
 
@@ -65,13 +65,12 @@ const getTags = (type: string, name?: string, tier?: string): Map => new Map({
 const createTerraformGenerator = (): TerraformGenerator => {
   // Terraform
   const tfg = new TerraformGenerator({
-    required_version: '= 0.12'
-  });
-
-  tfg.backend('s3', {
-    bucket: 'mybucket',
-    key: 'path/to/my/key',
-    region: 'ap-southeast-1'
+    required_version: '= 0.12',
+    backend: new Backend('s3', {
+      bucket: 'mybucket',
+      key: 'path/to/my/key',
+      region: 'ap-southeast-1'
+    })
   });
 
   // Provider

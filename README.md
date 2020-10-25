@@ -50,7 +50,12 @@ const { default: TerraformGenerator, Resource, map, fn } = TFG;
 ### **Initialize TerraformGenerator**
 ```javascript
 const tfg = new TerraformGenerator({
-  required_version: '>= 0.12'
+  required_version: '>= 0.12',
+  backend: {
+    bucket: 'mybucket',
+    key: 'path/to/my/key',
+    region: 'ap-southeast-1'
+  }
 });
 ```
 
