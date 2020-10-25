@@ -16,6 +16,12 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "@typescript-eslint/indent": [
       "error",
       2
@@ -42,7 +48,8 @@
         "format": [
           "camelCase",
           "UPPER_CASE"
-        ]
+        ],
+        "leadingUnderscore": "allow"
       },
       {
         "selector": "enumMember",
