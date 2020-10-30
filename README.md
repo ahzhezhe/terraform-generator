@@ -154,6 +154,12 @@ tfg.variable('password', {
 }, 'p@ssW0rd');
 ```
 
+### **Merge multiple configurations**
+```javascript
+// You can split your configuration into multiple files and merge them before you generate the final outcome.
+tfg.merge(tfg2, tfg3);
+```
+
 ### **Generate Terraform configuration**
 ```javascript
 // Generate Terraform configuration as string
