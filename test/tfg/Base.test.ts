@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { TerraformGenerator, Resource, Map } from '../../src';
+import TerraformGenerator, { Resource, Map } from '../../src';
 
 const project = 'test';
 
