@@ -1,6 +1,6 @@
 import { Block, Argument, Attribute } from '..';
 
-export default class Output extends Block {
+export class Output extends Block {
 
   readonly name: string;
 

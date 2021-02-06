@@ -11,7 +11,7 @@ export interface ResourceToDataOptions {
   name?: string;
 }
 
-export default class Resource extends Block {
+export class Resource extends Block {
 
   readonly type: string;
   readonly name: string;

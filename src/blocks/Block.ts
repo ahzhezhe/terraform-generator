@@ -1,7 +1,7 @@
 import { Attribute, Argument } from '..';
-import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
+import { Util } from '../Util';
 
-export default abstract class Block {
+export abstract class Block {
 
   readonly blockType: string;
   readonly blockNames: string[];
@@ -100,12 +100,12 @@ export default abstract class Block {
       str += ` "${name}"`;
     });
     str += '{\n';
-    str += TerraformGeneratorUtils.argumentsToString(this.arguments);
+    str += Util.argumentsToString(this.arguments);
     this.innerBlocks.forEach(block => {
       str += `${block.toTerraform().trim()}\n`;
     });
     str += '}\n\n';
-    return TerraformGeneratorUtils.escape(str);
+    return Util.escape(str);
   }
 
   /**

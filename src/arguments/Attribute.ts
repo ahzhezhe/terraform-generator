@@ -1,6 +1,6 @@
 import { Argument, Block } from '..';
 
-export default class Attribute extends Argument {
+export class Attribute extends Argument {
 
   /**
    * Construct block's attribute.

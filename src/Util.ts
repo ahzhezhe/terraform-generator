@@ -1,7 +1,7 @@
 import replaceString from 'replace-string';
 import { Block, Argument, Map, List } from '.';
 
-export default class TerraformGeneratorUtils {
+export class Util {
 
   private static readonly escapeChars = [
     ['"', '&tfgquot;']

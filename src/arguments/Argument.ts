@@ -1,6 +1,6 @@
-import TerraformGeneratorUtils from '../TerraformGeneratorUtils';
+import { Util } from '../Util';
 
-export default class Argument {
+export class Argument {
 
   readonly argument: string | Argument;
 
@@ -53,7 +53,7 @@ export default class Argument {
     } else {
       str += this.argument;
     }
-    return TerraformGeneratorUtils.escape(str);
+    return Util.escape(str);
   }
 
   /**

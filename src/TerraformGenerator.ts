@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import shell from 'shelljs';
-import TerraformGeneratorUtils from './TerraformGeneratorUtils';
+import { Util } from './Util';
 import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
 
 /**
@@ -35,7 +35,7 @@ export interface WriteOptions {
   format?: boolean | string;
 }
 
-export default class TerraformGenerator {
+export class TerraformGenerator {
 
   private readonly arguments: Record<string, any>;
   private readonly blocks: Block[] = [];
@@ -66,7 +66,7 @@ export default class TerraformGenerator {
 
     if (this.arguments || this.blocks.filter(block => block instanceof Backend).length > 0) {
       str += 'terraform {\n';
-      str += TerraformGeneratorUtils.argumentsToString(this.arguments);
+      str += Util.argumentsToString(this.arguments);
       this.blocks.forEach(block => {
         if (block instanceof Backend) {
           str += block.toTerraform();
@@ -81,14 +81,14 @@ export default class TerraformGenerator {
       }
     });
 
-    return TerraformGeneratorUtils.unescape(str);
+    return Util.unescape(str);
   }
 
   private generateTfvars(): string {
     let str = '';
 
     Object.keys(this.variables).forEach(key => {
-      str += TerraformGeneratorUtils.argumentsToString({ [key]: this.variables[key] });
+      str += Util.argumentsToString({ [key]: this.variables[key] });
       str += '\n';
     });
 

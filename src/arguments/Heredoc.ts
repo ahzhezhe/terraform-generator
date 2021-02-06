@@ -1,6 +1,6 @@
 import { Argument } from '..';
 
-export default class Heredoc extends Argument {
+export class Heredoc extends Argument {
 
   /**
    * Construct heredoc argument.

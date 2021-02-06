@@ -1,4 +1,4 @@
-export default class List {
+export class List {
 
   readonly elements: any[];
 

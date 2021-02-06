@@ -1,6 +1,6 @@
 import { Block, Argument, Attribute } from '..';
 
-export default class Variable extends Block {
+export class Variable extends Block {
 
   readonly name: string;
 

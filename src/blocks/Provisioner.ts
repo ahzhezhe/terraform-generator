@@ -1,6 +1,6 @@
 import { Block, Argument, Attribute } from '..';
 
-export default class Provisioner extends Block {
+export class Provisioner extends Block {
 
   readonly type: string;
 

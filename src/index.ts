@@ -1,22 +1,20 @@
-import { default as TerraformGenerator } from './TerraformGenerator';
-export default TerraformGenerator;
-export { WriteOptions } from './TerraformGenerator';
+export { TerraformGenerator, WriteOptions } from './TerraformGenerator';
 
-export { default as Block } from './blocks/Block';
-export { default as Provider } from './blocks/Provider';
-export { default as Resource, ResourceToDataOptions } from './blocks/Resource';
-export { default as Data } from './blocks/Data';
-export { default as Output } from './blocks/Output';
-export { default as Module } from './blocks/Module';
-export { default as Locals } from './blocks/Locals';
-export { default as Variable } from './blocks/Variable';
-export { default as Backend } from './blocks/Backend';
-export { default as Provisioner } from './blocks/Provisioner';
+export { Block } from './blocks/Block';
+export { Provider } from './blocks/Provider';
+export { Resource, ResourceToDataOptions } from './blocks/Resource';
+export { Data } from './blocks/Data';
+export { Output } from './blocks/Output';
+export { Module } from './blocks/Module';
+export { Locals } from './blocks/Locals';
+export { Variable } from './blocks/Variable';
+export { Backend } from './blocks/Backend';
+export { Provisioner } from './blocks/Provisioner';
 
-export { default as Argument, arg } from './arguments/Argument';
-export { default as Attribute, attr } from './arguments/Attribute';
-export { default as Function, fn } from './arguments/Function';
-export { default as Heredoc, heredoc } from './arguments/Heredoc';
+export { Argument, arg } from './arguments/Argument';
+export { Attribute, attr } from './arguments/Attribute';
+export { Function, fn } from './arguments/Function';
+export { Heredoc, heredoc } from './arguments/Heredoc';
 
-export { default as Map, map } from './types/Map';
-export { default as List, list } from './types/List';
+export { Map, map } from './types/Map';
+export { List, list } from './types/List';

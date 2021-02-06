@@ -1,12 +1,12 @@
 import { arg4 } from '..';
 import { Resource, map } from '../../src';
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
+import { Util } from '../../src/Util';
 
 test('Resource', () => {
   const resource = new Resource('type', 'name', arg4);
   expect(resource.toTerraform()).toMatchSnapshot();
-  expect(resource.asArgument().toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name'));
-  expect(resource.attr('attr').toTerraform()).toBe(TerraformGeneratorUtils.escape('type.name.attr'));
+  expect(resource.asArgument().toTerraform()).toBe(Util.escape('type.name'));
+  expect(resource.attr('attr').toTerraform()).toBe(Util.escape('type.name.attr'));
 });
 
 describe('toData', () => {

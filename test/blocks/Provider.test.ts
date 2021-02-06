@@ -1,6 +1,6 @@
 import { arg4 } from '..';
 import { Provider } from '../../src';
-import TerraformGeneratorUtils from '../../src/TerraformGeneratorUtils';
+import { Util } from '../../src/Util';
 
 test('Provider', () => {
   const provider = new Provider('name', arg4);
@@ -12,6 +12,6 @@ test('Provider', () => {
 test('Provider alias', () => {
   const provider = new Provider('name', { ...arg4, alias: 'alias' });
   expect(provider.toTerraform()).toMatchSnapshot();
-  expect(provider.asArgument().toTerraform()).toBe(TerraformGeneratorUtils.escape('name.alias'));
+  expect(provider.asArgument().toTerraform()).toBe(Util.escape('name.alias'));
   expect(() => provider.attr('attr')).toThrow();
 });

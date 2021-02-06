@@ -1,6 +1,6 @@
 import { Block, Argument, Attribute } from '..';
 
-export default class Locals extends Block {
+export class Locals extends Block {
 
   /**
    * Construct locals.

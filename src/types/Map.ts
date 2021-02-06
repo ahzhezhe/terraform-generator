@@ -1,4 +1,4 @@
-export default class Map {
+export class Map {
 
   readonly arguments: Record<string, any>;
 
