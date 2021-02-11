@@ -11,7 +11,7 @@ You do not need to have Terraform installed to use this module.
 
 The end result of using this module is Terraform configurations in plain text, you will need to write the text  into a file (terraform-generator does provide an utility function to write the file for you) and execute it yourself.
 
-Currently support generating configurations for Terraform version 0.12.
+Currently support generating configurations for Terraform version >= 0.12.
 
 ## **Benefit**
 
