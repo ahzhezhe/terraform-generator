@@ -50,7 +50,7 @@ export class Resource extends Block {
   /**
    * Set provisioners.
    */
-  setProvisioners(provisioners: Provisioner[]): this {
+  setProvisioners(provisioners: Provisioner[] | undefined): this {
     this.setInnerBlocks(provisioners);
     return this;
   }
@@ -64,7 +64,7 @@ export class Resource extends Block {
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  toData(options: ResourceToDataOptions, argNames: (string | [string, string])[], args?: Record<string, any>): Data {
+  toData(options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: Record<string, any>): Data {
     const type = (options && options.type) ? options.type : this.type;
     const name = (options && options.name) ? options.name : this.name;
 

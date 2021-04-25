@@ -3,7 +3,7 @@ import { Argument, arg } from '../../src';
 import { Util } from '../../src/Util';
 
 test('Argument invalid args', () => {
-  expect(() => new Argument(null)).toThrow();
+  expect(() => new Argument(null as unknown as string)).toThrow();
 });
 
 test('Argument', () => {

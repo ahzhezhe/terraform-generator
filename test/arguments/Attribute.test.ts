@@ -1,13 +1,13 @@
 import { resource } from '..';
-import { Attribute, attr } from '../../src';
+import { Attribute, attr, Block } from '../../src';
 import { Util } from '../../src/Util';
 
 test('Attribute invalid args', () => {
-  expect(() => new Attribute(null, null)).toThrow();
-  expect(() => new Attribute(resource, null)).toThrow();
-  expect(() => new Attribute(null, 'x')).toThrow();
-  expect(() => new Attribute(null, '')).toThrow();
-  expect(() => new Attribute(null, ' ')).toThrow();
+  expect(() => new Attribute(null as unknown as Block, null as unknown as string)).toThrow();
+  expect(() => new Attribute(resource, null as unknown as string)).toThrow();
+  expect(() => new Attribute(null as unknown as Block, 'x')).toThrow();
+  expect(() => new Attribute(null as unknown as Block, '')).toThrow();
+  expect(() => new Attribute(null as unknown as Block, ' ')).toThrow();
 });
 
 test('Attribute', () => {

@@ -1936,7 +1936,7 @@ aws_subnet.db2.cidr_block
 }
 
 ",
-  "tfvars": null,
+  "tfvars": undefined,
 }
 `;
 

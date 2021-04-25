@@ -17,7 +17,7 @@ export class Util {
     return str;
   }
 
-  static argumentsToString(args: Record<string, any>): string {
+  static argumentsToString(args?: Record<string, any>): string {
     let str = '';
     for (const key in args) {
       str += this.argumentToString(key, args[key]);
@@ -82,7 +82,7 @@ export class Util {
     }
   }
 
-  static argumentValueToString(value: any): string {
+  static argumentValueToString(value: any): string | null {
     if (value == null) {
       return null;
 

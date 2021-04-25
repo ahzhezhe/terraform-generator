@@ -86,7 +86,7 @@ export abstract class Block {
   /**
    * Set inner blocks.
    */
-  protected setInnerBlocks(innerBlocks: Block[]): this {
+  protected setInnerBlocks(innerBlocks: Block[] | undefined): this {
     this.innerBlocks = innerBlocks ? innerBlocks : [];
     return this;
   }

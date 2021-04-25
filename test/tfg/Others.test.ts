@@ -28,7 +28,7 @@ const createTerraformGenerator = (): TerraformGenerator => {
     })
   });
 
-  tfg.dataFromResource(r, null, ['cidr_block', ['tags', 'tag']]);
+  tfg.dataFromResource(r, undefined, ['cidr_block', ['tags', 'tag']]);
   tfg.dataFromResource(r, { name: 'test2' }, ['cidr_block', ['tags', 'tag']]);
 
   tfg.resource('innerBlock', 'innerBlock', {

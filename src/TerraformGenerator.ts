@@ -37,7 +37,7 @@ export interface WriteOptions {
 
 export class TerraformGenerator {
 
-  private readonly arguments: Record<string, any>;
+  private readonly arguments?: Record<string, any>;
   private readonly blocks: Block[] = [];
   private variables: Record<string, any> = {};
 
@@ -54,10 +54,10 @@ export class TerraformGenerator {
   /**
    * Generate Terraform configuration as string.
    */
-  generate(): { tf: string; tfvars: string } {
+  generate(): { tf: string; tfvars?: string } {
     return {
       tf: this.generateTf(),
-      tfvars: Object.keys(this.variables).length > 0 ? this.generateTfvars() : null
+      tfvars: Object.keys(this.variables).length > 0 ? this.generateTfvars() : undefined
     };
   }
 
@@ -182,7 +182,7 @@ export class TerraformGenerator {
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  dataFromResource(resource: Resource, options: ResourceToDataOptions, argNames: (string | [string, string])[],
+  dataFromResource(resource: Resource, options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[],
     args?: Record<string, any>): Data {
     const block = resource.toData(options, argNames, args);
     this.addBlocks(block);
@@ -313,7 +313,7 @@ export class TerraformGenerator {
   /**
    * Get arguments.
    */
-  getArguments(): Record<string, any> {
+  getArguments(): Record<string, any> | undefined {
     return this.arguments;
   }
 
