@@ -6,7 +6,6 @@
     "declaration": true,
     "esModuleInterop": true,
     "strict": true,
-    "noImplicitAny": false,
     "noImplicitReturns": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
