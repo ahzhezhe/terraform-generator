@@ -5,12 +5,6 @@ import shell from 'shelljs';
 import { Util } from './Util';
 import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
 
-/**
- * @param dir directoty, default = .
- * @param tfFilename
- * @param tfvarsFilename
- * @param format
- */
 export interface WriteOptions {
   /**
    * Directory to write to.
