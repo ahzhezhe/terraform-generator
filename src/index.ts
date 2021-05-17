@@ -1,4 +1,6 @@
 import { TerraformGenerator } from './TerraformGenerator';
+
+export { TerraformGenerator };
 export default TerraformGenerator;
 
 export { WriteOptions } from './TerraformGenerator';
