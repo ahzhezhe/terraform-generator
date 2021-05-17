@@ -6,7 +6,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/ahzhezhe/terraform-generator)](https://github.com/ahzhezhe/terraform-generator/issues)
 [![GitHub license](https://img.shields.io/github/license/ahzhezhe/terraform-generator)](https://github.com/ahzhezhe/terraform-generator/blob/master/LICENSE)
 
-
 Use Node.js to generate Terraform configurations.
 
 You do not need to have Terraform installed to use this module.
