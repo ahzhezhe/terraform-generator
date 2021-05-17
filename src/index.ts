@@ -1,9 +1,7 @@
-import { TerraformGenerator } from './TerraformGenerator';
+import { TerraformGenerator, WriteOptions } from './TerraformGenerator';
 
-export { TerraformGenerator };
+export { TerraformGenerator, WriteOptions };
 export default TerraformGenerator;
-
-export { WriteOptions } from './TerraformGenerator';
 
 export { Block } from './blocks/Block';
 export { Provider } from './blocks/Provider';
