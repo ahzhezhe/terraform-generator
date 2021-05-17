@@ -1,16 +1,17 @@
 {
+  "name": "terraform-generator - v4",
+  "out": "docs/terraform-generator-v4",
   "entryPoints": [
     "src/index.ts"
   ],
-  "out": "docs",
-  "excludePrivate": true,
-  "disableSources": true,
-  "hideGenerator": true,
   "categoryOrder": [
     "TerraformGenerator",
     "Block",
     "Argument",
     "Type",
     "*"
-  ]
+  ],
+  "excludePrivate": true,
+  "disableSources": true,
+  "hideGenerator": true
 }
