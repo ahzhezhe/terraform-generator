@@ -1,6 +1,9 @@
 import { Attribute, Argument } from '..';
 import { Util } from '../Util';
 
+/**
+ * @category Block
+ */
 export abstract class Block {
 
   readonly blockType: string;

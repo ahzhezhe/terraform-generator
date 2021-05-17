@@ -1,5 +1,8 @@
 import { Argument, Block } from '..';
 
+/**
+ * @category Argument
+ */
 export class Attribute extends Argument {
 
   /**
@@ -26,9 +29,11 @@ export class Attribute extends Argument {
 }
 
 /**
- * Convenient function to construct new block's attribute.
+ * Convenient function to construct new block's [[Attribute]].
  *
  * @param block block
  * @param name attribute name
+ *
+ * @category Argument
  */
 export const attr = (block: Block, name: string): Attribute => new Attribute(block, name);

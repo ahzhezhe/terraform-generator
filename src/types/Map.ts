@@ -1,3 +1,6 @@
+/**
+ * @category Type
+ */
 export class Map {
 
   readonly arguments: Record<string, any>;
@@ -14,8 +17,10 @@ export class Map {
 }
 
 /**
- * Convenient function to construct new map.
+ * Convenient function to construct new [[Map]].
  *
  * @param args map values
+ *
+ * @category Type
  */
 export const map = (args: Record<string, any>): Map => new Map(args);

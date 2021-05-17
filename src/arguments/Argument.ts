@@ -1,5 +1,8 @@
 import { Util } from '../Util';
 
+/**
+ * @category Argument
+ */
 export class Argument {
 
   readonly argument: string | Argument;
@@ -44,7 +47,8 @@ export class Argument {
 
   /**
    * To Terraform representation.
-   * Use this function when argument is used as an interpolation in another Terraform argument or code.
+   *
+   * Use this method when argument is used as an interpolation in another Terraform argument or code.
    */
   toTerraform(): string {
     let str = '';
@@ -58,7 +62,9 @@ export class Argument {
 
   /**
    * To string.
-   * Use this function when argument is used as an interpolation in a Terraform string or heredoc.
+   *
+   * Use this method when argument is used as an interpolation in a Terraform string or heredoc.
+   *
    * It is automatically called when argument is used in template literal.
    */
   toString(): string {
@@ -68,8 +74,10 @@ export class Argument {
 }
 
 /**
- * Convenient function to construct new argument.
+ * Convenient function to construct new [[Argument]].
  *
  * @param arg argument as string or copy from another argument object
+ *
+ * @category Argument
  */
 export const arg = (arg: string | Argument): Argument => new Argument(arg);

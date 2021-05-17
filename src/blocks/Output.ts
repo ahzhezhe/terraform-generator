@@ -1,11 +1,15 @@
 import { Block, Argument, Attribute } from '..';
 
+/**
+ * @category Block
+ */
 export class Output extends Block {
 
   readonly name: string;
 
   /**
    * Construct output.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param name name
@@ -18,11 +22,11 @@ export class Output extends Block {
   }
 
   asArgument(): Argument {
-    throw new Error('Inaccessible function.');
+    throw new Error('Inaccessible method.');
   }
 
   attr(_name: string): Attribute {
-    throw new Error('Inaccessible function.');
+    throw new Error('Inaccessible method.');
   }
 
 }

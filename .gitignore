@@ -2,6 +2,7 @@ node_modules
 dist
 test/__coverage__
 test/__output__
+docs
 tryout.ts
 tryout.tf
 tryout.tfvars

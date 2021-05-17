@@ -1,11 +1,15 @@
 import { Block, Argument, Attribute } from '..';
 
+/**
+ * @category Block
+ */
 export class Provider extends Block {
 
   readonly type: string;
 
   /**
    * Construct provider.
+   *
    * Refer to Terraform documentation on what can be put as type & arguments.
    *
    * @param type type
@@ -25,7 +29,7 @@ export class Provider extends Block {
   }
 
   attr(_name: string): Attribute {
-    throw new Error('Inaccessible function.');
+    throw new Error('Inaccessible method.');
   }
 
 }

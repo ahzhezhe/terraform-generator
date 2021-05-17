@@ -1,5 +1,8 @@
 import { Block, Argument, Attribute, Data, Map, Provisioner } from '..';
 
+/**
+ * @category Block
+ */
 export interface ResourceToDataOptions {
   /**
    * New type of the data source.
@@ -11,6 +14,9 @@ export interface ResourceToDataOptions {
   name?: string;
 }
 
+/**
+ * @category Block
+ */
 export class Resource extends Block {
 
   readonly type: string;
@@ -18,6 +24,7 @@ export class Resource extends Block {
 
   /**
    * Construct resource.
+   *
    * Refer to Terraform documentation on what can be put as type & arguments.
    *
    * @param type type
@@ -57,6 +64,7 @@ export class Resource extends Block {
 
   /**
    * Convert resource into data source.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param options options

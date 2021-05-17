@@ -1,5 +1,8 @@
 import { Argument } from '..';
 
+/**
+ * @category Argument
+ */
 export class Heredoc extends Argument {
 
   /**
@@ -14,8 +17,10 @@ export class Heredoc extends Argument {
 }
 
 /**
- * Convenient function to construct new heredoc.
+ * Convenient function to construct new [[Heredoc]].
  *
  * @param content string or object, object will be stringify
+ *
+ * @category Argument
  */
 export const heredoc = (content: string | Record<any, any>): Heredoc => new Heredoc(content);

@@ -1,6 +1,9 @@
 import { Argument } from '..';
 import { Util } from '../Util';
 
+/**
+ * @category Argument
+ */
 export class Function extends Argument {
 
   /**
@@ -35,10 +38,12 @@ export class Function extends Argument {
 }
 
 /**
- * Convenient function to construct new function.
+ * Convenient function to construct new [[Function]].
  *
  * @param name function name
  * @param args function arguments
+ *
+ * @category Argument
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
 export const fn = (name: string, ...args: any[]): Function => new Function(name, ...args);

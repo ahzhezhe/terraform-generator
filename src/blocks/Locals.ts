@@ -1,9 +1,13 @@
 import { Block, Argument, Attribute } from '..';
 
+/**
+ * @category Block
+ */
 export class Locals extends Block {
 
   /**
    * Construct locals.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param args arguments
@@ -13,11 +17,11 @@ export class Locals extends Block {
   }
 
   asArgument(): Argument {
-    throw new Error('Inaccessible function.');
+    throw new Error('Inaccessible method.');
   }
 
   attr(_name: string): Attribute {
-    throw new Error('Inaccessible function.');
+    throw new Error('Inaccessible method.');
   }
 
   arg(name: string): Argument {

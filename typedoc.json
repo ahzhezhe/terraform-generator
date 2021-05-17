@@ -1,0 +1,17 @@
+{
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "out": "docs",
+  "excludePrivate": true,
+  "disableSources": true,
+  "includeVersion": true,
+  "hideGenerator": true,
+  "categoryOrder": [
+    "TerraformGenerator",
+    "Block",
+    "Argument",
+    "Type",
+    "*"
+  ]
+}

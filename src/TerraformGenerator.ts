@@ -5,30 +5,41 @@ import shell from 'shelljs';
 import { Util } from './Util';
 import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from '.';
 
+/**
+ * @category TerraformGenerator
+ */
 export interface WriteOptions {
   /**
    * Directory to write to.
+   *
    * Default = .
    */
   dir?: string;
   /**
    * Terraform filename, must ends with .tf.
+   *
    * Default = terraform.tf
    */
   tfFilename?: string;
   /**
    * Terraform variables filename, must ends with .tfvars.
+   *
    * Default = terraform.tfvars
    */
   tfvarsFilename?: string;
   /**
-   * Put true to use 'terraform fmt' to format the configuration, Terraform must be installed.
+   * Put `true` to use `terraform fmt` to format the configuration, Terraform must be installed.
+   *
    * If the terraform binary is named differently in your machine, put the binary name instead.
+   *
    * Default = false
    */
   format?: boolean | string;
 }
 
+/**
+ * @category TerraformGenerator
+ */
 export class TerraformGenerator {
 
   private readonly arguments?: Record<string, any>;
@@ -37,6 +48,7 @@ export class TerraformGenerator {
 
   /**
    * Construct Terraform generator.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param args arguments
@@ -141,6 +153,7 @@ export class TerraformGenerator {
 
   /**
    * Add provider into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as type & arguments.
    *
    * @param type type
@@ -154,6 +167,7 @@ export class TerraformGenerator {
 
   /**
    * Add resource into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as type & arguments.
    *
    * @param type type
@@ -185,6 +199,7 @@ export class TerraformGenerator {
 
   /**
    * Add data source into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as type & arguments.
    *
    * @param type type
@@ -199,6 +214,7 @@ export class TerraformGenerator {
 
   /**
    * Add module into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param name name
@@ -212,6 +228,7 @@ export class TerraformGenerator {
 
   /**
    * Add output into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param name name
@@ -225,6 +242,7 @@ export class TerraformGenerator {
 
   /**
    * Add locals into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param args arguments
@@ -237,6 +255,7 @@ export class TerraformGenerator {
 
   /**
    * Add variable into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param name name
@@ -254,6 +273,7 @@ export class TerraformGenerator {
 
   /**
    * Add backend into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as type & arguments.
    *
    * @param type type
@@ -267,6 +287,7 @@ export class TerraformGenerator {
 
   /**
    * Add provisioner into Terraform.
+   *
    * Refer to Terraform documentation on what can be put as type & arguments.
    *
    * @param type type

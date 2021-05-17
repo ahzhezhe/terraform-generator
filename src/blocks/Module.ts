@@ -1,11 +1,15 @@
 import { Block, Argument, Attribute } from '..';
 
+/**
+ * @category Block
+ */
 export class Module extends Block {
 
   readonly name: string;
 
   /**
    * Construct module.
+   *
    * Refer to Terraform documentation on what can be put as arguments.
    *
    * @param name name

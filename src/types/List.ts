@@ -1,3 +1,6 @@
+/**
+ * @category Type
+ */
 export class List {
 
   readonly elements: any[];
@@ -14,8 +17,10 @@ export class List {
 }
 
 /**
- * Convenient function to construct new list.
+ * Convenient function to construct new [[List]].
  *
  * @param elements list elements
+ *
+ * @category Type
  */
 export const list = (...elements: any[]): List => new List(...elements);
