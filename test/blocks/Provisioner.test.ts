@@ -1,5 +1,5 @@
 import { arg4 } from '..';
-import { Provisioner } from '../../src';
+import { Provisioner } from '../../src/blocks';
 
 test('Provisioner', () => {
   const provisioner = new Provisioner('name', arg4);

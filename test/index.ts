@@ -1,4 +1,6 @@
-import { Resource, Attribute, arg, heredoc, fn, map, list } from '../src';
+import { Attribute, arg, heredoc, fn } from '../src/arguments';
+import { Resource } from '../src/blocks';
+import { map, list } from '../src/types';
 
 export const resource = new Resource('type', 'name', { test: true });
 

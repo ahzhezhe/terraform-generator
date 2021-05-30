@@ -1,5 +1,5 @@
 import { attr } from '..';
-import { Argument, arg } from '../../src';
+import { Argument, arg } from '../../src/arguments';
 import { Util } from '../../src/Util';
 
 test('Argument invalid args', () => {

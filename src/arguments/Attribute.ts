@@ -1,4 +1,5 @@
-import { Argument, Block } from '..';
+import { Block } from '../blocks';
+import { Argument } from '.';
 
 /**
  * @category Argument

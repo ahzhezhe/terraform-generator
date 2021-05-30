@@ -1,4 +1,4 @@
-import { Attribute, Argument } from '..';
+import { Argument, Attribute } from '../arguments';
 import { Util } from '../Util';
 
 /**

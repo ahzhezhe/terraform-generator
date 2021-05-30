@@ -1,5 +1,7 @@
 import replaceString from 'replace-string';
-import { Block, Argument, Map, List } from '.';
+import { Argument } from './arguments';
+import { Block } from './blocks';
+import { Map, List } from './types';
 
 export class Util {
 
@@ -8,12 +10,16 @@ export class Util {
   ];
 
   static escape(str: string): string {
-    this.#escapeChars.forEach(char => str = replaceString(str, char[0], char[1]));
+    this.#escapeChars.forEach(char => {
+      str = replaceString(str, char[0], char[1]);
+    });
     return str;
   }
 
   static unescape(str: string): string {
-    this.#escapeChars.slice().reverse().forEach(char => str = replaceString(str, char[1], char[0]));
+    this.#escapeChars.slice().reverse().forEach(char => {
+      str = replaceString(str, char[1], char[0]);
+    });
     return str;
   }
 
@@ -26,17 +32,16 @@ export class Util {
   }
 
   static isObjectArgument(value: any): boolean {
-    if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0
-      || value instanceof Block || value instanceof Argument
-      || value instanceof Map || value instanceof List) {
+    if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0 ||
+      value instanceof Block || value instanceof Argument ||
+      value instanceof Map || value instanceof List) {
       return false;
-
-    } else if (typeof value === 'object') {
-      return true;
-
-    } else {
-      throw new Error(`Invalid value: ${value}`);
     }
+    if (typeof value === 'object') {
+      return true;
+    }
+    throw new Error(`Invalid value: ${value}`);
+
   }
 
   static argumentToString(key: string, value: any): string {
@@ -58,10 +63,8 @@ export class Util {
           operator = ' ';
           isObjectArray = true;
         }
-      } else {
-        if (this.isObjectArgument(value)) {
-          operator = ' ';
-        }
+      } else if (this.isObjectArgument(value)) {
+        operator = ' ';
       }
 
       if (isObjectArray) {
@@ -73,9 +76,8 @@ export class Util {
         }
         return str;
 
-      } else {
-        return `${key}${operator}${this.argumentValueToString(value)}\n`;
       }
+      return `${key}${operator}${this.argumentValueToString(value)}\n`;
 
     } catch (err) {
       throw new Error(`Invalid value: ${key} = ${value}`);
@@ -85,28 +87,34 @@ export class Util {
   static argumentValueToString(value: any): string | null {
     if (value == null) {
       return null;
+    }
 
-    } else if (value instanceof Block) {
+    if (value instanceof Block) {
       return this.argumentValueToString(value.asArgument());
+    }
 
-    } else if (value instanceof Argument) {
+    if (value instanceof Argument) {
       return value.toTerraform();
+    }
 
-    } else if (value instanceof Map) {
+    if (value instanceof Map) {
       return this.argumentValueToString(value.arguments);
+    }
 
-    } else if (value instanceof List) {
+    if (value instanceof List) {
       let str = '[\n';
       value.elements.forEach((element, i) => {
         str += `${this.argumentValueToString(element)}${i < value.elements.length - 1 ? ',' : ''}\n`;
       });
       str += ']';
       return str;
+    }
 
-    } else if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0) {
+    if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0) {
       return JSON.stringify(value);
+    }
 
-    } else if (typeof value === 'object') {
+    if (typeof value === 'object') {
       if (Array.isArray(value)) {
         let str = '[\n';
         value.forEach((element, i) => {
@@ -114,19 +122,17 @@ export class Util {
         });
         str += ']';
         return str;
-
-      } else {
-        let str = '{\n';
-        for (const key in value) {
-          str += this.argumentToString(key, value[key]);
-        }
-        str += '}';
-        return str;
       }
 
-    } else {
-      throw new Error(`Invalid value: ${value}`);
+      let str = '{\n';
+      for (const key in value) {
+        str += this.argumentToString(key, value[key]);
+      }
+      str += '}';
+      return str;
     }
+
+    throw new Error(`Invalid value: ${value}`);
   }
 
 }

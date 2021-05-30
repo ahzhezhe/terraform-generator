@@ -1,5 +1,5 @@
 import { arg4 } from '..';
-import { Locals } from '../../src';
+import { Locals } from '../../src/blocks';
 import { Util } from '../../src/Util';
 
 test('Locals', () => {

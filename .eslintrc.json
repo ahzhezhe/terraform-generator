@@ -8,15 +8,22 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:security/recommended"
   ],
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/type-annotation-spacing": "error",
+    "@typescript-eslint/comma-spacing": "error",
+    "@typescript-eslint/keyword-spacing": "error",
+    "@typescript-eslint/func-call-spacing": "error",
+    "@typescript-eslint/space-infix-ops": "error",
+    "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -47,10 +54,17 @@
       {
         "selector": "variableLike",
         "format": [
-          "camelCase",
+          "strictCamelCase",
           "UPPER_CASE"
         ],
         "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "memberLike",
+        "format": [
+          "strictCamelCase",
+          "UPPER_CASE"
+        ]
       },
       {
         "selector": "enumMember",
@@ -61,13 +75,17 @@
       {
         "selector": "typeLike",
         "format": [
-          "PascalCase"
+          "StrictPascalCase"
         ]
       }
     ],
     "indent": "off",
-    "camelcase": "off",
-    "no-throw-literal": "error",
+    "no-unused-vars": "off",
+    "comma-spacing": "off",
+    "keyword-spacing": "off",
+    "func-call-spacing": "off",
+    "space-infix-ops": "off",
+    "no-warning-comments": "warn",
     "prefer-const": "error",
     "no-multi-spaces": "error",
     "no-return-await": "error",
@@ -75,6 +93,26 @@
     "prefer-template": "error",
     "block-spacing": "error",
     "eol-last": "error",
+    "key-spacing": "error",
+    "arrow-spacing": "error",
+    "semi-spacing": "error",
+    "space-before-blocks": "error",
+    "space-in-parens": "error",
+    "space-unary-ops": "error",
+    "default-param-last": "error",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-extra-label": "error",
+    "no-new-wrappers": "error",
+    "no-return-assign": "error",
+    "no-useless-return": "error",
+    "radix": "error",
+    "no-lonely-if": "error",
+    "no-mixed-operators": "error",
+    "no-whitespace-before-property": "error",
+    "no-unneeded-ternary": "error",
+    "operator-assignment": "error",
+    "no-useless-constructor": "error",
     "quotes": [
       "error",
       "single",
@@ -128,16 +166,69 @@
         "ignoreComments": true
       }
     ],
+    "no-else-return": [
+      "error",
+      {
+        "allowElseIf": false
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "asyncArrow": "always",
+        "named": "never"
+      }
+    ],
+    "max-classes-per-file": [
+      "error",
+      1
+    ],
+    "array-bracket-newline": [
+      "error",
+      "consistent"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "max-lines": [
+      "error",
+      2000
+    ],
+    "max-lines-per-function": "off",
+    "max-statements-per-line": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "max-params": [
+      "error",
+      5
+    ],
+    "operator-linebreak": [
+      "error",
+      "after"
+    ],
+    "no-duplicate-imports": [
+      "error",
+      {
+        "includeExports": true
+      }
+    ],
+    "import/no-default-export": "error",
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "parent",
-          "sibling",
-          "index"
-        ],
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true

@@ -1,6 +1,10 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { map, Provisioner, arg } from '../../src';
+import { arg } from '../../src/arguments';
+import { Provisioner } from '../../src/blocks';
+import { TerraformGenerator } from '../../src/TerraformGenerator';
+import { map } from '../../src/types';
 
 const createTerraformGenerator = (): TerraformGenerator => {
   const tfg = new TerraformGenerator();

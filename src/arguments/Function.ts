@@ -1,5 +1,5 @@
-import { Argument } from '..';
 import { Util } from '../Util';
+import { Argument } from '.';
 
 /**
  * @category Argument

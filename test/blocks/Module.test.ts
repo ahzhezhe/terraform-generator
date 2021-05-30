@@ -1,5 +1,5 @@
 import { arg4 } from '..';
-import { Module } from '../../src';
+import { Module } from '../../src/blocks';
 import { Util } from '../../src/Util';
 
 test('Module', () => {

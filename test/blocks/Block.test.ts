@@ -1,4 +1,4 @@
-import { Resource, Provisioner, Output } from '../../src';
+import { Resource, Provisioner, Output } from '../../src/blocks';
 
 test('Block identifier', () => {
   expect(() => new Resource('!@#', '$%^')).toThrow();

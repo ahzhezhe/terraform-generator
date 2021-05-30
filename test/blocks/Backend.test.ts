@@ -1,5 +1,5 @@
 import { arg4 } from '..';
-import { Backend } from '../../src';
+import { Backend } from '../../src/blocks';
 import { Util } from '../../src/Util';
 
 test('Backend', () => {

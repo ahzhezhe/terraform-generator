@@ -1,4 +1,4 @@
-import { Heredoc, heredoc } from '../../src';
+import { Heredoc, heredoc } from '../../src/arguments';
 import { Util } from '../../src/Util';
 
 test('Heredoc', () => {

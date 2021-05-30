@@ -1,5 +1,5 @@
 import { arg4 } from '..';
-import { Variable } from '../../src';
+import { Variable } from '../../src/blocks';
 import { Util } from '../../src/Util';
 
 test('Variable', () => {

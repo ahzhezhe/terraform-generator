@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import fs from 'fs';
 import path from 'path';
-import TerraformGenerator, { Resource, Map } from '../../src';
+import { Resource } from '../../src/blocks';
+import { TerraformGenerator } from '../../src/TerraformGenerator';
+import { Map } from '../../src/types';
 
 const project = 'test';
 
@@ -44,13 +47,15 @@ const findTier = (name: string): { name: string; cidr: string; subnetCidrs: stri
 const getAvailabilityZone = (index: number): string => {
   if (index === 0) {
     return 'ap-southeast-1a';
-  } else if (index === 1) {
-    return 'ap-southeast-1b';
-  } else if (index === 2) {
-    return 'ap-southeast-1c';
-  } else {
-    throw new Error(`Invalid availability zone ${index}`);
   }
+  if (index === 1) {
+    return 'ap-southeast-1b';
+  }
+  if (index === 2) {
+    return 'ap-southeast-1c';
+  }
+  throw new Error(`Invalid availability zone ${index}`);
+
 };
 
 const getTagName = (type: string, name?: string, tier?: string): string =>

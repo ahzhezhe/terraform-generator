@@ -1,5 +1,5 @@
 import { attr } from '..';
-import { Function, fn } from '../../src';
+import { Function, fn } from '../../src/arguments';
 import { Util } from '../../src/Util';
 
 test('Function invalid args', () => {

@@ -42,12 +42,11 @@ npm install terraform-generator
 
 ### **Import**
 ```javascript
-import TerraformGenerator, { Resource, map, fn } from 'terraform-generator';
+import { TerraformGenerator, Resource, map, fn } from 'terraform-generator';
 ```
 or
 ```javascript
-const TFG = require('terraform-generator');
-const { default: TerraformGenerator, Resource, map, fn } = TFG;
+const { TerraformGenerator, Resource, map, fn } = require('terraform-generator');
 ```
 
 ### **Initialize TerraformGenerator**

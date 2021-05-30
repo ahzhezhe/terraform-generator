@@ -1,5 +1,6 @@
 import { resource } from '..';
-import { Attribute, attr, Block } from '../../src';
+import { Attribute, attr } from '../../src/arguments';
+import { Block } from '../../src/blocks';
 import { Util } from '../../src/Util';
 
 test('Attribute invalid args', () => {

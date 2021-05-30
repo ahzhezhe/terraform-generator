@@ -1,4 +1,6 @@
-import { Block, Argument, Attribute, Data, Map, Provisioner } from '..';
+import { Argument, Attribute } from '../arguments';
+import { Map } from '../types';
+import { Block, Data, Provisioner } from '.';
 
 /**
  * @category Block
@@ -73,8 +75,8 @@ export class Resource extends Block {
    * @param args extra arguments
    */
   toData(options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: Record<string, any>): Data {
-    const type = (options && options.type) ? options.type : this.type;
-    const name = (options && options.name) ? options.name : this.name;
+    const type = options?.type ?? this.type;
+    const name = options?.name ?? this.name;
 
     if (!args) {
       args = {};

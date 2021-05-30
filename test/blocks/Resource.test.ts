@@ -1,5 +1,6 @@
 import { arg4 } from '..';
-import { Resource, map } from '../../src';
+import { Resource } from '../../src/blocks';
+import { map } from '../../src/types';
 import { Util } from '../../src/Util';
 
 test('Resource', () => {
