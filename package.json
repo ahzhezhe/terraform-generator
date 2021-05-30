@@ -1,6 +1,6 @@
 {
   "name": "terraform-generator",
-  "version": "4.8.5",
+  "version": "5.0.0",
   "author": "Chang Zhe Jiet",
   "description": "Generate Terraform configurations with Node.js.",
   "keywords": [
