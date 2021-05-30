@@ -3,17 +3,17 @@ import { Block, Argument, Map, List } from '.';
 
 export class Util {
 
-  private static readonly escapeChars = [
+  static readonly #escapeChars = [
     ['"', '&tfgquot;']
   ];
 
   static escape(str: string): string {
-    this.escapeChars.forEach(char => str = replaceString(str, char[0], char[1]));
+    this.#escapeChars.forEach(char => str = replaceString(str, char[0], char[1]));
     return str;
   }
 
   static unescape(str: string): string {
-    this.escapeChars.slice().reverse().forEach(char => str = replaceString(str, char[1], char[0]));
+    this.#escapeChars.slice().reverse().forEach(char => str = replaceString(str, char[1], char[0]));
     return str;
   }
 

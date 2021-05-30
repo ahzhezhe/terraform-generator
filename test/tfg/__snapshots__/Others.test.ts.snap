@@ -5,221 +5,106 @@ exports[`Others 1`] = `undefined`;
 exports[`Others 2`] = `
 Array [
   Variable {
-    "arguments": Object {
-      "type": Argument {
-        "argument": "string",
-      },
-    },
     "blockNames": Array [
       "test",
     ],
     "blockType": "variable",
-    "innerBlocks": Array [],
     "name": "test",
   },
   Variable {
-    "arguments": Object {
-      "type": Argument {
-        "argument": "string",
-      },
-    },
     "blockNames": Array [
       "test2",
     ],
     "blockType": "variable",
-    "innerBlocks": Array [],
     "name": "test2",
   },
   Data {
-    "arguments": Object {
-      "cidr_block": "test",
-    },
     "blockNames": Array [
       "aws_vpc",
       "test",
     ],
     "blockType": "data",
-    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
   Module {
-    "arguments": Object {
-      "source": "./test",
-    },
     "blockNames": Array [
       "test",
     ],
     "blockType": "module",
-    "innerBlocks": Array [],
     "name": "test",
   },
   Resource {
-    "arguments": Object {
-      "cidr_block": "test",
-      "tags": Map {
-        "arguments": Object {
-          "a": "a",
-        },
-      },
-    },
     "blockNames": Array [
       "aws_vpc",
       "test",
     ],
     "blockType": "resource",
-    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
   Data {
-    "arguments": Object {
-      "cidr_block": "test",
-      "filter": Array [
-        Object {
-          "name": "tag:a",
-          "values": Array [
-            "a",
-          ],
-        },
-      ],
-    },
     "blockNames": Array [
       "aws_vpc",
       "test",
     ],
     "blockType": "data",
-    "innerBlocks": Array [],
     "name": "test",
     "type": "aws_vpc",
   },
   Data {
-    "arguments": Object {
-      "cidr_block": "test",
-      "filter": Array [
-        Object {
-          "name": "tag:a",
-          "values": Array [
-            "a",
-          ],
-        },
-      ],
-    },
     "blockNames": Array [
       "aws_vpc",
       "test2",
     ],
     "blockType": "data",
-    "innerBlocks": Array [],
     "name": "test2",
     "type": "aws_vpc",
   },
   Resource {
-    "arguments": Object {
-      "a": "a",
-    },
     "blockNames": Array [
       "innerBlock",
       "innerBlock",
     ],
     "blockType": "resource",
-    "innerBlocks": Array [
-      Provisioner {
-        "arguments": Object {
-          "command": "echo hello",
-        },
-        "blockNames": Array [
-          "local-exec",
-        ],
-        "blockType": "provisioner",
-        "innerBlocks": Array [],
-        "type": "local-exec",
-      },
-      Provisioner {
-        "arguments": Object {
-          "command": "echo world",
-        },
-        "blockNames": Array [
-          "local-exec",
-        ],
-        "blockType": "provisioner",
-        "innerBlocks": Array [],
-        "type": "local-exec",
-      },
-    ],
     "name": "innerBlock",
     "type": "innerBlock",
   },
   Locals {
-    "arguments": Object {
-      "a": "a",
-      "b": 123,
-      "c": Attribute {
-        "argument": "aws_vpc.test.x",
-      },
-    },
     "blockNames": Array [],
     "blockType": "locals",
-    "innerBlocks": Array [],
   },
   Resource {
-    "arguments": Object {
-      "a": Argument {
-        "argument": "local.a",
-      },
-    },
     "blockNames": Array [
       "locals",
       "locals",
     ],
     "blockType": "resource",
-    "innerBlocks": Array [],
     "name": "locals",
     "type": "locals",
   },
   Provisioner {
-    "arguments": Object {
-      "a": "a",
-      "b": 123,
-      "c": Attribute {
-        "argument": "aws_vpc.test.x",
-      },
-    },
     "blockNames": Array [
       "provisioner",
     ],
     "blockType": "provisioner",
-    "innerBlocks": Array [],
     "type": "provisioner",
   },
   Resource {
-    "arguments": Object {
-      "tags": Map {
-        "arguments": Object {
-          "a": "a",
-          "b c d": "b c d",
-        },
-      },
-    },
     "blockNames": Array [
       "tags",
       "tags",
     ],
     "blockType": "resource",
-    "innerBlocks": Array [],
     "name": "tags",
     "type": "tags",
   },
   Resource {
-    "arguments": Object {
-      "tfg2": "tfg2",
-    },
     "blockNames": Array [
       "tfg2",
       "tfg2",
     ],
     "blockType": "resource",
-    "innerBlocks": Array [],
     "name": "tfg2",
     "type": "tfg2",
   },

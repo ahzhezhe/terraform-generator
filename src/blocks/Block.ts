@@ -8,8 +8,8 @@ export abstract class Block {
 
   readonly blockType: string;
   readonly blockNames: string[];
-  private readonly arguments: Record<string, any>;
-  private innerBlocks: Block[];
+  readonly #arguments: Record<string, any>;
+  #innerBlocks: Block[];
 
   /**
    * Construct block.
@@ -19,22 +19,22 @@ export abstract class Block {
    * @param args arguments
    */
   constructor(type: string, names: string[], args?: Record<string, any>, innerBlocks?: Block[]) {
-    this.validateIdentifier(type);
+    this.#validateIdentifier(type);
     names.forEach(name => {
-      this.validateIdentifier(name);
+      this.#validateIdentifier(name);
     });
 
     this.blockType = type;
     this.blockNames = names;
-    this.arguments = args ? args : {};
-    this.innerBlocks = innerBlocks ? innerBlocks : [];
+    this.#arguments = args ? args : {};
+    this.#innerBlocks = innerBlocks ? innerBlocks : [];
   }
 
   /**
    * Get arguments.
    */
   getArguments(): Record<string, any> {
-    return this.arguments;
+    return this.#arguments;
   }
 
   /**
@@ -43,7 +43,7 @@ export abstract class Block {
    * @param key key
    */
   getArgument(key: string): any {
-    return this.arguments[key];
+    return this.#arguments[key];
   }
 
   /**
@@ -53,7 +53,7 @@ export abstract class Block {
    * @param value value
    */
   setArgument(key: string, value: any): this {
-    this.arguments[key] = value;
+    this.#arguments[key] = value;
     return this;
   }
 
@@ -64,7 +64,7 @@ export abstract class Block {
    */
   setArguments(args: Record<string, any>): this {
     for (const key in args) {
-      this.arguments[key] = args[key];
+      this.#arguments[key] = args[key];
     }
     return this;
   }
@@ -75,7 +75,7 @@ export abstract class Block {
    * @param key key
    */
   deleteArgument(key: string): this {
-    delete this.arguments[key];
+    delete this.#arguments[key];
     return this;
   }
 
@@ -83,14 +83,14 @@ export abstract class Block {
    * Get inner blocks.
    */
   protected getInnerBlocks(): Block[] {
-    return this.innerBlocks;
+    return this.#innerBlocks;
   }
 
   /**
    * Set inner blocks.
    */
   protected setInnerBlocks(innerBlocks: Block[] | undefined): this {
-    this.innerBlocks = innerBlocks ? innerBlocks : [];
+    this.#innerBlocks = innerBlocks ? innerBlocks : [];
     return this;
   }
 
@@ -103,8 +103,8 @@ export abstract class Block {
       str += ` "${name}"`;
     });
     str += '{\n';
-    str += Util.argumentsToString(this.arguments);
-    this.innerBlocks.forEach(block => {
+    str += Util.argumentsToString(this.#arguments);
+    this.#innerBlocks.forEach(block => {
       str += `${block.toTerraform().trim()}\n`;
     });
     str += '}\n\n';
@@ -130,7 +130,7 @@ export abstract class Block {
     return this.attr('id');
   }
 
-  private validateIdentifier(identifier: string): void {
+  #validateIdentifier(identifier: string): void {
     if (!identifier.match(/^[a-zA-Z_\-]{1}[0-9a-zA-Z_\-]*$/)) {
       throw new Error(`Invalid identifier: ${identifier}`);
     }

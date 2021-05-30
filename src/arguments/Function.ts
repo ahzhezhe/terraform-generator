@@ -13,10 +13,10 @@ export class Function extends Argument {
    * @param args function arguments
    */
   constructor(name: string, ...args: any[]) {
-    super(Function.constructArgument(name, ...args));
+    super(Function.#constructArgument(name, ...args));
   }
 
-  private static constructArgument(fn: string, ...args: any[]): string {
+  static #constructArgument(fn: string, ...args: any[]): string {
     if (!fn || !fn.trim()) {
       throw new Error('Function name cannot be empty.');
     }

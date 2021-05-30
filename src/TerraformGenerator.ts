@@ -42,9 +42,9 @@ export interface WriteOptions {
  */
 export class TerraformGenerator {
 
-  private readonly arguments?: Record<string, any>;
-  private readonly blocks: Block[] = [];
-  private variables: Record<string, any> = {};
+  readonly #arguments?: Record<string, any>;
+  readonly #blocks: Block[] = [];
+  #variables: Record<string, any> = {};
 
   /**
    * Construct Terraform generator.
@@ -54,7 +54,7 @@ export class TerraformGenerator {
    * @param args arguments
    */
   constructor(args?: Record<string, any>) {
-    this.arguments = args;
+    this.#arguments = args;
   }
 
   /**
@@ -62,18 +62,18 @@ export class TerraformGenerator {
    */
   generate(): { tf: string; tfvars?: string } {
     return {
-      tf: this.generateTf(),
-      tfvars: Object.keys(this.variables).length > 0 ? this.generateTfvars() : undefined
+      tf: this.#generateTf(),
+      tfvars: Object.keys(this.#variables).length > 0 ? this.#generateTfvars() : undefined
     };
   }
 
-  private generateTf(): string {
+  #generateTf(): string {
     let str = '';
 
-    if (this.arguments || this.blocks.filter(block => block instanceof Backend).length > 0) {
+    if (this.#arguments || this.#blocks.filter(block => block instanceof Backend).length > 0) {
       str += 'terraform {\n';
-      str += Util.argumentsToString(this.arguments);
-      this.blocks.forEach(block => {
+      str += Util.argumentsToString(this.#arguments);
+      this.#blocks.forEach(block => {
         if (block instanceof Backend) {
           str += block.toTerraform();
         }
@@ -81,7 +81,7 @@ export class TerraformGenerator {
       str += '}\n\n';
     }
 
-    this.blocks.forEach(block => {
+    this.#blocks.forEach(block => {
       if (!(block instanceof Backend)) {
         str += block.toTerraform();
       }
@@ -90,11 +90,11 @@ export class TerraformGenerator {
     return Util.unescape(str);
   }
 
-  private generateTfvars(): string {
+  #generateTfvars(): string {
     let str = '';
 
-    Object.keys(this.variables).forEach(key => {
-      str += Util.argumentsToString({ [key]: this.variables[key] });
+    Object.keys(this.#variables).forEach(key => {
+      str += Util.argumentsToString({ [key]: this.#variables[key] });
       str += '\n';
     });
 
@@ -147,7 +147,7 @@ export class TerraformGenerator {
    * @param blocks blocks
    */
   addBlocks(...blocks: Block[]): this {
-    blocks.forEach(block => this.blocks.push(block));
+    blocks.forEach(block => this.#blocks.push(block));
     return this;
   }
 
@@ -305,8 +305,8 @@ export class TerraformGenerator {
    * @param variables variables
    */
   addVars(variables: Record<string, any>): this {
-    this.variables = {
-      ...this.variables,
+    this.#variables = {
+      ...this.#variables,
       ...variables
     };
     return this;
@@ -329,21 +329,21 @@ export class TerraformGenerator {
    * Get arguments.
    */
   getArguments(): Record<string, any> | undefined {
-    return this.arguments;
+    return this.#arguments;
   }
 
   /**
    * Get blocks.
    */
   getBlocks(): Block[] {
-    return this.blocks;
+    return this.#blocks;
   }
 
   /**
    * Get variables.
    */
   getVars(): Record<string, any> {
-    return this.variables;
+    return this.#variables;
   }
 
 }

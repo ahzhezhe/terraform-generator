@@ -12,10 +12,10 @@ export class Attribute extends Argument {
    * @param attrName attribute name
    */
   constructor(block: Block, attrName: string) {
-    super(Attribute.constructArgument(block, attrName));
+    super(Attribute.#constructArgument(block, attrName));
   }
 
-  private static constructArgument(block: Block, attrName: string): string {
+  static #constructArgument(block: Block, attrName: string): string {
     if (!block) {
       throw new Error('Attribute block cannot be null.');
     }
