@@ -1,6 +1,6 @@
 {
-  "name": "terraform-generator - v4",
-  "out": "docs/terraform-generator-v4",
+  "name": "terraform-generator - v5",
+  "out": "docs/terraform-generator-v5",
   "entryPoints": [
     "src/index.ts"
   ],
