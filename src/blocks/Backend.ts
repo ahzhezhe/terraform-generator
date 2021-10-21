@@ -22,11 +22,11 @@ export class Backend extends Block {
     this.type = type;
   }
 
-  asArgument(): Argument {
+  override asArgument(): Argument {
     return new Argument(JSON.stringify(this.type));
   }
 
-  attr(_name: string): Attribute {
+  override attr(_name: string): Attribute {
     throw new Error('Inaccessible method.');
   }
 

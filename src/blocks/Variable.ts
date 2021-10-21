@@ -22,11 +22,11 @@ export class Variable extends Block {
     this.name = name;
   }
 
-  asArgument(): Argument {
+  override asArgument(): Argument {
     return new Argument(`var.${this.name}`);
   }
 
-  attr(name: string): Attribute {
+  override attr(name: string): Attribute {
     return new Attribute(this, name);
   }
 

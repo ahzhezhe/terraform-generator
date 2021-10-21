@@ -17,11 +17,11 @@ export class Locals extends Block {
     super('locals', [], args);
   }
 
-  asArgument(): Argument {
+  override asArgument(): Argument {
     throw new Error('Inaccessible method.');
   }
 
-  attr(_name: string): Attribute {
+  override attr(_name: string): Attribute {
     throw new Error('Inaccessible method.');
   }
 

@@ -22,11 +22,11 @@ export class Module extends Block {
     this.name = name;
   }
 
-  asArgument(): Argument {
+  override asArgument(): Argument {
     return new Argument(`module.${this.name}`);
   }
 
-  attr(name: string): Attribute {
+  override attr(name: string): Attribute {
     return new Attribute(this, name);
   }
 

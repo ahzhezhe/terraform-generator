@@ -22,11 +22,11 @@ export class Output extends Block {
     this.name = name;
   }
 
-  asArgument(): Argument {
+  override asArgument(): Argument {
     throw new Error('Inaccessible method.');
   }
 
-  attr(_name: string): Attribute {
+  override attr(_name: string): Attribute {
     throw new Error('Inaccessible method.');
   }
 
