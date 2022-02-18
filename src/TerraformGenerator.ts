@@ -70,11 +70,11 @@ export class TerraformGenerator {
   #generateTf(): string {
     let str = '';
 
-    if (this.#arguments || this.#blocks.filter(block => block instanceof Backend).length > 0) {
+    if (this.#arguments || this.#blocks.filter(block => block.isInsideTerraformBlock()).length > 0) {
       str += 'terraform {\n';
       str += Util.argumentsToString(this.#arguments);
       this.#blocks.forEach(block => {
-        if (block instanceof Backend) {
+        if (block.isInsideTerraformBlock()) {
           str += block.toTerraform();
         }
       });
@@ -82,7 +82,7 @@ export class TerraformGenerator {
     }
 
     this.#blocks.forEach(block => {
-      if (!(block instanceof Backend)) {
+      if (!block.isInsideTerraformBlock()) {
         str += block.toTerraform();
       }
     });

@@ -10,6 +10,7 @@ export abstract class Block {
   readonly blockNames: string[];
   readonly #arguments: Record<string, any>;
   #innerBlocks: Block[];
+  readonly #insideTerraformBlock: boolean;
 
   /**
    * Construct block.
@@ -18,7 +19,7 @@ export abstract class Block {
    * @param names names
    * @param args arguments
    */
-  constructor(type: string, names: string[], args?: Record<string, any>, innerBlocks?: Block[]) {
+  constructor(type: string, names: string[], args?: Record<string, any>, innerBlocks?: Block[], insideTerraformBlock = false) {
     this.#validateIdentifier(type);
     names.forEach(name => {
       this.#validateIdentifier(name);
@@ -28,6 +29,14 @@ export abstract class Block {
     this.blockNames = names;
     this.#arguments = args ? args : {};
     this.#innerBlocks = innerBlocks ? innerBlocks : [];
+    this.#insideTerraformBlock = insideTerraformBlock;
+  }
+
+  /**
+   * Is this block to be placed inside top-level terrafrom block.
+   */
+  isInsideTerraformBlock() {
+    return this.#insideTerraformBlock;
   }
 
   /**
