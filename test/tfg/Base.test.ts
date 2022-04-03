@@ -302,7 +302,3 @@ test('Base', () => {
   expect(tf).toMatchSnapshot();
 });
 
-afterAll(() => {
-  fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
-  fs.rmdirSync(outputDir);
-});

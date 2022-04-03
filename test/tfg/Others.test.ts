@@ -94,9 +94,3 @@ test('Others', () => {
   const tfvars = fs.readFileSync(path.join(outputDir, 'terraform.tfvars'), 'utf8');
   expect(tfvars).toMatchSnapshot();
 });
-
-afterAll(() => {
-  fs.unlinkSync(path.join(outputDir, 'terraform.tf'));
-  fs.unlinkSync(path.join(outputDir, 'terraform.tfvars'));
-  fs.rmdirSync(outputDir);
-});
