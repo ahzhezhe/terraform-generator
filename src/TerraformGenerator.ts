@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import shell from 'shelljs';
-import { Block, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from './blocks';
+import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from './blocks';
 import { Util } from './Util';
 
 /**
@@ -149,6 +149,17 @@ export class TerraformGenerator {
   addBlocks(...blocks: Block[]): this {
     blocks.forEach(block => this.#blocks.push(block));
     return this;
+  }
+
+  /**
+   * Add comment into Terraform.
+   *
+   * @param comment comment
+   */
+  comment(comment: string): Comment {
+    const block = new Comment(comment);
+    this.addBlocks(block);
+    return block;
   }
 
   /**

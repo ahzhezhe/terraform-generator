@@ -33,7 +33,7 @@ export abstract class Block {
   }
 
   /**
-   * Is this block to be placed inside top-level terrafrom block.
+   * Is this block to be placed inside top-level terraform block.
    */
   isInsideTerraformBlock() {
     return this.#insideTerraformBlock;

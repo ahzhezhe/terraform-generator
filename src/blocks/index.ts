@@ -1,5 +1,6 @@
 export * from './Block';
 export * from './Backend';
+export * from './Comment';
 export * from './Data';
 export * from './Locals';
 export * from './Module';
