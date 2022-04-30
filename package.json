@@ -39,22 +39,21 @@
   },
   "dependencies": {
     "github-sponsors": "^1.0.1",
-    "replace-string": "^3.1.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "@types/shelljs": "^0.8.11",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "del-cli": "^3.0.1",
-    "eslint": "^8.12.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-security": "^1.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "del-cli": "^4.0.1",
+    "eslint": "^8.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-security": "^1.5.0",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
-    "typedoc": "^0.22.13",
-    "typescript": "^4.6.3"
+    "typedoc": "^0.22.15",
+    "typescript": "^4.6.4"
   }
 }

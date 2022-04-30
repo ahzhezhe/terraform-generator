@@ -1,4 +1,3 @@
-import replaceString from 'replace-string';
 import { Argument } from './arguments';
 import { Block } from './blocks';
 import { Map, List } from './types';
@@ -11,14 +10,14 @@ export class Util {
 
   static escape(str: string): string {
     this.#escapeChars.forEach(char => {
-      str = replaceString(str, char[0], char[1]);
+      str = str.replaceAll(char[0], char[1]);
     });
     return str;
   }
 
   static unescape(str: string): string {
     this.#escapeChars.slice().reverse().forEach(char => {
-      str = replaceString(str, char[1], char[0]);
+      str = str.replaceAll(char[1], char[0]);
     });
     return str;
   }
