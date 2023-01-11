@@ -17,7 +17,7 @@ export class Function extends Argument {
   }
 
   static #constructArgument(fn: string, ...args: any[]): string {
-    if (!fn || !fn.trim()) {
+    if (!fn.trim()) {
       throw new Error('Function name cannot be empty.');
     }
     if (args.filter(arg => arg == null).length > 0) {

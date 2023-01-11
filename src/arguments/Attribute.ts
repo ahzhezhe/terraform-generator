@@ -20,7 +20,7 @@ export class Attribute extends Argument {
     if (!block) {
       throw new Error('Attribute block cannot be null.');
     }
-    if (!attrName || !attrName.trim()) {
+    if (!attrName?.trim()) {
       throw new Error('Attribute name cannot be empty.');
     }
 

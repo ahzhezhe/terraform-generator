@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Block arguments 1`] = `Object {}`;
+exports[`Block arguments 1`] = `{}`;
 
 exports[`Block arguments 2`] = `
-Object {
+{
   "a": 1,
 }
 `;
 
 exports[`Block arguments 3`] = `
-Object {
+{
   "a": 0,
   "b": 1,
   "c": 2,
@@ -17,23 +17,23 @@ Object {
 `;
 
 exports[`Block arguments 4`] = `
-Object {
+{
   "a": 0,
   "c": 2,
 }
 `;
 
 exports[`Block arguments 5`] = `
-Array [
+[
   Provisioner {
-    "blockNames": Array [
+    "blockNames": [
       "p1",
     ],
     "blockType": "provisioner",
     "type": "p1",
   },
   Provisioner {
-    "blockNames": Array [
+    "blockNames": [
       "p2",
     ],
     "blockType": "provisioner",
@@ -42,4 +42,4 @@ Array [
 ]
 `;
 
-exports[`Block arguments 6`] = `Array []`;
+exports[`Block arguments 6`] = `[]`;

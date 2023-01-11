@@ -3,23 +3,23 @@
 exports[`Others 1`] = `undefined`;
 
 exports[`Others 2`] = `
-Array [
+[
   Variable {
-    "blockNames": Array [
+    "blockNames": [
       "test",
     ],
     "blockType": "variable",
     "name": "test",
   },
   Variable {
-    "blockNames": Array [
+    "blockNames": [
       "test2",
     ],
     "blockType": "variable",
     "name": "test2",
   },
   Data {
-    "blockNames": Array [
+    "blockNames": [
       "aws_vpc",
       "test",
     ],
@@ -28,14 +28,14 @@ Array [
     "type": "aws_vpc",
   },
   Module {
-    "blockNames": Array [
+    "blockNames": [
       "test",
     ],
     "blockType": "module",
     "name": "test",
   },
   Resource {
-    "blockNames": Array [
+    "blockNames": [
       "aws_vpc",
       "test",
     ],
@@ -44,7 +44,7 @@ Array [
     "type": "aws_vpc",
   },
   Data {
-    "blockNames": Array [
+    "blockNames": [
       "aws_vpc",
       "test",
     ],
@@ -53,7 +53,7 @@ Array [
     "type": "aws_vpc",
   },
   Data {
-    "blockNames": Array [
+    "blockNames": [
       "aws_vpc",
       "test2",
     ],
@@ -62,7 +62,7 @@ Array [
     "type": "aws_vpc",
   },
   Resource {
-    "blockNames": Array [
+    "blockNames": [
       "innerBlock",
       "innerBlock",
     ],
@@ -71,11 +71,11 @@ Array [
     "type": "innerBlock",
   },
   Locals {
-    "blockNames": Array [],
+    "blockNames": [],
     "blockType": "locals",
   },
   Resource {
-    "blockNames": Array [
+    "blockNames": [
       "locals",
       "locals",
     ],
@@ -84,14 +84,14 @@ Array [
     "type": "locals",
   },
   Provisioner {
-    "blockNames": Array [
+    "blockNames": [
       "provisioner",
     ],
     "blockType": "provisioner",
     "type": "provisioner",
   },
   Resource {
-    "blockNames": Array [
+    "blockNames": [
       "tags",
       "tags",
     ],
@@ -100,7 +100,7 @@ Array [
     "type": "tags",
   },
   Resource {
-    "blockNames": Array [
+    "blockNames": [
       "tfg2",
       "tfg2",
     ],
@@ -112,186 +112,186 @@ Array [
 `;
 
 exports[`Others 3`] = `
-Object {
+{
   "test2": "test",
 }
 `;
 
 exports[`Others 4`] = `
-Object {
-  "tf": "variable \\"test\\"{
+{
+  "tf": "variable "test"{
 type = string
 }
 
-variable \\"test2\\"{
+variable "test2"{
 type = string
 }
 
-data \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
+data "aws_vpc" "test"{
+cidr_block = "test"
 }
 
-module \\"test\\"{
-source = \\"./test\\"
+module "test"{
+source = "./test"
 }
 
-resource \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
+resource "aws_vpc" "test"{
+cidr_block = "test"
 tags = {
-a = \\"a\\"
+a = "a"
 }
 }
 
-data \\"aws_vpc\\" \\"test\\"{
+data "aws_vpc" "test"{
 filter {
-name = \\"tag:a\\"
+name = "tag:a"
 values = [
-\\"a\\"
+"a"
 ]
 }
-cidr_block = \\"test\\"
+cidr_block = "test"
 }
 
-data \\"aws_vpc\\" \\"test2\\"{
+data "aws_vpc" "test2"{
 filter {
-name = \\"tag:a\\"
+name = "tag:a"
 values = [
-\\"a\\"
+"a"
 ]
 }
-cidr_block = \\"test\\"
+cidr_block = "test"
 }
 
-resource \\"innerBlock\\" \\"innerBlock\\"{
-a = \\"a\\"
-provisioner \\"local-exec\\"{
-command = \\"echo hello\\"
+resource "innerBlock" "innerBlock"{
+a = "a"
+provisioner "local-exec"{
+command = "echo hello"
 }
-provisioner \\"local-exec\\"{
-command = \\"echo world\\"
+provisioner "local-exec"{
+command = "echo world"
 }
 }
 
 locals{
-a = \\"a\\"
+a = "a"
 b = 123
 c = aws_vpc.test.x
 }
 
-resource \\"locals\\" \\"locals\\"{
+resource "locals" "locals"{
 a = local.a
 }
 
-provisioner \\"provisioner\\"{
-a = \\"a\\"
+provisioner "provisioner"{
+a = "a"
 b = 123
 c = aws_vpc.test.x
 }
 
-resource \\"tags\\" \\"tags\\"{
+resource "tags" "tags"{
 tags = {
-a = \\"a\\"
-\\"b c d\\" = \\"b c d\\"
+a = "a"
+"b c d" = "b c d"
 }
 }
 
-resource \\"tfg2\\" \\"tfg2\\"{
-tfg2 = \\"tfg2\\"
+resource "tfg2" "tfg2"{
+tfg2 = "tfg2"
 }
 
 ",
-  "tfvars": "test2 = \\"test\\"
+  "tfvars": "test2 = "test"
 
 ",
 }
 `;
 
 exports[`Others 5`] = `
-"variable \\"test\\"{
+"variable "test"{
 type = string
 }
 
-variable \\"test2\\"{
+variable "test2"{
 type = string
 }
 
-data \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
+data "aws_vpc" "test"{
+cidr_block = "test"
 }
 
-module \\"test\\"{
-source = \\"./test\\"
+module "test"{
+source = "./test"
 }
 
-resource \\"aws_vpc\\" \\"test\\"{
-cidr_block = \\"test\\"
+resource "aws_vpc" "test"{
+cidr_block = "test"
 tags = {
-a = \\"a\\"
+a = "a"
 }
 }
 
-data \\"aws_vpc\\" \\"test\\"{
+data "aws_vpc" "test"{
 filter {
-name = \\"tag:a\\"
+name = "tag:a"
 values = [
-\\"a\\"
+"a"
 ]
 }
-cidr_block = \\"test\\"
+cidr_block = "test"
 }
 
-data \\"aws_vpc\\" \\"test2\\"{
+data "aws_vpc" "test2"{
 filter {
-name = \\"tag:a\\"
+name = "tag:a"
 values = [
-\\"a\\"
+"a"
 ]
 }
-cidr_block = \\"test\\"
+cidr_block = "test"
 }
 
-resource \\"innerBlock\\" \\"innerBlock\\"{
-a = \\"a\\"
-provisioner \\"local-exec\\"{
-command = \\"echo hello\\"
+resource "innerBlock" "innerBlock"{
+a = "a"
+provisioner "local-exec"{
+command = "echo hello"
 }
-provisioner \\"local-exec\\"{
-command = \\"echo world\\"
+provisioner "local-exec"{
+command = "echo world"
 }
 }
 
 locals{
-a = \\"a\\"
+a = "a"
 b = 123
 c = aws_vpc.test.x
 }
 
-resource \\"locals\\" \\"locals\\"{
+resource "locals" "locals"{
 a = local.a
 }
 
-provisioner \\"provisioner\\"{
-a = \\"a\\"
+provisioner "provisioner"{
+a = "a"
 b = 123
 c = aws_vpc.test.x
 }
 
-resource \\"tags\\" \\"tags\\"{
+resource "tags" "tags"{
 tags = {
-a = \\"a\\"
-\\"b c d\\" = \\"b c d\\"
+a = "a"
+"b c d" = "b c d"
 }
 }
 
-resource \\"tfg2\\" \\"tfg2\\"{
-tfg2 = \\"tfg2\\"
+resource "tfg2" "tfg2"{
+tfg2 = "tfg2"
 }
 
 "
 `;
 
 exports[`Others 6`] = `
-"test2 = \\"test\\"
+"test2 = "test"
 
 "
 `;
