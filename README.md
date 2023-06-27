@@ -41,16 +41,16 @@ npm install terraform-generator
 ## **Usage**
 
 ### **Import**
-```javascript
+```typescript
 import { TerraformGenerator, Resource, map, fn } from 'terraform-generator';
 ```
 or
-```javascript
+```typescript
 const { TerraformGenerator, Resource, map, fn } = require('terraform-generator');
 ```
 
 ### **Initialize TerraformGenerator**
-```javascript
+```typescript
 const tfg = new TerraformGenerator({
   required_version: '>= 0.12'
 });
@@ -59,7 +59,7 @@ const tfg = new TerraformGenerator({
 ### **Blocks**
 Block's arguments are not typed, please refer to official Terraform documentation on what arguments can be supplied.
 
-```javascript
+```typescript
 tfg.provider('aws', {
   region: 'ap-southeast-1',
   profile: 'example'
@@ -71,14 +71,14 @@ const vpc = tfg.resource('aws_vpc', 'vpc', {
 ```
 
 ### **Convert resource to data source**
-```javascript
+```typescript
 import { vpc as vpcDS } from 'other-terraform-generator-configuration';
 
 const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 ```
 
 ### **Arguments**
-```javascript
+```typescript
 {
   string: 'str',
   number: 123,
@@ -132,7 +132,7 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 ```
 
 ### **Attributes**
-```javascript
+```typescript
 block.attr('id')                                      // block id, string
 block.id                                              // convenience getter function, same as attr('id')
 block.attr('subnets')                                 // subnet objects, object list
@@ -143,7 +143,7 @@ block.attr('subnets').attr('*').attr('id').element(0) // same as above
 ```
 
 ### **Variables**
-```javascript
+```typescript
 // You can directly add multiple variable values.
 tfg.addVars({
   var1: 123,
@@ -157,13 +157,13 @@ tfg.variable('password', {
 ```
 
 ### **Merge multiple configurations**
-```javascript
+```typescript
 // You can split your configuration into multiple files and merge them before you generate the final outcome.
 tfg.merge(tfg2, tfg3);
 ```
 
 ### **Generate Terraform configuration**
-```javascript
+```typescript
 // Generate Terraform configuration as string
 const result = tfg.generate();
 console.log(result.tf);
@@ -177,7 +177,7 @@ tfg.write({
 ```
 
 ## **Example**
-```javascript
+```typescript
 import TerraformGenerator, { Map, map } from 'terraform-generator';
 import path from 'path';
 
