@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import shell from 'shelljs';
-import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals } from './blocks';
+import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import } from './blocks';
 import { Util } from './Util';
 
 /**
@@ -321,6 +321,19 @@ export class TerraformGenerator {
       ...variables
     };
     return this;
+  }
+
+  /**
+   * Add import into Terraform.
+   *
+   * Refer to Terraform documentation on what can be put as arguments.
+   *
+   * @param args arguments
+   */
+  import(args?: Record<string, any>): Import {
+    const importBlock = new Import(args);
+    this.addBlocks(importBlock);
+    return importBlock;
   }
 
   /**
