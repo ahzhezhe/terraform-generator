@@ -1,5 +1,6 @@
 import { Argument, Attribute } from '../arguments';
 import { Map } from '../types';
+import { BlockArgs } from '../utils';
 import { Block, Data, Provisioner } from '.';
 
 /**
@@ -34,8 +35,8 @@ export class Resource extends Block {
    * @param args arguments
    * @param provisioners provisioners
    */
-  constructor(type: string, name: string, args?: Record<string, any>, provisioners?: Provisioner[]) {
-    super('resource', [type, name], args, provisioners);
+  constructor(type: string, name: string, args?: BlockArgs, provisioners?: Provisioner[]) {
+    super('resource', [type, name], args || {}, provisioners);
 
     this.type = type;
     this.name = name;
@@ -74,7 +75,7 @@ export class Resource extends Block {
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  toData(options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: Record<string, any>): Data {
+  toData(options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: BlockArgs): Data {
     const type = options?.type ?? this.type;
     const name = options?.name ?? this.name;
 

@@ -1,7 +1,7 @@
 import { resource } from '..';
 import { Attribute, attr } from '../../src/arguments';
 import { Block } from '../../src/blocks';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Attribute invalid args', () => {
   expect(() => new Attribute(null as unknown as Block, null as unknown as string)).toThrow();

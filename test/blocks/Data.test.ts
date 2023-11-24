@@ -1,6 +1,6 @@
 import { arg4 } from '..';
 import { Data } from '../../src/blocks';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Data', () => {
   const data = new Data('type', 'name', arg4);

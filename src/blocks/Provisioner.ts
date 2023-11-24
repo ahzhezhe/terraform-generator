@@ -4,9 +4,23 @@ import { Block } from '.';
 /**
  * @category Block
  */
-export class Provisioner extends Block {
+export type ProvisionerType = 'local-exec' | 'remote-exec';
 
-  readonly type: string;
+/**
+ * @category Block
+ */
+export interface ProvisionerArgs {
+  command: string;
+  when?: Argument<'destroy'>;
+  on_failure?: Argument<'continue' | 'fail'>;
+}
+
+/**
+ * @category Block
+ */
+export class Provisioner extends Block<ProvisionerArgs> {
+
+  readonly type: ProvisionerType;
 
   /**
    * Construct provisioner.
@@ -16,7 +30,7 @@ export class Provisioner extends Block {
    * @param type type
    * @param args arguments
    */
-  constructor(type: string, args?: Record<string, any>) {
+  constructor(type: ProvisionerType, args: ProvisionerArgs) {
     super('provisioner', [type], args);
 
     this.type = type;

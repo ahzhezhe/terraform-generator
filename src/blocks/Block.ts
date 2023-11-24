@@ -1,14 +1,14 @@
 import { Argument, Attribute } from '../arguments';
-import { Util } from '../Util';
+import { BlockArgs, Util } from '../utils';
 
 /**
  * @category Block
  */
-export abstract class Block {
+export abstract class Block<Args extends BlockArgs = BlockArgs> {
 
   readonly blockType: string;
   readonly blockNames: string[];
-  readonly #arguments: Record<string, any>;
+  #arguments: Args;
   #innerBlocks: Block[];
   readonly #insideTerraformBlock: boolean;
 
@@ -19,7 +19,7 @@ export abstract class Block {
    * @param names names
    * @param args arguments
    */
-  constructor(type: string, names: string[], args?: Record<string, any>, innerBlocks?: Block[], insideTerraformBlock = false) {
+  constructor(type: string, names: string[], args: Args, innerBlocks?: Block[], insideTerraformBlock = false) {
     this.#validateIdentifier(type);
     names.forEach(name => {
       this.#validateIdentifier(name);
@@ -27,7 +27,7 @@ export abstract class Block {
 
     this.blockType = type;
     this.blockNames = names;
-    this.#arguments = args ? args : {};
+    this.#arguments = args;
     this.#innerBlocks = innerBlocks ? innerBlocks : [];
     this.#insideTerraformBlock = insideTerraformBlock;
   }
@@ -42,7 +42,7 @@ export abstract class Block {
   /**
    * Get arguments.
    */
-  getArguments(): Record<string, any> {
+  getArguments(): Args {
     return this.#arguments;
   }
 
@@ -51,7 +51,7 @@ export abstract class Block {
    *
    * @param key key
    */
-  getArgument(key: string): any {
+  getArgument<K extends keyof Args>(key: K): Args[K] {
     return this.#arguments[key];
   }
 
@@ -61,7 +61,7 @@ export abstract class Block {
    * @param key key
    * @param value value
    */
-  setArgument(key: string, value: any): this {
+  setArgument<K extends keyof Args>(key: K, value: Args[K]): this {
     this.#arguments[key] = value;
     return this;
   }
@@ -71,10 +71,11 @@ export abstract class Block {
    *
    * @param args arguments
    */
-  setArguments(args: Record<string, any>): this {
-    for (const key in args) {
-      this.#arguments[key] = args[key];
-    }
+  setArguments(args: Partial<Args>): this {
+    this.#arguments = {
+      ...this.#arguments,
+      ...args
+    };
     return this;
   }
 

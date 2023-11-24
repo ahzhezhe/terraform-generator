@@ -1,6 +1,6 @@
 import { arg4 } from '..';
 import { Locals } from '../../src/blocks';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Locals', () => {
   const locals = new Locals(arg4);

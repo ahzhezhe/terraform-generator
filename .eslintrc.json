@@ -55,7 +55,8 @@
         "selector": "variableLike",
         "format": [
           "strictCamelCase",
-          "UPPER_CASE"
+          "UPPER_CASE",
+          "snake_case"
         ],
         "leadingUnderscore": "allow"
       },
@@ -63,7 +64,8 @@
         "selector": "memberLike",
         "format": [
           "strictCamelCase",
-          "UPPER_CASE"
+          "UPPER_CASE",
+          "snake_case"
         ]
       },
       {

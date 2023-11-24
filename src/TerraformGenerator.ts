@@ -2,8 +2,8 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import shell from 'shelljs';
-import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import } from './blocks';
-import { Util } from './Util';
+import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import, ImportArgs, VariableArgs, ModuleArgs, OutputArgs } from './blocks';
+import { BlockArgs, Util } from './utils';
 
 /**
  * @category TerraformGenerator
@@ -42,9 +42,9 @@ export interface WriteOptions {
  */
 export class TerraformGenerator {
 
-  readonly #arguments?: Record<string, any>;
+  readonly #arguments?: BlockArgs;
   readonly #blocks: Block[] = [];
-  #variables: Record<string, any> = {};
+  #variables: BlockArgs = {};
 
   /**
    * Construct Terraform generator.
@@ -53,7 +53,7 @@ export class TerraformGenerator {
    *
    * @param args arguments
    */
-  constructor(args?: Record<string, any>) {
+  constructor(args?: BlockArgs) {
     this.#arguments = args;
   }
 
@@ -170,7 +170,7 @@ export class TerraformGenerator {
    * @param type type
    * @param args arguments
    */
-  provider(type: string, args?: Record<string, any>): Provider {
+  provider(type: string, args: BlockArgs): Provider {
     const block = new Provider(type, args);
     this.addBlocks(block);
     return block;
@@ -186,7 +186,7 @@ export class TerraformGenerator {
    * @param args arguments
    * @param provisioners provisioners
    */
-  resource(type: string, name: string, args?: Record<string, any>, provisioners?: Provisioner[]): Resource {
+  resource(type: string, name: string, args: BlockArgs, provisioners?: Provisioner[]): Resource {
     const block = new Resource(type, name, args, provisioners);
     this.addBlocks(block);
     return block;
@@ -201,8 +201,7 @@ export class TerraformGenerator {
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  dataFromResource(resource: Resource, options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[],
-    args?: Record<string, any>): Data {
+  dataFromResource(resource: Resource, options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: BlockArgs): Data {
     const block = resource.toData(options, argNames, args);
     this.addBlocks(block);
     return block;
@@ -217,7 +216,7 @@ export class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  data(type: string, name: string, args?: Record<string, any>): Data {
+  data(type: string, name: string, args: BlockArgs): Data {
     const block = new Data(type, name, args);
     this.addBlocks(block);
     return block;
@@ -231,7 +230,7 @@ export class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  module(name: string, args?: Record<string, any>): Module {
+  module(name: string, args: ModuleArgs): Module {
     const block = new Module(name, args);
     this.addBlocks(block);
     return block;
@@ -245,7 +244,7 @@ export class TerraformGenerator {
    * @param name name
    * @param args arguments
    */
-  output(name: string, args?: Record<string, any>): Output {
+  output(name: string, args: OutputArgs): Output {
     const block = new Output(name, args);
     this.addBlocks(block);
     return block;
@@ -258,7 +257,7 @@ export class TerraformGenerator {
    *
    * @param args arguments
    */
-  locals(args?: Record<string, any>): Locals {
+  locals(args: BlockArgs): Locals {
     const block = new Locals(args);
     this.addBlocks(block);
     return block;
@@ -273,12 +272,25 @@ export class TerraformGenerator {
    * @param args arguments
    * @param value variable value
    */
-  variable(name: string, args?: Record<string, any>, value?: any): Variable {
+  variable(name: string, args: VariableArgs, value?: any): Variable {
     const block = new Variable(name, args);
     this.addBlocks(block);
     if (value != null) {
       this.addVars({ [name]: value });
     }
+    return block;
+  }
+
+  /**
+   * Add import into Terraform.
+   *
+   * Refer to Terraform documentation on what can be put as arguments.
+   *
+   * @param args arguments
+   */
+  import(args: ImportArgs): Import {
+    const block = new Import(args);
+    this.addBlocks(block);
     return block;
   }
 
@@ -290,35 +302,8 @@ export class TerraformGenerator {
    * @param type type
    * @param args arguments
    */
-  backend(type: string, args?: Record<string, any>): Backend {
+  backend(type: string, args: BlockArgs): Backend {
     const block = new Backend(type, args);
-    this.addBlocks(block);
-    return block;
-  }
-
-  /**
-   * Add provisioner into Terraform.
-   *
-   * Refer to Terraform documentation on what can be put as type & arguments.
-   *
-   * @param type type
-   * @param args arguments
-   */
-  provisioner(type: string, args?: Record<string, any>): Provisioner {
-    const block = new Provisioner(type, args);
-    this.addBlocks(block);
-    return block;
-  }
-
-  /**
-   * Add import into Terraform.
-   *
-   * Refer to Terraform documentation on what can be put as arguments.
-   *
-   * @param args arguments
-   */
-  import(args?: Record<string, any>): Import {
-    const block = new Import(args);
     this.addBlocks(block);
     return block;
   }
@@ -328,7 +313,7 @@ export class TerraformGenerator {
    *
    * @param variables variables
    */
-  addVars(variables: Record<string, any>): this {
+  addVars(variables: BlockArgs): this {
     this.#variables = {
       ...this.#variables,
       ...variables
@@ -352,7 +337,7 @@ export class TerraformGenerator {
   /**
    * Get arguments.
    */
-  getArguments(): Record<string, any> | undefined {
+  getArguments(): BlockArgs | undefined {
     return this.#arguments;
   }
 
@@ -366,7 +351,7 @@ export class TerraformGenerator {
   /**
    * Get variables.
    */
-  getVars(): Record<string, any> {
+  getVars(): BlockArgs {
     return this.#variables;
   }
 

@@ -1,4 +1,5 @@
 import { Argument, Attribute } from '../arguments';
+import { BlockArgs } from '../utils';
 import { Block } from '.';
 
 /**
@@ -16,7 +17,7 @@ export class Backend extends Block {
    * @param type type
    * @param args arguments
    */
-  constructor(type: string, args?: Record<string, any>) {
+  constructor(type: string, args: BlockArgs) {
     super('backend', [type], args, undefined, true);
 
     this.type = type;

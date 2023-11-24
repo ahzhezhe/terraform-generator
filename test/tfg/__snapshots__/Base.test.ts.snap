@@ -484,9 +484,9 @@ profile = "test"
 resource "aws_vpc" "vpc"{
 cidr_block = "172.88.0.0/16"
 tags = {
-Name = "vpc-test-dev"
-Project = "test"
-Env = "dev"
+name = "vpc-test-dev"
+project = "test"
+env = "dev"
 }
 }
 
@@ -495,9 +495,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.100.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-public0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-public0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -506,9 +506,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.101.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-public1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-public1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -517,9 +517,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.102.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-public2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-public2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -528,9 +528,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.104.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-web0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-web0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -539,9 +539,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.105.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-web1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-web1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -550,9 +550,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.106.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-web2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-web2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -561,9 +561,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.108.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-app0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-app0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -572,9 +572,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.109.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-app1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-app1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -583,9 +583,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.110.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-app2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-app2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -594,9 +594,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.112.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-gut0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-gut0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -605,9 +605,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.113.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-gut1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-gut1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -616,9 +616,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.114.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-gut2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-gut2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -627,9 +627,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.116.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-db0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-db0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -638,9 +638,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.117.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-db1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-db1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -649,27 +649,27 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.118.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-db2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-db2"
+project = "test"
+env = "dev"
 }
 }
 
 resource "aws_internet_gateway" "igw"{
 vpc_id = aws_vpc.vpc.id
 tags = {
-Name = "igw-test-dev"
-Project = "test"
-Env = "dev"
+name = "igw-test-dev"
+project = "test"
+env = "dev"
 }
 }
 
 resource "aws_route_table" "default"{
 vpc_id = aws_vpc.vpc.id
 tags = {
-Name = "rt-test-dev-default"
-Project = "test"
-Env = "dev"
+name = "rt-test-dev-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -680,9 +680,9 @@ cidr_block = "0.0.0.0/0"
 gateway_id = aws_internet_gateway.igw.id
 }
 tags = {
-Name = "rt-test-dev-igw"
-Project = "test"
-Env = "dev"
+name = "rt-test-dev-igw"
+project = "test"
+env = "dev"
 }
 }
 
@@ -794,9 +794,9 @@ from_port = 0
 to_port = 0
 }
 tags = {
-Name = "nacl-test-dev-default"
-Project = "test"
-Env = "dev"
+name = "nacl-test-dev-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -840,9 +840,9 @@ from_port = 0
 to_port = 0
 }
 tags = {
-Name = "nacl-test-dev-db"
-Project = "test"
-Env = "dev"
+name = "nacl-test-dev-db"
+project = "test"
+env = "dev"
 }
 }
 
@@ -868,9 +868,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-public-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-public-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -896,9 +896,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-web-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-web-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -924,9 +924,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-app-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-app-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -952,9 +952,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-gut-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-gut-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -980,18 +980,18 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-db-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-db-default"
+project = "test"
+env = "dev"
 }
 }
 
 resource "aws_eip" "nat"{
 vpc = true
 tags = {
-Name = "eip-test-dev-nat"
-Project = "test"
-Env = "dev"
+name = "eip-test-dev-nat"
+project = "test"
+env = "dev"
 }
 }
 
@@ -999,9 +999,9 @@ resource "aws_nat_gateway" "nat"{
 allocation_id = aws_eip.nat.id
 subnet_id = aws_subnet.public0.id
 tags = {
-Name = "nat-test-dev"
-Project = "test"
-Env = "dev"
+name = "nat-test-dev"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1012,9 +1012,9 @@ cidr_block = "0.0.0.0/0"
 gateway_id = aws_nat_gateway.nat.id
 }
 tags = {
-Name = "rt-test-dev-nat"
-Project = "test"
-Env = "dev"
+name = "rt-test-dev-nat"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1093,9 +1093,9 @@ profile = "test"
 resource "aws_vpc" "vpc"{
 cidr_block = "172.88.0.0/16"
 tags = {
-Name = "vpc-test-dev"
-Project = "test"
-Env = "dev"
+name = "vpc-test-dev"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1104,9 +1104,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.100.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-public0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-public0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1115,9 +1115,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.101.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-public1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-public1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1126,9 +1126,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.102.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-public2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-public2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1137,9 +1137,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.104.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-web0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-web0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1148,9 +1148,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.105.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-web1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-web1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1159,9 +1159,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.106.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-web2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-web2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1170,9 +1170,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.108.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-app0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-app0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1181,9 +1181,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.109.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-app1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-app1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1192,9 +1192,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.110.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-app2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-app2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1203,9 +1203,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.112.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-gut0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-gut0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1214,9 +1214,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.113.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-gut1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-gut1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1225,9 +1225,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.114.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-gut2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-gut2"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1236,9 +1236,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.116.0/24"
 availability_zone = "ap-southeast-1a"
 tags = {
-Name = "subnet-test-dev-db0"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-db0"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1247,9 +1247,9 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.117.0/24"
 availability_zone = "ap-southeast-1b"
 tags = {
-Name = "subnet-test-dev-db1"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-db1"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1258,27 +1258,27 @@ vpc_id = aws_vpc.vpc.id
 cidr_block = "172.88.118.0/24"
 availability_zone = "ap-southeast-1c"
 tags = {
-Name = "subnet-test-dev-db2"
-Project = "test"
-Env = "dev"
+name = "subnet-test-dev-db2"
+project = "test"
+env = "dev"
 }
 }
 
 resource "aws_internet_gateway" "igw"{
 vpc_id = aws_vpc.vpc.id
 tags = {
-Name = "igw-test-dev"
-Project = "test"
-Env = "dev"
+name = "igw-test-dev"
+project = "test"
+env = "dev"
 }
 }
 
 resource "aws_route_table" "default"{
 vpc_id = aws_vpc.vpc.id
 tags = {
-Name = "rt-test-dev-default"
-Project = "test"
-Env = "dev"
+name = "rt-test-dev-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1289,9 +1289,9 @@ cidr_block = "0.0.0.0/0"
 gateway_id = aws_internet_gateway.igw.id
 }
 tags = {
-Name = "rt-test-dev-igw"
-Project = "test"
-Env = "dev"
+name = "rt-test-dev-igw"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1403,9 +1403,9 @@ from_port = 0
 to_port = 0
 }
 tags = {
-Name = "nacl-test-dev-default"
-Project = "test"
-Env = "dev"
+name = "nacl-test-dev-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1449,9 +1449,9 @@ from_port = 0
 to_port = 0
 }
 tags = {
-Name = "nacl-test-dev-db"
-Project = "test"
-Env = "dev"
+name = "nacl-test-dev-db"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1477,9 +1477,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-public-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-public-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1505,9 +1505,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-web-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-web-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1533,9 +1533,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-app-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-app-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1561,9 +1561,9 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-gut-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-gut-default"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1589,18 +1589,18 @@ cidr_blocks = [
 ]
 }
 tags = {
-Name = "sg-test-dev-db-default"
-Project = "test"
-Env = "dev"
+name = "sg-test-dev-db-default"
+project = "test"
+env = "dev"
 }
 }
 
 resource "aws_eip" "nat"{
 vpc = true
 tags = {
-Name = "eip-test-dev-nat"
-Project = "test"
-Env = "dev"
+name = "eip-test-dev-nat"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1608,9 +1608,9 @@ resource "aws_nat_gateway" "nat"{
 allocation_id = aws_eip.nat.id
 subnet_id = aws_subnet.public0.id
 tags = {
-Name = "nat-test-dev"
-Project = "test"
-Env = "dev"
+name = "nat-test-dev"
+project = "test"
+env = "dev"
 }
 }
 
@@ -1621,9 +1621,9 @@ cidr_block = "0.0.0.0/0"
 gateway_id = aws_nat_gateway.nat.id
 }
 tags = {
-Name = "rt-test-dev-nat"
-Project = "test"
-Env = "dev"
+name = "rt-test-dev-nat"
+project = "test"
+env = "dev"
 }
 }
 

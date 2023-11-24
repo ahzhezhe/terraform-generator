@@ -1,18 +1,18 @@
-import { Util } from '../Util';
+import { Util } from '../utils';
 
 /**
  * @category Argument
  */
-export class Argument {
+export class Argument<T extends string | Argument = string | Argument<string>> {
 
-  readonly argument: string | Argument;
+  readonly argument: T;
 
   /**
    * Construct argument.
    *
    * @param arg argument as string or copy from another argument object
    */
-  constructor(arg: string | Argument) {
+  constructor(arg: T) {
     if (!arg || (typeof arg === 'string' && !arg.trim())) {
       throw new Error('Argument cannot be empty.');
     }
@@ -80,4 +80,4 @@ export class Argument {
  *
  * @category Argument
  */
-export const arg = (arg: string | Argument): Argument => new Argument(arg);
+export const arg = <T extends string | Argument = string | Argument<string>>(arg: T): Argument<T> => new Argument(arg);

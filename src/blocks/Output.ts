@@ -1,10 +1,22 @@
 import { Argument, Attribute } from '../arguments';
-import { Block } from '.';
+import { BlockArgs } from '../utils';
+import { Block, Resource } from '.';
 
 /**
  * @category Block
  */
-export class Output extends Block {
+export interface OutputArgs {
+  value: any;
+  description?: string;
+  sensitive?: boolean;
+  precondition?: BlockArgs;
+  depends_on?: Resource[];
+}
+
+/**
+ * @category Block
+ */
+export class Output extends Block<OutputArgs> {
 
   readonly name: string;
 
@@ -16,7 +28,7 @@ export class Output extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(name: string, args?: Record<string, any>) {
+  constructor(name: string, args: OutputArgs) {
     super('output', [name], args);
 
     this.name = name;

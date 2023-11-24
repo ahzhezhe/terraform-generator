@@ -1,10 +1,23 @@
 import { Argument, Attribute } from '../arguments';
+import { BlockArgs } from '../utils';
 import { Block } from '.';
 
 /**
  * @category Block
  */
-export class Variable extends Block {
+export interface VariableArgs {
+  type: Argument;
+  default?: any;
+  description?: string;
+  sensitive?: boolean;
+  nullable?: boolean;
+  validation?: BlockArgs;
+}
+
+/**
+ * @category Block
+ */
+export class Variable extends Block<VariableArgs> {
 
   readonly name: string;
 
@@ -16,7 +29,7 @@ export class Variable extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(name: string, args?: Record<string, any>) {
+  constructor(name: string, args: VariableArgs) {
     super('variable', [name], args);
 
     this.name = name;

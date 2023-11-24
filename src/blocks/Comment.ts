@@ -4,7 +4,7 @@ import { Block } from '.';
 /**
  * @category Block
  */
-export class Comment extends Block {
+export class Comment extends Block<Record<string, never>> {
 
   readonly comment: string;
 
@@ -14,7 +14,7 @@ export class Comment extends Block {
    * @param comment comment
    */
   constructor(comment: string) {
-    super('comment', []);
+    super('comment', [], {});
 
     this.comment = comment;
   }

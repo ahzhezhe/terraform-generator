@@ -1,7 +1,7 @@
 import { arg4 } from '..';
 import { Resource } from '../../src/blocks';
 import { map } from '../../src/types';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Resource', () => {
   const resource = new Resource('type', 'name', arg4);

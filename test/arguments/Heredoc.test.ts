@@ -1,5 +1,5 @@
 import { Heredoc, heredoc } from '../../src/arguments';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Heredoc', () => {
   expect(new Heredoc('x').toTerraform()).toBe(Util.escape(`<<EOT

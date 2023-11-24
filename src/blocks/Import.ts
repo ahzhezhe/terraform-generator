@@ -1,10 +1,19 @@
 import { Argument, Attribute } from '../arguments';
-import { Block } from '.';
+import { Block, Resource } from '.';
 
 /**
  * @category Block
  */
-export class Import extends Block {
+export interface ImportArgs {
+  to: Resource;
+  id: string;
+  provider?: Argument;
+}
+
+/**
+ * @category Block
+ */
+export class Import extends Block<ImportArgs> {
 
   /**
    * Construct import.
@@ -13,7 +22,7 @@ export class Import extends Block {
    *
    * @param args arguments
    */
-  constructor(args?: Record<string, any>) {
+  constructor(args: ImportArgs) {
     super('import', [], args);
   }
 

@@ -1,6 +1,6 @@
 import { arg4 } from '..';
 import { Provider } from '../../src/blocks';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Provider', () => {
   const provider = new Provider('name', arg4);

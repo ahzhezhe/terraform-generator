@@ -1,9 +1,10 @@
+import { Argument } from '../../src/arguments';
 import { Resource, Provisioner, Output } from '../../src/blocks';
 
 test('Block identifier', () => {
   expect(() => new Resource('!@#', '$%^')).toThrow();
   expect(() => new Resource('', ' ')).toThrow();
-  expect(() => new Output(null as unknown as string)).toThrow();
+  expect(() => new Output(null as unknown as string, { value: 'value' })).toThrow();
 });
 
 test('Block arguments', () => {
@@ -17,8 +18,14 @@ test('Block arguments', () => {
   }).getArguments()).toMatchSnapshot();
   expect(resource.deleteArgument('b').getArguments()).toMatchSnapshot();
   expect(resource.setProvisioners([
-    new Provisioner('p1', { a: 0 }),
-    new Provisioner('p2', { b: 1 })
+    new Provisioner('local-exec', {
+      command: 'cmd1'
+    }),
+    new Provisioner('remote-exec', {
+      command: 'cmd2',
+      when: new Argument('destroy'),
+      on_failure: new Argument('fail')
+    })
   ]).getProvisioners()).toMatchSnapshot();
   expect(resource.setProvisioners(undefined).getProvisioners()).toMatchSnapshot();
 });

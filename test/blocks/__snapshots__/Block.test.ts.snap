@@ -27,17 +27,17 @@ exports[`Block arguments 5`] = `
 [
   Provisioner {
     "blockNames": [
-      "p1",
+      "local-exec",
     ],
     "blockType": "provisioner",
-    "type": "p1",
+    "type": "local-exec",
   },
   Provisioner {
     "blockNames": [
-      "p2",
+      "remote-exec",
     ],
     "blockType": "provisioner",
-    "type": "p2",
+    "type": "remote-exec",
   },
 ]
 `;

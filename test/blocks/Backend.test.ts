@@ -1,6 +1,6 @@
 import { arg4 } from '..';
 import { Backend } from '../../src/blocks';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Backend', () => {
   const backend = new Backend('name', arg4);

@@ -1,16 +1,18 @@
+import { BlockArgs } from '../utils';
+
 /**
  * @category Type
  */
 export class Map {
 
-  readonly arguments: Record<string, any>;
+  readonly arguments: BlockArgs;
 
   /**
    * Construct map.
    *
    * @param args map values
    */
-  constructor(args: Record<string, any>) {
+  constructor(args: BlockArgs) {
     this.arguments = args;
   }
 
@@ -23,4 +25,4 @@ export class Map {
  *
  * @category Type
  */
-export const map = (args: Record<string, any>): Map => new Map(args);
+export const map = (args: BlockArgs): Map => new Map(args);

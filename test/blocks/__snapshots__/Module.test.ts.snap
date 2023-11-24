@@ -2,6 +2,8 @@
 
 exports[`Module 1`] = `
 "module &tfgquot;name&tfgquot;{
+source = &tfgquot;source&tfgquot;
+version = &tfgquot;1&tfgquot;
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
 &tfgquot;b&tfgquot;,

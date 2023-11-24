@@ -1,9 +1,12 @@
-import { arg4 } from '..';
+import { Argument } from '../../src/arguments';
 import { Variable } from '../../src/blocks';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Variable', () => {
-  const variable = new Variable('name', arg4);
+  const variable = new Variable('name', {
+    type: new Argument('string'),
+    default: 'value'
+  });
   expect(variable.toTerraform()).toMatchSnapshot();
   expect(variable.asArgument().toTerraform()).toBe(Util.escape('var.name'));
   expect(variable.attr('attr').toTerraform()).toBe(Util.escape('var.name.attr'));

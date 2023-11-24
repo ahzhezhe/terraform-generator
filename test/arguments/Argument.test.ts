@@ -1,6 +1,6 @@
 import { attr } from '..';
 import { Argument, arg } from '../../src/arguments';
-import { Util } from '../../src/Util';
+import { Util } from '../../src/utils';
 
 test('Argument invalid args', () => {
   expect(() => new Argument(null as unknown as string)).toThrow();

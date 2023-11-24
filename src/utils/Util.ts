@@ -1,6 +1,7 @@
-import { Argument } from './arguments';
-import { Block } from './blocks';
-import { Map, List } from './types';
+import { Argument } from '../arguments';
+import { Block } from '../blocks';
+import { Map, List } from '../types';
+import { BlockArgs } from '.';
 
 export class Util {
 
@@ -22,7 +23,7 @@ export class Util {
     return str;
   }
 
-  static argumentsToString(args?: Record<string, any>): string {
+  static argumentsToString(args?: BlockArgs): string {
     let str = '';
     for (const key in args) {
       str += this.argumentToString(key, args[key]);

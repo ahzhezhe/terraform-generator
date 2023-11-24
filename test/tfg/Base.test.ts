@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import fs from 'fs';
 import path from 'path';
 import { Resource } from '../../src/blocks';
@@ -62,9 +61,9 @@ const getTagName = (type: string, name?: string, tier?: string): string =>
   `${type}-${project}-${configs.env}${tier ? `-${tier}` : ''}${name ? `-${name}` : ''}`;
 
 const getTags = (type: string, name?: string, tier?: string): Map => new Map({
-  Name: getTagName(type, name, tier),
-  Project: project,
-  Env: configs.env
+  name: getTagName(type, name, tier),
+  project,
+  env: configs.env
 });
 
 const createTerraformGenerator = (): TerraformGenerator => {
@@ -165,7 +164,7 @@ const createTerraformGenerator = (): TerraformGenerator => {
   });
 
   // NetworkACL
-  const defaultNACLRules = [
+  const defaultNaclRules = [
     {
       protocol: 'all',
       rule_no: 100,
@@ -176,7 +175,7 @@ const createTerraformGenerator = (): TerraformGenerator => {
     }
   ];
 
-  const dbNACLRules = [
+  const dbNaclRules = [
     {
       protocol: 'all',
       rule_no: 100,
@@ -198,16 +197,16 @@ const createTerraformGenerator = (): TerraformGenerator => {
   tfg.resource('aws_network_acl', 'default', {
     vpc_id: vpc.id,
     subnet_ids: publicSubnets.concat(webSubnets, appSubnets, gutSubnets, itSubnets, mgtSubnets).map(subnet => subnet.id),
-    ingress: defaultNACLRules,
-    egress: defaultNACLRules,
+    ingress: defaultNaclRules,
+    egress: defaultNaclRules,
     tags: getTags('nacl', 'default')
   });
 
   tfg.resource('aws_network_acl', 'db', {
     vpc_id: vpc.id,
     subnet_ids: dbSubnets.map(subnet => subnet.id),
-    ingress: dbNACLRules,
-    egress: dbNACLRules,
+    ingress: dbNaclRules,
+    egress: dbNaclRules,
     tags: getTags('nacl', 'db')
   });
 

@@ -83,13 +83,6 @@ exports[`Others 2`] = `
     "name": "locals",
     "type": "locals",
   },
-  Provisioner {
-    "blockNames": [
-      "provisioner",
-    ],
-    "blockType": "provisioner",
-    "type": "provisioner",
-  },
   Import {
     "blockNames": [],
     "blockType": "import",
@@ -186,22 +179,16 @@ resource "locals" "locals"{
 a = local.a
 }
 
-provisioner "provisioner"{
-a = "a"
-b = 123
-c = aws_vpc.test.x
-}
-
 import{
-a = "a"
-b = 123
-c = aws_vpc.test.x
+to = innerBlock.innerBlock
+id = "id"
+provider = arg
 }
 
 resource "tags" "tags"{
 tags = {
 a = "a"
-"b c d" = "b c d"
+b = "b c d"
 }
 }
 
@@ -280,22 +267,16 @@ resource "locals" "locals"{
 a = local.a
 }
 
-provisioner "provisioner"{
-a = "a"
-b = 123
-c = aws_vpc.test.x
-}
-
 import{
-a = "a"
-b = 123
-c = aws_vpc.test.x
+to = innerBlock.innerBlock
+id = "id"
+provider = arg
 }
 
 resource "tags" "tags"{
 tags = {
 a = "a"
-"b c d" = "b c d"
+b = "b c d"
 }
 }
 

@@ -1,4 +1,5 @@
 import { Argument, Attribute } from '../arguments';
+import { BlockArgs } from '../utils';
 import { Block } from '.';
 
 /**
@@ -18,7 +19,7 @@ export class Data extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(type: string, name: string, args?: Record<string, any>) {
+  constructor(type: string, name: string, args: BlockArgs) {
     super('data', [type, name], args);
 
     this.type = type;

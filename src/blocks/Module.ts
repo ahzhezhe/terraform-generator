@@ -1,10 +1,19 @@
 import { Argument, Attribute } from '../arguments';
+import { BlockArgs } from '../utils';
 import { Block } from '.';
 
 /**
  * @category Block
  */
-export class Module extends Block {
+export interface ModuleArgs extends BlockArgs {
+  source: string;
+  version?: string;
+}
+
+/**
+ * @category Block
+ */
+export class Module extends Block<ModuleArgs> {
 
   readonly name: string;
 
@@ -16,7 +25,7 @@ export class Module extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(name: string, args?: Record<string, any>) {
+  constructor(name: string, args: ModuleArgs) {
     super('module', [name], args);
 
     this.name = name;

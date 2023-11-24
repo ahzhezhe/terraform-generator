@@ -1,4 +1,5 @@
 import { Argument, Attribute } from '../arguments';
+import { BlockArgs } from '../utils';
 import { Block } from '.';
 
 /**
@@ -13,7 +14,7 @@ export class Locals extends Block {
    *
    * @param args arguments
    */
-  constructor(args?: Record<string, any>) {
+  constructor(args: BlockArgs) {
     super('locals', [], args);
   }
 
