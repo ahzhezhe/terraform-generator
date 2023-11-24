@@ -90,6 +90,10 @@ exports[`Others 2`] = `
     "blockType": "provisioner",
     "type": "provisioner",
   },
+  Import {
+    "blockNames": [],
+    "blockType": "import",
+  },
   Resource {
     "blockNames": [
       "tags",
@@ -188,6 +192,12 @@ b = 123
 c = aws_vpc.test.x
 }
 
+import{
+a = "a"
+b = 123
+c = aws_vpc.test.x
+}
+
 resource "tags" "tags"{
 tags = {
 a = "a"
@@ -271,6 +281,12 @@ a = local.a
 }
 
 provisioner "provisioner"{
+a = "a"
+b = 123
+c = aws_vpc.test.x
+}
+
+import{
 a = "a"
 b = 123
 c = aws_vpc.test.x

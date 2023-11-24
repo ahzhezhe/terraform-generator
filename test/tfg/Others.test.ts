@@ -61,6 +61,12 @@ const createTerraformGenerator = (): TerraformGenerator => {
     c: r.attr('x')
   });
 
+  tfg.import({
+    a: 'a',
+    b: 123,
+    c: r.attr('x')
+  });
+
   tfg.resource('tags', 'tags', {
     tags: map({
       'a': 'a',

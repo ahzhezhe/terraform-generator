@@ -7,7 +7,7 @@ import { Block } from '.';
 export class Import extends Block {
 
   /**
-   * Construct import blocks.
+   * Construct import.
    *
    * Refer to Terraform documentation on what can be put as arguments.
    *
