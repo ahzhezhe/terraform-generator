@@ -14,7 +14,7 @@ The end result of using this module is Terraform configurations in plain text, y
 
 Currently support generating configurations for Terraform version >= 0.12.
 
-[API Documentation](https://ahzhezhe.github.io/docs/terraform-generator-v5/index.html)
+[API Documentation](https://ahzhezhe.github.io/docs/terraform-generator-v6/index.html)
 
 ## **Benefit**
 

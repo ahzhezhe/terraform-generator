@@ -1,6 +1,6 @@
 {
-  "name": "terraform-generator - v5",
-  "out": "docs/terraform-generator-v5",
+  "name": "terraform-generator - v6",
+  "out": "docs/terraform-generator-v6",
   "entryPoints": [
     "src/index.ts"
   ],
@@ -8,7 +8,6 @@
     "TerraformGenerator",
     "Block",
     "Argument",
-    "Type",
     "*"
   ],
   "excludePrivate": true,
