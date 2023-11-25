@@ -1,7 +1,6 @@
 import { resource } from '..';
 import { Attribute, attr } from '../../src/arguments';
 import { Block } from '../../src/blocks';
-import { Util } from '../../src/utils';
 
 test('Attribute invalid args', () => {
   expect(() => new Attribute(null as unknown as Block, null as unknown as string)).toThrow();
@@ -12,9 +11,9 @@ test('Attribute invalid args', () => {
 });
 
 test('Attribute', () => {
-  expect(new Attribute(resource, 'x').toTerraform()).toBe(Util.escape('type.name.x'));
+  expect(new Attribute(resource, 'x').toTerraform()).toMatchSnapshot();
 });
 
 test('attr', () => {
-  expect(attr(resource, 'x').toTerraform()).toBe(Util.escape('type.name.x'));
+  expect(attr(resource, 'x').toTerraform()).toMatchSnapshot();
 });

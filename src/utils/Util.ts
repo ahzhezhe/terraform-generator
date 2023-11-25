@@ -1,7 +1,5 @@
-import { Argument } from '../arguments';
 import { Block } from '../blocks';
-import { Map, List } from '../types';
-import { BlockArgs } from '.';
+import { TerraformArgs, TerraformElement } from '.';
 
 export class Util {
 
@@ -23,7 +21,7 @@ export class Util {
     return str;
   }
 
-  static argumentsToString(args?: BlockArgs): string {
+  static argumentsToString(args?: TerraformArgs): string {
     let str = '';
     for (const key in args) {
       str += this.argumentToString(key, args[key]);
@@ -32,9 +30,7 @@ export class Util {
   }
 
   static isObjectArgument(value: any): boolean {
-    if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0 ||
-      value instanceof Block || value instanceof Argument ||
-      value instanceof Map || value instanceof List) {
+    if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0 || value instanceof TerraformElement) {
       return false;
     }
     if (typeof value === 'object') {
@@ -90,24 +86,11 @@ export class Util {
     }
 
     if (value instanceof Block) {
-      return this.argumentValueToString(value.asArgument());
+      return value.asArgument().toTerraform();
     }
 
-    if (value instanceof Argument) {
+    if (value instanceof TerraformElement) {
       return value.toTerraform();
-    }
-
-    if (value instanceof Map) {
-      return this.argumentValueToString(value.arguments);
-    }
-
-    if (value instanceof List) {
-      let str = '[\n';
-      value.elements.forEach((element, i) => {
-        str += `${this.argumentValueToString(element)}${i < value.elements.length - 1 ? ',' : ''}\n`;
-      });
-      str += ']';
-      return str;
     }
 
     if (['string', 'number', 'boolean'].indexOf(typeof value) >= 0) {
@@ -133,6 +116,10 @@ export class Util {
     }
 
     throw new Error(`Invalid value: ${value}`);
+  }
+
+  static inaccessibleMethod() {
+    return new Error('Inaccessible method.');
   }
 
 }

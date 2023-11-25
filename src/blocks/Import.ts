@@ -1,4 +1,5 @@
 import { Argument, Attribute } from '../arguments';
+import { Util } from '../utils';
 import { Block, Resource } from '.';
 
 /**
@@ -27,11 +28,11 @@ export class Import extends Block<ImportArgs> {
   }
 
   override asArgument(): Argument {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
   override attr(_name: string): Attribute {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
 }

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Attribute 1`] = `"type.name.x"`;
+
+exports[`attr 1`] = `"type.name.x"`;

@@ -1,1 +1,1 @@
-export type BlockArgs = Record<string, any>;
+export type TerraformArgs = Record<string, any>;

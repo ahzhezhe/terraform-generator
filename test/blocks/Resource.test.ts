@@ -1,20 +1,19 @@
 import { arg4 } from '..';
+import { Map } from '../../src/arguments';
 import { Resource } from '../../src/blocks';
-import { map } from '../../src/types';
-import { Util } from '../../src/utils';
 
 test('Resource', () => {
   const resource = new Resource('type', 'name', arg4);
   expect(resource.toTerraform()).toMatchSnapshot();
-  expect(resource.asArgument().toTerraform()).toBe(Util.escape('type.name'));
-  expect(resource.attr('attr').toTerraform()).toBe(Util.escape('type.name.attr'));
+  expect(resource.asArgument().toTerraform()).toMatchSnapshot();
+  expect(resource.attr('attr').toTerraform()).toMatchSnapshot();
 });
 
 describe('toData', () => {
 
   const resource = new Resource('type', 'name', {
     arg: 'arg',
-    tags: map({
+    tags: new Map({
       a: 'a',
       b: 'b'
     })

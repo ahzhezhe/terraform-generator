@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heredoc 1`] = `
+"<<EOT
+x
+EOT
+"
+`;
+
+exports[`Heredoc 2`] = `
+"<<EOT
+{
+  &tfgquot;x&tfgquot;: 123
+}
+EOT
+"
+`;
+
+exports[`heredoc 1`] = `
+"<<EOT
+x
+EOT
+"
+`;
+
+exports[`heredoc 2`] = `
+"<<EOT
+{
+  &tfgquot;x&tfgquot;: 123
+}
+EOT
+"
+`;

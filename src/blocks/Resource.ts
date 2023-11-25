@@ -1,6 +1,5 @@
-import { Argument, Attribute } from '../arguments';
-import { Map } from '../types';
-import { BlockArgs } from '../utils';
+import { Argument, Attribute, Map } from '../arguments';
+import { TerraformArgs } from '../utils';
 import { Block, Data, Provisioner } from '.';
 
 /**
@@ -35,7 +34,7 @@ export class Resource extends Block {
    * @param args arguments
    * @param provisioners provisioners
    */
-  constructor(type: string, name: string, args?: BlockArgs, provisioners?: Provisioner[]) {
+  constructor(type: string, name: string, args?: TerraformArgs, provisioners?: Provisioner[]) {
     super('resource', [type, name], args || {}, provisioners);
 
     this.type = type;
@@ -75,7 +74,7 @@ export class Resource extends Block {
    * use array for name mapping, position 0 = original resource's argument name, position 1 = mapped data source's argument name
    * @param args extra arguments
    */
-  toData(options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: BlockArgs): Data {
+  toData(options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: TerraformArgs): Data {
     const type = options?.type ?? this.type;
     const name = options?.name ?? this.name;
 

@@ -1,6 +1,5 @@
-import { Attribute, arg, heredoc, fn } from '../src/arguments';
+import { Attribute, arg, heredoc, fn, map, list } from '../src/arguments';
 import { Resource } from '../src/blocks';
-import { map, list } from '../src/types';
 
 export const resource = new Resource('type', 'name', { test: true });
 
@@ -19,10 +18,9 @@ export const arg1 = {
   arg9: [resource, resource, resource],
   arg10: ['e', 4, true, attr, resource],
   arg11: arg('arg'),
-  arg12: arg(attr),
-  arg13: heredoc('heredoc'),
-  arg14: fn('fn', 1, 2, 3),
-  arg15: fn('fn', attr, attr, attr)
+  arg12: heredoc('heredoc'),
+  arg13: fn('fn', 1, 2, 3),
+  arg14: fn('fn', attr, attr, attr)
 };
 
 export const arg2 = {

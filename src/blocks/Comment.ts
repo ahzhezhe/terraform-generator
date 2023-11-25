@@ -1,4 +1,5 @@
 import { Argument, Attribute } from '../arguments';
+import { Util } from '../utils';
 import { Block } from '.';
 
 /**
@@ -24,11 +25,11 @@ export class Comment extends Block<Record<string, never>> {
   }
 
   override asArgument(): Argument {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
   override attr(_name: string): Attribute {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
 }

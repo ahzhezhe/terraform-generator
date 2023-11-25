@@ -8,3 +8,7 @@ default = &tfgquot;value&tfgquot;
 
 "
 `;
+
+exports[`Variable 2`] = `"var.name"`;
+
+exports[`Variable 3`] = `"var.name.attr"`;

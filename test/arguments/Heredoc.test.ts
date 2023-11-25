@@ -1,28 +1,11 @@
 import { Heredoc, heredoc } from '../../src/arguments';
-import { Util } from '../../src/utils';
 
 test('Heredoc', () => {
-  expect(new Heredoc('x').toTerraform()).toBe(Util.escape(`<<EOT
-x
-EOT
-`));
-  expect(new Heredoc({ x: 123 }).toTerraform()).toBe(Util.escape(`<<EOT
-{
-  "x": 123
-}
-EOT
-`));
+  expect(new Heredoc('x').toTerraform()).toMatchSnapshot();
+  expect(new Heredoc({ x: 123 }).toTerraform()).toMatchSnapshot();
 });
 
 test('heredoc', () => {
-  expect(heredoc('x').toTerraform()).toBe(Util.escape(`<<EOT
-x
-EOT
-`));
-  expect(heredoc({ x: 123 }).toTerraform()).toBe(Util.escape(`<<EOT
-{
-  "x": 123
-}
-EOT
-`));
+  expect(heredoc('x').toTerraform()).toMatchSnapshot();
+  expect(heredoc({ x: 123 }).toTerraform()).toMatchSnapshot();
 });

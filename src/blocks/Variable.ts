@@ -1,5 +1,5 @@
 import { Argument, Attribute } from '../arguments';
-import { BlockArgs } from '../utils';
+import { TerraformArgs } from '../utils';
 import { Block } from '.';
 
 /**
@@ -11,7 +11,7 @@ export interface VariableArgs {
   description?: string;
   sensitive?: boolean;
   nullable?: boolean;
-  validation?: BlockArgs;
+  validation?: TerraformArgs;
 }
 
 /**

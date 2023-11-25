@@ -1,5 +1,5 @@
 import { Argument, Attribute } from '../arguments';
-import { BlockArgs } from '../utils';
+import { TerraformArgs } from '../utils';
 import { Block } from '.';
 
 /**
@@ -19,7 +19,7 @@ export class Data extends Block {
    * @param name name
    * @param args arguments
    */
-  constructor(type: string, name: string, args: BlockArgs) {
+  constructor(type: string, name: string, args: TerraformArgs) {
     super('data', [type, name], args);
 
     this.type = type;

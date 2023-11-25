@@ -1,11 +1,11 @@
 import { Argument, Attribute } from '../arguments';
-import { BlockArgs } from '../utils';
+import { TerraformArgs } from '../utils';
 import { Block } from '.';
 
 /**
  * @category Block
  */
-export interface ModuleArgs extends BlockArgs {
+export interface ModuleArgs extends TerraformArgs {
   source: string;
   version?: string;
 }

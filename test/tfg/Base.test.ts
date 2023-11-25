@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { Map, map } from '../../src/arguments';
 import { Resource } from '../../src/blocks';
 import { TerraformGenerator } from '../../src/TerraformGenerator';
-import { Map } from '../../src/types';
 
 const project = 'test';
 
@@ -60,7 +60,7 @@ const getAvailabilityZone = (index: number): string => {
 const getTagName = (type: string, name?: string, tier?: string): string =>
   `${type}-${project}-${configs.env}${tier ? `-${tier}` : ''}${name ? `-${name}` : ''}`;
 
-const getTags = (type: string, name?: string, tier?: string): Map => new Map({
+const getTags = (type: string, name?: string, tier?: string): Map => map({
   name: getTagName(type, name, tier),
   project,
   env: configs.env
@@ -267,13 +267,13 @@ const createTerraformGenerator = (): TerraformGenerator => {
 
   // Output
   tfg.output('vpc', {
-    value: new Map({
+    value: map({
       cidr: vpc.attr('cidr_block')
     })
   });
 
   tfg.output('subnets', {
-    value: new Map({
+    value: map({
       publicSubnets: publicSubnets.map(subnet => subnet.attr('cidr_block')),
       webSubnets: webSubnets.map(subnet => subnet.attr('cidr_block')),
       appSubnets: appSubnets.map(subnet => subnet.attr('cidr_block')),

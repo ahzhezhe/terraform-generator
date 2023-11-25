@@ -1,5 +1,5 @@
 import { Argument, Attribute } from '../arguments';
-import { BlockArgs } from '../utils';
+import { TerraformArgs, Util } from '../utils';
 import { Block } from '.';
 
 /**
@@ -14,16 +14,16 @@ export class Locals extends Block {
    *
    * @param args arguments
    */
-  constructor(args: BlockArgs) {
+  constructor(args: TerraformArgs) {
     super('locals', [], args);
   }
 
   override asArgument(): Argument {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
   override attr(_name: string): Attribute {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
   arg(name: string): Argument {

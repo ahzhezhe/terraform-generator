@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Function 1`] = `"fn()"`;
+
+exports[`Function 2`] = `"fn(&tfgquot;x&tfgquot;, &tfgquot;y&tfgquot;, &tfgquot;z&tfgquot;)"`;
+
+exports[`Function 3`] = `"fn(1, 2, 3)"`;
+
+exports[`Function 4`] = `"fn(true, false, true)"`;
+
+exports[`Function 5`] = `"fn(&tfgquot;x&tfgquot;, 2, true)"`;
+
+exports[`Function 6`] = `"fn(&tfgquot;x&tfgquot;, type.name.attr)"`;
+
+exports[`Function 7`] = `
+"fn(&tfgquot;x&tfgquot;, {
+a = 1
+b = &tfgquot;2&tfgquot;
+})"
+`;
+
+exports[`fn 1`] = `"fn()"`;
+
+exports[`fn 2`] = `"fn(&tfgquot;x&tfgquot;, &tfgquot;y&tfgquot;, &tfgquot;z&tfgquot;)"`;
+
+exports[`fn 3`] = `"fn(1, 2, 3)"`;
+
+exports[`fn 4`] = `"fn(true, false, true)"`;
+
+exports[`fn 5`] = `"fn(&tfgquot;x&tfgquot;, 2, true)"`;
+
+exports[`fn 6`] = `"fn(&tfgquot;x&tfgquot;, type.name.attr)"`;
+
+exports[`fn 7`] = `
+"fn(&tfgquot;x&tfgquot;, {
+a = 1
+b = &tfgquot;2&tfgquot;
+})"
+`;

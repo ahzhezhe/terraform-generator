@@ -1,6 +1,5 @@
 import { arg4 } from '..';
 import { Provider } from '../../src/blocks';
-import { Util } from '../../src/utils';
 
 test('Provider', () => {
   const provider = new Provider('name', arg4);
@@ -12,6 +11,6 @@ test('Provider', () => {
 test('Provider alias', () => {
   const provider = new Provider('name', { ...arg4, alias: 'alias' });
   expect(provider.toTerraform()).toMatchSnapshot();
-  expect(provider.asArgument().toTerraform()).toBe(Util.escape('name.alias'));
+  expect(provider.asArgument().toTerraform()).toMatchSnapshot();
   expect(() => provider.attr('attr')).toThrow();
 });

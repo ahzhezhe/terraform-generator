@@ -1,5 +1,5 @@
 import { Argument, Attribute } from '../arguments';
-import { BlockArgs } from '../utils';
+import { TerraformArgs, Util } from '../utils';
 import { Block, Resource } from '.';
 
 /**
@@ -9,7 +9,7 @@ export interface OutputArgs {
   value: any;
   description?: string;
   sensitive?: boolean;
-  precondition?: BlockArgs;
+  precondition?: TerraformArgs;
   depends_on?: Resource[];
 }
 
@@ -35,11 +35,11 @@ export class Output extends Block<OutputArgs> {
   }
 
   override asArgument(): Argument {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
   override attr(_name: string): Attribute {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
 }

@@ -1,5 +1,5 @@
 import { Argument, Attribute } from '../arguments';
-import { BlockArgs } from '../utils';
+import { TerraformArgs, Util } from '../utils';
 import { Block } from '.';
 
 /**
@@ -17,7 +17,7 @@ export class Provider extends Block {
    * @param type type
    * @param args arguments
    */
-  constructor(type: string, args: BlockArgs) {
+  constructor(type: string, args: TerraformArgs) {
     super('provider', [type], args);
 
     this.type = type;
@@ -31,7 +31,7 @@ export class Provider extends Block {
   }
 
   override attr(_name: string): Attribute {
-    throw new Error('Inaccessible method.');
+    throw Util.inaccessibleMethod();
   }
 
 }

@@ -1,4 +1,4 @@
-export { BlockArgs } from './utils';
+export { TerraformElement, TerraformArgs } from './utils';
 
 export { TerraformGenerator, WriteOptions } from './TerraformGenerator';
 
@@ -21,10 +21,7 @@ export {
   Argument, arg,
   Attribute, attr,
   Function, fn,
-  Heredoc, heredoc
-} from './arguments';
-
-export {
+  Heredoc, heredoc,
   List, list,
   Map, map
-} from './types';
+} from './arguments';

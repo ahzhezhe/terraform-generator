@@ -18,7 +18,7 @@ export class Function extends Argument {
 
   static #constructArgument(fn: string, ...args: any[]): string {
     if (!fn.trim()) {
-      throw new Error('Function name cannot be empty.');
+      throw new Error('Function name cannot be undefined.');
     }
     if (args.filter(arg => arg == null).length > 0) {
       throw new Error(`Invalid function argument: ${args}`);

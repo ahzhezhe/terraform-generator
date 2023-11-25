@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import { arg } from '../../src/arguments';
+import { arg, map } from '../../src/arguments';
 import { Provisioner } from '../../src/blocks';
 import { TerraformGenerator } from '../../src/TerraformGenerator';
-import { map } from '../../src/types';
 
 const createTerraformGenerator = (): TerraformGenerator => {
   const tfg = new TerraformGenerator();

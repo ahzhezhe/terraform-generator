@@ -1,32 +1,30 @@
 import { attr } from '..';
 import { Argument, arg } from '../../src/arguments';
-import { Util } from '../../src/utils';
 
 test('Argument invalid args', () => {
   expect(() => new Argument(null as unknown as string)).toThrow();
 });
 
 test('Argument', () => {
-  expect(new Argument('x').toTerraform()).toBe(Util.escape('x'));
-  expect(new Argument(attr).toTerraform()).toBe(Util.escape('type.name.attr'));
+  expect(new Argument('x').toTerraform()).toMatchSnapshot();
 });
 
 test('arg', () => {
-  expect(arg('x').toTerraform()).toBe(Util.escape('x'));
-  expect(arg(attr).toTerraform()).toBe(Util.escape('type.name.attr'));
+  expect(arg('x').toTerraform()).toMatchSnapshot();
+  expect(attr.toTerraform()).toMatchSnapshot();
 });
 
 test('.attr', () => {
-  expect(arg('x').attr('y').toTerraform()).toBe(Util.escape('x.y'));
-  expect(arg(attr).attr('y').toTerraform()).toBe(Util.escape('type.name.attr.y'));
+  expect(arg('x').attr('y').toTerraform()).toMatchSnapshot();
+  expect(attr.attr('y').toTerraform()).toMatchSnapshot();
 });
 
 test('.element', () => {
-  expect(arg('x').element(0).toTerraform()).toBe(Util.escape('x[0]'));
-  expect(arg(attr).element(0).toTerraform()).toBe(Util.escape('type.name.attr[0]'));
+  expect(arg('x').element(0).toTerraform()).toMatchSnapshot();
+  expect(attr.element(0).toTerraform()).toMatchSnapshot();
 });
 
 test('interpolation', () => {
-  expect(`prefix-${arg('x')}-suffix`).toBe(Util.escape('prefix-${x}-suffix'));
-  expect(`prefix-${arg(attr)}-suffix`).toBe(Util.escape('prefix-${type.name.attr}-suffix'));
+  expect(`prefix-${arg('x')}-suffix`).toMatchSnapshot();
+  expect(`prefix-${attr}-suffix`).toMatchSnapshot();
 });

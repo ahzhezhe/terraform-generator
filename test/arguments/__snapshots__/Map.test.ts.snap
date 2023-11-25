@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Provider 1`] = `
-"provider &tfgquot;name&tfgquot;{
+exports[`Map 1`] = `
+"{
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
 &tfgquot;b&tfgquot;,
@@ -1842,13 +1842,11 @@ arg14 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 }
 ]
-}
-
-"
+}"
 `;
 
-exports[`Provider alias 1`] = `
-"provider &tfgquot;name&tfgquot;{
+exports[`list 1`] = `
+"{
 arg0 = &tfgquot;a&tfgquot;
 arg1 = [
 &tfgquot;b&tfgquot;,
@@ -3689,10 +3687,5 @@ arg14 = fn(type.name.attr, type.name.attr, type.name.attr)
 }
 }
 ]
-alias = &tfgquot;alias&tfgquot;
-}
-
-"
+}"
 `;
-
-exports[`Provider alias 2`] = `"name.alias"`;

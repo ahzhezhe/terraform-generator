@@ -1,23 +1,26 @@
-import { Util } from '../utils';
+import { TerraformElement, Util } from '../utils';
 
 /**
  * @category Argument
  */
-export class Argument<T extends string | Argument = string | Argument<string>> {
+export class Argument<T extends string = string> extends TerraformElement {
 
-  readonly argument: T;
+  readonly #argument: T;
 
   /**
    * Construct argument.
    *
    * @param arg argument as string or copy from another argument object
+   * @param escape escape the value
    */
   constructor(arg: T) {
+    super();
+
     if (!arg || (typeof arg === 'string' && !arg.trim())) {
-      throw new Error('Argument cannot be empty.');
+      throw new Error('Argument cannot be undefined.');
     }
 
-    this.argument = arg;
+    this.#argument = arg;
   }
 
   /**
@@ -26,11 +29,7 @@ export class Argument<T extends string | Argument = string | Argument<string>> {
    * @param name attribute name
    */
   attr(name: string): Argument {
-    name = name.trim();
-    if (this.argument instanceof Argument) {
-      return this.argument.attr(name);
-    }
-    return new Argument(`${this.argument}.${name}`);
+    return new Argument(`${this.#argument}.${name.trim()}`);
   }
 
   /**
@@ -39,10 +38,7 @@ export class Argument<T extends string | Argument = string | Argument<string>> {
    * @param idx element index
    */
   element(idx: number): Argument {
-    if (this.argument instanceof Argument) {
-      return this.argument.element(idx);
-    }
-    return new Argument(`${this.argument}[${idx}]`);
+    return new Argument(`${this.#argument}[${idx}]`);
   }
 
   /**
@@ -50,14 +46,8 @@ export class Argument<T extends string | Argument = string | Argument<string>> {
    *
    * Use this method when argument is used as an interpolation in another Terraform argument or code.
    */
-  toTerraform(): string {
-    let str = '';
-    if (this.argument instanceof Argument) {
-      str += this.argument.toTerraform();
-    } else {
-      str += this.argument;
-    }
-    return Util.escape(str);
+  override toTerraform(): string {
+    return Util.escape(this.#argument);
   }
 
   /**
@@ -80,4 +70,4 @@ export class Argument<T extends string | Argument = string | Argument<string>> {
  *
  * @category Argument
  */
-export const arg = <T extends string | Argument = string | Argument<string>>(arg: T): Argument<T> => new Argument(arg);
+export const arg = <T extends string = string>(arg: T): Argument<T> => new Argument(arg);

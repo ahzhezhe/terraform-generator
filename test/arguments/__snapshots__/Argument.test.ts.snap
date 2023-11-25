@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.attr 1`] = `"x.y"`;
+
+exports[`.attr 2`] = `"type.name.attr.y"`;
+
+exports[`.element 1`] = `"x[0]"`;
+
+exports[`.element 2`] = `"type.name.attr[0]"`;
+
+exports[`Argument 1`] = `"x"`;
+
+exports[`arg 1`] = `"x"`;
+
+exports[`arg 2`] = `"type.name.attr"`;
+
+exports[`interpolation 1`] = `"prefix-\${x}-suffix"`;
+
+exports[`interpolation 2`] = `"prefix-\${type.name.attr}-suffix"`;

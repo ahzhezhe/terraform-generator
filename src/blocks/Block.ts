@@ -1,10 +1,10 @@
 import { Argument, Attribute } from '../arguments';
-import { BlockArgs, Util } from '../utils';
+import { TerraformArgs, TerraformElement, Util } from '../utils';
 
 /**
  * @category Block
  */
-export abstract class Block<Args extends BlockArgs = BlockArgs> {
+export abstract class Block<Args extends TerraformArgs = TerraformArgs> extends TerraformElement {
 
   readonly blockType: string;
   readonly blockNames: string[];
@@ -20,6 +20,8 @@ export abstract class Block<Args extends BlockArgs = BlockArgs> {
    * @param args arguments
    */
   constructor(type: string, names: string[], args: Args, innerBlocks?: Block[], insideTerraformBlock = false) {
+    super();
+
     this.#validateIdentifier(type);
     names.forEach(name => {
       this.#validateIdentifier(name);
@@ -104,10 +106,7 @@ export abstract class Block<Args extends BlockArgs = BlockArgs> {
     return this;
   }
 
-  /**
-   * To Terraform representation.
-   */
-  toTerraform(): string {
+  override toTerraform(): string {
     let str = this.blockType;
     this.blockNames.forEach(name => {
       str += ` "${name}"`;
