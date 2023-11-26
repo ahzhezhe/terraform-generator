@@ -57,7 +57,7 @@ const tfg = new TerraformGenerator({
 ```
 
 ### **Blocks**
-Block's arguments are not typed, please refer to official Terraform documentation on what arguments can be supplied.
+Some block's arguments are not typed, please refer to official Terraform documentation on what arguments can be supplied.
 
 ```typescript
 tfg.provider('aws', {
@@ -74,7 +74,7 @@ const vpc = tfg.resource('aws_vpc', 'vpc', {
 ```typescript
 import { vpc as vpcDS } from 'other-terraform-generator-configuration';
 
-const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
+const vpc = tfg.dataFromResource(vpcDS, undefined, ['cidr_block', ['tags', 'tag']]);
 ```
 
 ### **Arguments**
@@ -134,7 +134,7 @@ const vpc = tfg.dataFromResource(vpcDS, null, ['cidr_block', ['tags', 'tag']]);
 ### **Attributes**
 ```typescript
 block.attr('id')                                      // block id, string
-block.id                                              // convenience getter function, same as attr('id')
+block.id                                              // convenience getter function, same as above
 block.attr('subnets')                                 // subnet objects, object list
 block.attr('subnets.*.id')                            // subnet ids, string list
 block.attr('subnets').attr('*').attr('id')            // same as above
