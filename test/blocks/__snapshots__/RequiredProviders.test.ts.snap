@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+ 
+exports[`RequiredProviders 1`] = `
+"required_providers{
+to = type.name
+id = &tfgquot;id&tfgquot;
+provider = arg
+}
+ 
+"
+`;

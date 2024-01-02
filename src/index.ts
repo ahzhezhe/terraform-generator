@@ -13,6 +13,7 @@ export {
   Output, OutputArgs,
   Provider,
   Provisioner, ProvisionerArgs, ProvisionerType,
+  RequiredProviders, RequiredProvidersArgs,
   Resource, ResourceToDataOptions,
   Variable, VariableArgs
 } from './blocks';

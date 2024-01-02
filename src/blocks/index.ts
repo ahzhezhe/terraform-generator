@@ -8,5 +8,6 @@ export * from './Module';
 export * from './Output';
 export * from './Provider';
 export * from './Provisioner';
+export * from './RequiredProviders';
 export * from './Resource';
 export * from './Variable';

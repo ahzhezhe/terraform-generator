@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import shell from 'shelljs';
-import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import, ImportArgs, VariableArgs, ModuleArgs, OutputArgs } from './blocks';
+import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import, ImportArgs, VariableArgs, ModuleArgs, OutputArgs, RequiredProviders, RequiredProvidersArgs } from './blocks';
 import { TerraformArgs, Util } from './utils';
 
 /**
@@ -294,6 +294,19 @@ export class TerraformGenerator {
     this.addBlocks(block);
     return block;
   }
+
+  /**
+   * Add required providers into Terraform.
+   *
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   *
+   * @param args arguments
+   */
+    requiredProviders(args: RequiredProvidersArgs): RequiredProviders {
+      const block = new RequiredProviders(args);
+      this.addBlocks(block);
+      return block;
+    }
 
   /**
    * Add backend into Terraform.
