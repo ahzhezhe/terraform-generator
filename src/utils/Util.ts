@@ -46,7 +46,8 @@ export class Util {
         return '';
       }
 
-      if (key.indexOf(' ') > 0) {
+      // Escape key if it contains special characters.
+      if (!key.match(/^[a-zA-Z0-9_]+$/)) {
         key = `"${key}"`;
       }
 
