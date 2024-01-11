@@ -1,5 +1,5 @@
 import { Block } from '../blocks';
-import { TerraformArgs, TerraformElement } from '.';
+import { IDENTIFIER_REGEX, TerraformArgs, TerraformElement } from '.';
 
 export class Util {
 
@@ -37,7 +37,6 @@ export class Util {
       return true;
     }
     throw new Error(`Invalid value: ${value}`);
-
   }
 
   static argumentToString(key: string, value: any): string {
@@ -46,8 +45,7 @@ export class Util {
         return '';
       }
 
-      // Escape key if it contains special characters.
-      if (!key.match(/^[a-zA-Z0-9_]+$/)) {
+      if (!key.match(IDENTIFIER_REGEX)) {
         key = `"${key}"`;
       }
 

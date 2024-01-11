@@ -1,5 +1,5 @@
 import { Argument, Attribute } from '../arguments';
-import { TerraformArgs, TerraformElement, Util } from '../utils';
+import { IDENTIFIER_REGEX, TerraformArgs, TerraformElement, Util } from '../utils';
 
 /**
  * @category Block
@@ -140,7 +140,7 @@ export abstract class Block<Args extends TerraformArgs = TerraformArgs> extends 
   }
 
   #validateIdentifier(identifier: string): void {
-    if (!identifier.match(/^[a-zA-Z_\-]{1}[0-9a-zA-Z_\-]*$/)) {
+    if (!identifier.match(IDENTIFIER_REGEX)) {
       throw new Error(`Invalid identifier: ${identifier}`);
     }
   }
