@@ -22,7 +22,7 @@ test('Block arguments', () => {
       command: 'cmd1'
     }),
     new Provisioner('remote-exec', {
-      command: 'cmd2',
+      script: 'cmd2',
       when: new Argument('destroy'),
       on_failure: new Argument('fail')
     })

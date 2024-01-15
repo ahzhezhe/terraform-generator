@@ -1,27 +1,47 @@
-import { Argument, Attribute } from '../arguments';
+import { Argument, Attribute, Map } from '../arguments';
 import { Util } from '../utils';
 import { Block } from '.';
 
-/**
- * @category Block
- */
-export type ProvisionerType = 'local-exec' | 'remote-exec';
-
-/**
- * @category Block
- */
-export interface ProvisionerArgs {
-  command: string;
-  when?: Argument<'destroy'>;
+interface ProvisionerArgs {
+  when?: Argument<'create' | 'destroy'>;
   on_failure?: Argument<'continue' | 'fail'>;
 }
 
 /**
  * @category Block
  */
-export class Provisioner extends Block<ProvisionerArgs> {
+export interface FileProvisionerArgs extends ProvisionerArgs {
+  source?: string;
+  content?: string;
+  destination?: string;
+}
 
-  readonly type: ProvisionerType;
+/**
+ * @category Block
+ */
+export interface LocalExecProvisionerArgs extends ProvisionerArgs {
+  command: string;
+  working_dir?: string;
+  interpreter?: string[];
+  environment?: Map;
+  quiet?: boolean;
+}
+
+/**
+ * @category Block
+ */
+export interface RemoteExecProvisionerArgs extends ProvisionerArgs {
+  inline?: string[];
+  script?: string;
+  scripts?: string[];
+}
+
+/**
+ * @category Block
+ */
+export class Provisioner extends Block<FileProvisionerArgs | LocalExecProvisionerArgs | RemoteExecProvisionerArgs> {
+
+  readonly type: 'file' | 'local-exec' | 'remote-exec';
 
   /**
    * Construct provisioner.
@@ -31,7 +51,10 @@ export class Provisioner extends Block<ProvisionerArgs> {
    * @param type type
    * @param args arguments
    */
-  constructor(type: ProvisionerType, args: ProvisionerArgs) {
+  constructor(type: 'file', args: FileProvisionerArgs);
+  constructor(type: 'local-exec', args: LocalExecProvisionerArgs);
+  constructor(type: 'remote-exec', args: RemoteExecProvisionerArgs);
+  constructor(type: 'file' | 'local-exec' | 'remote-exec', args: FileProvisionerArgs | LocalExecProvisionerArgs | RemoteExecProvisionerArgs) {
     super('provisioner', [type], args);
 
     this.type = type;

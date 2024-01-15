@@ -12,7 +12,7 @@ export {
   Module, ModuleArgs,
   Output, OutputArgs,
   Provider,
-  Provisioner, ProvisionerArgs, ProvisionerType,
+  Provisioner, FileProvisionerArgs, LocalExecProvisionerArgs, RemoteExecProvisionerArgs,
   Resource, ResourceToDataOptions,
   Variable, VariableArgs
 } from './blocks';
