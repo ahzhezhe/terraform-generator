@@ -1,6 +1,6 @@
+import { Block } from '.';
 import { Argument, Attribute } from '../arguments';
 import { Util } from '../utils';
-import { Block } from '.';
 
 /**
  * @category Block
@@ -11,7 +11,8 @@ export type ProvisionerType = 'local-exec' | 'remote-exec';
  * @category Block
  */
 export interface ProvisionerArgs {
-  command: string;
+  command?: string;
+  inline?: string[];
   when?: Argument<'destroy'>;
   on_failure?: Argument<'continue' | 'fail'>;
 }
