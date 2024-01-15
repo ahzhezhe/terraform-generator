@@ -1,6 +1,6 @@
-import { Block } from '.';
 import { Argument, Attribute } from '../arguments';
 import { Util } from '../utils';
+import { Block } from '.';
 
 /**
  * @category Block
