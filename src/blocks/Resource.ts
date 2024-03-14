@@ -35,7 +35,7 @@ export class Resource extends Block {
    * @param provisioners provisioners
    */
   constructor(type: string, name: string, args?: TerraformArgs, provisioners?: Provisioner[]) {
-    super('resource', [type, name], args || {}, provisioners);
+    super('resource', [type, name], args ?? {}, provisioners);
 
     this.type = type;
     this.name = name;
