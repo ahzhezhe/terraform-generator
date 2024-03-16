@@ -10,16 +10,11 @@ export class Argument<T extends string = string> extends TerraformElement {
   /**
    * Construct argument.
    *
-   * @param arg argument as string or copy from another argument object
+   * @param arg argument as string
    * @param escape escape the value
    */
   constructor(arg: T) {
     super();
-
-    if (!arg || (typeof arg === 'string' && !arg.trim())) {
-      throw new Error('Argument cannot be undefined.');
-    }
-
     this.#argument = arg;
   }
 

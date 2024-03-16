@@ -14,12 +14,8 @@ export class Map extends Argument {
    * @param args map values
    */
   constructor(args: TerraformArgs) {
-    super(Map.#constructArgument(args));
+    super(Util.argumentValueToString(args)!);
     this.arguments = args;
-  }
-
-  static #constructArgument(args: TerraformArgs): string {
-    return Util.argumentValueToString(args)!;
   }
 
 }

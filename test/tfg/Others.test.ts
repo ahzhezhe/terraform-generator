@@ -66,6 +66,15 @@ const createTerraformGenerator = (): TerraformGenerator => {
     })
   });
 
+  tfg.comment('comment');
+
+  tfg.comment(`
+    line1
+    line2
+    line3
+    line4
+  `);
+
   const tfg2 = new TerraformGenerator();
   tfg2.resource('tfg2', 'tfg2', {
     tfg2: 'tfg2'

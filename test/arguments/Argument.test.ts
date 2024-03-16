@@ -1,10 +1,6 @@
 import { attr } from '..';
 import { Argument, arg } from '../../src/arguments';
 
-test('Argument invalid args', () => {
-  expect(() => new Argument(null as unknown as string)).toThrow();
-});
-
 test('Argument', () => {
   expect(new Argument('x').toTerraform()).toMatchSnapshot();
 });

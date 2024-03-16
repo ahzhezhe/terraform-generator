@@ -202,7 +202,11 @@ export class TerraformGenerator {
    * @param args extra arguments
    */
   dataFromResource(
-    resource: Resource, options: ResourceToDataOptions | undefined, argNames: (string | [string, string])[], args?: TerraformArgs): Data {
+    resource: Resource,
+    options: ResourceToDataOptions | undefined,
+    argNames: (string | [string, string])[],
+    args?: TerraformArgs
+  ): Data {
     const block = resource.toData(options, argNames, args);
     this.addBlocks(block);
     return block;

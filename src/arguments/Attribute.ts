@@ -13,18 +13,7 @@ export class Attribute extends Argument {
    * @param attrName attribute name
    */
   constructor(block: Block, attrName: string) {
-    super(Attribute.#constructArgument(block, attrName));
-  }
-
-  static #constructArgument(block: Block, attrName: string): string {
-    if (!block) {
-      throw new Error('Attribute block cannot be undefined.');
-    }
-    if (!attrName?.trim()) {
-      throw new Error('Attribute name cannot be undefined.');
-    }
-
-    return `${block.asArgument().toTerraform()}.${attrName.trim()}`;
+    super(`${block.asArgument().toTerraform()}.${attrName.trim()}`);
   }
 
 }

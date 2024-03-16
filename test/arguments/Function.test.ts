@@ -1,11 +1,6 @@
 import { attr } from '..';
 import { Function, fn } from '../../src/arguments';
 
-test('Function invalid args', () => {
-  expect(() => new Function(null as unknown as string)).toThrow();
-  expect(() => new Function('fn', null)).toThrow();
-});
-
 test('Function', () => {
   expect(new Function('fn').toTerraform()).toMatchSnapshot();
   expect(new Function('fn', 'x', 'y', 'z').toTerraform()).toMatchSnapshot();

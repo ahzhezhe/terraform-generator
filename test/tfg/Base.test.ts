@@ -44,17 +44,16 @@ const findTier = (name: string): { name: string; cidr: string; subnetCidrs: stri
   configs.tiers.filter(tier => tier.name === name)[0];
 
 const getAvailabilityZone = (index: number): string => {
-  if (index === 0) {
-    return 'ap-southeast-1a';
+  switch (index) {
+    case 0:
+      return 'ap-southeast-1a';
+    case 1:
+      return 'ap-southeast-1b';
+    case 2:
+      return 'ap-southeast-1c';
+    default:
+      throw new Error(`Invalid availability zone ${index}`);
   }
-  if (index === 1) {
-    return 'ap-southeast-1b';
-  }
-  if (index === 2) {
-    return 'ap-southeast-1c';
-  }
-  throw new Error(`Invalid availability zone ${index}`);
-
 };
 
 const getTagName = (type: string, name?: string, tier?: string): string =>
