@@ -10,9 +10,11 @@ export {
   Import, ImportArgs,
   Locals,
   Module, ModuleArgs,
+  Moved, MovedArgs,
   Output, OutputArgs,
   Provider,
   Provisioner, FileProvisionerArgs, LocalExecProvisionerArgs, RemoteExecProvisionerArgs,
+  Removed, RemovedArgs,
   Resource, ResourceToDataOptions,
   Variable, VariableArgs
 } from './blocks';

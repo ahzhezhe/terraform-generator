@@ -11,7 +11,6 @@ export class Argument<T extends string = string> extends TerraformElement {
    * Construct argument.
    *
    * @param arg argument as string
-   * @param escape escape the value
    */
   constructor(arg: T) {
     super();
