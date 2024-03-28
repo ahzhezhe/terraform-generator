@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { arg, map } from '../../src/arguments';
+import { Argument, arg, map } from '../../src/arguments';
 import { Provisioner } from '../../src/blocks';
 import { TerraformGenerator } from '../../src/TerraformGenerator';
 
@@ -74,6 +74,18 @@ const createTerraformGenerator = (): TerraformGenerator => {
     line3
     line4
   `);
+
+  tfg.moved({
+    from: new Argument('resource.a'),
+    to: resource
+  });
+
+  tfg.removed({
+    from: new Argument('resource.b'),
+    lifecycle: {
+      destroy: false
+    }
+  });
 
   const tfg2 = new TerraformGenerator();
   tfg2.resource('tfg2', 'tfg2', {

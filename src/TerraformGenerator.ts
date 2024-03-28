@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import shell from 'shelljs';
-import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import, ImportArgs, VariableArgs, ModuleArgs, OutputArgs } from './blocks';
+import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import, ImportArgs, VariableArgs, ModuleArgs, OutputArgs, Moved, MovedArgs, RemovedArgs, Removed } from './blocks';
 import { TerraformArgs, Util } from './utils';
 
 /**
@@ -309,6 +309,32 @@ export class TerraformGenerator {
    */
   backend(type: string, args: TerraformArgs): Backend {
     const block = new Backend(type, args);
+    this.addBlocks(block);
+    return block;
+  }
+
+  /**
+   * Add moved into Terraform.
+   *
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   *
+   * @param args arguments
+   */
+  moved(args: MovedArgs): Moved {
+    const block = new Moved(args);
+    this.addBlocks(block);
+    return block;
+  }
+
+  /**
+   * Add removed into Terraform.
+   *
+   * Refer to Terraform documentation on what can be put as type & arguments.
+   *
+   * @param args arguments
+   */
+  removed(args: RemovedArgs): Removed {
+    const block = new Removed(args);
     this.addBlocks(block);
     return block;
   }

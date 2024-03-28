@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`To argument 1`] = `
+"moved{
+from = resource.a
+to = resource.b
+}
+
+"
+`;
+
+exports[`To resource 1`] = `
+"moved{
+from = resource.a
+to = resource.b
+}
+
+"
+`;
