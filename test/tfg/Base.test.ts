@@ -295,8 +295,12 @@ test('Base', () => {
   expect(tfg.getVars()).toMatchSnapshot();
   expect(tfg.generate()).toMatchSnapshot();
 
-  tfg.write({ dir: outputDir });
-  const tf = fs.readFileSync(path.join(outputDir, 'terraform.tf'), 'utf8');
+  tfg.write({
+    dir: outputDir,
+    tfFilename: 'base',
+    tfvarsFilename: 'base'
+  });
+  const tf = fs.readFileSync(path.join(outputDir, 'base.tf'), 'utf8');
   expect(tf).toMatchSnapshot();
 });
 
