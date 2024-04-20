@@ -7,7 +7,7 @@ import { Block } from '.';
  */
 export interface ImportArgs {
   to: TerraformElement;
-  id: string;
+  id: TerraformElement | string;
   provider?: Argument;
 }
 
