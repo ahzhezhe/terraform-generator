@@ -1,12 +1,12 @@
 import { Argument, Attribute } from '../arguments';
 import { Util } from '../utils';
-import { Block } from '.';
+import { Block, Resource } from '.';
 
 /**
  * @category Block
  */
 export interface RemovedArgs {
-  from: Argument;
+  from: Resource;
   lifecycle: {
     destroy: boolean;
   };
