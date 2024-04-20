@@ -1,12 +1,12 @@
 import { Argument, Attribute } from '../arguments';
-import { Util } from '../utils';
-import { Block, Resource } from '.';
+import { TerraformElement, Util } from '../utils';
+import { Block } from '.';
 
 /**
  * @category Block
  */
 export interface ImportArgs {
-  to: Resource;
+  to: TerraformElement | string;
   id: string;
   provider?: Argument;
 }

@@ -1,12 +1,12 @@
 import { Argument, Attribute } from '../arguments';
-import { Util } from '../utils';
-import { Block, Resource } from '.';
+import { TerraformElement, Util } from '../utils';
+import { Block } from '.';
 
 /**
  * @category Block
  */
 export interface RemovedArgs {
-  from: Resource;
+  from: TerraformElement | string;
   lifecycle: {
     destroy: boolean;
   };
