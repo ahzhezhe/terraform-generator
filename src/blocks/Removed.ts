@@ -6,7 +6,7 @@ import { Block } from '.';
  * @category Block
  */
 export interface RemovedArgs {
-  from: TerraformElement | string;
+  from: TerraformElement;
   lifecycle: {
     destroy: boolean;
   };

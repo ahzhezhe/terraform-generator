@@ -6,7 +6,7 @@ import { Block } from '.';
  * @category Block
  */
 export interface ImportArgs {
-  to: TerraformElement | string;
+  to: TerraformElement;
   id: string;
   provider?: Argument;
 }

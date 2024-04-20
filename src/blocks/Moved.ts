@@ -6,8 +6,8 @@ import { Block } from '.';
  * @category Block
  */
 export interface MovedArgs {
-  from: TerraformElement | string;
-  to: TerraformElement | string;
+  from: TerraformElement;
+  to: TerraformElement;
 }
 
 /**
