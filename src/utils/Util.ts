@@ -45,7 +45,7 @@ export class Util {
         return '';
       }
 
-      if (!key.match(IDENTIFIER_REGEX)) {
+      if (!key.match(IDENTIFIER_REGEX) && !key.startsWith('"') && !key.endsWith('"')) {
         key = `"${key}"`;
       }
 
@@ -70,7 +70,6 @@ export class Util {
           });
         }
         return str;
-
       }
       return `${key}${operator}${this.argumentValueToString(value)}\n`;
 
