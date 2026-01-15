@@ -17,7 +17,7 @@
   "homepage": "https://github.com/ahzhezhe/terraform-generator#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahzhezhe/terraform-generator"
+    "url": "git+https://github.com/ahzhezhe/terraform-generator.git"
   },
   "funding": "https://github.com/sponsors/ahzhezhe",
   "license": "ISC",
