@@ -1,6 +1,11 @@
 {
   "transform": {
-    "^.+\\.ts$": "ts-jest"
+    "^.+\\.ts$": [
+      "ts-jest",
+      {
+        "tsconfig": "tsconfig.test.json"
+      }
+    ]
   },
   "testRegex": "test\\.ts$",
   "collectCoverage": true,
