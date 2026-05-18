@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@types/jest": "30.0.0",
+    "@types/node": "22.19.17",
     "@types/shelljs": "0.10.0",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
