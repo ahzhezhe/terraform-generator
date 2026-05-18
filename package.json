@@ -33,9 +33,10 @@
     "tryout": "ts-node tryout.ts",
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "build:watch": "tsc -w -p tsconfig.build.json",
+    "postversion": "git push",
     "prepublishOnly": "npm run build",
     "postpublish": "rm -rf dist",
-    "postversion": "git push"
+    "publish": "npm publish --auth-type=legacy"
   },
   "dependencies": {
     "shelljs": "0.10.0"
