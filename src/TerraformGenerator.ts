@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import shell from 'shelljs';
-import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import, ImportArgs, VariableArgs, ModuleArgs, OutputArgs, Moved, MovedArgs, RemovedArgs, Removed } from './blocks';
+import { Block, Comment, Resource, Data, Module, Output, Provider, Variable, Backend, Provisioner, ResourceToDataOptions, Locals, Import, ImportArgs, VariableArgs, ModuleArgs, OutputArgs, Moved, MovedArgs, RemovedArgs, Removed, Dynamic } from './blocks';
 import { TerraformArgs, Util } from './utils';
 
 /**
@@ -264,6 +264,20 @@ export class TerraformGenerator {
    */
   locals(args: TerraformArgs): Locals {
     const block = new Locals(args);
+    this.addBlocks(block);
+    return block;
+  }
+
+  /**
+   * Add dynamic into Terraform.
+   *
+   * Refer to Terraform documentation on what can be put as arguments.
+   *
+   * @param name name
+   * @param args arguments
+   */
+  dynamic(name: string, args: TerraformArgs): Dynamic {
+    const block = new Dynamic(name, args);
     this.addBlocks(block);
     return block;
   }

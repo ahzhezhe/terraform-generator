@@ -83,6 +83,12 @@ exports[`Others 2`] = `
     "name": "locals",
     "type": "locals",
   },
+  Dynamic {
+    "blockNames": [
+      "test",
+    ],
+    "blockType": "dynamic",
+  },
   Import {
     "blockNames": [],
     "blockType": "import",
@@ -202,6 +208,12 @@ resource "locals" "locals"{
 a = local.a
 }
 
+dynamic "test"{
+a = "a"
+b = 123
+c = aws_vpc.test.x
+}
+
 import{
 to = innerBlock.innerBlock
 id = "id"
@@ -307,6 +319,12 @@ c = aws_vpc.test.x
 
 resource "locals" "locals"{
 a = local.a
+}
+
+dynamic "test"{
+a = "a"
+b = 123
+c = aws_vpc.test.x
 }
 
 import{

@@ -2,8 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
-    "skipLibCheck": true,
-    "isolatedModules": false
+    "skipLibCheck": true
   },
   "include": [
     "src"

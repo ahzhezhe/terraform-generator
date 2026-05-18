@@ -7,7 +7,6 @@
       "jest"
     ],
     "outDir": "dist",
-    "isolatedModules": true,
     "declaration": true,
     "esModuleInterop": true,
     "strict": true,

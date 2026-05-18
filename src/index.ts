@@ -7,6 +7,7 @@ export {
   Backend,
   Comment,
   Data,
+  Dynamic,
   Import, ImportArgs,
   Locals,
   Module, ModuleArgs,
