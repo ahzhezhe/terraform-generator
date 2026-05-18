@@ -53,12 +53,6 @@ const createTerraformGenerator = (): TerraformGenerator => {
     a: locals.arg('a')
   });
 
-  tfg.dynamic('test', {
-    a: 'a',
-    b: 123,
-    c: r.attr('x')
-  });
-
   tfg.import({
     to: resource,
     id: 'id',

@@ -2,7 +2,6 @@ export * from './Block';
 export * from './Backend';
 export * from './Comment';
 export * from './Data';
-export * from './Dynamic';
 export * from './Import';
 export * from './Locals';
 export * from './Module';
